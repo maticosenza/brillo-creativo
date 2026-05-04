@@ -6,8 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { RootLayout } from "@/components/layout/RootLayout";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import Placeholder from "./pages/Placeholder.tsx";
 import ProjectDetail from "./pages/proyectos/ProjectDetail.tsx";
+import Proyectos from "./pages/proyectos/Proyectos.tsx";
 import Nosotros from "./pages/nosotros/Nosotros.tsx";
 import Equipo from "./pages/nosotros/Equipo.tsx";
 import Manifiesto from "./pages/nosotros/Manifiesto.tsx";
@@ -39,7 +39,7 @@ const App = () => (
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/servicios/:slug" element={<ServiceDetail />} />
 
-            <Route path="/proyectos" element={<Placeholder />} />
+            <Route path="/proyectos" element={<Proyectos />} />
             <Route path="/proyectos/:slug" element={<ProjectDetail />} />
 
             <Route path="/careers" element={<Careers />} />
