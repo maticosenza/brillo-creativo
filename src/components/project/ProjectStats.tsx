@@ -61,7 +61,7 @@ export const ProjectStats = ({ p }: { p: Project }) => {
     <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <StatBox value={p.attendees} label="Asistentes" />
-        <StatBox value={p.durationDays} label={p.durationDays === 1 ? "Jornada" : "Jornadas"} />
+        <StatBox value={p.durationDays} label={p.durationDays === 1 ? "Jornada" : "Jornadas"} delay={0.3} />
       </div>
     </section>
   );
