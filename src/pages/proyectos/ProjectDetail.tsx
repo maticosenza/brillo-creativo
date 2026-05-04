@@ -9,6 +9,7 @@ import { ProjectStats } from "@/components/project/ProjectStats";
 import { ProjectQuote } from "@/components/project/ProjectQuote";
 import { RelatedProjects } from "@/components/project/RelatedProjects";
 import { CtaSection } from "@/components/home/CtaSection";
+import { SEO } from "@/components/shared/SEO";
 
 const ProjectDetail = () => {
   const { slug = "" } = useParams();
@@ -20,6 +21,22 @@ const ProjectDetail = () => {
 
   return (
     <>
+      <SEO
+        title={`${project.title} — ${project.client} | Productora`}
+        description={project.shortDescription}
+        canonical={`https://productora.com/proyectos/${project.slug}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: project.title,
+          author: { "@type": "Organization", name: "Productora" },
+          about: project.category,
+          locationCreated: project.location,
+          dateCreated: String(project.year),
+          image: project.gallery[0],
+          description: project.shortDescription,
+        }}
+      />
       <ProjectBanner p={project} />
       <ProjectIntro p={project} />
       <ProjectServices p={project} />
