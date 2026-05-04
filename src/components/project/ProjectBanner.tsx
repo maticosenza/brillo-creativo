@@ -43,8 +43,8 @@ export const ProjectBanner = ({ p }: { p: Project }) => {
     <section ref={ref} className="relative h-[90vh] min-h-[560px] w-full overflow-hidden bg-brand-black text-brand-white">
       <div className="absolute inset-0 pb-img" style={{ clipPath: "inset(50% 50% 50% 50%)" }}>
         <img src={p.gallery[0]} alt={p.title} className="w-full h-full object-cover" />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/85" />
       </div>
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/85" />
 
       <div className="absolute left-0 bottom-0 z-10 p-8 md:p-16 max-w-[1200px]">
         <span className="pb-meta block eyebrow opacity-90" style={{ opacity: 0 }}>{p.category}</span>
