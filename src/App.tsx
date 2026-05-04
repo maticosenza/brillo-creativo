@@ -7,6 +7,7 @@ import { RootLayout } from "@/components/layout/RootLayout";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Placeholder from "./pages/Placeholder.tsx";
+import ProjectDetail from "./pages/proyectos/ProjectDetail.tsx";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +32,7 @@ const App = () => (
             <Route path="/servicios/lanzamientos" element={<Placeholder />} />
 
             <Route path="/proyectos" element={<Placeholder />} />
-            <Route path="/proyectos/:slug" element={<Placeholder />} />
+            <Route path="/proyectos/:slug" element={<ProjectDetail />} />
 
             <Route path="/careers" element={<Placeholder />} />
             <Route path="/careers/cultura" element={<Placeholder />} />

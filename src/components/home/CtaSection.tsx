@@ -5,11 +5,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const WORDS = [["¿LISTOS", "PARA"], ["EMPEZAR?"]];
-const FLAT = WORDS.flat();
+type Props = {
+  lines?: string[][];
+  description?: string;
+};
 
-export const CtaSection = () => {
+const DEFAULT_LINES = [["¿LISTOS", "PARA"], ["EMPEZAR?"]];
+const DEFAULT_DESC =
+  "Contanos qué tenés en mente. Te respondemos en menos de 24 horas con una primera propuesta de enfoque.";
+
+export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
+  const flat = lines.flat();
 
   useEffect(() => {
     const el = ref.current;
@@ -24,15 +31,13 @@ export const CtaSection = () => {
       const tl = gsap.timeline({
         scrollTrigger: { trigger: el, start: "top 75%", once: true },
       });
-      FLAT.forEach((_, i) => {
-        tl.fromTo(
-          `.cta-word-main-${i}`,
+      flat.forEach((_, i) => {
+        tl.fromTo(`.cta-word-main-${i}`,
           { clipPath: "inset(100% 0 0 0)" },
           { clipPath: "inset(0% 0 0 0)", duration: 0.9, ease: "power4.out" },
           i * 0.15
         );
-        tl.fromTo(
-          `.cta-word-echo-${i}`,
+        tl.fromTo(`.cta-word-echo-${i}`,
           { clipPath: "inset(100% 0 0 0)", x: 0, opacity: 0 },
           { clipPath: "inset(0% 0 0 0)", x: 8, opacity: 0.6, duration: 0.9, ease: "power4.out" },
           i * 0.15 + 0.12
@@ -41,7 +46,7 @@ export const CtaSection = () => {
     }, el);
 
     return () => ctx.revert();
-  }, []);
+  }, [flat.join("|")]);
 
   let idx = -1;
   return (
@@ -51,7 +56,7 @@ export const CtaSection = () => {
       style={{ paddingTop: "clamp(100px, 14vw, 160px)", paddingBottom: "clamp(100px, 14vw, 160px)" }}
     >
       <h2 className="font-display uppercase text-hero leading-[0.9] mx-auto">
-        {WORDS.map((line, li) => (
+        {lines.map((line, li) => (
           <span key={li} className="block">
             {line.map((w) => {
               idx += 1;
@@ -71,10 +76,7 @@ export const CtaSection = () => {
         ))}
       </h2>
 
-      <p className="mx-auto mt-10 max-w-[600px] text-lg leading-[1.6]">
-        Contanos qué tenés en mente. Te respondemos en menos de 24 horas con
-        una primera propuesta de enfoque.
-      </p>
+      <p className="mx-auto mt-10 max-w-[600px] text-lg leading-[1.6]">{description}</p>
 
       <Link
         to="/contacto"
