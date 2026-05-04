@@ -55,7 +55,7 @@ export const TestimonialsSection = () => {
     const id = window.setInterval(() => emblaApi.scrollNext(), AUTOPLAY_MS);
     tickRef.current = id;
     return () => window.clearInterval(id);
-  }, [emblaApi, paused, selected]);
+  }, [emblaApi, paused]);
 
   const goTo = useCallback((i: number) => emblaApi?.scrollTo(i), [emblaApi]);
 
@@ -74,7 +74,7 @@ export const TestimonialsSection = () => {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {TESTIMONIALS.map((t, i) => (
-              <div key={t.client} className="shrink-0 grow-0 basis-full px-2">
+              <div key={t.client} className="relative shrink-0 grow-0 basis-full px-2">
                 <div
                   className={`text-center transition-opacity duration-700 ${
                     selected === i ? "opacity-100" : "opacity-0"
@@ -93,16 +93,25 @@ export const TestimonialsSection = () => {
                   >
                     {t.quote}
                   </p>
-                  <div className="mt-10 flex flex-col items-center gap-8 md:relative">
+                  <div className="mt-10 flex flex-col items-center gap-8">
                     <ClientLogo name={t.client} />
                     <img
                       src={t.img}
                       alt={`Evento producido para ${t.client}`}
-                      className="w-[200px] h-[140px] object-cover md:absolute md:right-0 md:bottom-0"
+                      className="w-[200px] h-[140px] object-cover md:hidden"
                       loading="lazy"
                     />
                   </div>
                 </div>
+                <img
+                  src={t.img}
+                  alt=""
+                  aria-hidden
+                  className={`hidden md:block absolute right-0 bottom-0 w-[200px] h-[140px] object-cover transition-opacity duration-700 ${
+                    selected === i ? "opacity-100" : "opacity-0"
+                  }`}
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
@@ -115,8 +124,8 @@ export const TestimonialsSection = () => {
               onClick={() => goTo(i)}
               aria-label={`Testimonio ${i + 1}`}
               className={`relative h-[2px] w-10 overflow-hidden ${
-                selected === i ? "opacity-100" : "opacity-30"
-              } bg-brand-white/40`}
+                selected === i ? "bg-brand-white" : "bg-white/20 border border-white/30"
+              }`}
             >
               {selected === i && !paused && (
                 <span
