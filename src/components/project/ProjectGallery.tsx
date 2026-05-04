@@ -47,7 +47,7 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
         clipPath: "inset(0% 0% 0% 0%)",
         duration: 0.9,
         ease: "power3.out",
-        stagger: 0.15,
+        stagger: 0.12,
         scrollTrigger: { trigger: el, start: "top 75%", once: true },
       }
     );
@@ -67,10 +67,15 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
           {p.gallery.map((src, i) => (
             <div
               key={i}
-              className={`shrink-0 basis-[80vw] aspect-[16/10] overflow-hidden ${i < 2 ? "pg-img-anim" : ""}`}
-              style={i < 2 ? { clipPath: "inset(0 50% 0 50%)" } : undefined}
+              className="group pg-img-anim shrink-0 basis-[80vw] aspect-[16/10] overflow-hidden"
+              style={{ clipPath: "inset(0 50% 0 50%)" }}
             >
-              <img src={src} alt={`${p.title} — imagen ${i + 1}`} className="w-full h-full object-cover" loading={i < 2 ? "eager" : "lazy"} />
+              <img
+                src={src}
+                alt={`${p.title} — imagen ${i + 1}`}
+                className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.04]"
+                loading={i < 3 ? "eager" : "lazy"}
+              />
             </div>
           ))}
         </div>
