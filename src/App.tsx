@@ -19,6 +19,8 @@ import Posiciones from "./pages/careers/Posiciones.tsx";
 import Contacto from "./pages/contacto/Contacto.tsx";
 import BuenosAires from "./pages/contacto/BuenosAires.tsx";
 import Brief from "./pages/contacto/Brief.tsx";
+import Insights from "./pages/insights/Insights.tsx";
+import InsightDetail from "./pages/insights/InsightDetail.tsx";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +51,9 @@ const App = () => (
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/contacto/buenos-aires" element={<BuenosAires />} />
             <Route path="/contacto/brief" element={<Brief />} />
+
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:slug" element={<InsightDetail />} />
 
             <Route path="*" element={<NotFound />} />
           </Route>
