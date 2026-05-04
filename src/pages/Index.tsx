@@ -7,10 +7,16 @@ import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { InsightsSection } from "@/components/home/InsightsSection";
 import { CtaSection } from "@/components/home/CtaSection";
+import { SEO } from "@/components/shared/SEO";
 
 const Index = () => {
   return (
     <>
+      <SEO
+        title="PRODUCTORA — Eventos que dejan huella"
+        description="Productora de eventos en Buenos Aires. Diseñamos y producimos experiencias de marca, eventos corporativos, lanzamientos y activaciones en toda Latinoamérica."
+        canonical="https://productora.com/"
+      />
       <Hero />
       <AboutSection />
       <ServicesSection />
