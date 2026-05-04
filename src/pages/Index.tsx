@@ -1,16 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
-
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      <section className="min-h-screen flex flex-col justify-center bg-brand-red text-brand-white px-6 md:px-12 pt-32 pb-20">
+        <span className="eyebrow mb-8 opacity-80">Productora de eventos · Buenos Aires</span>
+        <h1 className="font-display text-hero uppercase max-w-[14ch]">
+          Eventos que dejan huella
+        </h1>
+        <p className="mt-10 max-w-xl text-lg md:text-xl opacity-90">
+          Diseño, producción y dirección creativa para marcas que quieren ser recordadas.
+        </p>
+      </section>
+
+      <section className="section-y bg-brand-black text-brand-white px-6 md:px-12">
+        <span className="eyebrow opacity-60">Próximamente</span>
+        <h2 className="font-display text-h2 uppercase mt-6 max-w-[16ch]">
+          Estamos armando esta sección
+        </h2>
+      </section>
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
