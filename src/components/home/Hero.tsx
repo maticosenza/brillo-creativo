@@ -1,7 +1,11 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-const WORDS = ["EVENTOS", "QUE", "DEJAN", "HUELLA"];
+const WORDS = [
+  { text: "SPORT.", black: false },
+  { text: "BUSINESS.", black: false },
+  { text: "IMPACT.", black: true },
+];
 
 export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -68,45 +72,37 @@ export const Hero = () => {
           type="video/mp4"
         />
       </video>
-      <div className="absolute inset-0 bg-brand-red/55" aria-hidden />
+      <div className="absolute inset-0 bg-brand-red/35" aria-hidden />
 
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-        <h1 className="font-display uppercase text-hero leading-[0.9]">
+      <div className="relative z-10 h-full flex flex-col justify-center" style={{ paddingLeft: "6vw", paddingRight: "6vw" }}>
+        <h1 className="font-display uppercase text-hero leading-[0.9] text-left max-w-[80%]">
           {WORDS.map((w, i) => (
             <span
-              key={w}
-              className="block relative overflow-visible"
-              aria-label={w}
+              key={w.text}
+              className={`block relative overflow-visible ${w.black ? "text-brand-black" : ""}`}
+              aria-label={w.text}
             >
               <span
                 className={`hero-word hero-word-main-${i} block`}
                 style={{ clipPath: "inset(100% 0 0 0)" }}
               >
-                {w}
+                {w.text}
               </span>
               <span
                 aria-hidden
                 className={`hero-word hero-word-echo-${i} block absolute inset-0`}
                 style={{ clipPath: "inset(100% 0 0 0)", opacity: 0 }}
               >
-                {w}
+                {w.text}
               </span>
             </span>
           ))}
         </h1>
-
-        <p className="hero-fade mt-10 max-w-[600px] text-lg leading-relaxed opacity-95">
-          Somos una productora que diseña y ejecuta experiencias de marca,
-          eventos corporativos, lanzamientos y activaciones en toda Latinoamérica.
-        </p>
       </div>
 
-      <div className="hero-fade absolute bottom-[60px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-4">
-        <span className="relative block w-px h-[60px] bg-white/30 overflow-hidden">
-          <span className="scroll-bar absolute top-0 left-0 w-full h-1/2 bg-brand-white" />
-        </span>
-        <span className="text-[11px] uppercase tracking-[0.3em] opacity-70">
-          Scroll
+      <div className="hero-fade absolute bottom-[40px] left-0 right-0 z-10 px-[6vw]">
+        <span className="text-[11px] uppercase tracking-[0.3em] opacity-80">
+          Agencia de producción de eventos — Buenos Aires, AR
         </span>
       </div>
 
