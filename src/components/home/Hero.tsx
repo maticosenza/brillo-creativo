@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const WORDS = [
@@ -9,6 +9,17 @@ const WORDS = [
 
 export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [loadVideo, setLoadVideo] = useState(false);
+
+  useEffect(() => {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) return;
+    // @ts-expect-error - non-standard API
+    const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const slow = conn && (conn.effectiveType === "2g" || conn.effectiveType === "slow-2g" || conn.saveData);
+    if (slow) return;
+    setLoadVideo(true);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -59,20 +70,30 @@ export const Hero = () => {
       ref={containerRef}
       className="relative h-screen min-h-[640px] w-full overflow-hidden bg-brand-red text-brand-white"
     >
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80"
-      >
-        <source
-          src="https://assets.mixkit.co/videos/preview/mixkit-crowd-of-people-celebrating-at-a-concert-4640-large.mp4"
-          type="video/mp4"
+      {loadVideo ? (
+        <video
+          key="hero-video"
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/videos/caracter-hero-poster.jpg"
+        >
+          <source src="/videos/caracter-hero.webm" type="video/webm" media="(min-width: 768px)" />
+          <source src="/videos/caracter-hero.mp4" type="video/mp4" media="(min-width: 768px)" />
+          <source src="/videos/caracter-hero-mobile.mp4" type="video/mp4" />
+        </video>
+      ) : (
+        <img
+          src="/videos/caracter-hero-poster.jpg"
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover"
         />
-      </video>
-      <div className="absolute inset-0 bg-brand-red/35" aria-hidden />
+      )}
+      <div className="absolute inset-0 bg-brand-red/40" aria-hidden />
 
       <div className="relative z-10 h-full flex flex-col justify-center" style={{ paddingLeft: "6vw", paddingRight: "6vw" }}>
         <h1 className="font-display uppercase text-hero leading-[0.9] text-left max-w-[80%]">
