@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,24 +7,24 @@
 @layer base {
   :root {
     --background: 0 0% 4%;
-    --foreground: 0 0% 100%;
+    --foreground: 12 50% 98%;
     --card: 0 0% 4%;
-    --card-foreground: 0 0% 100%;
+    --card-foreground: 12 50% 98%;
     --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 359 78% 42%;
-    --primary-foreground: 0 0% 100%;
+    --popover-foreground: 12 50% 98%;
+    --primary: 359 77% 43%;
+    --primary-foreground: 12 50% 98%;
     --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary-foreground: 12 50% 98%;
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 70%;
-    --accent: 359 78% 42%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 359 78% 42%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 100%;
+    --accent: 359 77% 43%;
+    --accent-foreground: 12 50% 98%;
+    --destructive: 359 77% 43%;
+    --destructive-foreground: 12 50% 98%;
+    --border: 12 50% 98%;
     --input: 0 0% 15%;
-    --ring: 0 0% 100%;
+    --ring: 12 50% 98%;
     --radius: 0;
   }
 }
@@ -32,8 +32,9 @@
 @layer base {
   * { @apply border-border; }
   html, body { @apply bg-brand-black text-brand-white font-body antialiased; }
-  body { font-size: 17px; line-height: 1.6; }
-  ::selection { background: #bf181b; color: #fff; }
+  body { font-size: 17px; line-height: 1.6; letter-spacing: 0.01em; }
+  p { letter-spacing: 0.01em; }
+  ::selection { background: #c0181b; color: #fcf7f5; }
 
   h1, h2, h3, h4, h5 { @apply font-display uppercase; }
 
@@ -71,7 +72,7 @@
   top: 0; left: 0;
   width: 12px; height: 12px;
   border-radius: 9999px;
-  background: #fff;
+  background: #fcf7f5;
   mix-blend-mode: difference;
   pointer-events: none;
   z-index: 9999;
@@ -90,7 +91,7 @@
   position: absolute;
   left: -9999px;
   top: 0;
-  background: #fff;
+  background: #fcf7f5;
   color: #0a0a0a;
   padding: 12px 20px;
   z-index: 9999;
@@ -101,7 +102,7 @@
 /* Page transition overlay */
 .page-overlay {
   position: fixed; inset: 0;
-  background: #bf181b;
+  background: #c0181b;
   z-index: 200;
   pointer-events: none;
   clip-path: inset(100% 0 0 0);
