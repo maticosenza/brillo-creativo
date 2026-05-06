@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { RevealHeading } from "./RevealHeading";
+import { RedFrame } from "@/components/shared/RedFrame";
 
 export const ServicesSection = () => {
   return (
@@ -9,14 +10,14 @@ export const ServicesSection = () => {
         <div className="md:col-span-6">
           <span className="eyebrow opacity-90">Qué hacemos</span>
           <RevealHeading
-            text="Producimos experiencias, no eventos"
+            text="Operamos en más de diez países."
             className="mt-6 font-display uppercase text-h2"
           />
           <p className="mt-8 text-lg leading-[1.6] max-w-[55ch] opacity-95">
-            Diseñamos cada proyecto desde cero, integrando estrategia,
-            creatividad, producción y logística en un solo equipo. Nos
-            involucramos desde el concepto hasta el desmontaje del último
-            escenario.
+            Gestionamos Grand Prix de Fórmula 1, ferias internacionales, eventos
+            corporativos y experiencias MICE para clientes globales. Nuestro
+            trabajo es sencillo: que el evento salga perfecto y que el cliente
+            no tenga que preocuparse por nada.
           </p>
 
           <Link
@@ -34,6 +35,7 @@ export const ServicesSection = () => {
         </div>
 
         <div className="md:col-start-8 md:col-span-5">
+          <RedFrame>
           <motion.div
             initial={{ rotate: -3, scale: 0.95, opacity: 0 }}
             whileInView={{ rotate: 0, scale: 1, opacity: 1 }}
@@ -48,6 +50,7 @@ export const ServicesSection = () => {
               loading="lazy"
             />
           </motion.div>
+          </RedFrame>
         </div>
       </div>
     </section>

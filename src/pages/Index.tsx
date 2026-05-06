@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { StatementSection } from "@/components/home/StatementSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { BrandsSection } from "@/components/home/BrandsSection";
@@ -18,6 +19,7 @@ const Index = () => {
         canonical="https://productora.com/"
       />
       <Hero />
+      <StatementSection />
       <AboutSection />
       <ServicesSection />
       <BrandsSection />

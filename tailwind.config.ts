@@ -8,7 +8,7 @@ export default {
     container: { center: true, padding: "1.5rem", screens: { "2xl": "1400px" } },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
+        border: "hsl(var(--border) / 0.10)",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -21,16 +21,16 @@ export default {
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
         brand: {
-          red: "#bf181b",
-          "red-hover": "#8f1214",
+          red: "#c0181b",
+          "red-hover": "#901214",
           black: "#0a0a0a",
-          white: "#ffffff",
+          white: "#fcf7f5",
         },
-        divider: "rgba(255,255,255,0.08)",
+        divider: "rgba(252,247,245,0.10)",
       },
       fontFamily: {
         display: ['Anton', 'Impact', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        body: ['"Arial"', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
       },
       fontSize: {
         'hero': ['clamp(60px, 11vw, 180px)', { lineHeight: '0.9', letterSpacing: '-0.02em' }],

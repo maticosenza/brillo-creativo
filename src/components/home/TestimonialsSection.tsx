@@ -30,7 +30,7 @@ const AUTOPLAY_MS = 7000;
 const ClientLogo = ({ name }: { name: string }) => (
   <svg viewBox="0 0 240 50" role="img" aria-label={name} className="h-10 w-auto">
     <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle"
-      fill="#ffffff" fontFamily="Anton, Impact, sans-serif" fontSize="36" letterSpacing="3">
+      fill="#fcf7f5" fontFamily="Anton, Impact, sans-serif" fontSize="36" letterSpacing="3">
       {name}
     </text>
   </svg>
