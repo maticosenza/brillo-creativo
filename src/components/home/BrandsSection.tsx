@@ -45,7 +45,7 @@ export const BrandsSection = () => {
                 y="50%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                fill="#ffffff"
+                fill="#fcf7f5"
                 fontFamily="Anton, Impact, sans-serif"
                 fontSize="34"
                 letterSpacing="2"

@@ -39,7 +39,7 @@
   h1, h2, h3, h4, h5 { @apply font-display uppercase; }
 
   *:focus-visible {
-    outline: 2px solid #ffffff;
+    outline: 2px solid #fcf7f5;
     outline-offset: 4px;
   }
 }
