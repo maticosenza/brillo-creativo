@@ -4,35 +4,61 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+type Side = "right" | "left" | "top" | "bottom";
+
 type Props = {
   children: ReactNode;
   className?: string;
+  side?: Side;
+  double?: boolean;
 };
 
-/**
- * Red diagonal "racing stripe" frame with animated 8px border that draws on
- * scroll. Wrap videos or images for the signature CARACTER look.
- */
-export const RedFrame = ({ children, className = "" }: Props) => {
+const STRIPE_W = 60;
+const OVERHANG = 24;
+const BLEED = 16;
+
+function stripeStyle(side: Side): React.CSSProperties {
+  const angle = side === "left" || side === "bottom" ? -45 : 45;
+  const base: React.CSSProperties = {
+    backgroundImage: `repeating-linear-gradient(${angle}deg, #c0181b 0px, #c0181b 14px, #fcf7f5 14px, #fcf7f5 28px)`,
+    position: "absolute",
+    pointerEvents: "none",
+  };
+  if (side === "right") {
+    return { ...base, top: -BLEED, bottom: -BLEED, right: -OVERHANG, width: STRIPE_W };
+  }
+  if (side === "left") {
+    return { ...base, top: -BLEED, bottom: -BLEED, left: -OVERHANG, width: STRIPE_W };
+  }
+  if (side === "top") {
+    return { ...base, left: -BLEED, right: -BLEED, top: -OVERHANG, height: STRIPE_W };
+  }
+  return { ...base, left: -BLEED, right: -BLEED, bottom: -OVERHANG, height: STRIPE_W };
+}
+
+function initialTransform(side: Side): string {
+  if (side === "right") return "translateX(100%)";
+  if (side === "left") return "translateX(-100%)";
+  if (side === "top") return "translateY(-100%)";
+  return "translateY(100%)";
+}
+
+export const RedFrame = ({ children, className = "", side = "right", double = false }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const lines = el.querySelectorAll<HTMLElement>(".rf-line");
+    const stripes = el.querySelectorAll<HTMLElement>(".rf-stripe");
     if (reduced) {
-      lines.forEach((l) => (l.style.transform = "scale(1)"));
+      stripes.forEach((s) => (s.style.transform = "none"));
       return;
     }
     const tl = gsap.timeline({
       scrollTrigger: { trigger: el, start: "top 80%", once: true },
     });
-    tl.fromTo(".rf-top", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.inOut" })
-      .fromTo(".rf-right", { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "power2.inOut" })
-      .fromTo(".rf-bottom", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.inOut" })
-      .fromTo(".rf-left", { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "power2.inOut" })
-      .fromTo(".rf-corner", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.4, stagger: 0.08, ease: "back.out(2)" }, "-=0.2");
+    tl.to(stripes, { x: 0, y: 0, duration: 0.8, ease: "power3.out", stagger: 0.1 });
 
     return () => {
       tl.scrollTrigger?.kill();
@@ -40,25 +66,20 @@ export const RedFrame = ({ children, className = "" }: Props) => {
     };
   }, []);
 
-  const cornerSvg = (
-    <svg viewBox="0 0 40 40" className="w-full h-full" aria-hidden>
-      <polygon points="0,0 40,0 0,40" fill="#c0181b" />
-    </svg>
-  );
+  const opposite: Record<Side, Side> = { right: "left", left: "right", top: "bottom", bottom: "top" };
+  const sides: Side[] = double ? [side, opposite[side]] : [side];
 
   return (
     <div ref={ref} className={`relative ${className}`}>
       {children}
-      {/* 4 sides */}
-      <span aria-hidden className="rf-line rf-top absolute -top-2 left-0 h-2 w-full bg-brand-red origin-left" style={{ transform: "scaleX(0)" }} />
-      <span aria-hidden className="rf-line rf-right absolute top-0 -right-2 w-2 h-full bg-brand-red origin-top" style={{ transform: "scaleY(0)" }} />
-      <span aria-hidden className="rf-line rf-bottom absolute -bottom-2 left-0 h-2 w-full bg-brand-red origin-right" style={{ transform: "scaleX(0)" }} />
-      <span aria-hidden className="rf-line rf-left absolute top-0 -left-2 w-2 h-full bg-brand-red origin-bottom" style={{ transform: "scaleY(0)" }} />
-      {/* diagonal corners */}
-      <span className="rf-corner absolute -top-6 -left-6 w-10 h-10 rotate-0">{cornerSvg}</span>
-      <span className="rf-corner absolute -top-6 -right-6 w-10 h-10 rotate-90">{cornerSvg}</span>
-      <span className="rf-corner absolute -bottom-6 -right-6 w-10 h-10 rotate-180">{cornerSvg}</span>
-      <span className="rf-corner absolute -bottom-6 -left-6 w-10 h-10 -rotate-90">{cornerSvg}</span>
+      {sides.map((s) => (
+        <span
+          key={s}
+          aria-hidden
+          className="rf-stripe"
+          style={{ ...stripeStyle(s), transform: initialTransform(s) }}
+        />
+      ))}
     </div>
   );
 };

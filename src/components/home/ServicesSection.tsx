@@ -35,7 +35,7 @@ export const ServicesSection = () => {
         </div>
 
         <div className="md:col-start-8 md:col-span-5">
-          <RedFrame>
+          <RedFrame side="left">
           <motion.div
             initial={{ rotate: -3, scale: 0.95, opacity: 0 }}
             whileInView={{ rotate: 0, scale: 1, opacity: 1 }}

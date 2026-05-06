@@ -1,8 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import type { Project } from "@/data/projects";
-import { RedFrame } from "@/components/shared/RedFrame";
-
 export const ProjectBanner = ({ p }: { p: Project }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,10 +40,8 @@ export const ProjectBanner = ({ p }: { p: Project }) => {
 
   return (
     <section ref={ref} className="relative h-[90vh] min-h-[560px] w-full overflow-hidden bg-brand-black text-brand-white">
-      <div className="absolute inset-6 md:inset-12 pb-img" style={{ clipPath: "inset(50% 50% 50% 50%)" }}>
-        <RedFrame className="w-full h-full">
-          <img src={p.gallery[0]} alt={p.title} className="w-full h-full object-cover" />
-        </RedFrame>
+      <div className="absolute inset-0 pb-img" style={{ clipPath: "inset(50% 50% 50% 50%)" }}>
+        <img src={p.gallery[0]} alt={p.title} className="w-full h-full object-cover" />
       </div>
       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/85" />
 
