@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { RevealHeading } from "./RevealHeading";
 
 const BRANDS = [
@@ -9,53 +8,77 @@ const BRANDS = [
 ];
 
 export const BrandsSection = () => {
+  const reduced =
+    typeof window !== "undefined" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const Logo = ({ name }: { name: string }) => (
+    <svg
+      viewBox="0 0 240 60"
+      role="img"
+      aria-label={name}
+      className="shrink-0 h-[50px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+      style={{ minWidth: 200 }}
+    >
+      <text
+        x="50%" y="50%"
+        dominantBaseline="middle" textAnchor="middle"
+        fill="#fcf7f5"
+        fontFamily="Anton, Impact, sans-serif"
+        fontSize="34" letterSpacing="2"
+      >{name}</text>
+    </svg>
+  );
+
   return (
-    <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
-      <div className="text-center max-w-5xl mx-auto">
+    <section className="bg-brand-black text-brand-white py-[60px] md:py-[100px]">
+      <div className="text-center max-w-5xl mx-auto px-6 md:px-12">
         <RevealHeading
           text="Las marcas que nos eligen"
           className="font-display uppercase text-h2"
         />
       </div>
 
-      <motion.ul
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-10%" }}
-        variants={{ show: { transition: { staggerChildren: 0.05 } } }}
-        className="mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10"
-      >
-        {BRANDS.map((name) => (
-          <motion.li
-            key={name}
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22,1,0.36,1] } },
-            }}
-            className="flex items-center justify-center"
+      {reduced ? (
+        <ul className="mt-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 px-6 md:px-12">
+          {BRANDS.map((name) => (
+            <li key={name} className="flex items-center justify-center">
+              <Logo name={name} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div
+          className="mt-20 marquee-mask group"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            maskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          }}
+        >
+          <div
+            className="flex gap-20 marquee-track"
+            style={{ width: "max-content" }}
           >
-            <svg
-              viewBox="0 0 240 60"
-              role="img"
-              aria-label={name}
-              className="w-full max-w-[160px] h-[60px] opacity-60 hover:opacity-100 hover:scale-105 transition-all duration-300"
-            >
-              <text
-                x="50%"
-                y="50%"
-                dominantBaseline="middle"
-                textAnchor="middle"
-                fill="#fcf7f5"
-                fontFamily="Anton, Impact, sans-serif"
-                fontSize="34"
-                letterSpacing="2"
-              >
-                {name}
-              </text>
-            </svg>
-          </motion.li>
-        ))}
-      </motion.ul>
+            {[...BRANDS, ...BRANDS].map((name, i) => (
+              <Logo key={`${name}-${i}`} name={name} />
+            ))}
+          </div>
+          <style>{`
+            @keyframes marqueeScroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .marquee-track {
+              animation: marqueeScroll 40s linear infinite;
+            }
+            .marquee-mask:hover .marquee-track {
+              animation-play-state: paused;
+            }
+          `}</style>
+        </div>
+      )}
     </section>
   );
 };

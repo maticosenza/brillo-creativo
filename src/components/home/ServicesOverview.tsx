@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { RevealHeading } from "./RevealHeading";
+import { RedFrame } from "@/components/shared/RedFrame";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,7 @@ export const ServicesOverview = () => {
     <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-center">
         <div ref={wrapRef} className="md:col-span-7 relative">
+          <RedFrame>
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <video
               className="w-full h-full object-cover"
@@ -49,6 +51,7 @@ export const ServicesOverview = () => {
             <span aria-hidden className="bd-bottom absolute bottom-0 right-0 h-px w-full bg-brand-white origin-right" style={{ transform: "scaleX(0)" }} />
             <span aria-hidden className="bd-left absolute bottom-0 left-0 w-px h-full bg-brand-white origin-bottom" style={{ transform: "scaleY(0)" }} />
           </div>
+          </RedFrame>
         </div>
 
         <div className="md:col-start-9 md:col-span-4">

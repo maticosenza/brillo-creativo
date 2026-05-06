@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { RevealHeading } from "./RevealHeading";
+import { RedFrame } from "@/components/shared/RedFrame";
 
 export const AboutSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -16,28 +17,30 @@ export const AboutSection = () => {
         <div className="md:col-span-5">
           <span className="eyebrow opacity-80">Quiénes somos</span>
           <RevealHeading
-            text="Una productora que no sigue fórmulas"
+            text="Somos una productora de eventos con ADN operativo."
             className="mt-6 font-display uppercase text-h2"
           />
         </div>
 
         <div className="md:col-start-7 md:col-span-6">
           <p className="text-lg leading-[1.6] text-brand-white/90">
-            Producimos experiencias memorables para marcas que buscan dejar huella.
-            Desde activaciones masivas hasta galas corporativas, combinamos
-            creatividad, logística y producción técnica para entregar eventos
-            que generan impacto real en audiencias y resultados de negocio.
+            Somos una productora de eventos con ADN operativo. Con más de seis
+            años trabajando para empresas multinacionales y agencias
+            internacionales de marketing y motorsport, sabemos lo que significa
+            ejecutar en entornos de alta exigencia.
           </p>
 
-          <div ref={ref} className="mt-12 overflow-hidden aspect-[4/5] w-full">
-            <motion.img
-              style={{ y }}
-              src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1200&q=80"
-              alt="Producción detrás de escena de un evento en vivo"
-              className="w-full h-[120%] object-cover -mt-[10%]"
-              loading="lazy"
-            />
-          </div>
+          <RedFrame className="mt-12">
+            <div ref={ref} className="overflow-hidden aspect-[4/5] w-full">
+              <motion.img
+                style={{ y }}
+                src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1200&q=80"
+                alt="Producción detrás de escena de un evento en vivo"
+                className="w-full h-[120%] object-cover -mt-[10%]"
+                loading="lazy"
+              />
+            </div>
+          </RedFrame>
         </div>
       </div>
     </section>
