@@ -38,6 +38,7 @@ export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }
         outline
         outlineColor="#c0181b"
         glow={false}
+        scrubFill
         className="mx-auto"
       />
 
