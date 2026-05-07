@@ -2,15 +2,18 @@ import { Link } from "react-router-dom";
 import { DisplayHeading } from "@/components/shared/DisplayHeading";
 
 type Props = {
-  lines?: string[];
+  lines?: string[][] | string[];
   description?: string;
 };
 
-const DEFAULT_LINES = ["¿LISTOS PARA", "EMPEZAR?"];
+const DEFAULT_LINES: string[][] = [["¿LISTOS", "PARA"], ["EMPEZAR?"]];
 const DEFAULT_DESC =
   "Contanos qué tenés en mente. Te respondemos en menos de 24 horas con una primera propuesta de enfoque.";
 
 export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }: Props) => {
+  const flatLines: string[] = Array.isArray(lines[0])
+    ? (lines as string[][]).map((l) => l.join(" "))
+    : (lines as string[]);
   return (
     <section
       className="px-6 md:px-12 text-center"
@@ -28,7 +31,7 @@ export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }
       />
 
       <DisplayHeading
-        lines={lines}
+        lines={flatLines}
         size="cta"
         as="h2"
         align="center"
