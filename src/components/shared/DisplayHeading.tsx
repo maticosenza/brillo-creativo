@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export type DisplaySize = "hero" | "section" | "cta";
 
@@ -17,9 +18,10 @@ interface DisplayHeadingProps {
   as?: "h1" | "h2";
   className?: string;
   trigger?: "immediate" | "scroll";
-  /** Outline / stroke variant (used for CTA). Color used as stroke color. */
   outline?: boolean;
   outlineColor?: string;
+  /** When true with outline, the fill color reveals as the section is scrolled. */
+  scrubFill?: boolean;
 }
 
 const SIZE_STYLES: Record<DisplaySize, React.CSSProperties> = {
@@ -29,7 +31,7 @@ const SIZE_STYLES: Record<DisplaySize, React.CSSProperties> = {
 };
 
 const GLOW_SHADOW =
-  "0 0 40px rgba(252, 247, 245, 0.25), 0 0 80px rgba(252, 247, 245, 0.15)";
+  "0 0 30px rgba(252, 247, 245, 0.35), 0 0 60px rgba(252, 247, 245, 0.20)";
 
 export const DisplayHeading = ({
   lines,
@@ -44,6 +46,7 @@ export const DisplayHeading = ({
   trigger = "scroll",
   outline = false,
   outlineColor = "#c0181b",
+  scrubFill = false,
 }: DisplayHeadingProps) => {
   const ref = useRef<HTMLHeadingElement>(null);
   const Tag = as as any;
@@ -51,68 +54,147 @@ export const DisplayHeading = ({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const targets = el.querySelectorAll<HTMLElement>(".dh-line");
-    if (!targets.length) return;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      gsap.fromTo(targets,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.5, stagger: 0.1 });
-      return;
-    }
-
+    const splits: SplitText[] = [];
     const ctx = gsap.context(() => {
-      gsap.fromTo(targets,
-        { clipPath: "inset(100% 0 0 0)" },
-        {
-          clipPath: "inset(0% 0 0 0)",
-          duration: 0.9,
-          ease: "power4.out",
-          stagger: 0.15,
-          ...(trigger === "immediate"
-            ? { delay: 0.2 }
-            : { scrollTrigger: { trigger: el, start: "top 80%", once: true } }),
-        });
-    }, el);
-    return () => ctx.revert();
-  }, [lines.join("|"), trigger]);
+      const baseLines = Array.from(el.querySelectorAll<HTMLElement>(".dh-base .dh-line"));
+      if (!baseLines.length) return;
 
-  const outlineStyle: React.CSSProperties = outline
+      const charsPerLine: HTMLElement[][] = [];
+      baseLines.forEach((line) => {
+        const split = new SplitText(line, { type: "chars,words", charsClass: "dh-char" });
+        splits.push(split);
+        const chars = split.chars as HTMLElement[];
+        chars.forEach((c) => {
+          c.style.display = "inline-block";
+          c.style.willChange = "transform, opacity";
+        });
+        charsPerLine.push(chars);
+      });
+
+      if (reduced) {
+        const all = charsPerLine.flat();
+        gsap.fromTo(all, { opacity: 0 }, { opacity: 1, duration: 0.2, stagger: 0.005 });
+      } else {
+        charsPerLine.forEach((chars, lineIdx) => {
+          gsap.fromTo(
+            chars,
+            { opacity: 0, yPercent: 100, rotateX: -40 },
+            {
+              opacity: 1,
+              yPercent: 0,
+              rotateX: 0,
+              duration: 0.6,
+              ease: "power3.out",
+              stagger: 0.028,
+              transformOrigin: "50% 100%",
+              ...(trigger === "immediate"
+                ? { delay: 0.3 + lineIdx * 0.1 }
+                : {
+                    delay: lineIdx * 0.1,
+                    scrollTrigger: { trigger: el, start: "top 80%", once: true },
+                  }),
+            }
+          );
+        });
+      }
+
+      if (outline && scrubFill && !reduced) {
+        const fillLines = Array.from(el.querySelectorAll<HTMLElement>(".dh-fill .dh-line"));
+        const fillChars: HTMLElement[] = [];
+        fillLines.forEach((line) => {
+          const s = new SplitText(line, { type: "chars,words", charsClass: "dh-fill-char" });
+          splits.push(s);
+          (s.chars as HTMLElement[]).forEach((c) => {
+            c.style.display = "inline-block";
+            c.style.clipPath = "inset(100% 0 0 0)";
+            (c.style as any).webkitClipPath = "inset(100% 0 0 0)";
+            c.style.willChange = "clip-path";
+            fillChars.push(c);
+          });
+        });
+        if (fillChars.length) {
+          const section = el.closest("section") || el.parentElement || el;
+          gsap.to(fillChars, {
+            clipPath: "inset(0% 0 0 0)",
+            webkitClipPath: "inset(0% 0 0 0)",
+            ease: "none",
+            stagger: { each: 0.02, from: "start" },
+            scrollTrigger: {
+              trigger: section as Element,
+              start: "top 80%",
+              end: "center 50%",
+              scrub: true,
+            },
+          });
+        }
+      }
+    }, el);
+
+    return () => {
+      splits.forEach((s) => { try { s.revert(); } catch {} });
+      ctx.revert();
+    };
+  }, [lines.join("|"), trigger, outline, scrubFill]);
+
+  const outlineStrokePx = outline ? 2 : 0;
+  const baseOutlineStyle: React.CSSProperties = outline
     ? {
         color: "transparent",
-        WebkitTextStroke: `2px ${outlineColor}`,
-        // @ts-expect-error non-standard
-        textStroke: `2px ${outlineColor}`,
+        WebkitTextStroke: `${outlineStrokePx}px ${outlineColor}`,
         paintOrder: "stroke fill",
       }
     : {};
 
+  const fullText = lines.join(" ");
+
   return (
     <Tag
       ref={ref}
+      aria-label={fullText}
       className={`font-display uppercase ${align === "center" ? "text-center" : "text-left"} ${className}`}
-      style={{ ...SIZE_STYLES[size] }}
+      style={{ ...SIZE_STYLES[size], position: "relative" }}
     >
-      {lines.map((line, i) => {
-        const isHi = highlightedLine === i;
-        const color = isHi ? highlightColor : textColor;
-        const useGlow = glow && !isHi && !outline;
-        return (
-          <span key={i} className="block overflow-hidden">
-            <span
-              className="dh-line block"
-              style={{
-                clipPath: "inset(100% 0 0 0)",
-                color: outline ? undefined : color,
-                textShadow: useGlow ? GLOW_SHADOW : undefined,
-                ...outlineStyle,
-              }}
-            >
-              {line}
+      <span className="dh-base block" aria-hidden="true">
+        {lines.map((line, i) => {
+          const isHi = highlightedLine === i;
+          const color = isHi ? highlightColor : textColor;
+          const useGlow = glow && !isHi && !outline;
+          return (
+            <span key={i} className="block">
+              <span
+                className="dh-line block"
+                style={{
+                  color: outline ? undefined : color,
+                  textShadow: useGlow ? GLOW_SHADOW : undefined,
+                  ...baseOutlineStyle,
+                }}
+              >
+                {line}
+              </span>
             </span>
-          </span>
-        );
-      })}
+          );
+        })}
+      </span>
+
+      {outline && scrubFill && (
+        <span
+          className="dh-fill pointer-events-none absolute inset-0"
+          aria-hidden="true"
+        >
+          {lines.map((line, i) => (
+            <span key={`f-${i}`} className="block">
+              <span
+                className="dh-line block"
+                style={{ color: outlineColor }}
+              >
+                {line}
+              </span>
+            </span>
+          ))}
+        </span>
+      )}
     </Tag>
   );
 };
