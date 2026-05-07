@@ -35,12 +35,7 @@ export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }
         tl.fromTo(`.cta-word-main-${i}`,
           { clipPath: "inset(100% 0 0 0)" },
           { clipPath: "inset(0% 0 0 0)", duration: 0.9, ease: "power4.out" },
-          i * 0.15
-        );
-        tl.fromTo(`.cta-word-echo-${i}`,
-          { clipPath: "inset(100% 0 0 0)", x: 0, opacity: 0 },
-          { clipPath: "inset(0% 0 0 0)", x: 8, opacity: 0.6, duration: 0.9, ease: "power4.out" },
-          i * 0.15 + 0.12
+          i * 0.12
         );
       });
     }, el);
@@ -52,21 +47,26 @@ export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }
   return (
     <section
       ref={ref}
-      className="bg-brand-red text-brand-white px-6 md:px-12 text-center"
+      className="bg-brand-black text-brand-white px-6 md:px-12 text-center"
       style={{ paddingTop: "clamp(100px, 14vw, 160px)", paddingBottom: "clamp(100px, 14vw, 160px)" }}
     >
-      <h2 className="font-display uppercase text-hero leading-[0.9] mx-auto">
+      <div className="mx-auto" style={{ maxWidth: 1200, height: 1, background: "#c0181b", opacity: 0.5, marginBottom: 60 }} aria-hidden />
+      <h2
+        className="cta-outline-text font-display uppercase mx-auto"
+        style={{
+          fontSize: "clamp(60px, 11vw, 180px)",
+          lineHeight: 0.95,
+          letterSpacing: "-0.01em",
+        }}
+      >
         {lines.map((line, li) => (
           <span key={li} className="block">
             {line.map((w) => {
               idx += 1;
               const i = idx;
               return (
-                <span key={`${w}-${i}`} className="relative inline-block overflow-visible mr-[0.25em] last:mr-0 align-bottom">
+                <span key={`${w}-${i}`} className="relative inline-block overflow-hidden mr-[0.25em] last:mr-0 align-bottom">
                   <span className={`cta-word cta-word-main-${i} inline-block`} style={{ clipPath: "inset(100% 0 0 0)" }}>
-                    {w}
-                  </span>
-                  <span aria-hidden className={`cta-word cta-word-echo-${i} absolute inset-0`} style={{ clipPath: "inset(100% 0 0 0)", opacity: 0 }}>
                     {w}
                   </span>
                 </span>
@@ -76,18 +76,33 @@ export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }
         ))}
       </h2>
 
-      <p className="mx-auto mt-10 max-w-[600px] text-lg leading-[1.6]">{description}</p>
+      <p className="mx-auto mt-10 max-w-[600px] text-lg leading-[1.6]" style={{ color: "#fcf7f5", opacity: 0.9 }}>{description}</p>
 
       <Link
         to="/contacto"
-        className="group relative mt-12 inline-flex items-center justify-center overflow-hidden rounded-full bg-brand-white text-brand-red border border-brand-white"
-        style={{ padding: "24px 56px" }}
+        className="group relative mt-12 inline-flex items-center justify-center overflow-hidden rounded-full"
+        style={{ padding: "18px 44px", border: "1px solid #c0181b", background: "transparent" }}
       >
-        <span aria-hidden className="absolute inset-0 bg-brand-black origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
-        <span className="relative z-10 text-base font-medium uppercase tracking-wider transition-colors duration-300 group-hover:text-brand-white">
+        <span aria-hidden className="absolute inset-0 origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" style={{ background: "#c0181b" }} />
+        <span className="relative z-10 font-display uppercase transition-colors duration-300 group-hover:text-[#fcf7f5]" style={{ color: "#c0181b", fontSize: 14, letterSpacing: "0.2em" }}>
           Hablemos
         </span>
       </Link>
+
+      <style>{`
+        .cta-outline-text {
+          color: transparent;
+          -webkit-text-stroke: 2px #c0181b;
+          text-stroke: 2px #c0181b;
+          paint-order: stroke fill;
+        }
+        @media (min-width: 1024px) {
+          .cta-outline-text { -webkit-text-stroke-width: 2.5px; }
+        }
+        @media (max-width: 640px) {
+          .cta-outline-text { -webkit-text-stroke-width: 1.5px; }
+        }
+      `}</style>
     </section>
   );
 };
