@@ -13,27 +13,25 @@ type Props = {
   double?: boolean;
 };
 
-const STRIPE_W = 60;
-const OVERHANG = 24;
-const BLEED = 16;
+const STRIPE_W = 32;
 
 function stripeStyle(side: Side): React.CSSProperties {
   const angle = side === "left" || side === "bottom" ? -45 : 45;
   const base: React.CSSProperties = {
-    backgroundImage: `repeating-linear-gradient(${angle}deg, #c0181b 0px, #c0181b 14px, #fcf7f5 14px, #fcf7f5 28px)`,
+    backgroundImage: `repeating-linear-gradient(${angle}deg, #fcf7f5 0px, #fcf7f5 8px, transparent 8px, transparent 16px)`,
     position: "absolute",
     pointerEvents: "none",
   };
   if (side === "right") {
-    return { ...base, top: -BLEED, bottom: -BLEED, right: -OVERHANG, width: STRIPE_W };
+    return { ...base, top: 0, bottom: 0, right: 0, width: STRIPE_W };
   }
   if (side === "left") {
-    return { ...base, top: -BLEED, bottom: -BLEED, left: -OVERHANG, width: STRIPE_W };
+    return { ...base, top: 0, bottom: 0, left: 0, width: STRIPE_W };
   }
   if (side === "top") {
-    return { ...base, left: -BLEED, right: -BLEED, top: -OVERHANG, height: STRIPE_W };
+    return { ...base, left: 0, right: 0, top: 0, height: STRIPE_W };
   }
-  return { ...base, left: -BLEED, right: -BLEED, bottom: -OVERHANG, height: STRIPE_W };
+  return { ...base, left: 0, right: 0, bottom: 0, height: STRIPE_W };
 }
 
 function initialTransform(side: Side): string {
