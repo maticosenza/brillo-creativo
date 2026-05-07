@@ -48,9 +48,7 @@ export const Hero = () => {
           preload="metadata"
           poster="/videos/caracter-hero-poster.jpg"
         >
-          <source src="/videos/caracter-hero.webm" type="video/webm" media="(min-width: 768px)" />
-          <source src="/videos/caracter-hero.mp4" type="video/mp4" media="(min-width: 768px)" />
-          <source src="/videos/caracter-hero-mobile.mp4" type="video/mp4" />
+          <source src="/videos/caracter-hero.mp4" type="video/mp4" />
         </video>
       ) : (
         <img
