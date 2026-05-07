@@ -36,7 +36,7 @@ export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }
         as="h2"
         align="center"
         outline
-        outlineColor="#fcf7f5"
+        outlineColor="#c0181b"
         glow={false}
         className="mx-auto"
       />
