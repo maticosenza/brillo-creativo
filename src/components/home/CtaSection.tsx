@@ -26,7 +26,7 @@ export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }
     >
       <div
         className="mx-auto"
-        style={{ maxWidth: 1200, height: 1, background: "#c0181b", opacity: 0.5, marginBottom: 60 }}
+        style={{ maxWidth: 1200, height: 1, background: "#fcf7f5", opacity: 0.5, marginBottom: 60 }}
         aria-hidden
       />
 
@@ -36,9 +36,8 @@ export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }
         as="h2"
         align="center"
         outline
-        outlineColor="#c0181b"
+        outlineColor="#fcf7f5"
         glow={false}
-        scrubFill
         className="mx-auto"
       />
 
