@@ -1,14 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-
-const WORDS = [
-  { text: "SPORT.", black: false },
-  { text: "BUSINESS.", black: false },
-  { text: "IMPACT.", black: true },
-];
-
-const WHITE_GLOW =
-  "0 0 40px rgba(252, 247, 245, 0.25), 0 0 80px rgba(252, 247, 245, 0.15)";
+import { DisplayHeading } from "@/components/shared/DisplayHeading";
 
 export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -27,28 +19,13 @@ export const Hero = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        gsap.set(".hero-word", { clipPath: "inset(0 0 0 0)", opacity: 1 });
         gsap.set(".hero-fade", { opacity: 1, y: 0 });
         return;
       }
-
-      const tl = gsap.timeline({ delay: 0.3 });
-
-      WORDS.forEach((_, i) => {
-        const main = `.hero-word-main-${i}`;
-        tl.fromTo(
-          main,
-          { clipPath: "inset(100% 0 0 0)" },
-          { clipPath: "inset(0% 0 0 0)", duration: 0.9, ease: "power4.out" },
-          i * 0.15
-        );
-      });
-
-      tl.fromTo(
+      gsap.fromTo(
         ".hero-fade",
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", stagger: 0.1 },
-        0.6
+        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", stagger: 0.1, delay: 0.9 }
       );
     }, containerRef);
 
@@ -86,28 +63,19 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-brand-red/40" aria-hidden />
 
       <div className="relative z-10 h-full flex flex-col justify-center" style={{ paddingLeft: "6vw", paddingRight: "6vw" }}>
-        <h1
-          className="font-display uppercase text-hero leading-[0.9] text-left max-w-[80%]"
-          style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.3))" }}
-        >
-          {WORDS.map((w, i) => (
-            <span
-              key={w.text}
-              className={`block relative overflow-hidden ${w.black ? "text-brand-black" : ""}`}
-              aria-label={w.text}
-            >
-              <span
-                className={`hero-word hero-word-main-${i} block`}
-                style={{
-                  clipPath: "inset(100% 0 0 0)",
-                  textShadow: w.black ? "none" : WHITE_GLOW,
-                }}
-              >
-                {w.text}
-              </span>
-            </span>
-          ))}
-        </h1>
+        <div className="max-w-[80%]" style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.3))" }}>
+          <DisplayHeading
+            lines={["SPORT.", "BUSINESS.", "IMPACT."]}
+            highlightedLine={2}
+            highlightColor="#0a0a0a"
+            textColor="#fcf7f5"
+            glow
+            align="left"
+            size="hero"
+            as="h1"
+            trigger="immediate"
+          />
+        </div>
       </div>
 
       <div className="hero-fade absolute bottom-[40px] left-0 right-0 z-10 px-[6vw]">
