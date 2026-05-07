@@ -7,6 +7,9 @@ const WORDS = [
   { text: "IMPACT.", black: true },
 ];
 
+const WHITE_GLOW =
+  "0 0 40px rgba(252, 247, 245, 0.25), 0 0 80px rgba(252, 247, 245, 0.15)";
+
 export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [loadVideo, setLoadVideo] = useState(false);
@@ -33,24 +36,11 @@ export const Hero = () => {
 
       WORDS.forEach((_, i) => {
         const main = `.hero-word-main-${i}`;
-        const echo = `.hero-word-echo-${i}`;
         tl.fromTo(
           main,
           { clipPath: "inset(100% 0 0 0)" },
           { clipPath: "inset(0% 0 0 0)", duration: 0.9, ease: "power4.out" },
           i * 0.15
-        );
-        tl.fromTo(
-          echo,
-          { clipPath: "inset(100% 0 0 0)", x: 0, opacity: 0 },
-          {
-            clipPath: "inset(0% 0 0 0)",
-            x: 8,
-            opacity: 0.6,
-            duration: 0.9,
-            ease: "power4.out",
-          },
-          i * 0.15 + 0.12
         );
       });
 
@@ -96,23 +86,22 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-brand-red/40" aria-hidden />
 
       <div className="relative z-10 h-full flex flex-col justify-center" style={{ paddingLeft: "6vw", paddingRight: "6vw" }}>
-        <h1 className="font-display uppercase text-hero leading-[0.9] text-left max-w-[80%]">
+        <h1
+          className="font-display uppercase text-hero leading-[0.9] text-left max-w-[80%]"
+          style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.3))" }}
+        >
           {WORDS.map((w, i) => (
             <span
               key={w.text}
-              className={`block relative overflow-visible ${w.black ? "text-brand-black" : ""}`}
+              className={`block relative overflow-hidden ${w.black ? "text-brand-black" : ""}`}
               aria-label={w.text}
             >
               <span
                 className={`hero-word hero-word-main-${i} block`}
-                style={{ clipPath: "inset(100% 0 0 0)" }}
-              >
-                {w.text}
-              </span>
-              <span
-                aria-hidden
-                className={`hero-word hero-word-echo-${i} block absolute inset-0`}
-                style={{ clipPath: "inset(100% 0 0 0)", opacity: 0 }}
+                style={{
+                  clipPath: "inset(100% 0 0 0)",
+                  textShadow: w.black ? "none" : WHITE_GLOW,
+                }}
               >
                 {w.text}
               </span>
