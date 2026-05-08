@@ -17,7 +17,7 @@ interface DisplayHeadingProps {
   size?: DisplaySize;
   as?: "h1" | "h2";
   className?: string;
-  trigger?: "immediate" | "scroll";
+  trigger?: "immediate" | "scroll" | "static";
   outline?: boolean;
   outlineColor?: string;
   /** When true with outline, the fill color reveals as the section is scrolled. */
@@ -54,6 +54,7 @@ export const DisplayHeading = ({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (trigger === "static") return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const splits: SplitText[] = [];
