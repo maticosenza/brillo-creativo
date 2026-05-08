@@ -1,8 +1,6 @@
-import { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { RevealHeading } from "./RevealHeading";
 
 const slugify = (s: string) =>
   s.toLowerCase()
@@ -23,99 +21,111 @@ const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"rig
   <button
     onClick={onClick}
     aria-label={label}
-    className="group relative w-14 h-14 rounded-full border border-brand-white overflow-hidden flex items-center justify-center"
+    className="group relative w-12 h-12 rounded-full border border-brand-white overflow-hidden flex items-center justify-center"
   >
     <span aria-hidden className="absolute inset-0 bg-brand-white origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
     {dir === "left" ? (
-      <ArrowLeft className="relative z-10 w-5 h-5 text-brand-white transition-colors duration-300 group-hover:text-brand-red" />
+      <ArrowLeft className="relative z-10 w-4 h-4 text-brand-white transition-colors duration-300 group-hover:text-brand-red" />
     ) : (
-      <ArrowRight className="relative z-10 w-5 h-5 text-brand-white transition-colors duration-300 group-hover:text-brand-red" />
+      <ArrowRight className="relative z-10 w-4 h-4 text-brand-white transition-colors duration-300 group-hover:text-brand-red" />
     )}
   </button>
 );
 
 export const ProjectsSection = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    dragFree: true,
-    align: "start",
-    containScroll: "trimSnaps",
-  });
-  const [, force] = useState(0);
+  const [index, setIndex] = useState(0);
+  const timerRef = useRef<number | null>(null);
+
+  const go = useCallback((next: number) => {
+    setIndex(((next % PROJECTS.length) + PROJECTS.length) % PROJECTS.length);
+  }, []);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    const onSelect = () => force((n) => n + 1);
-    emblaApi.on("select", onSelect);
-    return () => { emblaApi.off("select", onSelect); };
-  }, [emblaApi]);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    timerRef.current = window.setTimeout(() => go(index + 1), 4200);
+    return () => { if (timerRef.current) window.clearTimeout(timerRef.current); };
+  }, [index, go]);
 
-  const prev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const next = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const current = PROJECTS[index];
+  const slug = slugify(current.title);
 
   return (
-    <section className="bg-brand-red text-brand-white section-y overflow-hidden">
-      <div className="px-6 md:px-12 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-        <div className="max-w-3xl">
-          <span className="eyebrow opacity-90">Proyectos destacados</span>
-          <RevealHeading
-            text="Trabajos recientes"
-            className="mt-6 font-display uppercase text-h2"
+    <section className="relative bg-brand-black text-brand-white overflow-hidden h-screen min-h-[640px] w-full">
+      {/* Background slideshow */}
+      <div className="absolute inset-0">
+        {PROJECTS.map((p, i) => (
+          <img
+            key={p.title}
+            src={p.img}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-out"
+            style={{ opacity: i === index ? 1 : 0 }}
           />
-        </div>
-        <div className="flex gap-3">
-          <NavBtn onClick={prev} dir="left" label="Anterior" />
-          <NavBtn onClick={next} dir="right" label="Siguiente" />
-        </div>
+        ))}
+        <div aria-hidden className="absolute inset-0 bg-black/55" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80" />
       </div>
 
-      <div className="mt-16 px-6 md:px-12">
-        <div className="overflow-hidden -mx-6 md:-mx-12" ref={emblaRef}>
-          <div className="flex gap-6 px-6 md:px-12">
-            {PROJECTS.map((p) => {
-              const slug = slugify(p.title);
-              return (
-                <Link
-                  key={slug}
-                  to={`/proyectos/${slug}`}
-                  className="group relative shrink-0 basis-[90vw] md:basis-[75vw] aspect-[4/5] max-h-[70vh] overflow-hidden block"
-                >
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.08]"
-                  />
-                  <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
+      {/* Title overlay */}
+      <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-12">
+        <h2
+          aria-label="Trabajos"
+          className="font-display uppercase leading-[0.9] tracking-[-0.02em] select-none"
+          style={{
+            fontSize: "clamp(80px, 18vw, 280px)",
+            color: "transparent",
+            WebkitTextStroke: "2px #fcf7f5",
+          }}
+        >
+          TRABAJOS
+        </h2>
+      </div>
 
-                  <span
-                    aria-hidden
-                    className="absolute top-6 right-6 w-12 h-12 rounded-full border border-brand-white flex items-center justify-center opacity-0 -translate-x-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0"
-                  >
-                    <ArrowUpRight className="w-5 h-5 text-brand-white" />
-                  </span>
+      {/* Bottom info + actions */}
+      <div className="absolute bottom-0 left-0 right-0 z-20 px-6 md:px-12 pb-10 md:pb-14">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+          <Link to={`/proyectos/${slug}`} className="block group max-w-2xl">
+            <span className="text-[11px] uppercase tracking-[0.3em] opacity-80">{current.category}</span>
+            <h3
+              key={current.title}
+              className="mt-3 font-display uppercase text-brand-white animate-fade-in"
+              style={{ fontSize: "clamp(24px, 3.5vw, 48px)", lineHeight: 1 }}
+            >
+              {current.title}
+            </h3>
+          </Link>
 
-                  <div className="absolute left-8 bottom-8 right-8 z-10">
-                    <span className="text-xs uppercase tracking-[0.2em] opacity-90">{p.category}</span>
-                    <h3 className="mt-3 font-display uppercase text-h3 text-brand-white">
-                      {p.title}
-                    </h3>
-                  </div>
-                </Link>
-              );
-            })}
+          <div className="flex items-center gap-4">
+            <NavBtn onClick={() => go(index - 1)} dir="left" label="Anterior" />
+            <NavBtn onClick={() => go(index + 1)} dir="right" label="Siguiente" />
+            <Link
+              to="/proyectos"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-brand-white px-7 py-3 text-[12px] font-medium uppercase tracking-[0.2em] text-brand-white"
+            >
+              <span aria-hidden className="absolute inset-0 bg-brand-white origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-red">
+                Ver todos
+              </span>
+            </Link>
           </div>
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <Link
-            to="/proyectos"
-            className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-brand-white px-8 py-4 text-[13px] font-medium uppercase tracking-wider text-brand-red border border-brand-white"
-          >
-            <span aria-hidden className="absolute inset-0 bg-brand-red origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-white">
-              Ver todos
-            </span>
-          </Link>
+        {/* Progress dots */}
+        <div className="mt-8 flex gap-2">
+          {PROJECTS.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => go(i)}
+              aria-label={`Ir al proyecto ${i + 1}`}
+              className="h-[2px] flex-1 max-w-[60px] bg-brand-white/30 overflow-hidden"
+            >
+              <span
+                className="block h-full bg-brand-white transition-transform duration-300 origin-left"
+                style={{ transform: `scaleX(${i === index ? 1 : 0})` }}
+              />
+            </button>
+          ))}
         </div>
       </div>
     </section>
