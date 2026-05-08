@@ -17,7 +17,7 @@ interface DisplayHeadingProps {
   size?: DisplaySize;
   as?: "h1" | "h2";
   className?: string;
-  trigger?: "immediate" | "scroll" | "static";
+  trigger?: "immediate" | "scroll" | "static" | "typewriter";
   outline?: boolean;
   outlineColor?: string;
   /** When true with outline, the fill color reveals as the section is scrolled. */
@@ -77,6 +77,19 @@ export const DisplayHeading = ({
       if (reduced) {
         const all = charsPerLine.flat();
         gsap.fromTo(all, { opacity: 0 }, { opacity: 1, duration: 0.2, stagger: 0.005 });
+      } else if (trigger === "typewriter") {
+        const all = charsPerLine.flat();
+        gsap.fromTo(
+          all,
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 0.01,
+            ease: "none",
+            stagger: 0.06,
+            delay: 0.2,
+          }
+        );
       } else {
         charsPerLine.forEach((chars, lineIdx) => {
           gsap.fromTo(
