@@ -71,7 +71,7 @@ export const Hero = () => {
             align="left"
             size="hero"
             as="h1"
-            trigger="immediate"
+            trigger="static"
           />
         </div>
       </div>
