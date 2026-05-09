@@ -8,7 +8,7 @@ type Props = {
 
 export const PageHero = ({ title, image, alt = "" }: Props) => {
   return (
-    <section className="relative w-screen h-screen min-h-[640px] overflow-hidden bg-brand-black text-brand-white -mt-[72px]">
+    <section className="relative w-full h-screen min-h-[640px] overflow-hidden bg-brand-black text-brand-white">
       <img
         src={image}
         alt={alt}
