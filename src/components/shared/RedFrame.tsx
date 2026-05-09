@@ -38,7 +38,7 @@ export const RedFrame = ({ children, className = "", side = "right" }: Props) =>
           ...stripeBg(45),
           position: "absolute",
           top: GAP,
-          bottom: GAP,
+          bottom: 0,
           width: STRIPE_W,
           ...(isRight ? { right: 0 } : { left: 0 }),
         }}
@@ -50,8 +50,8 @@ export const RedFrame = ({ children, className = "", side = "right" }: Props) =>
         style={{
           ...stripeBg(45),
           position: "absolute",
-          left: GAP,
-          right: GAP,
+          left: isRight ? GAP : 0,
+          right: isRight ? 0 : GAP,
           bottom: 0,
           height: STRIPE_W,
         }}
