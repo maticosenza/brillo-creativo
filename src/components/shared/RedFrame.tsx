@@ -11,7 +11,8 @@ type Props = {
   double?: boolean;
 };
 
-const STRIPE_W = 18;
+const STRIPE_W = 12;
+const GAP = "10%";
 
 const stripeBg = (angle: number): React.CSSProperties => ({
   backgroundImage: `repeating-linear-gradient(${angle}deg, #fcf7f5 0px, #fcf7f5 6px, transparent 6px, transparent 12px)`,
@@ -36,8 +37,8 @@ export const RedFrame = ({ children, className = "", side = "right" }: Props) =>
         style={{
           ...stripeBg(45),
           position: "absolute",
-          top: 0,
-          bottom: STRIPE_W,
+          top: GAP,
+          bottom: GAP,
           width: STRIPE_W,
           ...(isRight ? { right: 0 } : { left: 0 }),
         }}
@@ -49,8 +50,8 @@ export const RedFrame = ({ children, className = "", side = "right" }: Props) =>
         style={{
           ...stripeBg(45),
           position: "absolute",
-          left: 0,
-          right: 0,
+          left: GAP,
+          right: GAP,
           bottom: 0,
           height: STRIPE_W,
         }}
