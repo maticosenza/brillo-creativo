@@ -27,7 +27,7 @@ export const Navbar = () => {
       >
         <div className="flex items-center justify-between px-6 md:px-12 h-20">
           <Link to="/" className="font-display text-2xl md:text-3xl text-brand-white tracking-tight">
-            PRODUCTORA
+            CARACTER
           </Link>
 
           <div className="flex items-center gap-3 md:gap-5">

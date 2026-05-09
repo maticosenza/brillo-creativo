@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="PRODUCTORA — Eventos que dejan huella"
+        title="CARACTER — Eventos que dejan huella"
         description="Productora de eventos en Buenos Aires. Diseñamos y producimos experiencias de marca, eventos corporativos, lanzamientos y activaciones en toda Latinoamérica."
         canonical="https://productora.com/"
       />

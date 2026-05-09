@@ -25,7 +25,7 @@ export const MenuOverlay = ({ open, onClose }: Props) => {
         >
           <div className="flex items-center justify-between px-6 md:px-12 py-6">
             <Link to="/" onClick={onClose} className="font-display text-2xl tracking-tight">
-              PRODUCTORA
+              CARACTER
             </Link>
             <button
               onClick={onClose}

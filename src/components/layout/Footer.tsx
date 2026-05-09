@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
         <div>
           <Link to="/" className="font-display text-3xl tracking-tight block mb-4">
-            PRODUCTORA
+            CARACTER
           </Link>
           <p className="text-sm text-white/70 leading-relaxed max-w-[220px]">
             Eventos que dejan huella.
@@ -50,7 +50,7 @@ export const Footer = () => {
       </div>
 
       <div className="mt-20 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/50 uppercase tracking-[0.15em]">
-        <span>© 2026 PRODUCTORA</span>
+        <span>© 2026 CARACTER</span>
         <span>Diseñado y producido en Buenos Aires</span>
       </div>
     </footer>
