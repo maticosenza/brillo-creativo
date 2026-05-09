@@ -11,13 +11,8 @@ type Props = {
   double?: boolean;
 };
 
-const STRIPE_W = 12;
+const STRIPE_W = 7;
 const GAP = "10%";
-
-const stripeBg = (angle: number): React.CSSProperties => ({
-  backgroundImage: `repeating-linear-gradient(${angle}deg, #e10600 0px, #e10600 8px, #0a0a0a 8px, #0a0a0a 16px)`,
-  pointerEvents: "none",
-});
 
 export const RedFrame = ({ children, className = "", side = "right" }: Props) => {
   const isRight = side === "right";
@@ -27,33 +22,25 @@ export const RedFrame = ({ children, className = "", side = "right" }: Props) =>
     paddingBottom: STRIPE_W,
   };
 
+  // L-shape clip so a single diagonal pattern flows continuously across both arms
+  const clip = isRight
+    ? `polygon(calc(100% - ${STRIPE_W}px) ${GAP}, 100% ${GAP}, 100% 100%, ${GAP} 100%, ${GAP} calc(100% - ${STRIPE_W}px), calc(100% - ${STRIPE_W}px) calc(100% - ${STRIPE_W}px))`
+    : `polygon(0 ${GAP}, ${STRIPE_W}px ${GAP}, ${STRIPE_W}px calc(100% - ${STRIPE_W}px), calc(100% - ${GAP}) calc(100% - ${STRIPE_W}px), calc(100% - ${GAP}) 100%, 0 100%)`;
+
   return (
     <div className={`relative ${className}`} style={padStyle}>
       <div className="relative">{children}</div>
 
-      {/* Vertical stripe on the chosen side */}
       <span
         aria-hidden
         style={{
-          ...stripeBg(45),
           position: "absolute",
-          top: GAP,
-          bottom: STRIPE_W,
-          width: STRIPE_W,
-          ...(isRight ? { right: 0 } : { left: 0 }),
-        }}
-      />
-
-      {/* Horizontal stripe on the bottom (forms the L) */}
-      <span
-        aria-hidden
-        style={{
-          ...stripeBg(45),
-          position: "absolute",
-          left: isRight ? GAP : 0,
-          right: isRight ? 0 : GAP,
-          bottom: 0,
-          height: STRIPE_W,
+          inset: 0,
+          backgroundImage:
+            "repeating-linear-gradient(45deg, #fcf7f5 0px, #fcf7f5 2px, transparent 2px, transparent 7px)",
+          clipPath: clip,
+          WebkitClipPath: clip,
+          pointerEvents: "none",
         }}
       />
     </div>
