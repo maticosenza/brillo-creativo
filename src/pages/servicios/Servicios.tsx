@@ -11,13 +11,13 @@ const ServiceRow = ({ s }: { s: typeof SERVICES[number] }) => {
       className="group block border-t border-brand-black/10"
     >
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-10 items-center px-6 md:px-12 py-10 md:py-14 transition-colors duration-300 group-hover:bg-brand-black/[0.03]">
-        <div className="md:col-span-1 flex md:block items-start">
+        <div className="order-1 md:order-none md:col-span-1 flex md:block items-start">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-brand-red text-brand-red font-display text-sm">
             {s.number}
           </span>
         </div>
 
-        <div className="md:col-span-6">
+        <div className="order-2 md:order-none md:col-span-6">
           <h2 className="font-display uppercase text-brand-red leading-[0.95] text-[clamp(28px,3.4vw,44px)]">
             {s.title}
           </h2>
@@ -26,7 +26,7 @@ const ServiceRow = ({ s }: { s: typeof SERVICES[number] }) => {
           </p>
         </div>
 
-        <div className="md:col-start-8 md:col-span-5">
+        <div className="order-3 md:order-none md:col-start-8 md:col-span-5">
           <div className="aspect-[4/3] w-full overflow-hidden">
             <img
               src={s.gallery[0]}
