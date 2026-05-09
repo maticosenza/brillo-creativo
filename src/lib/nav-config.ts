@@ -6,22 +6,12 @@ export type NavItem = {
 
 export const NAV: NavItem[] = [
   {
-    label: "Nosotros",
-    href: "/nosotros",
-    children: [
-      { label: "Equipo", href: "/nosotros/equipo" },
-      { label: "Manifiesto", href: "/nosotros/manifiesto" },
-    ],
+    label: "Home",
+    href: "/",
   },
   {
     label: "Servicios",
     href: "/servicios",
-    children: [
-      { label: "Producción integral", href: "/servicios/produccion-integral" },
-      { label: "Activaciones de marca", href: "/servicios/activaciones-de-marca" },
-      { label: "Eventos corporativos", href: "/servicios/eventos-corporativos" },
-      { label: "Lanzamientos", href: "/servicios/lanzamientos" },
-    ],
   },
   {
     label: "Proyectos",
@@ -29,19 +19,11 @@ export const NAV: NavItem[] = [
   },
   {
     label: "Nosotros",
-    href: "/careers",
-    children: [
-      { label: "Cultura", href: "/careers/cultura" },
-      { label: "Posiciones abiertas", href: "/careers/posiciones-abiertas" },
-    ],
+    href: "/nosotros",
   },
   {
     label: "Contacto",
     href: "/contacto",
-    children: [
-      { label: "Buenos Aires", href: "/contacto/buenos-aires" },
-      { label: "Brief", href: "/contacto/brief" },
-    ],
   },
 ];
 
