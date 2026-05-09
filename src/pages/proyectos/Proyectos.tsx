@@ -1,29 +1,13 @@
-import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
 import { CtaSection } from "@/components/home/CtaSection";
 import { SEO } from "@/components/shared/SEO";
 import { PROJECTS } from "@/data/projects";
 
-const CATEGORIES = [
-  "Todos",
-  "Evento corporativo",
-  "Lanzamiento de producto",
-  "Festival de música",
-  "Activación de marca",
-  "Convención",
-  "Premiere / Red carpet",
-];
-
 const Proyectos = () => {
-  const [active, setActive] = useState("Todos");
-
-  const filtered = useMemo(
-    () => (active === "Todos" ? PROJECTS : PROJECTS.filter((p) => p.category === active)),
-    [active]
-  );
+  const filtered = PROJECTS;
 
   return (
     <>
@@ -38,34 +22,8 @@ const Proyectos = () => {
         alt="Proyectos"
       />
 
-      <div className="sticky top-[72px] z-30 bg-brand-black/95 backdrop-blur border-b border-white/10">
-        <div className="px-6 md:px-12 py-6 overflow-x-auto">
-          <ul className="flex gap-3 min-w-max">
-            {CATEGORIES.map((c) => {
-              const isActive = c === active;
-              return (
-                <li key={c}>
-                  <button
-                    onClick={() => setActive(c)}
-                    className={`rounded-full border border-brand-white uppercase text-[13px] tracking-wider transition-colors duration-300 ${
-                      isActive
-                        ? "bg-brand-white text-brand-red"
-                        : "bg-transparent text-brand-white hover:bg-brand-white hover:text-brand-red"
-                    }`}
-                    style={{ padding: "12px 24px" }}
-                  >
-                    {c}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-
       <section className="bg-brand-black text-brand-white px-6 md:px-12 py-20 md:py-28">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <AnimatePresence mode="popLayout">
             {filtered.map((p, i) => (
               <motion.div
                 key={p.slug}
@@ -100,7 +58,6 @@ const Proyectos = () => {
                 </Link>
               </motion.div>
             ))}
-          </AnimatePresence>
         </div>
 
         {filtered.length === 0 && (
