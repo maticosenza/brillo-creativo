@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { IntroBanner } from "@/components/shared/IntroBanner";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { GlobeSection } from "@/components/shared/AnimatedGlobe";
 import { SOCIALS, CONTACT_EMAIL } from "@/lib/nav-config";
 
 const Contacto = () => {
@@ -50,6 +51,10 @@ const Contacto = () => {
           </div>
         </div>
       </section>
+      <GlobeSection
+        title="Alcance global con toque local"
+        description="Headquarters en Puerto Madero, Buenos Aires, con presencia en toda LATAM, Estados Unidos y Europa. Producimos campañas globales con lectura regional."
+      />
     </>
   );
 };
