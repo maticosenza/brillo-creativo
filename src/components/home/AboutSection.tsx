@@ -49,7 +49,7 @@ export const AboutSection = () => {
         </div>
 
         <div className="md:col-span-6">
-          <RedFrame side="left">
+          <RedFrame side="right">
             <div ref={ref} className="overflow-hidden aspect-[4/5] w-full">
               <motion.img
                 style={{ y }}
