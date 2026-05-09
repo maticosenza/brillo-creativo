@@ -19,7 +19,7 @@ export const ServicesOverview = () => {
 
         <div className="md:col-start-9 md:col-span-4">
           <span className="eyebrow text-brand-red">Nuestros servicios</span>
-          <div style={{ fontSize: "clamp(28px, 3.4vw, 52px)" }}>
+          <div style={{ fontSize: "clamp(36px, 4.6vw, 72px)" }}>
             <RevealHeading
               text="Gestión completa, resultados concretos"
               className="mt-6 font-display uppercase leading-[0.95]"
