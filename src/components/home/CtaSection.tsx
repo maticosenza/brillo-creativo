@@ -60,8 +60,8 @@ export const CtaSection = ({ lines = DEFAULT_LINES, description = DEFAULT_DESC }
           style={{ background: "#c0181b" }}
         />
         <span
-          className="relative z-10 font-display uppercase transition-colors duration-300 group-hover:text-[#fcf7f5]"
-          style={{ color: "#c0181b", fontSize: 14, letterSpacing: "0.2em" }}
+          className="relative z-10 font-display uppercase transition-colors duration-300 text-[#c0181b] group-hover:text-[#fcf7f5]"
+          style={{ fontSize: 14, letterSpacing: "0.2em" }}
         >
           Hablemos
         </span>
