@@ -1,42 +1,11 @@
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { RevealHeading } from "./RevealHeading";
-import { RedFrame } from "@/components/shared/RedFrame";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export const ServicesOverview = () => {
-  const wrapRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = wrapRef.current;
-    if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      gsap.set([".bd-top", ".bd-right", ".bd-bottom", ".bd-left"], { scaleX: 1, scaleY: 1 });
-      return;
-    }
-
-    const tl = gsap.timeline({
-      scrollTrigger: { trigger: el, start: "top 75%", once: true },
-    });
-    tl.fromTo(".bd-top",    { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.inOut" })
-      .fromTo(".bd-right",  { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "power2.inOut" })
-      .fromTo(".bd-bottom", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.inOut" })
-      .fromTo(".bd-left",   { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "power2.inOut" });
-
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
-  }, []);
-
   return (
     <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-center">
-        <div ref={wrapRef} className="md:col-span-7 relative">
-          <RedFrame>
+        <div className="md:col-span-7 relative">
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <video
               className="w-full h-full object-cover"
@@ -45,13 +14,7 @@ export const ServicesOverview = () => {
             >
               <source src="https://assets.mixkit.co/videos/preview/mixkit-stage-with-spotlights-and-fog-at-a-concert-32809-large.mp4" type="video/mp4" />
             </video>
-
-            <span aria-hidden className="bd-top absolute top-0 left-0 h-px w-full bg-brand-white origin-left" style={{ transform: "scaleX(0)" }} />
-            <span aria-hidden className="bd-right absolute top-0 right-0 w-px h-full bg-brand-white origin-top" style={{ transform: "scaleY(0)" }} />
-            <span aria-hidden className="bd-bottom absolute bottom-0 right-0 h-px w-full bg-brand-white origin-right" style={{ transform: "scaleX(0)" }} />
-            <span aria-hidden className="bd-left absolute bottom-0 left-0 w-px h-full bg-brand-white origin-bottom" style={{ transform: "scaleY(0)" }} />
           </div>
-          </RedFrame>
         </div>
 
         <div className="md:col-start-9 md:col-span-4">
