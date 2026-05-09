@@ -20,8 +20,10 @@ export const StatementSection = () => {
           style={{ fontSize: "clamp(24px, 3.2vw, 48px)", lineHeight: 1.2 }}
         >
           {words.map((w, i) => (
-            <span key={i} className={`mr-[0.25em] ${w.black ? "text-brand-red" : ""}`}>
-              {w.text}
+            <span key={i} className="inline-block overflow-hidden align-bottom mr-[0.25em]">
+              <span className={`inline-block ${w.black ? "text-brand-red" : ""}`}>
+                {w.text}
+              </span>
             </span>
           ))}
         </h2>
