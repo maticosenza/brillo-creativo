@@ -17,7 +17,6 @@ export const Footer = () => {
         <div>
           <h4 className="eyebrow text-white/50 mb-5">Navegación</h4>
           <ul className="space-y-3">
-            <li><Link to="/" className="underline-link">Home</Link></li>
             {NAV.map((n) => (
               <li key={n.href}>
                 <Link to={n.href} className="underline-link">{n.label}</Link>
