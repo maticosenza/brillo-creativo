@@ -45,7 +45,7 @@ export const StatementSection = () => {
       <div className="max-w-[1100px] mx-auto text-center">
         <h2
           className="font-display uppercase"
-          style={{ fontSize: "clamp(32px, 4.5vw, 68px)", lineHeight: 1.1 }}
+          style={{ fontSize: "clamp(24px, 3.2vw, 48px)", lineHeight: 1.2 }}
         >
           {words.map((w, i) => (
             <span key={i} className="inline-block overflow-hidden align-bottom mr-[0.25em]">
