@@ -37,21 +37,22 @@ export const MenuOverlay = ({ open, onClose }: Props) => {
             </button>
           </div>
 
-          <nav className="flex-1 flex flex-col justify-center px-6 md:px-12 overflow-y-auto">
-            <ul className="space-y-2 md:space-y-3">
+          <nav className="flex-1 flex flex-col justify-center px-6 md:px-12 overflow-hidden min-h-0">
+            <ul className="flex flex-col justify-center h-full">
               {NAV.map((item, i) => (
                 <motion.li
                   key={item.href}
                   initial={{ y: 40, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.25 + i * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="border-b border-white/10"
+                  className="border-b border-white/10 flex-1 flex items-center min-h-0"
                 >
-                  <div className="flex items-center justify-between gap-6 group py-2">
+                  <div className="flex items-center justify-between gap-6 group w-full">
                     <Link
                       to={item.href}
                       onClick={onClose}
-                      className="menu-item relative font-display text-menu uppercase leading-none transition-colors duration-300 hover:text-brand-black"
+                      className="menu-item relative font-display uppercase leading-none transition-colors duration-300 hover:text-brand-black"
+                      style={{ fontSize: "clamp(36px, 11vh, 96px)" }}
                     >
                       <span className="relative inline-block">
                         {item.label}
