@@ -15,7 +15,7 @@ const STRIPE_W = 12;
 const GAP = "10%";
 
 const stripeBg = (angle: number): React.CSSProperties => ({
-  backgroundImage: `repeating-linear-gradient(${angle}deg, #fcf7f5 0px, #fcf7f5 6px, transparent 6px, transparent 12px)`,
+  backgroundImage: `repeating-linear-gradient(${angle}deg, #e10600 0px, #e10600 8px, #0a0a0a 8px, #0a0a0a 16px)`,
   pointerEvents: "none",
 });
 
