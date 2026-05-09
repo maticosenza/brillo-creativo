@@ -1,4 +1,4 @@
-import { IntroBanner } from "@/components/shared/IntroBanner";
+import { PageHero } from "@/components/shared/PageHero";
 import { RevealHeading } from "@/components/home/RevealHeading";
 import { TeamGrid } from "@/components/shared/TeamGrid";
 import { CtaSection } from "@/components/home/CtaSection";
@@ -8,9 +8,10 @@ const Nosotros = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <>
-      <IntroBanner
-        lines={[["SOMOS"], ["CARACTER"]]}
-        subtitle="Diseñamos y producimos eventos para marcas que buscan dejar huella en su audiencia."
+      <PageHero
+        title={<>Somos<br/>Caracter</>}
+        image="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=2000&q=80"
+        alt="Equipo Caracter"
       />
 
       <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
