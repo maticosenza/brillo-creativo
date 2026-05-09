@@ -58,7 +58,8 @@ export const ServicesOverview = () => {
           <span className="eyebrow text-brand-red">Nuestros servicios</span>
           <RevealHeading
             text="Gestión completa, resultados concretos"
-            className="mt-6 font-display uppercase text-h2"
+            className="mt-6 font-display uppercase leading-[0.95]"
+            style={{ fontSize: "clamp(28px, 3.4vw, 52px)" }}
           />
           <p className="mt-8 text-lg leading-[1.6] text-brand-white/90">
             De la idea a la ejecución, nos ocupamos de cada detalle para que el
