@@ -50,9 +50,23 @@ export const ProjectsSection = () => {
   const slug = slugify(current.title);
 
   return (
-    <section className="relative bg-brand-black text-brand-white overflow-hidden h-screen min-h-[640px] w-full">
-      {/* Background slideshow */}
-      <div className="absolute inset-0">
+    <section className="relative bg-brand-black text-brand-white overflow-hidden w-full px-6 md:px-12 pt-10 md:pt-16 pb-10 md:pb-14">
+      {/* TRABAJOS title — half above, half overlapping image */}
+      <h2
+        aria-label="Trabajos"
+        className="relative z-20 font-display uppercase leading-[0.85] tracking-[-0.02em] select-none pointer-events-none"
+        style={{
+          fontSize: "clamp(80px, 18vw, 260px)",
+          color: "transparent",
+          WebkitTextStroke: "2px #fcf7f5",
+          marginBottom: "-0.5em",
+        }}
+      >
+        TRABAJOS
+      </h2>
+
+      {/* Image slideshow */}
+      <div className="relative z-10 w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden">
         {PROJECTS.map((p, i) => (
           <img
             key={p.title}
@@ -63,27 +77,11 @@ export const ProjectsSection = () => {
             style={{ opacity: i === index ? 1 : 0 }}
           />
         ))}
-        <div aria-hidden className="absolute inset-0 bg-black/55" />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80" />
-      </div>
-
-      {/* Title overlay */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-12">
-        <h2
-          aria-label="Trabajos"
-          className="font-display uppercase leading-[0.9] tracking-[-0.02em] select-none"
-          style={{
-            fontSize: "clamp(80px, 18vw, 280px)",
-            color: "transparent",
-            WebkitTextStroke: "2px #fcf7f5",
-          }}
-        >
-          TRABAJOS
-        </h2>
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
       </div>
 
       {/* Bottom info + actions */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 px-6 md:px-12 pb-10 md:pb-14">
+      <div className="relative z-20 mt-8 md:mt-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <Link to={`/proyectos/${slug}`} className="block group max-w-2xl">
             <span className="text-[11px] uppercase tracking-[0.3em] opacity-80">{current.category}</span>
