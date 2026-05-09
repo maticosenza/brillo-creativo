@@ -55,16 +55,14 @@ export const ServicesOverview = () => {
         </div>
 
         <div className="md:col-start-9 md:col-span-4">
-          <span className="eyebrow opacity-80">Nuestros servicios</span>
+          <span className="eyebrow text-brand-red">Nuestros servicios</span>
           <RevealHeading
-            text="Un enfoque 360°"
+            text="Gestión completa, resultados concretos"
             className="mt-6 font-display uppercase text-h2"
           />
           <p className="mt-8 text-lg leading-[1.6] text-brand-white/90">
-            Tomamos cada proyecto desde la idea inicial hasta la última pieza
-            de comunicación post-evento. Producción integral, dirección
-            creativa, gestión de talento, logística, audiovisual y activaciones
-            de marca, todo bajo un solo equipo coordinado.
+            De la idea a la ejecución, nos ocupamos de cada detalle para que el
+            resultado sea impecable.
           </p>
 
           <Link
