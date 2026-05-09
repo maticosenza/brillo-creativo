@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { RedFrame } from "@/components/shared/RedFrame";
 import { RevealHeading } from "./RevealHeading";
 
 export const ServicesOverview = () => {
@@ -6,15 +7,17 @@ export const ServicesOverview = () => {
     <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-center">
         <div className="md:col-span-7 relative">
-          <div className="relative aspect-[4/3] w-full overflow-hidden">
-            <video
-              className="w-full h-full object-cover"
-              autoPlay muted loop playsInline
-              poster="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=80"
-            >
-              <source src="https://assets.mixkit.co/videos/preview/mixkit-stage-with-spotlights-and-fog-at-a-concert-32809-large.mp4" type="video/mp4" />
-            </video>
-          </div>
+          <RedFrame side="right">
+            <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay muted loop playsInline
+                poster="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=80"
+              >
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-stage-with-spotlights-and-fog-at-a-concert-32809-large.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </RedFrame>
         </div>
 
         <div className="md:col-start-9 md:col-span-4">
