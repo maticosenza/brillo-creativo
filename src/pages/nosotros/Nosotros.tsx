@@ -9,7 +9,7 @@ const Nosotros = () => {
   return (
     <>
       <IntroBanner
-        lines={[["SOMOS"], ["PRODUCTORA"]]}
+        lines={[["SOMOS"], ["CARACTER"]]}
         subtitle="Diseñamos y producimos eventos para marcas que buscan dejar huella en su audiencia."
       />
 
