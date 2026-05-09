@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CtaSection } from "@/components/home/CtaSection";
+import { PageHero } from "@/components/shared/PageHero";
 import { SERVICES } from "@/data/services";
 
 const ServiceRow = ({ s }: { s: typeof SERVICES[number] }) => {
@@ -44,21 +45,11 @@ const Servicios = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <>
-      {/* Hero with event image */}
-      <section className="relative w-full min-h-[70vh] flex items-end overflow-hidden bg-brand-black text-brand-white">
-        <img
-          src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80"
-          alt="Evento producido por Caracter"
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
-        />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent" />
-        <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 pt-32 w-full">
-          <h1 className="font-display uppercase leading-[0.9] text-[clamp(48px,9vw,140px)]">
-            Nuestros<br/>
-            <span className="text-brand-red">Servicios</span>
-          </h1>
-        </div>
-      </section>
+      <PageHero
+        title={<>Nuestros<br/>Servicios</>}
+        image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80"
+        alt="Evento producido por Caracter"
+      />
 
       {/* Intro */}
       <section className="bg-brand-white text-brand-black px-6 md:px-12 py-16 md:py-20 border-b border-brand-black/10">

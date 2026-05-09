@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { IntroBanner } from "@/components/shared/IntroBanner";
+import { PageHero } from "@/components/shared/PageHero";
 import { CtaSection } from "@/components/home/CtaSection";
 import { SEO } from "@/components/shared/SEO";
 import { PROJECTS } from "@/data/projects";
@@ -32,10 +32,10 @@ const Proyectos = () => {
         description="Una selección de los eventos que marcaron a marcas y audiencias en los últimos años."
         canonical="https://productora.com/proyectos"
       />
-      <IntroBanner
-        lines={[["NUESTROS"], ["PROYECTOS"]]}
-        subtitle="Una selección de los eventos que marcaron a marcas y audiencias en los últimos años."
-        height="50vh"
+      <PageHero
+        title={<>Nuestros<br/>Proyectos</>}
+        image="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=2000&q=80"
+        alt="Proyectos"
       />
 
       <div className="sticky top-[72px] z-30 bg-brand-black/95 backdrop-blur border-b border-white/10">
