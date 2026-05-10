@@ -6,11 +6,19 @@ export default function GlobalReachSection() {
       style={{
         background: "#0a0a0a",
         color: "#ffffff",
-        padding: "80px 24px",
+        padding: "0 24px 80px",
         width: "100%",
         overflow: "hidden",
       }}
     >
+      <div
+        style={{
+          maxWidth: "1400px",
+          margin: "0 auto 80px",
+          height: "1px",
+          background: "rgba(255,255,255,0.8)",
+        }}
+      />
       <div
         style={{
           maxWidth: "1400px",
