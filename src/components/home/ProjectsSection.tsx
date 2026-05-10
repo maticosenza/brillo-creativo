@@ -35,6 +35,9 @@ const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"rig
 export const ProjectsSection = () => {
   const [index, setIndex] = useState(0);
   const timerRef = useRef<number | null>(null);
+  const dragStartX = useRef<number | null>(null);
+  const dragDelta = useRef(0);
+  const [dragging, setDragging] = useState(false);
 
   const go = useCallback((next: number) => {
     setIndex(((next % PROJECTS.length) + PROJECTS.length) % PROJECTS.length);
@@ -42,9 +45,30 @@ export const ProjectsSection = () => {
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (dragging) return;
     timerRef.current = window.setTimeout(() => go(index + 1), 4200);
     return () => { if (timerRef.current) window.clearTimeout(timerRef.current); };
-  }, [index, go]);
+  }, [index, go, dragging]);
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    dragStartX.current = e.clientX;
+    dragDelta.current = 0;
+    setDragging(true);
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (dragStartX.current === null) return;
+    dragDelta.current = e.clientX - dragStartX.current;
+  };
+  const onPointerUp = () => {
+    if (dragStartX.current === null) return;
+    const threshold = 50;
+    if (dragDelta.current > threshold) go(index - 1);
+    else if (dragDelta.current < -threshold) go(index + 1);
+    dragStartX.current = null;
+    dragDelta.current = 0;
+    setDragging(false);
+  };
 
   const current = PROJECTS[index];
   const slug = slugify(current.title);
@@ -66,18 +90,33 @@ export const ProjectsSection = () => {
       </h2>
 
       {/* Image slideshow */}
-      <div className="relative z-10 w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden">
+      <div
+        className="relative z-10 w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing select-none"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+      >
         {PROJECTS.map((p, i) => (
           <img
             key={p.title}
             src={p.img}
             alt=""
             aria-hidden
+            draggable={false}
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-out"
             style={{ opacity: i === index ? 1 : 0 }}
           />
         ))}
         <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+
+        {/* Side arrows over image */}
+        <div className="absolute inset-y-0 left-3 md:left-6 z-20 flex items-center">
+          <NavBtn onClick={() => go(index - 1)} dir="left" label="Anterior" />
+        </div>
+        <div className="absolute inset-y-0 right-3 md:right-6 z-20 flex items-center">
+          <NavBtn onClick={() => go(index + 1)} dir="right" label="Siguiente" />
+        </div>
       </div>
 
       {/* Bottom info + actions */}
@@ -95,8 +134,6 @@ export const ProjectsSection = () => {
           </Link>
 
           <div className="flex items-center gap-4">
-            <NavBtn onClick={() => go(index - 1)} dir="left" label="Anterior" />
-            <NavBtn onClick={() => go(index + 1)} dir="right" label="Siguiente" />
             <Link
               to="/proyectos"
               className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-brand-white px-7 py-3 text-[12px] font-medium uppercase tracking-[0.2em] text-brand-white"
