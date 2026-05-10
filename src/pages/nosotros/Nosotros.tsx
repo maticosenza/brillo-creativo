@@ -1,6 +1,6 @@
 import { PageHero } from "@/components/shared/PageHero";
 import { TeamGrid } from "@/components/shared/TeamGrid";
-import { GlobeSection } from "@/components/shared/AnimatedGlobe";
+import GlobalReachSection from "@/components/GlobalReachSection";
 import { useEffect } from "react";
 
 const VALUES = [
@@ -100,12 +100,7 @@ const Nosotros = () => {
       </section>
 
       {/* Global reach with animated globe */}
-      <GlobeSection
-        title="Alcance global con toque local"
-        description="Headquarters en Puerto Madero, Buenos Aires, con presencia en toda LATAM, Estados Unidos y Europa. Producimos campañas globales con lectura regional."
-        ctaLabel="Hablemos"
-        ctaHref="/contacto"
-      />
+      <GlobalReachSection />
 
     </>
   );
