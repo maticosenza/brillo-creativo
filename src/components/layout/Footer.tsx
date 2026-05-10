@@ -111,7 +111,17 @@ export const Footer = () => {
         <Link to="/" className="font-display text-2xl tracking-tight text-brand-white normal-case">
           CARACTER
         </Link>
-        <span>© 2026 CARACTER · Diseñado y producido en Buenos Aires</span>
+        <span>
+          © 2026 CARACTER · Diseñado por CARACTER y{" "}
+          <a
+            href="https://www.velocentum.com"
+            target="_blank"
+            rel="noreferrer"
+            className="underline-link"
+          >
+            Velocentum
+          </a>
+        </span>
       </div>
     </footer>
   );
