@@ -91,7 +91,7 @@ export default function GlobeRed() {
     });
     group.add(new THREE.Points(cGeo, cGlowMat));
 
-    // ── Crisp rim + outer atmospheric halo ───────────────────────────────
+    // ── Crisp rim around globe ───────────────────────────────────────────
     const rimGeo = new THREE.SphereGeometry(1.005, 64, 64);
     const rimMat = new THREE.MeshBasicMaterial({
       color: 0xff2828, transparent: true, opacity: 0.10, side: THREE.BackSide,
