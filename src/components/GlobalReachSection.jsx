@@ -4,7 +4,7 @@ export default function GlobalReachSection() {
   return (
     <section
       style={{
-        background: "#000000",
+        background: "#0a0a0a",
         color: "#ffffff",
         padding: "80px 24px",
         width: "100%",
