@@ -1,5 +1,4 @@
-import GlobeRed from "./GlobeRed";
-// import GlobeWhite from "./GlobeWhite";  // alternativa
+import GlobeWhite from "./GlobeWhite";
 
 export default function GlobalReachSection() {
   return (
@@ -32,7 +31,7 @@ export default function GlobalReachSection() {
             margin: "0 auto",
           }}
         >
-          <GlobeRed />
+          <GlobeWhite />
         </div>
 
         {/* Text — right side */}
@@ -43,7 +42,7 @@ export default function GlobalReachSection() {
               fontWeight: 900,
               lineHeight: 1.05,
               letterSpacing: "-0.01em",
-              color: "#e30613",
+              color: "#ffffff",
               textTransform: "uppercase",
               margin: "0 0 24px 0",
             }}
