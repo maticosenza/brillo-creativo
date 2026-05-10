@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Hammer, Flame, Users, Eye, Sparkles, Target } from "lucide-react";
 import { IntroBanner } from "@/components/shared/IntroBanner";
 import { RevealHeading } from "@/components/home/RevealHeading";
-import { CtaSection } from "@/components/home/CtaSection";
 
 const VALUES = [
   { icon: Hammer, title: "Craft", desc: "Cuidamos el oficio en cada decisión. Diseñar y producir bien es nuestra forma de respeto." },
@@ -30,7 +29,6 @@ const Cultura = () => {
           ))}
         </ul>
       </section>
-      <CtaSection />
     </>
   );
 };

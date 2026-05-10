@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { IntroBanner } from "@/components/shared/IntroBanner";
-import { CtaSection } from "@/components/home/CtaSection";
 import { SEO } from "@/components/shared/SEO";
 import { INSIGHTS } from "@/data/insights";
 
@@ -59,7 +58,6 @@ const Insights = () => (
       </div>
     </section>
 
-    <CtaSection />
   </>
 );
 

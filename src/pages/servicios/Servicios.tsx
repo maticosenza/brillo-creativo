@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CtaSection } from "@/components/home/CtaSection";
 import { PageHero } from "@/components/shared/PageHero";
 import { SERVICES } from "@/data/services";
 
@@ -65,7 +64,6 @@ const Servicios = () => {
         <div className="border-t border-brand-black/10" />
       </section>
 
-      <CtaSection />
     </>
   );
 };

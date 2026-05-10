@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
-import { CtaSection } from "@/components/home/CtaSection";
 import { SEO } from "@/components/shared/SEO";
 import { PROJECTS } from "@/data/projects";
 
@@ -65,7 +64,6 @@ const Proyectos = () => {
         )}
       </section>
 
-      <CtaSection lines={[["¿TENÉS", "UN"], ["PROYECTO?"]]} />
     </>
   );
 };

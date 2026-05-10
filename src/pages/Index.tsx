@@ -6,7 +6,6 @@ import { BrandsSection } from "@/components/home/BrandsSection";
 import { ProjectsSection } from "@/components/home/ProjectsSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { InsightsSection } from "@/components/home/InsightsSection";
-import { CtaSection } from "@/components/home/CtaSection";
 import { SEO } from "@/components/shared/SEO";
 
 const Index = () => {
@@ -25,7 +24,6 @@ const Index = () => {
       <ProjectsSection />
       <ServicesOverview />
       <InsightsSection />
-      <CtaSection />
     </>
   );
 };

@@ -4,7 +4,6 @@ import { ArrowRight, Hammer, Flame, Users, Eye } from "lucide-react";
 import { IntroBanner } from "@/components/shared/IntroBanner";
 import { RevealHeading } from "@/components/home/RevealHeading";
 import { BulletList } from "@/components/shared/BulletList";
-import { CtaSection } from "@/components/home/CtaSection";
 
 const VALUES = [
   { icon: Hammer, title: "Craft", desc: "Cada decisión está cuidada. Lo que entregamos tiene oficio detrás." },
@@ -101,11 +100,6 @@ const Careers = () => {
           ))}
         </ul>
       </section>
-
-      <CtaSection
-        lines={[["¿NO", "VES"], ["TU", "POSICIÓN?"]]}
-        description="Mandanos tu CV y un par de líneas sobre vos. Si encaja con un proyecto, te escribimos."
-      />
     </>
   );
 };

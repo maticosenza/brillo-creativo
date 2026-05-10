@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { IntroBanner } from "@/components/shared/IntroBanner";
 import { RevealHeading } from "@/components/home/RevealHeading";
-import { CtaSection } from "@/components/home/CtaSection";
 
 const AREAS = ["Todas", "Producción", "Creativo", "Audiovisual", "Operaciones", "Cuentas"] as const;
 
@@ -58,7 +57,6 @@ const Posiciones = () => {
           ))}
         </ul>
       </section>
-      <CtaSection lines={[["¿NO", "VES"], ["TU", "POSICIÓN?"]]} description="Mandanos tu CV. Si encaja con un proyecto, te escribimos." />
     </>
   );
 };

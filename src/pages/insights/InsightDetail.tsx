@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { getInsight, INSIGHTS } from "@/data/insights";
-import { CtaSection } from "@/components/home/CtaSection";
 import { SEO } from "@/components/shared/SEO";
 
 const InsightDetail = () => {
@@ -73,7 +72,6 @@ const InsightDetail = () => {
         </section>
       )}
 
-      <CtaSection />
     </>
   );
 };

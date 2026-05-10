@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { IntroBanner } from "@/components/shared/IntroBanner";
-import { CtaSection } from "@/components/home/CtaSection";
 import { CONTACT_EMAIL } from "@/lib/nav-config";
 
 const PHOTOS = [
@@ -69,7 +68,6 @@ const BuenosAires = () => {
         </ul>
       </section>
 
-      <CtaSection />
     </>
   );
 };
