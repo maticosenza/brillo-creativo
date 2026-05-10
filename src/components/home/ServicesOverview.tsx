@@ -22,11 +22,10 @@ export const ServicesOverview = () => {
 
         <div className="md:col-start-8 md:col-span-4">
           <span className="eyebrow text-brand-red">Nuestros servicios</span>
-          <div style={{ fontSize: "clamp(36px, 4.6vw, 72px)" }}>
-            <RevealHeading
-              text="Gestión completa, resultados concretos"
-              className="mt-6 font-display uppercase leading-[0.95]"
-            />
+          <div style={{ fontSize: "clamp(32px, 3.6vw, 56px)" }}>
+            <h2 className="mt-6 font-display uppercase leading-[0.95] whitespace-nowrap">
+              Gestión completa,<br />resultados concretos
+            </h2>
           </div>
           <p className="mt-8 text-lg leading-[1.6] text-brand-white/90">
             De la idea a la ejecución, nos ocupamos de cada detalle para que el
