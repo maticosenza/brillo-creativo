@@ -18,19 +18,25 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 
 export const Footer = () => {
   return (
-    <footer className="bg-brand-black text-brand-white px-6 md:px-12 pt-20 md:pt-28 pb-10 border-t border-white/20">
-      {/* CTA outline heading */}
-      <DisplayHeading
-        lines={["LET'S MAKE IMPACT!"]}
-        size="cta"
-        as="h2"
-        align="center"
-        outline
-        outlineColor="#c0181b"
-        glow={false}
-        trigger="static"
-        className="leading-[0.95]"
-      />
+    <footer className="bg-brand-black text-brand-white px-6 md:px-12 pt-20 md:pt-28 pb-10">
+      {/* Top divider — bright white, contained within page padding */}
+      <div className="h-px w-full bg-white/80" />
+
+      {/* CTA outline heading — sized to span the divider width */}
+      <div className="mt-10 md:mt-14">
+        <DisplayHeading
+          lines={["LET'S MAKE IMPACT!"]}
+          size="cta"
+          as="h2"
+          align="center"
+          outline
+          outlineColor="#c0181b"
+          glow={false}
+          trigger="static"
+          className="leading-[0.95] w-full"
+          style={{ fontSize: "clamp(60px, 13.2vw, 220px)", letterSpacing: "-0.02em", lineHeight: 0.95 }}
+        />
+      </div>
 
       <div className="mt-10 md:mt-12 flex justify-center">
         <Link
