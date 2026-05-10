@@ -22,6 +22,7 @@ interface DisplayHeadingProps {
   outlineColor?: string;
   /** When true with outline, the fill color reveals as the section is scrolled. */
   scrubFill?: boolean;
+  style?: React.CSSProperties;
 }
 
 const SIZE_STYLES: Record<DisplaySize, React.CSSProperties> = {
@@ -47,6 +48,7 @@ export const DisplayHeading = ({
   outline = false,
   outlineColor = "#c0181b",
   scrubFill = false,
+  style,
 }: DisplayHeadingProps) => {
   const ref = useRef<HTMLHeadingElement>(null);
   const Tag = as as any;
@@ -168,7 +170,7 @@ export const DisplayHeading = ({
       ref={ref}
       aria-label={fullText}
       className={`font-display uppercase ${align === "center" ? "text-center" : "text-left"} ${className}`}
-      style={{ ...SIZE_STYLES[size], position: "relative" }}
+      style={{ ...SIZE_STYLES[size], position: "relative", ...style }}
     >
       <span className="dh-base block" aria-hidden="true">
         {lines.map((line, i) => {
