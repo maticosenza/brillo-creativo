@@ -38,6 +38,23 @@ export const Footer = () => {
           <p className="text-sm leading-[1.7] text-brand-white/80 max-w-[360px]">
             Contactanos y descubrí cómo la experiencia y el carácter de CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
           </p>
+          <Link
+            to="/contacto"
+            className="group relative mt-8 inline-flex items-center justify-center overflow-hidden rounded-full"
+            style={{ padding: "18px 44px", border: "1px solid #c0181b", background: "transparent" }}
+          >
+            <span
+              aria-hidden
+              className="absolute inset-0 origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100"
+              style={{ background: "#c0181b" }}
+            />
+            <span
+              className="relative z-10 font-display uppercase transition-colors duration-300 text-[#c0181b] group-hover:text-[#fcf7f5]"
+              style={{ fontSize: 14, letterSpacing: "0.2em" }}
+            >
+              Hablemos
+            </span>
+          </Link>
         </div>
 
         {/* Nav buttons */}
