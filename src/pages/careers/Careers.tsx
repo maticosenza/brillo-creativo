@@ -100,11 +100,6 @@ const Careers = () => {
           ))}
         </ul>
       </section>
-
-      <CtaSection
-        lines={[["¿NO", "VES"], ["TU", "POSICIÓN?"]]}
-        description="Mandanos tu CV y un par de líneas sobre vos. Si encaja con un proyecto, te escribimos."
-      />
     </>
   );
 };
