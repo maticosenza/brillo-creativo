@@ -20,7 +20,7 @@ const Contacto = () => {
           size="hero"
           align="left"
           glow={false}
-          trigger="immediate"
+          trigger="static"
           outline
           outlineColor="#fcf7f5"
         />
