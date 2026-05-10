@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { IntroBanner } from "@/components/shared/IntroBanner";
+import { DisplayHeading } from "@/components/shared/DisplayHeading";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { GlobeSection } from "@/components/shared/AnimatedGlobe";
 import { SOCIALS, CONTACT_EMAIL } from "@/lib/nav-config";
@@ -10,11 +10,24 @@ const Contacto = () => {
   useEffect(() => { window.scrollTo(0, 0); document.title = "Contacto — Productora"; }, []);
   return (
     <>
-      <IntroBanner
-        lines={[["HABLEMOS"]]}
-        subtitle="Contanos qué evento tenés en mente. Te respondemos en menos de 24 horas."
-        height="50vh"
-      />
+      <section
+        className="relative w-full bg-brand-red text-brand-white px-6 md:px-12 flex flex-col justify-end pb-16 md:pb-24 pt-32"
+        style={{ minHeight: "50vh" }}
+      >
+        <DisplayHeading
+          lines={["HABLEMOS"]}
+          as="h1"
+          size="hero"
+          align="left"
+          glow={false}
+          trigger="immediate"
+          outline
+          outlineColor="#fcf7f5"
+        />
+        <p className="mt-8 max-w-[640px] text-lg md:text-xl leading-[1.5]">
+          CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
+        </p>
+      </section>
       <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-16 lg:gap-x-12">
           <div className="lg:col-span-6">
