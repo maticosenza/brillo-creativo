@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 import { IntroBanner } from "@/components/shared/IntroBanner";
 import { FloatingField, inputClass } from "@/components/contact/FloatingField";
+import GlobalReachSection from "@/components/GlobalReachSection";
 import { cn } from "@/lib/utils";
 
 const schema = z.object({
@@ -94,6 +95,8 @@ const Brief = () => {
           </div>
         </div>
       </section>
+
+      <GlobalReachSection />
     </>
   );
 };
