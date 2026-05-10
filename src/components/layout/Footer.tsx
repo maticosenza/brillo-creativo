@@ -24,7 +24,7 @@ export const Footer = () => {
         lines={["LET'S MAKE IMPACT!"]}
         size="cta"
         as="h2"
-        align="left"
+        align="center"
         outline
         outlineColor="#c0181b"
         glow={false}
@@ -32,7 +32,7 @@ export const Footer = () => {
         className="leading-[0.95]"
       />
 
-      <div className="mt-10 md:mt-12">
+      <div className="mt-10 md:mt-12 flex justify-center">
         <Link
           to="/contacto"
           className="group relative inline-flex items-center justify-center overflow-hidden rounded-full"
