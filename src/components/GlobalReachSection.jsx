@@ -42,25 +42,23 @@ export default function GlobalReachSection() {
               fontWeight: 900,
               lineHeight: 1.05,
               letterSpacing: "-0.01em",
-              color: "#ffffff",
               textTransform: "uppercase",
               margin: "0 0 24px 0",
             }}
           >
-            Global reach with
-            <br />a local touch
+            Alcance global con
+            <br />toque local
           </h2>
           <p
             style={{
               fontSize: "clamp(1rem, 1.4vw, 1.125rem)",
               lineHeight: 1.6,
-              color: "rgba(255,255,255,0.85)",
+              color: "#ffffff",
               margin: 0,
             }}
           >
-            Headquartered in the UK, with offices in the US and partners
-            worldwide, we deliver global partnership marketing campaigns,
-            with regional insight.
+            Headquartered en Puerto Madero, Buenos Aires, Argentina con
+            presencia en todo el mundo.
           </p>
         </div>
       </div>
