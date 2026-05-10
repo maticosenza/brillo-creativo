@@ -1,5 +1,4 @@
 import { PageHero } from "@/components/shared/PageHero";
-import { TeamGrid } from "@/components/shared/TeamGrid";
 import GlobalReachSection from "@/components/GlobalReachSection";
 import { useEffect } from "react";
 
@@ -88,15 +87,6 @@ const Nosotros = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Team */}
-      <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
-        <div className="max-w-5xl mx-auto">
-          <span className="font-display uppercase text-brand-red text-sm md:text-base tracking-[0.18em]">El equipo</span>
-          <h2 className="mt-6 font-display uppercase text-[clamp(32px,5vw,60px)] leading-[1.05]">Las personas detrás</h2>
-        </div>
-        <div className="mt-14"><TeamGrid /></div>
       </section>
 
       {/* Global reach with animated globe */}
