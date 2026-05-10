@@ -45,7 +45,7 @@ const Brief = () => {
 
   return (
     <>
-      <IntroBanner lines={[["MANDANOS"], ["TU", "BRIEF"]]} subtitle="Cuanta más información nos pases, mejor podemos responderte." height="60vh" />
+      <IntroBanner lines={[["MANDANOS"], ["TU", "BRIEF"]]} subtitle="Cuanta más información nos pases, mejor podemos responderte." height="60vh" trigger="static" />
 
       <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
         <div className="max-w-3xl mx-auto space-y-3">
