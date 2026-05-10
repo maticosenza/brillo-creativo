@@ -1,6 +1,5 @@
 import { PageHero } from "@/components/shared/PageHero";
 import { TeamGrid } from "@/components/shared/TeamGrid";
-import { CtaSection } from "@/components/home/CtaSection";
 import { GlobeSection } from "@/components/shared/AnimatedGlobe";
 import { useEffect } from "react";
 
@@ -108,7 +107,6 @@ const Nosotros = () => {
         ctaHref="/contacto"
       />
 
-      <CtaSection />
     </>
   );
 };

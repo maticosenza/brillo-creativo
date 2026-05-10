@@ -10,7 +10,6 @@ import { PROJECTS } from "@/data/projects";
 import { IntroBanner } from "@/components/shared/IntroBanner";
 import { RevealHeading } from "@/components/home/RevealHeading";
 import { BulletList } from "@/components/shared/BulletList";
-import { CtaSection } from "@/components/home/CtaSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -147,7 +146,6 @@ const ServiceDetail = () => {
         </motion.div>
       </section>
 
-      <CtaSection />
     </>
   );
 };

@@ -8,7 +8,6 @@ import { ProjectGallery } from "@/components/project/ProjectGallery";
 import { ProjectStats } from "@/components/project/ProjectStats";
 import { ProjectQuote } from "@/components/project/ProjectQuote";
 import { RelatedProjects } from "@/components/project/RelatedProjects";
-import { CtaSection } from "@/components/home/CtaSection";
 import { SEO } from "@/components/shared/SEO";
 
 const ProjectDetail = () => {
@@ -44,7 +43,6 @@ const ProjectDetail = () => {
       <ProjectStats p={project} />
       <ProjectQuote p={project} />
       <RelatedProjects p={project} />
-      <CtaSection lines={[["¿TENÉS", "UN"], ["PROYECTO?"]]} />
     </>
   );
 };

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { IntroBanner } from "@/components/shared/IntroBanner";
 import { RevealHeading } from "@/components/home/RevealHeading";
-import { CtaSection } from "@/components/home/CtaSection";
 
 const PARAS = [
   "Creemos que un evento bien producido cambia la forma en que una marca es percibida. No nos interesa repetir fórmulas: cada proyecto se diseña desde cero, con un equipo único que toma decisiones rápido y se hace cargo de cada detalle.",
@@ -23,7 +22,6 @@ const Manifiesto = () => {
           </div>
         </div>
       </section>
-      <CtaSection />
     </>
   );
 };
