@@ -55,18 +55,9 @@ export default function GlobeRed() {
     scene.add(group);
 
     // ── Black opaque base sphere (oceans = black) ────────────────────────
-    const baseGeo = new THREE.SphereGeometry(0.985, 64, 64);
+    const baseGeo = new THREE.SphereGeometry(0.99, 64, 64);
     const baseMat = new THREE.MeshBasicMaterial({ color: 0x000000 });
     group.add(new THREE.Mesh(baseGeo, baseMat));
-
-    // ── Inner atmospheric glow (faint colored haze inside the globe) ─────
-    const innerGlowGeo = new THREE.SphereGeometry(0.995, 64, 64);
-    const innerGlowMat = new THREE.MeshBasicMaterial({
-      color: 0x661111,
-      transparent: true,
-      opacity: 0.18,
-    });
-    group.add(new THREE.Mesh(innerGlowGeo, innerGlowMat));
 
     // ── Land dots (only on continents) ───────────────────────────────────
     const dPos = [];
@@ -103,15 +94,9 @@ export default function GlobeRed() {
     // ── Crisp rim + outer atmospheric halo ───────────────────────────────
     const rimGeo = new THREE.SphereGeometry(1.005, 64, 64);
     const rimMat = new THREE.MeshBasicMaterial({
-      color: 0xff2828, transparent: true, opacity: 0.12, side: THREE.BackSide,
+      color: 0xff2828, transparent: true, opacity: 0.10, side: THREE.BackSide,
     });
     group.add(new THREE.Mesh(rimGeo, rimMat));
-
-    const haloGeo = new THREE.SphereGeometry(1.06, 64, 64);
-    const haloMat = new THREE.MeshBasicMaterial({
-      color: 0xff2828, transparent: true, opacity: 0.05, side: THREE.BackSide,
-    });
-    group.add(new THREE.Mesh(haloGeo, haloMat));
 
     // ── Pins (location markers — same as before) ─────────────────────────
     const C = new THREE.Color(0xff2828);
