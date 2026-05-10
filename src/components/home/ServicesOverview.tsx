@@ -6,7 +6,7 @@ export const ServicesOverview = () => {
   return (
     <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-center">
-        <div className="md:col-span-5 relative">
+        <div className="md:col-start-2 md:col-span-5 relative">
           <RedFrame side="right">
             <div className="relative aspect-[3/4] w-full overflow-hidden">
               <video
@@ -20,7 +20,7 @@ export const ServicesOverview = () => {
           </RedFrame>
         </div>
 
-        <div className="md:col-start-9 md:col-span-4">
+        <div className="md:col-start-8 md:col-span-4">
           <span className="eyebrow text-brand-red">Nuestros servicios</span>
           <div style={{ fontSize: "clamp(36px, 4.6vw, 72px)" }}>
             <RevealHeading
