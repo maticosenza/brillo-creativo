@@ -6,9 +6,9 @@ export const ServicesOverview = () => {
   return (
     <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-center">
-        <div className="md:col-span-7 relative">
+        <div className="md:col-span-5 relative">
           <RedFrame side="right">
-            <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <div className="relative aspect-[3/4] w-full overflow-hidden">
               <video
                 className="w-full h-full object-cover"
                 autoPlay muted loop playsInline
