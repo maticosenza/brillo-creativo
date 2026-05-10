@@ -42,6 +42,7 @@ export default function GlobalReachSection() {
               fontWeight: 900,
               lineHeight: 1.05,
               letterSpacing: "-0.01em",
+              color: "#e30613",
               textTransform: "uppercase",
               margin: "0 0 24px 0",
             }}
