@@ -18,8 +18,8 @@ export const FloatingField = ({ label, required, children, hasValue }: Props) =>
         htmlFor={id}
         className={`absolute left-0 origin-left transition-all duration-200 pointer-events-none ${
           floated
-            ? "top-0 text-[12px] uppercase tracking-[0.2em] text-white/50"
-            : "top-7 text-[18px] text-white/40"
+            ? "top-0 text-[12px] uppercase tracking-[0.2em] text-white/90"
+            : "top-7 text-[18px] text-white/80"
         }`}
       >
         {label}{required && <span aria-hidden> *</span>}
