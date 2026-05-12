@@ -34,7 +34,7 @@ export const Footer = () => {
           glow={false}
           trigger="static"
           className="leading-[0.95] w-full"
-          style={{ fontSize: "clamp(60px, 13.2vw, 220px)", letterSpacing: "-0.02em", lineHeight: 0.95 }}
+          style={{ fontSize: "clamp(48px, 10.5vw, 176px)", letterSpacing: "-0.02em", lineHeight: 0.95 }}
         />
       </div>
 
