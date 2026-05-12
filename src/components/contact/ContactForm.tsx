@@ -43,7 +43,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 max-w-2xl mx-auto">
       <FloatingField label="Nombre" required hasValue={!!nombre}>
         {(p) => <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} className={inputClass} maxLength={100} {...p} />}
       </FloatingField>
@@ -89,7 +89,7 @@ export const ContactForm = () => {
           rows={4} maxLength={1000} className={cn(inputClass, "resize-none")} {...p} />}
       </FloatingField>
 
-      <div className="pt-10">
+      <div className="pt-10 flex justify-center">
         <button
           type="button"
           onClick={handleSubmit}
