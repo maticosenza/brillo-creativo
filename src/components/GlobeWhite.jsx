@@ -234,7 +234,7 @@ export default function GlobeWhite() {
   return (
     <div
       ref={mountRef}
-      style={{ width:"100%", height:"100%", minHeight:"500px", background:"transparent", cursor:"grab" }}
+      style={{ width:"100%", height:"100%", aspectRatio:"1 / 1", background:"transparent", cursor:"grab" }}
     />
   );
 }
