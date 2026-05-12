@@ -38,6 +38,7 @@ export default function GlobalReachSection() {
             maxWidth: "640px",
             margin: "0 auto",
           }}
+          className="globe-wrapper"
         >
           <GlobeWhite />
         </div>
@@ -82,6 +83,14 @@ export default function GlobalReachSection() {
           }
           .globe-grid > div:last-child {
             margin: 0 auto;
+          }
+          .globe-wrapper {
+            max-width: 78vw !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .globe-wrapper {
+            max-width: 70vw !important;
           }
         }
       `}</style>
