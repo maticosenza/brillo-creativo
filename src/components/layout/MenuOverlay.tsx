@@ -52,7 +52,7 @@ export const MenuOverlay = ({ open, onClose }: Props) => {
                       to={item.href}
                       onClick={onClose}
                       className="menu-item relative font-display uppercase leading-none transition-colors duration-300 hover:text-brand-black"
-                      style={{ fontSize: "clamp(36px, 11vh, 96px)" }}
+                      style={{ fontSize: "clamp(28px, 8.5vh, 96px)" }}
                     >
                       <span className="relative inline-block">
                         {item.label}
