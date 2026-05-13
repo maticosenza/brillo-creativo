@@ -102,7 +102,11 @@ const Nosotros = () => {
       </section>
 
       {/* Global reach with animated globe */}
-      <GlobalReachSection />
+      <GlobalReachSection
+        background="#c0181b"
+        title="Desde Argentina al mundo"
+        subtitle="Radicados en Argentina pero con alcance y experiencia global."
+      />
 
     </>
   );
