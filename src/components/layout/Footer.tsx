@@ -18,9 +18,9 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 
 export const Footer = () => {
   return (
-    <footer className="bg-brand-black text-brand-white px-6 md:px-12 pt-20 md:pt-28 pb-10">
-      {/* Top divider — bright white, contained within page padding */}
-      <div className="h-px w-full bg-white/80" />
+    <footer className="bg-brand-white text-brand-black px-6 md:px-12 pt-20 md:pt-28 pb-10">
+      {/* Top divider */}
+      <div className="h-px w-full bg-brand-black/80" />
 
       {/* CTA outline heading — sized to span the divider width */}
       <div className="mt-10 md:mt-14">
@@ -61,14 +61,14 @@ export const Footer = () => {
       <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
         {/* Paragraph */}
         <div className="md:col-span-4">
-          <p className="text-sm leading-[1.7] text-brand-white/80 max-w-[360px]">
+          <p className="text-sm leading-[1.7] text-brand-black max-w-[360px]">
             Contactanos y descubrí cómo la experiencia y el carácter de CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
           </p>
         </div>
 
         {/* Nav buttons */}
         <div className="md:col-span-3 md:col-start-6">
-          <ul className="space-y-3 text-[15px]">
+          <ul className="space-y-3 text-[15px] text-brand-black">
             {FOOTER_NAV.map((n) => (
               <li key={n.href}>
                 <Link to={n.href} className="underline-link">{n.label}</Link>
@@ -79,8 +79,8 @@ export const Footer = () => {
 
         {/* Contact */}
         <div className="md:col-span-4 md:col-start-9">
-          <h4 className="eyebrow text-white/50 mb-4">Contacto</h4>
-          <address className="not-italic text-sm leading-[1.7] text-brand-white/85 space-y-2">
+          <h4 className="eyebrow text-brand-black/60 mb-4">Contacto</h4>
+          <address className="not-italic text-sm leading-[1.7] text-brand-black space-y-2">
             <p>HQ en Puerto Madero, Buenos Aires, Argentina con presencia en todo el mundo</p>
             <p><a href="mailto:hello@caracterprod.com" className="underline-link">hello@caracterprod.com</a></p>
             <p><a href="tel:+16452397512" className="underline-link">+1 645 239 7512</a></p>
@@ -90,7 +90,7 @@ export const Footer = () => {
 
       {/* Socials */}
       <div className="mt-14">
-        <h4 className="eyebrow text-white/50 mb-4">Redes</h4>
+        <h4 className="eyebrow text-brand-black/60 mb-4">Redes</h4>
         <div className="flex items-center gap-4">
           <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"
              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-red text-brand-red transition-colors hover:bg-brand-red hover:text-brand-white">
@@ -107,8 +107,8 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/50 uppercase tracking-[0.15em]">
-        <Link to="/" className="font-display text-2xl tracking-tight text-brand-white normal-case">
+      <div className="mt-16 pt-6 border-t border-brand-black/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-brand-black/60 uppercase tracking-[0.15em]">
+        <Link to="/" className="font-display text-2xl tracking-tight text-brand-black normal-case">
           CARACTER
         </Link>
         <span className="flex items-baseline gap-1">
