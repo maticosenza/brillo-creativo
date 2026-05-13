@@ -50,7 +50,9 @@ export const Navbar = () => {
             <Link
               to="/contacto"
               className={`relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-3 text-[13px] font-medium uppercase tracking-wider group transition-colors duration-300 ${
-                scrolled ? "bg-brand-red text-brand-white" : "bg-brand-white text-brand-black"
+                scrolled
+                  ? "bg-brand-red text-brand-white border border-brand-red"
+                  : "bg-brand-white text-brand-black"
               }`}
             >
               <span
