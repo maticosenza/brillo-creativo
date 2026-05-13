@@ -10,8 +10,8 @@ const Contacto = () => {
   return (
     <>
       <section
-        className="relative w-full bg-brand-red text-brand-white px-6 md:px-12 flex flex-col justify-end pb-20 md:pb-32 pt-48 md:pt-64"
-        style={{ minHeight: "70vh" }}
+        className="relative w-full bg-brand-red text-brand-white px-6 md:px-12 flex flex-col justify-end pb-12 md:pb-16 pt-32 md:pt-40"
+        style={{ minHeight: "60vh" }}
       >
         <DisplayHeading
           lines={["HABLEMOS"]}
@@ -23,6 +23,10 @@ const Contacto = () => {
           outline
           outlineColor="#fcf7f5"
           style={{ fontSize: "clamp(80px, 14vw, 240px)" }}
+        />
+        <div
+          aria-hidden
+          className="mt-10 md:mt-14 w-full h-px bg-brand-white/80"
         />
       </section>
       <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
