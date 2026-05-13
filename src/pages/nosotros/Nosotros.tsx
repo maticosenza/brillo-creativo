@@ -28,10 +28,10 @@ const Nosotros = () => {
       />
 
       {/* Our Company */}
-      <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
+      <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center max-w-7xl mx-auto">
           <div>
-            <span className="font-display uppercase text-brand-red text-sm md:text-base tracking-[0.18em]">Nuestra empresa</span>
+            <span className="font-display uppercase text-brand-white text-sm md:text-base tracking-[0.18em]">Nuestra empresa</span>
             <h2 className="mt-6 font-display uppercase text-[clamp(30px,4.5vw,56px)] leading-[1.05]">
               Somos una empresa con caracter que genera impacto
             </h2>
@@ -55,7 +55,7 @@ const Nosotros = () => {
       </section>
 
       {/* Misión, Visión y Valores */}
-      <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
+      <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
@@ -74,12 +74,12 @@ const Nosotros = () => {
             ].map((card) => (
               <div
                 key={card.title}
-                className="aspect-square rounded-3xl bg-brand-red text-brand-white p-8 md:p-10 flex flex-col"
+                className="aspect-square rounded-3xl bg-white text-black p-8 md:p-10 flex flex-col"
               >
                 <h3 className="font-display uppercase text-[clamp(28px,3vw,40px)] leading-[1]">
                   {card.title}
                 </h3>
-                <p className="mt-6 text-base md:text-[15px] leading-[1.6] text-brand-white/95">
+                <p className="mt-6 text-base md:text-[15px] leading-[1.6] text-black/85">
                   {card.body}
                 </p>
               </div>
@@ -89,7 +89,7 @@ const Nosotros = () => {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             {VALUES.map((v, i) => (
               <div key={i} className="border-t border-brand-white/20 pt-6">
-                <h4 className="font-display uppercase text-brand-red text-[clamp(18px,1.6vw,22px)] leading-[1.2]">
+                <h4 className="font-display uppercase text-brand-white text-[clamp(18px,1.6vw,22px)] leading-[1.2]">
                   {v.title}
                 </h4>
                 <p className="mt-3 text-sm md:text-base leading-[1.6] text-brand-white/85">
