@@ -61,6 +61,48 @@ const Servicios = () => {
                 <div className="absolute left-8 bottom-8 right-8 z-10">
                   <h3 className="font-display uppercase text-h3 text-brand-white">{s.title}</h3>
                 </div>
+
+                {/* Diagonal striped L-corners (top-left & bottom-right) */}
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute top-0 left-0 z-20"
+                  style={{
+                    width: "28%",
+                    height: "5px",
+                    backgroundImage:
+                      "repeating-linear-gradient(45deg, #fcf7f5 0px, #fcf7f5 2px, transparent 2px, transparent 6px)",
+                  }}
+                />
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute top-0 left-0 z-20"
+                  style={{
+                    width: "5px",
+                    height: "28%",
+                    backgroundImage:
+                      "repeating-linear-gradient(45deg, #fcf7f5 0px, #fcf7f5 2px, transparent 2px, transparent 6px)",
+                  }}
+                />
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute bottom-0 right-0 z-20"
+                  style={{
+                    width: "28%",
+                    height: "5px",
+                    backgroundImage:
+                      "repeating-linear-gradient(45deg, #fcf7f5 0px, #fcf7f5 2px, transparent 2px, transparent 6px)",
+                  }}
+                />
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute bottom-0 right-0 z-20"
+                  style={{
+                    width: "5px",
+                    height: "28%",
+                    backgroundImage:
+                      "repeating-linear-gradient(45deg, #fcf7f5 0px, #fcf7f5 2px, transparent 2px, transparent 6px)",
+                  }}
+                />
               </Link>
             </motion.div>
           ))}
