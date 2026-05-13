@@ -16,7 +16,7 @@ const Servicios = () => {
       />
 
       {/* Intro */}
-      <section className="bg-brand-white text-brand-black py-[80px] md:py-[120px] px-6 md:px-12 border-b border-brand-black/10">
+      <section className="bg-brand-red text-brand-white py-[80px] md:py-[120px] px-6 md:px-12">
         <div className="max-w-[1100px] mx-auto text-center">
           <h2
             className="font-display uppercase"
