@@ -57,7 +57,7 @@ const Nosotros = () => {
       {/* Misión, Visión y Valores */}
       <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
             {[
               {
                 title: "Misión",
@@ -74,7 +74,7 @@ const Nosotros = () => {
             ].map((card) => (
               <div
                 key={card.title}
-                className="aspect-square rounded-3xl bg-white text-black p-8 md:p-10 flex flex-col"
+                className="h-full min-h-[320px] rounded-3xl bg-white text-black p-8 md:p-10 flex flex-col"
               >
                 <h3 className="font-display uppercase text-[clamp(28px,3vw,40px)] leading-[1]">
                   {card.title}
