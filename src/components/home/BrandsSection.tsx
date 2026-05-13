@@ -31,10 +31,10 @@ export const BrandsSection = () => {
   );
 
   return (
-    <section className="bg-brand-black text-brand-white py-[60px] md:py-[100px]">
+    <section className="bg-brand-red text-brand-white py-[60px] md:py-[100px]">
       <div className="text-center max-w-5xl mx-auto px-6 md:px-12">
         <RevealHeading
-          text="Las marcas que nos eligen"
+          text="Track Record"
           className="font-display uppercase text-h2"
         />
       </div>
