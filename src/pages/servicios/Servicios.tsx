@@ -51,11 +51,16 @@ const Servicios = () => {
       />
 
       {/* Intro */}
-      <section className="bg-brand-white text-brand-black px-6 md:px-12 py-16 md:py-20 border-b border-brand-black/10">
-        <p className="max-w-3xl text-lg md:text-xl leading-[1.5] uppercase font-medium">
-          Caracter Producciones ofrece soluciones integrales para eventos,
-          desde la estrategia a la ejecución, cubrimos todo lo que tu evento necesita.
-        </p>
+      <section className="bg-brand-white text-brand-black py-[80px] md:py-[120px] px-6 md:px-12 border-b border-brand-black/10">
+        <div className="max-w-[1100px] mx-auto text-center">
+          <h2
+            className="font-display uppercase"
+            style={{ fontSize: "clamp(24px, 3.2vw, 48px)", lineHeight: 1.2 }}
+          >
+            Caracter Producciones ofrece soluciones integrales para eventos,
+            desde la estrategia a la ejecución, cubrimos todo lo que tu evento necesita.
+          </h2>
+        </div>
       </section>
 
       {/* Services list */}
