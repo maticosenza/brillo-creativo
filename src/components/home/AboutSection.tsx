@@ -15,6 +15,7 @@ export const AboutSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
         <div className="md:col-span-6 space-y-12">
           <div>
+            <span className="eyebrow text-brand-black">Sobre Nosotros</span>
             <h2
               className="font-display uppercase text-brand-white"
               style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1 }}
