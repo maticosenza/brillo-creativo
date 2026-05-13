@@ -54,43 +54,47 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Vision & Mission */}
+      {/* Misión, Visión y Valores */}
       <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
-        <div className="max-w-5xl mx-auto">
-          <div>
-            <span className="font-display uppercase text-brand-red text-sm md:text-base tracking-[0.18em]">Visión y misión</span>
-            <h2 className="mt-6 font-display uppercase text-[clamp(32px,5vw,60px)] leading-[1.05]">
-              Empujar los límites de la producción de eventos
-            </h2>
-            <div className="mt-8 space-y-6 text-lg leading-[1.7] text-brand-white/90 max-w-3xl">
-              <p>Nunca estuvo en nuestra naturaleza conformarnos. Siempre fuimos curiosos, incluso inquietos, para saber más e ir más lejos. No buscamos producir por producir, sino crear experiencias significativas que dejen una huella positiva en nuestros clientes, en su audiencia y en la industria.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="bg-brand-white text-brand-black section-y px-6 md:px-12">
-        <div className="max-w-5xl mx-auto">
-          <span className="font-display uppercase text-brand-red text-sm md:text-base tracking-[0.18em]">Nuestros valores</span>
-          <h2 className="mt-6 font-display uppercase text-[clamp(32px,5vw,60px)] leading-[1.05]">
-            Nuestros valores guían cada interacción
-          </h2>
-          <p className="mt-8 max-w-3xl text-lg leading-[1.7] text-brand-black/80">
-            Con el equipo, con los clientes y con el resto del mundo. Mientras la visión y la misión marcan el rumbo, son los valores los que dirigen nuestras acciones, decisiones e interacciones.
-          </p>
-
-          <div className="mt-14 relative aspect-[4/5] md:aspect-[16/10] overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1800&q=80" alt="Equipo trabajando" className="w-full h-full object-cover" />
-          </div>
-
-          <div className="mt-16 space-y-12">
-            {VALUES.map((v, i) => (
-              <div key={i} className="border-t border-brand-black/15 pt-8">
-                <h3 className="font-display uppercase text-brand-red text-[clamp(22px,3vw,34px)] leading-[1.1]">
-                  {v.title}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                title: "Misión",
+                body: "Diseñar y ejecutar eventos de alto impacto, combinando estrategia, creatividad y excelencia operativa para generar experiencias memorables y resultados concretos para cada cliente.",
+              },
+              {
+                title: "Visión",
+                body: "Ser una productora referente en el sector deportivo y corporativo a nivel internacional, creando experiencias que eleven el estándar de ejecución, hospitality y producción en cada evento.",
+              },
+              {
+                title: "Valores",
+                body: "Carácter: Tomamos decisiones, resolvemos bajo presión y enfrentamos cada proyecto con personalidad, criterio y determinación.",
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="aspect-square rounded-3xl bg-brand-red text-brand-white p-8 md:p-10 flex flex-col"
+              >
+                <h3 className="font-display uppercase text-[clamp(28px,3vw,40px)] leading-[1]">
+                  {card.title}
                 </h3>
-                <p className="mt-5 text-base md:text-lg leading-[1.7] text-brand-black/80 max-w-3xl">{v.body}</p>
+                <p className="mt-6 text-base md:text-[15px] leading-[1.6] text-brand-white/95">
+                  {card.body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {VALUES.map((v, i) => (
+              <div key={i} className="border-t border-brand-white/20 pt-6">
+                <h4 className="font-display uppercase text-brand-red text-[clamp(18px,1.6vw,22px)] leading-[1.2]">
+                  {v.title}
+                </h4>
+                <p className="mt-3 text-sm md:text-base leading-[1.6] text-brand-white/85">
+                  {v.body}
+                </p>
               </div>
             ))}
           </div>
