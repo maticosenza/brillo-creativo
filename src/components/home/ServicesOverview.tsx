@@ -4,7 +4,7 @@ import { RevealHeading } from "./RevealHeading";
 
 export const ServicesOverview = () => {
   return (
-    <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
+    <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-center">
         <div className="md:col-start-2 md:col-span-5 relative">
           <RedFrame side="right">
@@ -21,7 +21,7 @@ export const ServicesOverview = () => {
         </div>
 
         <div className="md:col-start-8 md:col-span-4">
-          <span className="eyebrow text-brand-red">Nuestros servicios</span>
+          <span className="eyebrow text-brand-black">Nuestros servicios</span>
           <div style={{ fontSize: "clamp(32px, 3.6vw, 56px)" }}>
             <h2 className="mt-6 font-display uppercase leading-[0.95] whitespace-nowrap">
               Gestión completa,<br />resultados concretos
@@ -38,7 +38,7 @@ export const ServicesOverview = () => {
           >
             <span aria-hidden className="absolute inset-0 bg-brand-white origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
             <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-black">
-              Ver servicios
+              Nuestros servicios
             </span>
           </Link>
         </div>
