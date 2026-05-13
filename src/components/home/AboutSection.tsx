@@ -11,17 +11,17 @@ export const AboutSection = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
-    <section className="bg-brand-red text-black section-y px-6 md:px-12">
+    <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
         <div className="md:col-span-6 space-y-12">
           <div>
             <h2
-              className="font-display uppercase text-brand-red"
+              className="font-display uppercase text-brand-white"
               style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1 }}
             >
               Quiénes somos
             </h2>
-            <p className="mt-6 text-lg leading-[1.6] text-black max-w-[55ch]">
+            <p className="mt-6 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
               Somos una productora de eventos con ADN operativo. Con más de seis
               años trabajando para empresas multinacionales y agencias
               internacionales de marketing y motorsport, sabemos lo que significa
@@ -31,17 +31,17 @@ export const AboutSection = () => {
 
           <div>
             <h2
-              className="font-display uppercase text-brand-red"
+              className="font-display uppercase text-brand-white"
               style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1 }}
             >
               Qué hacemos
             </h2>
-            <p className="mt-6 text-lg leading-[1.6] text-black max-w-[55ch]">
+            <p className="mt-6 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
               Operamos en más de diez países. Gestionamos Grand Prix de Fórmula 1,
-              ferias internacionales, eventos corporativos y experiencias MICE
-              para clientes globales.
+              eventos corporativos, deportivos y experiencias MICE para clientes
+              globales.
             </p>
-            <p className="mt-4 text-lg leading-[1.6] text-black max-w-[55ch]">
+            <p className="mt-4 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
               Nuestro trabajo es sencillo: que el evento salga perfecto y que el
               cliente no tenga que preocuparse por nada.
             </p>
