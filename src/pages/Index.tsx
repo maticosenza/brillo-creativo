@@ -4,7 +4,6 @@ import { AboutSection } from "@/components/home/AboutSection";
 import { BrandsSection } from "@/components/home/BrandsSection";
 import { ProjectsSection } from "@/components/home/ProjectsSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
-import { InsightsSection } from "@/components/home/InsightsSection";
 import { SEO } from "@/components/shared/SEO";
 
 const Index = () => {
@@ -21,7 +20,6 @@ const Index = () => {
       <BrandsSection />
       <ProjectsSection />
       <ServicesOverview />
-      <InsightsSection />
     </>
   );
 };
