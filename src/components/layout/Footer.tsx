@@ -81,7 +81,7 @@ export const Footer = () => {
         <div className="md:col-span-4 md:col-start-9">
           <h4 className="eyebrow text-brand-black/60 mb-4">Contacto</h4>
           <address className="not-italic text-sm leading-[1.7] text-brand-black space-y-2">
-            <p>HQ en Puerto Madero, Buenos Aires, Argentina con presencia en todo el mundo</p>
+            <p>HQ en Puerto Madero, Argentina<br />con presencia en todo el mundo</p>
             <p><a href="mailto:hello@caracterprod.com" className="underline-link">hello@caracterprod.com</a></p>
             <p><a href="tel:+16452397512" className="underline-link">+1 645 239 7512</a></p>
           </address>
