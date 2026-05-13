@@ -13,7 +13,7 @@ export const StatementSection = () => {
   }
 
   return (
-    <section className="bg-brand-black text-brand-white py-[80px] md:py-[120px] px-6 md:px-12">
+    <section className="bg-white text-black py-[80px] md:py-[120px] px-6 md:px-12">
       <div className="max-w-[1100px] mx-auto text-center">
         <h2
           className="font-display uppercase"
@@ -31,13 +31,13 @@ export const StatementSection = () => {
         <div className="mt-[60px]">
           <Link
             to="/servicios"
-            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-brand-white px-9 py-4 text-[13px] font-medium uppercase tracking-wider text-brand-white"
+            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-brand-red px-9 py-4 text-[13px] font-medium uppercase tracking-wider text-brand-red"
           >
-            <span aria-hidden className="absolute inset-0 bg-brand-white origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-black">
+            <span aria-hidden className="absolute inset-0 bg-brand-red origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-white">
               Conocé más
             </span>
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-black">→</span>
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-white">→</span>
           </Link>
         </div>
       </div>
