@@ -57,12 +57,7 @@ const Nosotros = () => {
       {/* Vision & Mission */}
       <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
-          <div className="relative aspect-[4/5] md:aspect-[16/10] overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1800&q=80" alt="Equipo en evento" className="w-full h-full object-cover" />
-            <div aria-hidden className="absolute -right-2 top-0 bottom-0 w-3" style={{ background: "repeating-linear-gradient(45deg, #c0181b 0 6px, transparent 6px 12px)" }} />
-            <div aria-hidden className="absolute left-0 right-0 -bottom-2 h-3" style={{ background: "repeating-linear-gradient(45deg, #c0181b 0 6px, transparent 6px 12px)" }} />
-          </div>
-          <div className="mt-14">
+          <div>
             <span className="font-display uppercase text-brand-red text-sm md:text-base tracking-[0.18em]">Visión y misión</span>
             <h2 className="mt-6 font-display uppercase text-[clamp(32px,5vw,60px)] leading-[1.05]">
               Empujar los límites de la producción de eventos
