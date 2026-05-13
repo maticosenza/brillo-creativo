@@ -25,12 +25,23 @@ export const Footer = () => {
       {/* CTA outline heading — sized to span the divider width */}
       <div className="mt-10 md:mt-14">
         <DisplayHeading
-          lines={["LET'S MAKE IMPACT!"]}
+          lines={["LET'S MAKE"]}
           size="cta"
           as="h2"
           align="center"
           outline
           outlineColor="#c0181b"
+          glow={false}
+          trigger="static"
+          className="leading-[0.95] w-full"
+          style={{ fontSize: "clamp(48px, 10.5vw, 176px)", letterSpacing: "-0.02em", lineHeight: 0.95 }}
+        />
+        <DisplayHeading
+          lines={["IMPACT!"]}
+          size="cta"
+          as="h2"
+          align="center"
+          textColor="#c0181b"
           glow={false}
           trigger="static"
           className="leading-[0.95] w-full"
