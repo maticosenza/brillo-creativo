@@ -16,7 +16,7 @@ const Proyectos = () => {
         canonical="https://productora.com/proyectos"
       />
       <PageHero
-        title={<>Nuestros<br/>Proyectos</>}
+        title={<>Proyectos</>}
         image="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=2000&q=80"
         alt="Proyectos"
       />
