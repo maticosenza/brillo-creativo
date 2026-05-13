@@ -111,10 +111,16 @@ export const ProjectsSection = () => {
         <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
 
         {/* Side arrows over image */}
-        <div className="absolute inset-y-0 left-3 md:left-6 z-20 flex items-center">
+        <div
+          className="absolute inset-y-0 left-3 md:left-6 z-20 flex items-center"
+          onPointerDown={(e) => e.stopPropagation()}
+        >
           <NavBtn onClick={() => go(index - 1)} dir="left" label="Anterior" />
         </div>
-        <div className="absolute inset-y-0 right-3 md:right-6 z-20 flex items-center">
+        <div
+          className="absolute inset-y-0 right-3 md:right-6 z-20 flex items-center"
+          onPointerDown={(e) => e.stopPropagation()}
+        >
           <NavBtn onClick={() => go(index + 1)} dir="right" label="Siguiente" />
         </div>
       </div>
