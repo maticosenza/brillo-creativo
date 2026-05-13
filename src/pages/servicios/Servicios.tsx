@@ -45,7 +45,7 @@ const Servicios = () => {
   return (
     <>
       <PageHero
-        title={<>Nuestros<br/>Servicios</>}
+        title={<>Proyectos</>}
         image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80"
         alt="Evento producido por Caracter"
       />
