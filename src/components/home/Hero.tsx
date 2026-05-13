@@ -65,7 +65,7 @@ export const Hero = () => {
           <DisplayHeading
             lines={["SPORT.", "BUSINESS.", "IMPACT."]}
             highlightedLine={2}
-            highlightColor="#0a0a0a"
+            highlightColor="#c0181b"
             textColor="#fcf7f5"
             glow
             align="left"
