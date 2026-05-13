@@ -74,10 +74,10 @@ export const ProjectsSection = () => {
   const slug = slugify(current.title);
 
   return (
-    <section className="relative bg-brand-black text-brand-white overflow-hidden w-full px-6 md:px-12 pt-10 md:pt-16 pb-10 md:pb-14">
-      {/* TRABAJOS title — half above, half overlapping image */}
+    <section className="relative bg-brand-red text-brand-white overflow-hidden w-full px-6 md:px-12 pt-10 md:pt-16 pb-10 md:pb-14">
+      {/* PROYECTOS title — half above, half overlapping image */}
       <h2
-        aria-label="Trabajos"
+        aria-label="Proyectos"
         className="relative z-20 font-display uppercase leading-[0.85] tracking-[-0.02em] select-none pointer-events-none"
         style={{
           fontSize: "clamp(80px, 18vw, 260px)",
@@ -86,7 +86,7 @@ export const ProjectsSection = () => {
           marginBottom: "-0.5em",
         }}
       >
-        TRABAJOS
+        PROYECTOS
       </h2>
 
       {/* Image slideshow */}
