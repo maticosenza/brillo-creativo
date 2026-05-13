@@ -22,11 +22,16 @@ export const Navbar = () => {
     <>
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-          scrolled ? "bg-brand-black" : "bg-transparent"
+          scrolled ? "bg-white" : "bg-transparent"
         }`}
       >
         <div className="flex items-center justify-between px-6 md:px-12 h-20">
-          <Link to="/" className="font-display text-2xl md:text-3xl text-brand-white tracking-tight">
+          <Link
+            to="/"
+            className={`font-display text-2xl md:text-3xl tracking-tight transition-colors duration-300 ${
+              scrolled ? "text-brand-red" : "text-brand-white"
+            }`}
+          >
             CARACTER
           </Link>
 
@@ -37,20 +42,26 @@ export const Navbar = () => {
               aria-expanded={open}
               className="relative w-10 h-10 flex flex-col items-center justify-center gap-[6px] group"
             >
-              <span className="block w-6 h-[2px] bg-brand-white transition-all duration-300" />
-              <span className="block w-6 h-[2px] bg-brand-white transition-all duration-300" />
-              <span className="block w-6 h-[2px] bg-brand-white transition-all duration-300" />
+              <span className={`block w-6 h-[2px] transition-all duration-300 ${scrolled ? "bg-brand-red" : "bg-brand-white"}`} />
+              <span className={`block w-6 h-[2px] transition-all duration-300 ${scrolled ? "bg-brand-red" : "bg-brand-white"}`} />
+              <span className={`block w-6 h-[2px] transition-all duration-300 ${scrolled ? "bg-brand-red" : "bg-brand-white"}`} />
             </button>
 
             <Link
               to="/contacto"
-              className="relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-3 text-[13px] font-medium uppercase tracking-wider text-brand-black bg-brand-white group"
+              className={`relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-3 text-[13px] font-medium uppercase tracking-wider group transition-colors duration-300 ${
+                scrolled ? "bg-brand-red text-brand-white" : "bg-brand-white text-brand-black"
+              }`}
             >
               <span
                 aria-hidden
-                className="absolute inset-0 bg-brand-red origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100"
+                className={`absolute inset-0 origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100 ${
+                  scrolled ? "bg-brand-white" : "bg-brand-red"
+                }`}
               />
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-white">
+              <span className={`relative z-10 transition-colors duration-300 ${
+                scrolled ? "group-hover:text-brand-red" : "group-hover:text-brand-white"
+              }`}>
                 Contacto
               </span>
             </Link>
