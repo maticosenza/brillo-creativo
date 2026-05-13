@@ -77,9 +77,9 @@ export const Hero = () => {
       </div>
 
       <div className="hero-fade absolute bottom-[40px] left-0 right-0 z-10 px-[6vw]">
-        <span className="text-[11px] uppercase tracking-[0.3em] opacity-80">
-          Agencia de producción de eventos — Buenos Aires, AR
-        </span>
+        <p className="text-[11px] uppercase tracking-[0.3em] opacity-80">
+          Productora de eventos — Buenos Aires, AR
+        </p>
       </div>
 
       <style>{`
