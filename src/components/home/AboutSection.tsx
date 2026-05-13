@@ -17,7 +17,7 @@ export const AboutSection = () => {
           <div>
             <span className="eyebrow text-brand-black">Sobre Nosotros</span>
             <h2
-              className="font-display uppercase text-brand-white"
+              className="mt-4 font-display uppercase text-brand-white"
               style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1 }}
             >
               Quiénes somos
