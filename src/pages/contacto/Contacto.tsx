@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { DisplayHeading } from "@/components/shared/DisplayHeading";
 import { ContactForm } from "@/components/contact/ContactForm";
+import GlobalReachSection from "@/components/GlobalReachSection";
 import { CONTACT_EMAIL } from "@/lib/nav-config";
 
 const Contacto = () => {
@@ -49,6 +50,11 @@ const Contacto = () => {
           </div>
         </div>
       </section>
+      <GlobalReachSection
+        background="#c0181b"
+        title="Desde Argentina al mundo"
+        subtitle="Radicados en Argentina pero con alcance y experiencia global."
+      />
     </>
   );
 };

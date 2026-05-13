@@ -1,10 +1,19 @@
 import GlobeWhite from "./GlobeWhite";
 
-export default function GlobalReachSection() {
+export default function GlobalReachSection({
+  background = "#0a0a0a",
+  title = (
+    <>
+      Alcance global con
+      <br />toque local
+    </>
+  ),
+  subtitle = "Headquartered en Puerto Madero, Buenos Aires, Argentina con presencia en todo el mundo.",
+} = {}) {
   return (
     <section
       style={{
-        background: "#0a0a0a",
+        background,
         color: "#ffffff",
         padding: "0 24px 80px",
         width: "100%",
@@ -56,8 +65,7 @@ export default function GlobalReachSection() {
               margin: "0 0 24px 0",
             }}
           >
-            Alcance global con
-            <br />toque local
+            {title}
           </h2>
           <p
             style={{
@@ -67,8 +75,7 @@ export default function GlobalReachSection() {
               margin: 0,
             }}
           >
-            Headquartered en Puerto Madero, Buenos Aires, Argentina con
-            presencia en todo el mundo.
+            {subtitle}
           </p>
         </div>
       </div>
