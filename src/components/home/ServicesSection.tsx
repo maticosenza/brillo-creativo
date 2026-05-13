@@ -34,7 +34,7 @@ export const ServicesSection = () => {
           </Link>
         </div>
 
-        <div className="md:col-start-8 md:col-span-5">
+        <div className="md:col-start-9 md:col-span-4 md:max-w-[360px] md:ml-auto">
           <RedFrame side="left">
           <motion.div
             initial={{ rotate: -3, scale: 0.95, opacity: 0 }}
