@@ -18,12 +18,15 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 
 export const Footer = () => {
   return (
-    <footer className="bg-brand-white text-brand-black px-6 md:px-12 pt-20 md:pt-28 pb-10">
-      {/* Top divider */}
-      <div className="h-px w-full bg-brand-black/80" />
+    <footer className="text-brand-black">
+      {/* Red cap with white divider near the bottom of the red section */}
+      <div className="bg-brand-red px-6 md:px-12 pt-16 md:pt-24 pb-10 md:pb-14">
+        <div className="h-px w-full bg-brand-white" />
+      </div>
 
-      {/* CTA outline heading — sized to span the divider width */}
-      <div className="mt-10 md:mt-14">
+      <div className="bg-brand-white px-6 md:px-12 pt-16 md:pt-20 pb-10">
+      {/* CTA outline heading */}
+      <div>
         <DisplayHeading
           lines={["LET'S MAKE"]}
           size="cta"
@@ -133,6 +136,7 @@ export const Footer = () => {
             VELOCENTUM
           </a>
         </span>
+      </div>
       </div>
     </footer>
   );
