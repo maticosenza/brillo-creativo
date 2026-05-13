@@ -16,7 +16,7 @@ const Servicios = () => {
       />
 
       {/* Intro */}
-      <section className="bg-brand-red text-brand-white py-[80px] md:py-[120px] px-6 md:px-12">
+      <section className="bg-brand-red text-brand-white pt-[80px] md:pt-[120px] pb-8 md:pb-12 px-6 md:px-12">
         <div className="max-w-[1100px] mx-auto text-center">
           <h2
             className="font-display uppercase"
@@ -29,7 +29,7 @@ const Servicios = () => {
       </section>
 
       {/* Services list */}
-      <section className="bg-brand-red text-brand-white px-6 md:px-12 py-20 md:py-28">
+      <section className="bg-brand-red text-brand-white px-6 md:px-12 pt-4 md:pt-6 pb-20 md:pb-28">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {SERVICES.map((s, i) => (
             <motion.div
