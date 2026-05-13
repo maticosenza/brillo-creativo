@@ -29,14 +29,27 @@ const Nosotros = () => {
 
       {/* Our Company */}
       <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
-        <div className="max-w-5xl">
-          <span className="font-display uppercase text-brand-red text-sm md:text-base tracking-[0.18em]">Nuestra empresa</span>
-          <h2 className="mt-6 font-display uppercase text-[clamp(34px,5.5vw,68px)] leading-[1.05]">
-            Somos una productora de eventos premiada
-          </h2>
-          <div className="mt-10 space-y-6 text-lg leading-[1.7] text-brand-white/90 max-w-3xl">
-            <p>Ayudamos a marcas a maximizar el valor de cada activación, lanzamiento y festival que producimos en Argentina y la región.</p>
-            <p>Nos enorgullece ser una productora con criterio editorial, con un enfoque estratégico y creativo en cada proyecto. Con base en Buenos Aires y presencia en toda LATAM, trabajamos con clientes que buscan generar impacto real.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center max-w-7xl mx-auto">
+          <div>
+            <span className="font-display uppercase text-brand-red text-sm md:text-base tracking-[0.18em]">Nuestra empresa</span>
+            <h2 className="mt-6 font-display uppercase text-[clamp(30px,4.5vw,56px)] leading-[1.05]">
+              Somos una empresa con caracter que genera impacto
+            </h2>
+            <div className="mt-8 space-y-5 text-base md:text-lg leading-[1.7] text-brand-white/90">
+              <p>Nos especializamos en eventos deportivos y corporativos, con foco en experiencias de alto impacto y ejecución impecable.</p>
+              <p>Tenemos más de seis años trabajando para empresas multinacionales, agencias internacionales y proyectos vinculados al marketing, hospitality y motorsport.</p>
+              <p>Participamos en la producción y operación de Grand Prix de Fórmula 1, activaciones de marca, eventos deportivos, conferencias, hospitality, ferias y experiencias corporativas en más de diez países.</p>
+              <p>Trabajamos en entornos donde la velocidad, la precisión y la capacidad de resolución hacen la diferencia. Por eso nuestro enfoque es claro: comunicación directa, proactividad y atención absoluta a cada detalle.</p>
+              <p>Gestionamos cada proyecto de punta a punta, logística, coordinación on-site, proveedores, invitados y operación general, para que el cliente pueda delegar con tranquilidad sabiendo que todo está bajo control.</p>
+            </div>
+          </div>
+          <div className="relative aspect-[4/5] overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80"
+              alt="Equipo Caracter en acción"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
