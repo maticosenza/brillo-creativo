@@ -37,6 +37,7 @@ const Servicios = () => {
               layout
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1, transition: { delay: i * 0.08, duration: 0.7, ease: [0.22, 1, 0.36, 1] } }}
+              className={i % 2 === 1 ? "md:mt-24" : ""}
             >
               <Link
                 to={`/servicios/${s.slug}`}
