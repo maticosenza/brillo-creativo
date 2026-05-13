@@ -33,4 +33,4 @@ export const SOCIALS = [
   { label: "Instagram", href: "https://www.instagram.com/caracter.prod/" },
 ];
 
-export const CONTACT_EMAIL = "hola@productora.com";
+export const CONTACT_EMAIL = "hello@caracterprod.com";
