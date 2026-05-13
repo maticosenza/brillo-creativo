@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { DisplayHeading } from "@/components/shared/DisplayHeading";
 import { ContactForm } from "@/components/contact/ContactForm";
-import GlobalReachSection from "@/components/GlobalReachSection";
 import { CONTACT_EMAIL } from "@/lib/nav-config";
 
 const Contacto = () => {
@@ -11,8 +10,8 @@ const Contacto = () => {
   return (
     <>
       <section
-        className="relative w-full bg-brand-red text-brand-white px-6 md:px-12 flex flex-col justify-end pb-16 md:pb-24 pt-32"
-        style={{ minHeight: "50vh" }}
+        className="relative w-full bg-brand-red text-brand-white px-6 md:px-12 flex flex-col justify-end pb-20 md:pb-32 pt-48 md:pt-64"
+        style={{ minHeight: "70vh" }}
       >
         <DisplayHeading
           lines={["HABLEMOS"]}
@@ -23,12 +22,10 @@ const Contacto = () => {
           trigger="static"
           outline
           outlineColor="#fcf7f5"
+          style={{ fontSize: "clamp(80px, 14vw, 240px)" }}
         />
-        <p className="mt-8 max-w-[640px] text-lg md:text-xl leading-[1.5]">
-          CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
-        </p>
       </section>
-      <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
+      <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
         <ContactForm />
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
@@ -48,7 +45,6 @@ const Contacto = () => {
           </div>
         </div>
       </section>
-      <GlobalReachSection />
     </>
   );
 };
