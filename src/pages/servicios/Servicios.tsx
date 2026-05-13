@@ -1,44 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/shared/PageHero";
 import { SERVICES } from "@/data/services";
-
-const ServiceRow = ({ s }: { s: typeof SERVICES[number] }) => {
-  return (
-    <Link
-      to={`/servicios/${s.slug}`}
-      className="group block border-t border-brand-black/10"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-10 items-center px-6 md:px-12 py-10 md:py-14 transition-colors duration-300 group-hover:bg-brand-black/[0.03]">
-        <div className="order-1 md:order-none md:col-span-1 flex md:block items-start">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-brand-red text-brand-red font-display text-sm">
-            {s.number}
-          </span>
-        </div>
-
-        <div className="order-2 md:order-none md:col-span-6">
-          <h2 className="font-display uppercase text-brand-red leading-[0.95] text-[clamp(28px,3.4vw,44px)]">
-            {s.title}
-          </h2>
-          <p className="mt-4 text-base md:text-[17px] leading-[1.6] text-brand-black/80 max-w-[55ch]">
-            {s.description}
-          </p>
-        </div>
-
-        <div className="order-3 md:order-none md:col-start-8 md:col-span-5">
-          <div className="aspect-[4/3] w-full overflow-hidden">
-            <img
-              src={s.gallery[0]}
-              alt={s.title}
-              loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-            />
-          </div>
-        </div>
-      </div>
-    </Link>
-  );
-};
 
 const Servicios = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -64,9 +29,41 @@ const Servicios = () => {
       </section>
 
       {/* Services list */}
-      <section className="bg-brand-white text-brand-black">
-        {SERVICES.map((s) => <ServiceRow key={s.slug} s={s} />)}
-        <div className="border-t border-brand-black/10" />
+      <section className="bg-brand-red text-brand-white px-6 md:px-12 py-20 md:py-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {SERVICES.map((s, i) => (
+            <motion.div
+              key={s.slug}
+              layout
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1, transition: { delay: i * 0.08, duration: 0.7, ease: [0.22, 1, 0.36, 1] } }}
+            >
+              <Link
+                to={`/servicios/${s.slug}`}
+                className="group relative block aspect-[3/2] overflow-hidden"
+              >
+                <img
+                  src={s.gallery[0]}
+                  alt={s.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.08]"
+                />
+                <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
+
+                <span
+                  aria-hidden
+                  className="absolute top-6 right-6 w-12 h-12 rounded-full border border-brand-white flex items-center justify-center opacity-0 -translate-x-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0"
+                >
+                  <ArrowUpRight className="w-5 h-5 text-brand-white" />
+                </span>
+
+                <div className="absolute left-8 bottom-8 right-8 z-10">
+                  <h3 className="font-display uppercase text-h3 text-brand-white">{s.title}</h3>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
     </>
