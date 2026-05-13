@@ -28,9 +28,9 @@ export const NAV: NavItem[] = [
 ];
 
 export const SOCIALS = [
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "TikTok", href: "https://tiktok.com" },
-  { label: "Instagram", href: "https://instagram.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/car%C3%A1cter-producciones/?viewAsMember=true" },
+  { label: "TikTok", href: "https://www.tiktok.com/@caracter.prod?lang=es-419" },
+  { label: "Instagram", href: "https://www.instagram.com/caracter.prod/" },
 ];
 
 export const CONTACT_EMAIL = "hola@productora.com";

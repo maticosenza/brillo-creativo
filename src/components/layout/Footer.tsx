@@ -92,15 +92,15 @@ export const Footer = () => {
       <div className="mt-14">
         <h4 className="eyebrow text-brand-black/60 mb-4">Redes</h4>
         <div className="flex items-center gap-4">
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"
+          <a href="https://www.linkedin.com/company/car%C3%A1cter-producciones/?viewAsMember=true" target="_blank" rel="noreferrer" aria-label="LinkedIn"
              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-red text-brand-red transition-colors hover:bg-brand-red hover:text-brand-white">
             <Linkedin className="h-4 w-4" />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"
+          <a href="https://www.instagram.com/caracter.prod/" target="_blank" rel="noreferrer" aria-label="Instagram"
              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-red text-brand-red transition-colors hover:bg-brand-red hover:text-brand-white">
             <Instagram className="h-4 w-4" />
           </a>
-          <a href="https://tiktok.com" target="_blank" rel="noreferrer" aria-label="TikTok"
+          <a href="https://www.tiktok.com/@caracter.prod?lang=es-419" target="_blank" rel="noreferrer" aria-label="TikTok"
              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-red text-brand-red transition-colors hover:bg-brand-red hover:text-brand-white">
             <TikTokIcon className="h-4 w-4" />
           </a>
