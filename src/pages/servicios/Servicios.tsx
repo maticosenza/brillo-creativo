@@ -1,22 +1,54 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
-import { PageHero } from "@/components/shared/PageHero";
-import { SERVICES } from "@/data/services";
+import { DisplayHeading } from "@/components/shared/DisplayHeading";
+import { ServiceRows } from "@/components/servicios/ServiceRows";
 
 const Servicios = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <>
-      <PageHero
-        title={<>Servicios</>}
-        image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80"
-        alt="Evento producido por Caracter"
-      />
+      {/* Hero banner */}
+      <section
+        className="relative w-full overflow-hidden bg-brand-black text-brand-white"
+        style={{ height: "70vh", minHeight: 520 }}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80"
+          alt="Evento producido por Caracter"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div
+          className="relative z-10 h-full flex flex-col justify-end pb-16 md:pb-20"
+          style={{ paddingLeft: "6vw", paddingRight: "6vw" }}
+        >
+          <DisplayHeading
+            as="h1"
+            lines={["SERVICIOS"]}
+            size="hero"
+            align="left"
+            trigger="immediate"
+            textColor="#fcf7f5"
+            glow={false}
+          />
+          <p
+            className="mt-6 uppercase"
+            style={{
+              fontFamily: "Arial, sans-serif",
+              fontSize: 14,
+              letterSpacing: "0.2em",
+              color: "#fcf7f5",
+              opacity: 0.85,
+            }}
+          >
+            Diez formas de ejecutar. Una sola obsesión: que todo salga perfecto.
+          </p>
+        </div>
+      </section>
 
       {/* Intro */}
-      <section className="bg-brand-red text-brand-white pt-[80px] md:pt-[120px] pb-8 md:pb-12 px-6 md:px-12">
+      <section
+        className="bg-brand-red text-brand-white px-6 md:px-12"
+        style={{ paddingTop: "100px", paddingBottom: "100px" }}
+      >
         <div className="max-w-[1100px] mx-auto text-center">
           <h2
             className="font-display uppercase"
@@ -28,87 +60,8 @@ const Servicios = () => {
         </div>
       </section>
 
-      {/* Services list */}
-      <section className="bg-brand-red text-brand-white px-6 md:px-12 pt-4 md:pt-6 pb-20 md:pb-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {SERVICES.map((s, i) => (
-            <motion.div
-              key={s.slug}
-              layout
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1, transition: { delay: i * 0.08, duration: 0.7, ease: [0.22, 1, 0.36, 1] } }}
-              className={i % 2 === 1 ? "md:mt-24" : ""}
-            >
-              <Link
-                to={`/servicios/${s.slug}`}
-                className="group relative block aspect-[3/2] overflow-hidden"
-              >
-                <img
-                  src={s.gallery[0]}
-                  alt={s.title}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.08]"
-                />
-                <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
-
-                <span
-                  aria-hidden
-                  className="absolute top-6 right-6 w-12 h-12 rounded-full border border-brand-white flex items-center justify-center opacity-0 -translate-x-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0"
-                >
-                  <ArrowUpRight className="w-5 h-5 text-brand-white" />
-                </span>
-
-                <div className="absolute left-8 bottom-8 right-8 z-10">
-                  <h3 className="font-display uppercase text-h3 text-brand-white">{s.title}</h3>
-                </div>
-
-                {/* Diagonal striped L-corners (top-left & bottom-right) */}
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute top-0 left-0 z-20"
-                  style={{
-                    width: "28%",
-                    height: "5px",
-                    backgroundImage:
-                      "repeating-linear-gradient(45deg, #fcf7f5 0px, #fcf7f5 2px, transparent 2px, transparent 6px)",
-                  }}
-                />
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute top-0 left-0 z-20"
-                  style={{
-                    width: "5px",
-                    height: "28%",
-                    backgroundImage:
-                      "repeating-linear-gradient(45deg, #fcf7f5 0px, #fcf7f5 2px, transparent 2px, transparent 6px)",
-                  }}
-                />
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute bottom-0 right-0 z-20"
-                  style={{
-                    width: "28%",
-                    height: "5px",
-                    backgroundImage:
-                      "repeating-linear-gradient(45deg, #fcf7f5 0px, #fcf7f5 2px, transparent 2px, transparent 6px)",
-                  }}
-                />
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute bottom-0 right-0 z-20"
-                  style={{
-                    width: "5px",
-                    height: "28%",
-                    backgroundImage:
-                      "repeating-linear-gradient(45deg, #fcf7f5 0px, #fcf7f5 2px, transparent 2px, transparent 6px)",
-                  }}
-                />
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
+      {/* Zigzag rows */}
+      <ServiceRows />
     </>
   );
 };
