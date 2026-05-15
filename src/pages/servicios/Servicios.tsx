@@ -29,18 +29,6 @@ const Servicios = () => {
             textColor="#fcf7f5"
             glow={false}
           />
-          <p
-            className="mt-6 uppercase"
-            style={{
-              fontFamily: "Arial, sans-serif",
-              fontSize: 14,
-              letterSpacing: "0.2em",
-              color: "#fcf7f5",
-              opacity: 0.85,
-            }}
-          >
-            Diez formas de ejecutar. Una sola obsesión: que todo salga perfecto.
-          </p>
         </div>
       </section>
 
