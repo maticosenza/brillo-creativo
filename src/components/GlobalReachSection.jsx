@@ -1,7 +1,7 @@
-import GlobeWhite from "./GlobeWhite";
+import GlobeWhiteTranslucent from "./GlobeWhiteTranslucent";
 
 export default function GlobalReachSection({
-  background = "#0a0a0a",
+  background = "#c0181b",
   title = (
     <>
       Alcance global con
@@ -49,7 +49,7 @@ export default function GlobalReachSection({
           }}
           className="globe-wrapper"
         >
-          <GlobeWhite />
+          <GlobeWhiteTranslucent />
         </div>
 
         {/* Text — right side */}
