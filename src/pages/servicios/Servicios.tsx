@@ -9,7 +9,7 @@ const Servicios = () => {
       {/* Hero banner */}
       <section
         className="relative w-full overflow-hidden bg-brand-black text-brand-white"
-        style={{ height: "70vh", minHeight: 520 }}
+        style={{ height: "100vh", minHeight: 520 }}
       >
         <img
           src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80"
