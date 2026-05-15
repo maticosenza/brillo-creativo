@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SERVICES } from "@/data/services";
-import { DisplayHeading } from "@/components/shared/DisplayHeading";
 import { RedFrame } from "@/components/shared/RedFrame";
 
 const Row = ({ s, index }: { s: typeof SERVICES[number]; index: number }) => {
@@ -67,17 +66,20 @@ const Row = ({ s, index }: { s: typeof SERVICES[number]; index: number }) => {
         className="block mt-2 mb-6"
         style={{ width: 40, height: 2, background: "#fcf7f5" }}
       />
-      <DisplayHeading
-        as="h2"
-        lines={[s.title.toUpperCase()]}
-        size="section"
-        textColor="#fcf7f5"
-        glow={false}
-        align="left"
-        trigger="scroll"
-        className="!leading-[1.1]"
-        style={{ fontSize: "clamp(28px, 4vw, 52px)" }}
-      />
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-15% 0px" }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
+        className="font-display uppercase text-left !leading-[1.1]"
+        style={{
+          fontSize: "clamp(28px, 4vw, 52px)",
+          color: "#fcf7f5",
+          letterSpacing: "-0.01em",
+        }}
+      >
+        {s.title.toUpperCase()}
+      </motion.h2>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 0.9, y: 0 }}
