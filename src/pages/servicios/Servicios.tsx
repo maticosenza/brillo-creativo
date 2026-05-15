@@ -25,7 +25,7 @@ const Servicios = () => {
             lines={["SERVICIOS"]}
             size="hero"
             align="left"
-            trigger="immediate"
+            trigger="static"
             textColor="#fcf7f5"
             glow={false}
           />
