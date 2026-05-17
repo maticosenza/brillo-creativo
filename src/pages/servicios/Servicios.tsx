@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { DisplayHeading } from "@/components/shared/DisplayHeading";
-import { ServiceRows } from "@/components/servicios/ServiceRows";
+import { ServiceGrid } from "@/components/servicios/ServiceGrid";
 
 const Servicios = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -48,8 +48,8 @@ const Servicios = () => {
         </div>
       </section>
 
-      {/* Zigzag rows */}
-      <ServiceRows />
+      {/* Services grid: 5 rows x 2 cards */}
+      <ServiceGrid />
     </>
   );
 };
