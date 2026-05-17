@@ -2,48 +2,23 @@ import { SERVICES } from "@/data/services";
 import { ServiceDivider } from "@/components/shared/ServiceDivider";
 
 const Card = ({ s }: { s: typeof SERVICES[number] }) => (
-  <div className="flex flex-col">
-    <div className="relative w-full" style={{ aspectRatio: "16 / 10" }}>
+  <div className="service-card">
+    <div className="service-image-wrap">
       <img
         src={s.image}
         alt={s.title}
         loading="lazy"
-        className="w-full h-full object-cover block"
+        className="service-image"
       />
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          boxShadow:
-            "inset 0 0 50px rgba(0,0,0,0.35), inset 0 0 100px rgba(0,0,0,0.15)",
-        }}
-      />
+      <div aria-hidden className="service-image-vignette" />
     </div>
-    <h3
-      className="uppercase"
-      style={{
-        fontFamily: "Arial, sans-serif",
-        fontWeight: 700,
-        fontSize: "clamp(20px, 2.5vw, 28px)",
-        lineHeight: 1.2,
-        color: "#fcf7f5",
-        marginTop: 24,
-      }}
-    >
-      {s.title.toUpperCase()}
-    </h3>
-    <p
-      style={{
-        fontFamily: "Arial, sans-serif",
-        fontSize: "clamp(14px, 1.8vw, 16px)",
-        lineHeight: 1.5,
-        color: "#fcf7f5",
-        opacity: 0.85,
-        marginTop: 12,
-      }}
-    >
-      {s.description}
-    </p>
+    <div className="service-text">
+      <div className="service-header">
+        <span className="service-number">{s.number}</span>
+        <h3 className="service-title">{s.title.toUpperCase()}</h3>
+      </div>
+      <p className="service-description">{s.description}</p>
+    </div>
   </div>
 );
 
@@ -78,6 +53,70 @@ export const ServiceGrid = () => {
           grid-template-columns: 1fr 1fr;
           gap: 60px;
           min-height: 500px;
+        }
+        .service-card { display: flex; flex-direction: column; }
+        .service-image-wrap {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 10;
+          overflow: hidden;
+        }
+        .service-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          box-shadow:
+            inset 0 0 60px rgba(0, 0, 0, 0.45),
+            inset 0 0 120px rgba(0, 0, 0, 0.25);
+        }
+        .service-image-vignette {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background: radial-gradient(
+            ellipse 100% 100% at 50% 50%,
+            transparent 20%,
+            rgba(192, 24, 27, 0.35) 70%,
+            rgba(192, 24, 27, 0.75) 100%
+          );
+        }
+        .service-text { padding: 0; margin-top: 24px; }
+        .service-header {
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+          margin-bottom: 12px;
+          flex-wrap: wrap;
+        }
+        .service-number {
+          color: #fcf7f5;
+          font-family: 'Anton', sans-serif;
+          font-size: clamp(28px, 3.5vw, 48px);
+          font-weight: 400;
+          line-height: 1;
+          flex-shrink: 0;
+          letter-spacing: -0.02em;
+        }
+        .service-title {
+          color: #fcf7f5;
+          font-family: 'Anton', sans-serif;
+          font-size: clamp(18px, 2.5vw, 28px);
+          font-weight: 400;
+          line-height: 1.15;
+          letter-spacing: -0.01em;
+          text-transform: uppercase;
+          margin: 0;
+        }
+        .service-description {
+          color: #fcf7f5;
+          opacity: 0.85;
+          font-family: Arial, sans-serif;
+          font-size: clamp(14px, 1.8vw, 16px);
+          font-weight: 400;
+          line-height: 1.5;
+          margin: 0;
+          padding-left: 0;
         }
         @media (max-width: 768px) {
           .service-grid-row {
