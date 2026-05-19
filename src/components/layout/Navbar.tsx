@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MenuOverlay } from "./MenuOverlay";
+import logoCaracter from "@/assets/logo-caracter.png";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -22,17 +23,12 @@ export const Navbar = () => {
     <>
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-          scrolled ? "bg-white" : "bg-transparent"
+          scrolled ? "bg-brand-red" : "bg-transparent"
         }`}
       >
         <div className="flex items-center justify-between px-6 md:px-12 h-20">
-          <Link
-            to="/"
-            className={`font-display text-2xl md:text-3xl tracking-tight transition-colors duration-300 ${
-              scrolled ? "text-brand-red" : "text-brand-white"
-            }`}
-          >
-            CARACTER
+          <Link to="/" aria-label="Caracter Producciones" className="flex items-center">
+            <img src={logoCaracter} alt="Caracter Producciones" className="h-8 md:h-10 w-auto" />
           </Link>
 
           <div className="flex items-center gap-3 md:gap-5">
@@ -42,27 +38,27 @@ export const Navbar = () => {
               aria-expanded={open}
               className="relative w-10 h-10 flex flex-col items-center justify-center gap-[6px] group"
             >
-              <span className={`block w-6 h-[2px] transition-all duration-300 ${scrolled ? "bg-brand-red" : "bg-brand-white"}`} />
-              <span className={`block w-6 h-[2px] transition-all duration-300 ${scrolled ? "bg-brand-red" : "bg-brand-white"}`} />
-              <span className={`block w-6 h-[2px] transition-all duration-300 ${scrolled ? "bg-brand-red" : "bg-brand-white"}`} />
+              <span className="block w-6 h-[2px] bg-brand-white transition-all duration-300" />
+              <span className="block w-6 h-[2px] bg-brand-white transition-all duration-300" />
+              <span className="block w-6 h-[2px] bg-brand-white transition-all duration-300" />
             </button>
 
             <Link
               to="/contacto"
               className={`relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-3 text-[13px] font-medium uppercase tracking-wider group transition-colors duration-300 ${
                 scrolled
-                  ? "bg-brand-red text-brand-white border border-brand-red"
+                  ? "bg-brand-white text-brand-red border border-brand-white"
                   : "bg-brand-white text-brand-black"
               }`}
             >
               <span
                 aria-hidden
                 className={`absolute inset-0 origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100 ${
-                  scrolled ? "bg-brand-white" : "bg-brand-red"
+                  scrolled ? "bg-brand-red" : "bg-brand-red"
                 }`}
               />
               <span className={`relative z-10 transition-colors duration-300 ${
-                scrolled ? "group-hover:text-brand-red" : "group-hover:text-brand-white"
+                scrolled ? "group-hover:text-brand-white" : "group-hover:text-brand-white"
               }`}>
                 Contacto
               </span>
