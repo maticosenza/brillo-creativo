@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { DisplayHeading } from "@/components/shared/DisplayHeading";
 import { ServiceGrid } from "@/components/servicios/ServiceGrid";
+import serviciosHero from "@/assets/servicios-hero.jpg";
 
 const Servicios = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -12,8 +13,8 @@ const Servicios = () => {
         style={{ height: "100vh", minHeight: 520 }}
       >
         <img
-          src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=2000&q=80"
-          alt="Equipo Caracter"
+          src={serviciosHero}
+          alt="Servicios Caracter"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div
