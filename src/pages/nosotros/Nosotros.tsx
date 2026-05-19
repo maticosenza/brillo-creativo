@@ -1,6 +1,7 @@
 import { PageHero } from "@/components/shared/PageHero";
 import GlobalReachSection from "@/components/GlobalReachSection";
 import { useEffect } from "react";
+import nosotrosHero from "@/assets/nosotros-hero.jpg";
 
 const VALUES = [
   {
@@ -23,7 +24,7 @@ const Nosotros = () => {
     <>
       <PageHero
         title={<>Sobre<br/>Nosotros</>}
-        image="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=2000&q=80"
+        image={nosotrosHero}
         alt="Equipo Caracter"
       />
 
