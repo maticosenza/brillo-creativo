@@ -12,8 +12,8 @@ const Servicios = () => {
         style={{ height: "100vh", minHeight: 520 }}
       >
         <img
-          src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80"
-          alt="Evento producido por Caracter"
+          src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=2000&q=80"
+          alt="Equipo Caracter"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div
