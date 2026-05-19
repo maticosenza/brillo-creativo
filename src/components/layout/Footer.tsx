@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Instagram } from "lucide-react";
 import { DisplayHeading } from "@/components/shared/DisplayHeading";
+import logoCaracter from "@/assets/logo-caracter.png";
 
 const FOOTER_NAV = [
   { label: "Home", href: "/" },
@@ -122,8 +123,8 @@ export const Footer = () => {
       </div>
 
       <div className="mt-16 pt-6 border-t border-brand-white/20 flex flex-col md:flex-row justify-between gap-3 text-xs text-brand-white/80 uppercase tracking-[0.15em]">
-        <Link to="/" className="font-display text-2xl tracking-tight text-brand-white normal-case">
-          CARACTER
+        <Link to="/" aria-label="Caracter Producciones" className="flex items-center">
+          <img src={logoCaracter} alt="Caracter Producciones" className="h-8 w-auto" />
         </Link>
         <span className="flex items-baseline gap-1">
           © 2026 MARCA REGISTRADA · DISEÑADO POR{" "}
