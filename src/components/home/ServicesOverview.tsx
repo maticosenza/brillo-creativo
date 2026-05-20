@@ -21,7 +21,7 @@ export const ServicesOverview = () => {
         </div>
 
         <div className="md:col-start-8 md:col-span-4">
-          <span className="eyebrow text-brand-black">Nuestros servicios</span>
+          <span className="eyebrow text-brand-white">Nuestros servicios</span>
           <div style={{ fontSize: "clamp(32px, 3.6vw, 56px)" }}>
             <h2 className="mt-6 font-display uppercase leading-[0.95] whitespace-nowrap">
               Gestión completa,<br />resultados concretos
