@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
-import GlobalReachSection from "@/components/GlobalReachSection";
+import GlobeRedOnWhite from "@/components/GlobeRedOnWhite";
 
 const Contacto = () => {
   useEffect(() => { window.scrollTo(0, 0); document.title = "Contacto — Productora"; }, []);
