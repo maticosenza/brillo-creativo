@@ -10,19 +10,21 @@ import atlassian from "@/assets/brands/atlassian.png";
 import cocacola from "@/assets/brands/cocacola.png";
 import manga from "@/assets/brands/manga.png";
 import intelcia from "@/assets/brands/intelcia.png";
+import clap from "@/assets/brands/clap.png";
 
 const BRANDS: { name: string; src: string; className?: string }[] = [
   { name: "Mercado Libre", src: mercadolibre },
   { name: "Fira Barcelona", src: fira },
   { name: "Monster Energy", src: monster },
-  { name: "Sophos", src: sophos, className: "h-[64px] max-w-[160px]" },
+  { name: "Sophos", src: sophos, className: "h-[72px] max-w-[180px]" },
   { name: "Heineken", src: heineken },
   { name: "Geopost", src: geopost },
   { name: "Datawise", src: datawise },
-  { name: "Atlassian", src: atlassian, className: "max-w-[180px]" },
+  { name: "Atlassian", src: atlassian, className: "h-[60px] max-w-[200px]" },
   { name: "Coca-Cola", src: cocacola },
   { name: "Manga Barcelona", src: manga },
   { name: "Intelcia", src: intelcia },
+  { name: "Clap Music", src: clap },
 ];
 
 export const BrandsSection = () => {
@@ -35,7 +37,7 @@ export const BrandsSection = () => {
       src={src}
       alt={name}
       loading="lazy"
-      className={`shrink-0 h-[50px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 ${className ?? ""}`}
+      className={`shrink-0 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 ${className ?? "h-[50px]"}`}
     />
   );
 
