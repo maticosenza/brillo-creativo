@@ -114,3 +114,63 @@
   }
   .cursor-dot { display: none; }
 }
+
+/* ═══════════════════════════════════════════════ */
+/* SELECTION STYLES — DEFINICIONES COMPLETAS       */
+/* ═══════════════════════════════════════════════ */
+
+/* 1) Selection en secciones de FONDO ROJO: fondo blanco, texto rojo */
+.red-background ::selection,
+[style*="background-color: #c0181b"] ::selection,
+section[class*="red"] ::selection {
+  background-color: #fcf7f5 !important;
+  color: #c0181b !important;
+}
+.red-background ::-moz-selection,
+[style*="background-color: #c0181b"] ::-moz-selection,
+section[class*="red"] ::-moz-selection {
+  background-color: #fcf7f5 !important;
+  color: #c0181b !important;
+}
+
+/* 2) Selection en TÍTULOS DE BANNERS: fondo rojo, texto blanco */
+.banner-title ::selection,
+.display-heading ::selection,
+[class*="banner"] h1 ::selection,
+[class*="banner"] h2 ::selection {
+  background-color: #c0181b !important;
+  color: #fcf7f5 !important;
+}
+.banner-title ::-moz-selection,
+.display-heading ::-moz-selection,
+[class*="banner"] h1 ::-moz-selection,
+[class*="banner"] h2 ::-moz-selection {
+  background-color: #c0181b !important;
+  color: #fcf7f5 !important;
+}
+
+/* 3) Selection en CTA del footer: fondo rojo, texto blanco */
+.cta-footer ::selection,
+.footer-cta h2 ::selection {
+  background-color: #c0181b !important;
+  color: #fcf7f5 !important;
+}
+.cta-footer ::-moz-selection,
+.footer-cta h2 ::-moz-selection {
+  background-color: #c0181b !important;
+  color: #fcf7f5 !important;
+}
+
+/* 4) Selection en secciones de FONDO NEGRO: fondo rojo, texto blanco */
+.black-background ::selection,
+[style*="background-color: #0a0a0a"] ::selection,
+section[class*="black"] ::selection {
+  background-color: #c0181b !important;
+  color: #fcf7f5 !important;
+}
+.black-background ::-moz-selection,
+[style*="background-color: #0a0a0a"] ::-moz-selection,
+section[class*="black"] ::-moz-selection {
+  background-color: #c0181b !important;
+  color: #fcf7f5 !important;
+}
