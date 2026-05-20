@@ -34,8 +34,6 @@
   html, body { @apply bg-brand-black text-brand-white font-body antialiased; overflow-x: hidden; max-width: 100vw; }
   body { font-size: 17px; line-height: 1.6; letter-spacing: 0.01em; }
   p { letter-spacing: 0.01em; }
-  .cta-footer ::selection { background-color: #c0181b; color: #fcf7f5; }
-  .cta-footer ::-moz-selection { background-color: #c0181b; color: #fcf7f5; }
 
   h1, h2, h3, h4, h5 { @apply font-display uppercase; }
 
