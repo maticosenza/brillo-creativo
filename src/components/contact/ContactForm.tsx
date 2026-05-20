@@ -59,8 +59,8 @@ export const ContactForm = () => {
       <FloatingField label="Tipo de evento" required hasValue={!!tipo}>
         {(p) => (
           <select value={tipo} onChange={(e) => setTipo(e.target.value)} className={cn(inputClass, "uppercase tracking-wide")} {...p}>
-            <option value="" disabled className="bg-brand-black"></option>
-            {TIPOS.map((t) => <option key={t} value={t} className="bg-brand-black">{t}</option>)}
+            <option value="" disabled></option>
+            {TIPOS.map((t) => <option key={t} value={t}>{t}</option>)}
           </select>
         )}
       </FloatingField>
@@ -75,7 +75,7 @@ export const ContactForm = () => {
                 <CalendarIcon className="w-4 h-4 opacity-60" />
               </button>
             </PopoverTrigger>
-            <PopoverContent className="w-auto p-0 bg-brand-black border-white/20 text-brand-white" align="start">
+            <PopoverContent className="w-auto p-0" align="start">
               <Calendar mode="single" selected={fecha} onSelect={setFecha}
                 disabled={(d) => d < new Date(new Date().setHours(0,0,0,0))}
                 initialFocus className="p-3 pointer-events-auto" />
@@ -94,10 +94,9 @@ export const ContactForm = () => {
           type="button"
           onClick={handleSubmit}
           disabled={submitting}
-          className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-brand-white px-8 py-4 text-[13px] font-medium uppercase tracking-wider disabled:opacity-50"
+          className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-brand-red text-brand-white px-10 py-4 text-[13px] font-display uppercase tracking-[0.2em] transition-colors duration-300 hover:bg-[#901214] disabled:opacity-50"
         >
-          <span aria-hidden className="absolute inset-0 bg-brand-white origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
-          <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover:text-brand-red">
+          <span className="relative z-10 flex items-center gap-2">
             {submitting ? "Enviando..." : "Enviar mensaje"}
             <ArrowRight className="w-4 h-4" />
           </span>
