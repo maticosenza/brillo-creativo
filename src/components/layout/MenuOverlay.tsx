@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Plus } from "lucide-react";
 import { NAV, SOCIALS, CONTACT_EMAIL } from "@/lib/nav-config";
+import logoCaracter from "@/assets/logo-caracter.png";
 
 type Props = { open: boolean; onClose: () => void };
 
@@ -24,8 +25,8 @@ export const MenuOverlay = ({ open, onClose }: Props) => {
           aria-label="Menú principal"
         >
           <div className="flex items-center justify-between px-6 md:px-12 py-6">
-            <Link to="/" onClick={onClose} className="font-display text-2xl tracking-tight">
-              CARACTER
+            <Link to="/" onClick={onClose} aria-label="Caracter Producciones" className="flex items-center">
+              <img src={logoCaracter} alt="Caracter Producciones" className="h-8 md:h-10 w-auto" />
             </Link>
             <button
               onClick={onClose}
