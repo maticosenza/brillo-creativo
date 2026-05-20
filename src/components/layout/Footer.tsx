@@ -78,9 +78,7 @@ export const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="px-[4vw] md:px-[6vw]">
-        <div className="h-px w-full bg-[#fcf7f5] opacity-20" />
-      </div>
+      <div className="footer-divider" />
 
       {/* 3) Bottom line */}
       <div className="px-[4vw] md:px-[6vw] py-5 flex flex-col md:flex-row justify-between gap-2 font-body text-[12px] text-brand-white/60 uppercase tracking-[0.15em]">
