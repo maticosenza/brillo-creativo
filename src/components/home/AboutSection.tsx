@@ -59,9 +59,9 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        <div className="md:col-span-6">
+        <div className="md:col-span-5 md:col-start-8">
           <RedFrame side="right">
-            <div ref={ref} className="overflow-hidden aspect-[4/5] w-full">
+            <div ref={ref} className="overflow-hidden aspect-[3/4] w-full max-w-[440px] ml-auto">
               <motion.img
                 style={{ y }}
                 src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1200&q=80"
