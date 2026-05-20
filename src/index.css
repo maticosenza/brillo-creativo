@@ -242,29 +242,35 @@ section[class*="black"] ::-moz-selection {
 /* CONTACTO PAGE                                    */
 /* ═══════════════════════════════════════════════ */
 
-.hablemos-title {
+.contact-banner-white {
+  background: #fcf7f5;
+  padding: 140px 6vw 60px;
+  border-bottom: 1px solid #c0181b;
+}
+
+.hablemos-title-red {
   font-family: 'Anton', sans-serif;
   font-size: clamp(80px, 14vw, 240px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #fcf7f5;
+  color: #c0181b;
   margin: 0;
-  text-shadow: 0 0 40px rgba(252, 247, 245, 0.25);
+  text-shadow: 0 0 40px rgba(192, 24, 27, 0.15);
 }
 
 .contact-form-section {
-  background: #fcf7f5;
-  color: #0a0a0a;
+  background: #c0181b;
+  color: #fcf7f5;
   padding: 100px 6vw;
 }
 
 .brief-cta-section {
-  background: #fcf7f5;
+  background: #c0181b;
   padding: 80px 6vw;
-  border-top: 1px solid #c0181b;
-  border-bottom: 1px solid #c0181b;
+  border-top: 1px solid #fcf7f5;
+  border-bottom: 1px solid #fcf7f5;
 }
 
 .brief-content {
@@ -281,7 +287,7 @@ section[class*="black"] ::-moz-selection {
 .brief-text h3 {
   font-family: 'Anton', sans-serif;
   font-size: clamp(24px, 3vw, 36px);
-  color: #0a0a0a;
+  color: #fcf7f5;
   text-transform: uppercase;
   margin: 0 0 16px 0;
   letter-spacing: -0.01em;
@@ -291,10 +297,11 @@ section[class*="black"] ::-moz-selection {
 .brief-text p {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: #0a0a0a;
+  color: #fcf7f5;
   line-height: 1.6;
   margin: 0;
   max-width: 520px;
+  opacity: 0.85;
 }
 
 .brief-button {
@@ -302,8 +309,8 @@ section[class*="black"] ::-moz-selection {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #c0181b;
-  color: #fcf7f5;
+  background: #fcf7f5;
+  color: #c0181b;
   padding: 16px 32px;
   border: none;
   border-radius: 999px;
@@ -318,7 +325,7 @@ section[class*="black"] ::-moz-selection {
   text-decoration: none;
 }
 
-.brief-button:hover { background: #901214; }
+.brief-button:hover { background: #fcf7f5; opacity: 0.9; }
 
 @media (max-width: 768px) {
   .contact-form-section { padding: 64px 6vw; }
@@ -455,11 +462,11 @@ section[class*="black"] ::-moz-selection {
 }
 
 /* ═══════════════════════════════════════════════ */
-/* CONTACTO — WORLD SECTION (WHITE BG)              */
+/* CONTACTO — WORLD SECTION (RED BG)                */
 /* ═══════════════════════════════════════════════ */
 
-.world-section-white {
-  background: #fcf7f5;
+.world-section-red {
+  background: #c0181b;
   padding: 100px 6vw;
   display: flex;
   align-items: center;
@@ -474,49 +481,56 @@ section[class*="black"] ::-moz-selection {
   width: 100%;
 }
 
-.world-globe {
+.world-section-red .world-container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+}
+
+.world-section-red .world-globe {
   flex: 0 0 40%;
   position: relative;
   aspect-ratio: 1 / 1;
   max-width: 480px;
-  opacity: 0.85;
-  filter: drop-shadow(0 0 30px rgba(192, 24, 27, 0.25));
+  filter: drop-shadow(0 0 30px rgba(252, 247, 245, 0.25));
 }
 
-.world-text { flex: 1; }
+.world-section-red .world-text { flex: 1; }
 
-.world-text h2 {
+.world-section-red .world-text h2 {
   font-family: 'Anton', sans-serif;
   font-size: clamp(32px, 5vw, 56px);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #c0181b;
+  color: #fcf7f5;
   margin: 0 0 16px 0;
 }
 
-.world-text p {
+.world-section-red .world-text p {
   font-family: Arial, sans-serif;
   font-size: clamp(15px, 1.8vw, 18px);
   line-height: 1.6;
-  color: #0a0a0a;
-  opacity: 0.75;
+  color: #fcf7f5;
+  opacity: 0.85;
   margin: 0;
   max-width: 500px;
 }
 
 @media (max-width: 768px) {
-  .world-section-white { padding: 64px 6vw; }
-  .world-container {
+  .world-section-red { padding: 64px 6vw; }
+  .world-section-red .world-container {
     flex-direction: column;
     gap: 40px;
     text-align: center;
   }
-  .world-globe {
+  .world-section-red .world-globe {
     flex: 0 0 auto;
     width: 70%;
     max-width: 300px;
   }
-  .world-text p { margin: 0 auto; }
+  .world-section-red .world-text p { margin: 0 auto; }
 }

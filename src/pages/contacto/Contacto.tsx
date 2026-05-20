@@ -2,21 +2,14 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
-import GlobeRedOnWhite from "@/components/GlobeRedOnWhite";
+import GlobeWhiteTranslucent from "@/components/GlobeWhiteTranslucent";
 
 const Contacto = () => {
   useEffect(() => { window.scrollTo(0, 0); document.title = "Contacto — Productora"; }, []);
   return (
     <>
-      <section
-        className="relative w-full bg-brand-red text-brand-white px-6 md:px-12 flex flex-col justify-end pb-12 md:pb-16 pt-32 md:pt-40"
-        style={{ minHeight: "60vh" }}
-      >
-        <h1 className="hablemos-title">HABLEMOS</h1>
-        <div
-          aria-hidden
-          className="mt-10 md:mt-14 w-full h-px bg-brand-white/80"
-        />
+      <section className="contact-banner-white">
+        <h1 className="hablemos-title-red">HABLEMOS</h1>
       </section>
 
       <section className="contact-form-section">
@@ -38,10 +31,10 @@ const Contacto = () => {
         </div>
       </section>
 
-      <section className="world-section-white">
+      <section className="world-section-red">
         <div className="world-container">
           <div className="world-globe">
-            <GlobeRedOnWhite />
+            <GlobeWhiteTranslucent />
           </div>
           <div className="world-text">
             <h2>Desde Argentina al mundo</h2>

@@ -58,9 +58,9 @@ export const ContactForm = () => {
 
       <FloatingField label="Tipo de evento" required hasValue={!!tipo}>
         {(p) => (
-          <select value={tipo} onChange={(e) => setTipo(e.target.value)} className={cn(inputClass, "uppercase tracking-wide")} {...p}>
+          <select value={tipo} onChange={(e) => setTipo(e.target.value)} className={cn(inputClass, "uppercase tracking-wide bg-brand-red")} {...p}>
             <option value="" disabled></option>
-            {TIPOS.map((t) => <option key={t} value={t}>{t}</option>)}
+            {TIPOS.map((t) => <option key={t} value={t} className="bg-brand-red text-brand-white">{t}</option>)}
           </select>
         )}
       </FloatingField>
@@ -94,7 +94,7 @@ export const ContactForm = () => {
           type="button"
           onClick={handleSubmit}
           disabled={submitting}
-          className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-brand-red text-brand-white px-10 py-4 text-[13px] font-display uppercase tracking-[0.2em] transition-colors duration-300 hover:bg-[#901214] disabled:opacity-50"
+          className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-brand-white text-brand-red px-10 py-4 text-[13px] font-display uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-90 disabled:opacity-50"
         >
           <span className="relative z-10 flex items-center gap-2">
             {submitting ? "Enviando..." : "Enviar mensaje"}
