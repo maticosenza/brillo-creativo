@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Instagram } from "lucide-react";
-import { DisplayHeading } from "@/components/shared/DisplayHeading";
 import logoCaracter from "@/assets/logo-caracter.png";
 
 const FOOTER_NAV = [
@@ -21,58 +20,13 @@ export const Footer = () => {
   return (
     <footer className="text-brand-white red-background bg-brand-red">
       {/* 1) CTA */}
-      <div className="px-[4vw] md:px-[6vw] pt-[60px] pb-[40px]">
-        <div className="cta-footer">
-          <DisplayHeading
-            lines={["LET'S MAKE"]}
-            size="cta"
-            as="h2"
-            align="center"
-            outline
-            outlineColor="#fcf7f5"
-            glow={false}
-            trigger="static"
-            className="leading-[0.95] w-full"
-            style={{ fontSize: "clamp(48px, 10.5vw, 176px)", letterSpacing: "-0.02em", lineHeight: 0.95 }}
-          />
-          <DisplayHeading
-            lines={["IMPACT!"]}
-            size="cta"
-            as="h2"
-            align="center"
-            textColor="#fcf7f5"
-            glow={false}
-            trigger="static"
-            className="leading-[0.95] w-full"
-            style={{ fontSize: "clamp(48px, 10.5vw, 176px)", letterSpacing: "-0.02em", lineHeight: 0.95 }}
-          />
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <Link
-            to="/contacto"
-            className="group relative inline-flex items-center justify-center overflow-hidden rounded-full"
-            style={{ padding: "18px 44px", border: "1px solid #fcf7f5", background: "#c0181b" }}
-          >
-            <span
-              aria-hidden
-              className="absolute inset-0 origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100"
-              style={{ background: "#fcf7f5" }}
-            />
-            <span
-              className="relative z-10 font-display uppercase transition-colors duration-300 text-[#fcf7f5] group-hover:text-[#c0181b]"
-              style={{ fontSize: 14, letterSpacing: "0.2em" }}
-            >
-              Hablemos
-            </span>
-          </Link>
-        </div>
-      </div>
+      <section className="footer-cta cta-footer">
+        <h2>LET'S MAKE IMPACT!</h2>
+        <Link to="/contacto" className="footer-cta-btn">Hablemos</Link>
+      </section>
 
       {/* Divider */}
-      <div className="px-[4vw] md:px-[6vw]">
-        <div className="h-px w-full bg-[#fcf7f5] opacity-30" />
-      </div>
+      <div className="footer-divider" />
 
       {/* 2) Main content — 3 cols */}
       <div className="px-[4vw] md:px-[6vw] py-[60px] grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
@@ -124,9 +78,7 @@ export const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="px-[4vw] md:px-[6vw]">
-        <div className="h-px w-full bg-[#fcf7f5] opacity-20" />
-      </div>
+      <div className="footer-divider" />
 
       {/* 3) Bottom line */}
       <div className="px-[4vw] md:px-[6vw] py-5 flex flex-col md:flex-row justify-between gap-2 font-body text-[12px] text-brand-white/60 uppercase tracking-[0.15em]">
