@@ -13,7 +13,7 @@ export const StatementSection = () => {
   }
 
   return (
-    <section className="bg-white text-black py-[80px] md:py-[120px] px-6 md:px-12">
+    <section className="bg-white text-black py-[40px] md:py-[64px] px-6 md:px-12">
       <div className="max-w-[1100px] mx-auto text-center">
         <h2
           className="font-display uppercase"
@@ -28,7 +28,7 @@ export const StatementSection = () => {
           ))}
         </h2>
 
-        <div className="mt-[60px]">
+        <div className="mt-[32px]">
           <Link
             to="/servicios"
             className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-brand-red px-9 py-4 text-[13px] font-medium uppercase tracking-wider text-brand-red"
