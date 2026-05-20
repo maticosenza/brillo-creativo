@@ -180,7 +180,7 @@ section[class*="black"] ::-moz-selection {
 /* ═══════════════════════════════════════════════ */
 
 .footer-cta {
-  padding: 60px 6vw;
+  padding: 60px 6vw 100px 6vw;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -229,7 +229,7 @@ section[class*="black"] ::-moz-selection {
   height: 1px;
   width: 100%;
   background: #fcf7f5;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {
