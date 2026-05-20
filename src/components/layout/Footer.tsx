@@ -19,7 +19,7 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 
 export const Footer = () => {
   return (
-    <footer className="text-brand-white">
+    <footer className="text-brand-white red-background">
       {/* Red cap with white divider near the bottom of the red section */}
       <div className="bg-brand-red px-6 md:px-12 pt-16 md:pt-24 pb-10 md:pb-14">
         <div className="h-px w-full bg-brand-white" />
