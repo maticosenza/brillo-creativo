@@ -13,8 +13,8 @@ export const AboutSection = () => {
 
   return (
     <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
-        <div className="md:col-span-6 space-y-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
+        <div className="md:col-span-6 md:col-start-2 space-y-12">
           <div>
             <span className="eyebrow text-brand-white">Sobre Nosotros</span>
             <h2
@@ -59,9 +59,9 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        <div className="md:col-span-5 md:col-start-8">
-          <RedFrame side="right">
-            <div ref={ref} className="overflow-hidden aspect-[3/4] w-full max-w-[440px] ml-auto">
+        <div className="md:col-span-4 md:col-start-9">
+          <RedFrame side="right" className="w-full max-w-[420px] ml-auto">
+            <div ref={ref} className="overflow-hidden aspect-[3/4] w-full">
               <motion.img
                 style={{ y }}
                 src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1200&q=80"
