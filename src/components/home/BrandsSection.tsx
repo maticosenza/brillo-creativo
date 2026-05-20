@@ -8,6 +8,8 @@ import geopost from "@/assets/brands/geopost.png";
 import datawise from "@/assets/brands/datawise.png";
 import atlassian from "@/assets/brands/atlassian.png";
 import cocacola from "@/assets/brands/cocacola.png";
+import manga from "@/assets/brands/manga.png";
+import intelcia from "@/assets/brands/intelcia.png";
 
 const BRANDS: { name: string; src: string; className?: string }[] = [
   { name: "Mercado Libre", src: mercadolibre },
@@ -19,6 +21,8 @@ const BRANDS: { name: string; src: string; className?: string }[] = [
   { name: "Datawise", src: datawise },
   { name: "Atlassian", src: atlassian, className: "max-w-[180px]" },
   { name: "Coca-Cola", src: cocacola },
+  { name: "Manga Barcelona", src: manga },
+  { name: "Intelcia", src: intelcia },
 ];
 
 export const BrandsSection = () => {
