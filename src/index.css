@@ -237,3 +237,127 @@ section[class*="black"] ::-moz-selection {
     font-size: clamp(28px, 8vw, 48px);
   }
 }
+
+/* ═══════════════════════════════════════════════ */
+/* MISSION / VISION / VALUES                        */
+/* ═══════════════════════════════════════════════ */
+
+.mission-vision-values {
+  padding: 100px 6vw;
+  background-color: #c0181b;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.mission-vision-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  position: relative;
+}
+
+.mission-vision-row::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #fcf7f5;
+  opacity: 0.3;
+  transform: translateX(-50%);
+}
+
+.mvv-box {
+  background: transparent;
+  padding: 40px;
+  border: 1px solid rgba(252, 247, 245, 0.3);
+  border-radius: 0;
+}
+
+.mvv-box h3 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(24px, 3vw, 36px);
+  color: #fcf7f5;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.mvv-box p {
+  font-size: clamp(15px, 1.8vw, 17px);
+  color: #fcf7f5;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.values-box {
+  background: transparent;
+  padding: 0;
+  border: none;
+  max-width: 100%;
+}
+
+.values-box > h3 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(24px, 3vw, 36px);
+  color: #fcf7f5;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+  letter-spacing: -0.01em;
+  text-align: center;
+  line-height: 1;
+}
+
+.values-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.value-item {
+  padding: 32px;
+  border: 1px solid rgba(252, 247, 245, 0.3);
+  border-radius: 0;
+  background: transparent;
+}
+
+.value-item h4 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(18px, 2.2vw, 24px);
+  color: #fcf7f5;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.value-item p {
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: #fcf7f5;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mission-vision-values {
+    padding: 60px 6vw;
+    gap: 40px;
+  }
+  .mission-vision-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mission-vision-row::after {
+    display: none;
+  }
+  .values-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .value-item {
+    padding: 24px;
+  }
+}
