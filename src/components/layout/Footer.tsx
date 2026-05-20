@@ -28,9 +28,6 @@ export const Footer = () => {
         <Link to="/contacto" className="footer-cta-btn">Hablemos</Link>
       </section>
 
-      {/* Divider — abajo del CTA */}
-      <div className="footer-divider" />
-
       {/* 2) Main content — 3 cols */}
       <div className="px-[4vw] md:px-[6vw] py-[60px] grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
         {/* Col 1 — Description + Logo */}
