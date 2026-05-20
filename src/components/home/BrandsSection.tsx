@@ -37,7 +37,7 @@ export const BrandsSection = () => {
       src={src}
       alt={name}
       loading="lazy"
-      className={`shrink-0 h-[50px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 ${className ?? ""}`}
+      className={`shrink-0 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 ${className ?? "h-[50px]"}`}
     />
   );
 
