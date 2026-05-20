@@ -8,19 +8,17 @@ import hpe from "@/assets/brands/hpe.png";
 import geopost from "@/assets/brands/geopost.png";
 import datawise from "@/assets/brands/datawise.png";
 import atlassian from "@/assets/brands/atlassian.png";
-import cocacola from "@/assets/brands/cocacola.png";
 
-const BRANDS: { name: string; src: string }[] = [
+const BRANDS: { name: string; src: string; className?: string }[] = [
   { name: "Mercado Libre", src: mercadolibre },
   { name: "Fira Barcelona", src: fira },
   { name: "Monster Energy", src: monster },
-  { name: "Sophos", src: sophos },
+  { name: "Sophos", src: sophos, className: "max-w-[140px]" },
   { name: "Heineken", src: heineken },
   { name: "Hewlett Packard Enterprise", src: hpe },
   { name: "Geopost", src: geopost },
   { name: "Datawise", src: datawise },
   { name: "Atlassian", src: atlassian },
-  { name: "Coca-Cola", src: cocacola },
 ];
 
 export const BrandsSection = () => {
@@ -28,12 +26,12 @@ export const BrandsSection = () => {
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const Logo = ({ name, src }: { name: string; src: string }) => (
+  const Logo = ({ name, src, className }: { name: string; src: string; className?: string }) => (
     <img
       src={src}
       alt={name}
       loading="lazy"
-      className="shrink-0 h-[50px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+      className={`shrink-0 h-[50px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 ${className ?? ""}`}
     />
   );
 
@@ -50,7 +48,7 @@ export const BrandsSection = () => {
         <ul className="mt-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 px-6 md:px-12">
           {BRANDS.map((b) => (
             <li key={b.name} className="flex items-center justify-center">
-              <Logo name={b.name} src={b.src} />
+              <Logo name={b.name} src={b.src} className={b.className} />
             </li>
           ))}
         </ul>
@@ -69,7 +67,7 @@ export const BrandsSection = () => {
             style={{ width: "max-content" }}
           >
             {[...BRANDS, ...BRANDS].map((b, i) => (
-              <Logo key={`${b.name}-${i}`} name={b.name} src={b.src} />
+              <Logo key={`${b.name}-${i}`} name={b.name} src={b.src} className={b.className} />
             ))}
           </div>
           <style>{`
