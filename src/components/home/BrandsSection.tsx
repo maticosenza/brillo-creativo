@@ -11,6 +11,7 @@ import cocacola from "@/assets/brands/cocacola.png";
 import manga from "@/assets/brands/manga.png";
 import intelcia from "@/assets/brands/intelcia.png";
 import clap from "@/assets/brands/clap.png";
+import adidas from "@/assets/brands/adidas.png";
 
 const BRANDS: { name: string; src: string; className?: string }[] = [
   { name: "Mercado Libre", src: mercadolibre },
@@ -25,6 +26,7 @@ const BRANDS: { name: string; src: string; className?: string }[] = [
   { name: "Manga Barcelona", src: manga },
   { name: "Intelcia", src: intelcia },
   { name: "Clap Music", src: clap },
+  { name: "Adidas", src: adidas },
 ];
 
 export const BrandsSection = () => {
