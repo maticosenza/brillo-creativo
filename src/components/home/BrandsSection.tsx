@@ -1,10 +1,26 @@
 import { RevealHeading } from "./RevealHeading";
+import mercadolibre from "@/assets/brands/mercadolibre.png";
+import fira from "@/assets/brands/fira.png";
+import monster from "@/assets/brands/monster.png";
+import sophos from "@/assets/brands/sophos.png";
+import heineken from "@/assets/brands/heineken.png";
+import hpe from "@/assets/brands/hpe.png";
+import geopost from "@/assets/brands/geopost.png";
+import datawise from "@/assets/brands/datawise.png";
+import atlassian from "@/assets/brands/atlassian.png";
+import cocacola from "@/assets/brands/cocacola.png";
 
-const BRANDS = [
-  "NORTHWAVE","ATLAS","VÉRTICE","KINGSTON","HELIOS","ORION",
-  "FORTUNE","KAIROS","NOVA","ÉTER","MERIDIAN","PHOENIX",
-  "ZENITH","ALBA","CIRCA","BOREAL","LUMEN","FARO",
-  "AXIS","HALO","MAGNA","VOLTA","PRISMA","ÓRBITA",
+const BRANDS: { name: string; src: string }[] = [
+  { name: "Mercado Libre", src: mercadolibre },
+  { name: "Fira Barcelona", src: fira },
+  { name: "Monster Energy", src: monster },
+  { name: "Sophos", src: sophos },
+  { name: "Heineken", src: heineken },
+  { name: "Hewlett Packard Enterprise", src: hpe },
+  { name: "Geopost", src: geopost },
+  { name: "Datawise", src: datawise },
+  { name: "Atlassian", src: atlassian },
+  { name: "Coca-Cola", src: cocacola },
 ];
 
 export const BrandsSection = () => {
@@ -12,22 +28,13 @@ export const BrandsSection = () => {
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const Logo = ({ name }: { name: string }) => (
-    <svg
-      viewBox="0 0 240 60"
-      role="img"
-      aria-label={name}
-      className="shrink-0 h-[50px] w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
-      style={{ minWidth: 200 }}
-    >
-      <text
-        x="50%" y="50%"
-        dominantBaseline="middle" textAnchor="middle"
-        fill="#fcf7f5"
-        fontFamily="Anton, Impact, sans-serif"
-        fontSize="34" letterSpacing="2"
-      >{name}</text>
-    </svg>
+  const Logo = ({ name, src }: { name: string; src: string }) => (
+    <img
+      src={src}
+      alt={name}
+      loading="lazy"
+      className="shrink-0 h-[50px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+    />
   );
 
   return (
@@ -41,9 +48,9 @@ export const BrandsSection = () => {
 
       {reduced ? (
         <ul className="mt-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 px-6 md:px-12">
-          {BRANDS.map((name) => (
-            <li key={name} className="flex items-center justify-center">
-              <Logo name={name} />
+          {BRANDS.map((b) => (
+            <li key={b.name} className="flex items-center justify-center">
+              <Logo name={b.name} src={b.src} />
             </li>
           ))}
         </ul>
@@ -58,11 +65,11 @@ export const BrandsSection = () => {
           }}
         >
           <div
-            className="flex gap-20 marquee-track"
+            className="flex gap-12 marquee-track"
             style={{ width: "max-content" }}
           >
-            {[...BRANDS, ...BRANDS].map((name, i) => (
-              <Logo key={`${name}-${i}`} name={name} />
+            {[...BRANDS, ...BRANDS].map((b, i) => (
+              <Logo key={`${b.name}-${i}`} name={b.name} src={b.src} />
             ))}
           </div>
           <style>{`
