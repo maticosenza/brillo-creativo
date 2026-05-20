@@ -65,7 +65,7 @@ export const BrandsSection = () => {
           }}
         >
           <div
-            className="flex gap-12 marquee-track"
+            className="flex gap-14 marquee-track"
             style={{ width: "max-content" }}
           >
             {[...BRANDS, ...BRANDS].map((b, i) => (
@@ -78,7 +78,7 @@ export const BrandsSection = () => {
               100% { transform: translateX(-50%); }
             }
             .marquee-track {
-              animation: marqueeScroll 40s linear infinite;
+              animation: marqueeScroll 32s linear infinite;
             }
             .marquee-mask:hover .marquee-track {
               animation-play-state: paused;
