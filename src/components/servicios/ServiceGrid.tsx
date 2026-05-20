@@ -13,10 +13,9 @@ const Card = ({ s }: { s: typeof SERVICES[number] }) => (
       <div aria-hidden className="service-image-vignette" />
     </div>
     <div className="service-text">
-      <div className="service-header">
-        <span className="service-number">{s.number}</span>
-        <h3 className="service-title">{s.title.toUpperCase()}</h3>
-      </div>
+    <span className="service-number">{s.number}</span>
+    <div className="service-divider-line" aria-hidden />
+    <h3 className="service-title">{s.title.toUpperCase()}</h3>
       <p className="service-description">{s.description}</p>
     </div>
   </div>
@@ -81,32 +80,37 @@ export const ServiceGrid = () => {
             rgba(192, 24, 27, 0.75) 100%
           );
         }
-        .service-text { padding: 0; margin-top: 24px; }
-        .service-header {
+        .service-text {
+          padding: 0;
+          margin-top: 24px;
           display: flex;
-          align-items: flex-start;
-          gap: 16px;
-          margin-bottom: 12px;
-          flex-wrap: wrap;
+          flex-direction: column;
         }
         .service-number {
           color: #fcf7f5;
           font-family: 'Anton', sans-serif;
-          font-size: clamp(28px, 3.5vw, 48px);
+          font-size: clamp(48px, 7vw, 96px);
           font-weight: 400;
           line-height: 1;
-          flex-shrink: 0;
           letter-spacing: -0.02em;
+          margin: 0 0 12px 0;
+        }
+        .service-divider-line {
+          width: 60px;
+          height: 1px;
+          background-color: #fcf7f5;
+          opacity: 0.35;
+          margin-bottom: 20px;
         }
         .service-title {
           color: #fcf7f5;
           font-family: 'Anton', sans-serif;
-          font-size: clamp(18px, 2.5vw, 28px);
+          font-size: clamp(20px, 3vw, 40px);
           font-weight: 400;
           line-height: 1.15;
           letter-spacing: -0.01em;
           text-transform: uppercase;
-          margin: 0;
+          margin: 0 0 16px 0;
         }
         .service-description {
           color: #fcf7f5;
