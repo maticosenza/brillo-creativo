@@ -228,8 +228,7 @@ section[class*="black"] ::-moz-selection {
 .footer-divider {
   height: 1px;
   width: 100%;
-  background: #fcf7f5;
-  opacity: 0.18;
+  background: linear-gradient(to right, transparent 0%, rgba(252,247,245,0.35) 20%, rgba(252,247,245,0.35) 80%, transparent 100%);
 }
 
 @media (max-width: 768px) {
