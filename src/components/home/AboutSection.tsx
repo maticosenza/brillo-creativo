@@ -38,12 +38,12 @@ export const AboutSection = () => {
               Qué hacemos
             </h2>
             <p className="mt-6 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
-              Operamos en más de diez países. Gestionamos Grand Prix de Fórmula 1,
-              eventos corporativos, deportivos y experiencias MICE para clientes
-              globales.
+              Operamos en más de diez países. Gestionamos activaciones en Grand
+              Prix de Fórmula 1, eventos corporativos, deportivos y experiencias
+              MICE para clientes de todo el mundo.
             </p>
             <p className="mt-4 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
-              Nuestro trabajo es sencillo: que el evento salga perfecto y que el
+              Nuestro trabajo es sencillo: ejecutar con eficiencia y que el
               cliente no tenga que preocuparse por nada.
             </p>
           </div>
