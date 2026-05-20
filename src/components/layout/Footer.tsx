@@ -19,13 +19,16 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 export const Footer = () => {
   return (
     <footer className="text-brand-white red-background bg-brand-red">
+      {/* Divider — arriba del CTA */}
+      <div className="footer-divider" />
+
       {/* 1) CTA */}
       <section className="footer-cta cta-footer">
         <h2>LET'S MAKE IMPACT!</h2>
         <Link to="/contacto" className="footer-cta-btn">Hablemos</Link>
       </section>
 
-      {/* Divider */}
+      {/* Divider — abajo del CTA */}
       <div className="footer-divider" />
 
       {/* 2) Main content — 3 cols */}
