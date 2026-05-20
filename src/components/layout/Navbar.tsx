@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { MenuOverlay } from "./MenuOverlay";
 import logoCaracter from "@/assets/logo-caracter.png";
+import logoCaracterRed from "@/assets/logo-caracter-red.png";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isContactPage = location.pathname.startsWith("/contacto");
+  const useRedLogo = isContactPage && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -28,7 +32,7 @@ export const Navbar = () => {
       >
         <div className="flex items-center justify-between px-6 md:px-12 h-20">
           <Link to="/" aria-label="Caracter Producciones" className="flex items-center">
-            <img src={logoCaracter} alt="Caracter Producciones" className="h-12 md:h-14 w-auto" />
+            <img src={useRedLogo ? logoCaracterRed : logoCaracter} alt="Caracter Producciones" className="h-12 md:h-14 w-auto" />
           </Link>
 
           <div className="flex items-center gap-3 md:gap-5">
@@ -38,9 +42,9 @@ export const Navbar = () => {
               aria-expanded={open}
               className="relative w-10 h-10 flex flex-col items-center justify-center gap-[6px] group"
             >
-              <span className="block w-6 h-[2px] bg-brand-white transition-all duration-300" />
-              <span className="block w-6 h-[2px] bg-brand-white transition-all duration-300" />
-              <span className="block w-6 h-[2px] bg-brand-white transition-all duration-300" />
+              <span className={`block w-6 h-[2px] transition-all duration-300 ${useRedLogo ? "bg-brand-red" : "bg-brand-white"}`} />
+              <span className={`block w-6 h-[2px] transition-all duration-300 ${useRedLogo ? "bg-brand-red" : "bg-brand-white"}`} />
+              <span className={`block w-6 h-[2px] transition-all duration-300 ${useRedLogo ? "bg-brand-red" : "bg-brand-white"}`} />
             </button>
 
             <Link
