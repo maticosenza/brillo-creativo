@@ -27,7 +27,7 @@ export const Footer = () => {
 
       <div className="bg-brand-red px-6 md:px-12 pt-16 md:pt-20 pb-10">
       {/* CTA outline heading */}
-      <div>
+      <div className="cta-footer">
         <DisplayHeading
           lines={["LET'S MAKE"]}
           size="cta"
