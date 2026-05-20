@@ -453,3 +453,70 @@ section[class*="black"] ::-moz-selection {
     padding: 24px;
   }
 }
+
+/* ═══════════════════════════════════════════════ */
+/* CONTACTO — WORLD SECTION (WHITE BG)              */
+/* ═══════════════════════════════════════════════ */
+
+.world-section-white {
+  background: #fcf7f5;
+  padding: 100px 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.world-container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+}
+
+.world-globe {
+  flex: 0 0 40%;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  max-width: 480px;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 30px rgba(192, 24, 27, 0.25));
+}
+
+.world-text { flex: 1; }
+
+.world-text h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #c0181b;
+  margin: 0 0 16px 0;
+}
+
+.world-text p {
+  font-family: Arial, sans-serif;
+  font-size: clamp(15px, 1.8vw, 18px);
+  line-height: 1.6;
+  color: #0a0a0a;
+  opacity: 0.75;
+  margin: 0;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .world-section-white { padding: 64px 6vw; }
+  .world-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .world-globe {
+    flex: 0 0 auto;
+    width: 70%;
+    max-width: 300px;
+  }
+  .world-text p { margin: 0 auto; }
+}

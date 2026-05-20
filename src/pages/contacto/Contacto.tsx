@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
-import GlobalReachSection from "@/components/GlobalReachSection";
+import GlobeRedOnWhite from "@/components/GlobeRedOnWhite";
 
 const Contacto = () => {
   useEffect(() => { window.scrollTo(0, 0); document.title = "Contacto — Productora"; }, []);
@@ -38,11 +38,17 @@ const Contacto = () => {
         </div>
       </section>
 
-      <GlobalReachSection
-        background="#c0181b"
-        title="Desde Argentina al mundo"
-        subtitle="Radicados en Argentina pero con alcance y experiencia global."
-      />
+      <section className="world-section-white">
+        <div className="world-container">
+          <div className="world-globe">
+            <GlobeRedOnWhite />
+          </div>
+          <div className="world-text">
+            <h2>Desde Argentina al mundo</h2>
+            <p>Radicados en Argentina pero con alcance y experiencia global.</p>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
