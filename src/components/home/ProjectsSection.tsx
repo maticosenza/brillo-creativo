@@ -146,7 +146,7 @@ export const ProjectsSection = () => {
             >
               <span aria-hidden className="absolute inset-0 bg-brand-white origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
               <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-red">
-                Ver todos
+                Ver más
               </span>
             </Link>
           </div>
