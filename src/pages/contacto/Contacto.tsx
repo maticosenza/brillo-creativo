@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import GlobalReachSection from "@/components/GlobalReachSection";
-import { CONTACT_EMAIL } from "@/lib/nav-config";
 
 const Contacto = () => {
   useEffect(() => { window.scrollTo(0, 0); document.title = "Contacto — Productora"; }, []);
