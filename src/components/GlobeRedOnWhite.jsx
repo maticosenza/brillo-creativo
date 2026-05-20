@@ -56,7 +56,7 @@ export default function GlobeRed() {
 
     // ── Black opaque base sphere (oceans = black) ────────────────────────
     const baseGeo = new THREE.SphereGeometry(0.99, 64, 64);
-    const baseMat = new THREE.MeshBasicMaterial({ color: 0x000000 });
+    const baseMat = new THREE.MeshBasicMaterial({ color: 0xfcf7f5 });
     group.add(new THREE.Mesh(baseGeo, baseMat));
 
     // ── Land dots (only on continents) ───────────────────────────────────
