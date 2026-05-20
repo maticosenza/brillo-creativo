@@ -124,7 +124,7 @@ export const Footer = () => {
 
       <div className="mt-16 pt-6 border-t border-brand-white/20 flex flex-col md:flex-row justify-between gap-3 text-xs text-brand-white/80 uppercase tracking-[0.15em]">
         <Link to="/" aria-label="Caracter Producciones" className="flex items-center">
-          <img src={logoCaracter} alt="Caracter Producciones" className="h-8 w-auto" />
+          <img src={logoCaracter} alt="Caracter Producciones" className="h-12 w-auto" />
         </Link>
         <span className="flex items-baseline gap-1">
           © 2026 MARCA REGISTRADA · DISEÑADO POR{" "}
