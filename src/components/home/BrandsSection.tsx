@@ -8,17 +8,18 @@ import hpe from "@/assets/brands/hpe.png";
 import geopost from "@/assets/brands/geopost.png";
 import datawise from "@/assets/brands/datawise.png";
 import atlassian from "@/assets/brands/atlassian.png";
+import cocacola from "@/assets/brands/cocacola.png";
 
 const BRANDS: { name: string; src: string; className?: string }[] = [
   { name: "Mercado Libre", src: mercadolibre },
   { name: "Fira Barcelona", src: fira },
   { name: "Monster Energy", src: monster },
-  { name: "Sophos", src: sophos, className: "max-w-[140px]" },
+  { name: "Sophos", src: sophos, className: "h-[64px] max-w-[160px]" },
   { name: "Heineken", src: heineken },
-  { name: "Hewlett Packard Enterprise", src: hpe },
   { name: "Geopost", src: geopost },
   { name: "Datawise", src: datawise },
-  { name: "Atlassian", src: atlassian },
+  { name: "Atlassian", src: atlassian, className: "max-w-[180px]" },
+  { name: "Coca-Cola", src: cocacola },
 ];
 
 export const BrandsSection = () => {
