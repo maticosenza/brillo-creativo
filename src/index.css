@@ -180,7 +180,7 @@ section[class*="black"] ::-moz-selection {
 /* ═══════════════════════════════════════════════ */
 
 .footer-cta {
-  padding: 60px 6vw 100px 6vw;
+  padding: 80px 6vw 40px 6vw;
   text-align: center;
   display: flex;
   flex-direction: column;
