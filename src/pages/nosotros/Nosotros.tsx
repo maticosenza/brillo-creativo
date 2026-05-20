@@ -5,16 +5,16 @@ import nosotrosHero from "@/assets/nosotros-hero.jpg";
 
 const VALUES = [
   {
-    title: "Colaboración: subimos y bajamos juntos",
-    body: "Somos un equipo que comparte un espíritu colectivo. Celebramos cuando las cosas salen bien y nos sostenemos cuando no. La inspiración y las ideas se comparten abiertamente con colegas y clientes.",
+    title: "Carácter",
+    body: "Tomamos decisiones, resolvemos bajo presión y enfrentamos cada proyecto con personalidad, criterio y determinación.",
   },
   {
-    title: "Curiosidad: nunca dejamos de preguntar",
-    body: "Investigamos cada brief como si fuera el primero. La curiosidad es lo que nos permite encontrar ángulos nuevos en categorías saturadas y proponer ideas que realmente importan.",
+    title: "Eficiencia",
+    body: "Priorizamos la organización, la rapidez de respuesta y la ejecución impecable en cada etapa del proyecto.",
   },
   {
-    title: "Oficio: el detalle hace la diferencia",
-    body: "Diseñamos cada touchpoint con criterio editorial. Preferimos quitar antes que sumar. Lo que entra al evento está ahí porque tiene una razón.",
+    title: "Confianza",
+    body: "Trabajamos para que cada cliente pueda delegar con tranquilidad, sabiendo que cada detalle está bajo control.",
   },
 ];
 
@@ -56,46 +56,25 @@ const Nosotros = () => {
       </section>
 
       {/* Misión, Visión y Valores */}
-      <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
-            {[
-              {
-                title: "Misión",
-                body: "Diseñar y ejecutar eventos de alto impacto, combinando estrategia, creatividad y excelencia operativa para generar experiencias memorables y resultados concretos para cada cliente.",
-              },
-              {
-                title: "Visión",
-                body: "Ser una productora referente en el sector deportivo y corporativo a nivel internacional, creando experiencias que eleven el estándar de ejecución, hospitality y producción en cada evento.",
-              },
-              {
-                title: "Valores",
-                body: "Carácter: Tomamos decisiones, resolvemos bajo presión y enfrentamos cada proyecto con personalidad, criterio y determinación.",
-              },
-            ].map((card) => (
-              <div
-                key={card.title}
-                className="h-full min-h-[320px] rounded-3xl bg-white text-black p-8 md:p-10 flex flex-col"
-              >
-                <h3 className="font-display uppercase text-[clamp(28px,3vw,40px)] leading-[1]">
-                  {card.title}
-                </h3>
-                <p className="mt-6 text-base md:text-[15px] leading-[1.6] text-black/85">
-                  {card.body}
-                </p>
-              </div>
-            ))}
+      <section className="mission-vision-values red-background">
+        <div className="mission-vision-row">
+          <div className="mvv-box">
+            <h3>Misión</h3>
+            <p>Diseñar y ejecutar eventos de alto impacto, combinando estrategia, creatividad y excelencia operativa para generar experiencias memorables y resultados concretos para cada cliente.</p>
           </div>
+          <div className="mvv-box">
+            <h3>Visión</h3>
+            <p>Ser una productora referente en el sector deportivo y corporativo a nivel internacional, creando experiencias que eleven el estándar de ejecución, hospitality y producción en cada evento.</p>
+          </div>
+        </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {VALUES.map((v, i) => (
-              <div key={i} className="border-t border-brand-white/20 pt-6">
-                <h4 className="font-display uppercase text-brand-white text-[clamp(18px,1.6vw,22px)] leading-[1.2]">
-                  {v.title}
-                </h4>
-                <p className="mt-3 text-sm md:text-base leading-[1.6] text-brand-white/85">
-                  {v.body}
-                </p>
+        <div className="values-box">
+          <h3>Valores</h3>
+          <div className="values-content">
+            {VALUES.map((v) => (
+              <div key={v.title} className="value-item">
+                <h4>{v.title}</h4>
+                <p>{v.body}</p>
               </div>
             ))}
           </div>
