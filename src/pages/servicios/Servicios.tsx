@@ -23,7 +23,7 @@ const Servicios = () => {
         >
           <DisplayHeading
             as="h1"
-            lines={["SERVICIOS"]}
+            lines={["NUESTROS", "SERVICIOS"]}
             size="hero"
             align="left"
             trigger="static"
@@ -43,8 +43,7 @@ const Servicios = () => {
             className="font-display uppercase"
             style={{ fontSize: "clamp(24px, 3.2vw, 48px)", lineHeight: 1.2 }}
           >
-            Caracter Producciones ofrece soluciones integrales para eventos,
-            desde la estrategia a la ejecución, cubrimos todo lo que tu evento necesita.
+            Ofrecemos soluciones integrales para eventos, desde la estrategia a la ejecución, cubrimos todo lo que tu evento necesita.
           </h2>
         </div>
       </section>
