@@ -4,7 +4,6 @@ import fira from "@/assets/brands/fira.png";
 import monster from "@/assets/brands/monster.png";
 import sophos from "@/assets/brands/sophos.png";
 import heineken from "@/assets/brands/heineken.png";
-import hpe from "@/assets/brands/hpe.png";
 import geopost from "@/assets/brands/geopost.png";
 import datawise from "@/assets/brands/datawise.png";
 import atlassian from "@/assets/brands/atlassian.png";
