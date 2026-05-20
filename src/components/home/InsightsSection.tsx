@@ -20,7 +20,7 @@ export const InsightsSection = () => {
           <RevealHeading text="Notas y novedades" className="mt-6 font-display uppercase text-h2" />
         </div>
         <Link to="/insights" className="underline-link text-sm uppercase tracking-[0.2em] font-medium self-start md:self-end">
-          Ver todas →
+          Ver más →
         </Link>
       </div>
 
