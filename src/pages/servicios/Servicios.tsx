@@ -36,7 +36,7 @@ const Servicios = () => {
       {/* Intro */}
       <section
         className="bg-brand-red text-brand-white px-6 md:px-12"
-        style={{ paddingTop: "100px", paddingBottom: "100px" }}
+        style={{ paddingTop: "40px", paddingBottom: "40px" }}
       >
         <div className="max-w-[1100px] mx-auto text-center">
           <h2
