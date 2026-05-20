@@ -7,7 +7,7 @@ export const ServicesOverview = () => {
     <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-center">
         <div className="md:col-start-2 md:col-span-5 relative">
-          <RedFrame side="right">
+          <RedFrame side="right" className="w-full max-w-[520px]">
             <div className="relative aspect-[3/4] w-full overflow-hidden">
               <video
                 className="w-full h-full object-cover"
