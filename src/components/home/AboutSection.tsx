@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
 import { RedFrame } from "@/components/shared/RedFrame";
 
 export const AboutSection = () => {
@@ -15,7 +16,7 @@ export const AboutSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
         <div className="md:col-span-6 space-y-12">
           <div>
-            <span className="eyebrow text-brand-black">Sobre Nosotros</span>
+            <span className="eyebrow text-brand-white">Sobre Nosotros</span>
             <h2
               className="mt-4 font-display uppercase text-brand-white"
               style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1 }}
@@ -46,6 +47,15 @@ export const AboutSection = () => {
               Nuestro trabajo es sencillo: ejecutar con eficiencia y que el
               cliente no tenga que preocuparse por nada.
             </p>
+            <Link
+              to="/nosotros"
+              className="group relative mt-8 inline-flex items-center justify-center overflow-hidden rounded-full border border-brand-white px-8 py-4 text-[13px] font-medium uppercase tracking-wider"
+            >
+              <span aria-hidden className="absolute inset-0 bg-brand-white origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-red">
+                Conocenos
+              </span>
+            </Link>
           </div>
         </div>
 
