@@ -420,10 +420,11 @@ section[class*="black"] ::-moz-selection {
 }
 
 .mvv-box {
-  background: transparent;
+  background: rgba(252, 247, 245, 0.1);
   padding: 40px;
-  border: 1px solid rgba(252, 247, 245, 0.3);
-  border-radius: 0;
+  border: 1px solid rgba(252, 247, 245, 0.25);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
 }
 
 .mvv-box h3 {
@@ -469,9 +470,10 @@ section[class*="black"] ::-moz-selection {
 
 .value-item {
   padding: 32px;
-  border: 1px solid rgba(252, 247, 245, 0.3);
-  border-radius: 0;
-  background: transparent;
+  border: 1px solid rgba(252, 247, 245, 0.25);
+  border-radius: 16px;
+  background: rgba(252, 247, 245, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .value-item h4 {
