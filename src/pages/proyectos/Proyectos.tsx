@@ -36,7 +36,7 @@ const Proyectos = () => {
                   className="group relative block aspect-[4/5] overflow-hidden"
                 >
                   <img
-                    src={p.gallery[0]}
+                    src={p.heroImage ?? p.gallery[0]}
                     alt={p.title}
                     loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.08]"
