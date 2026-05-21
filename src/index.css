@@ -278,14 +278,16 @@ section[class*="black"] ::-moz-selection {
 
 .hablemos-title-red {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(60px, 11vw, 180px);
+  font-size: clamp(80px, 15vw, 240px);
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
   color: #c0181b;
   margin: 0;
   text-shadow: 0 0 40px rgba(192, 24, 27, 0.15);
+  transform: scaleY(1.08);
+  transform-origin: left bottom;
 }
 
 .contact-form-section {
