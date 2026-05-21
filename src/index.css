@@ -196,7 +196,7 @@ section[class*="black"] ::-moz-selection {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 0.8px #c0181b;
+  -webkit-text-stroke: 0.8px #fcf7f5;
   paint-order: stroke fill;
   margin: 0;
   white-space: nowrap;
