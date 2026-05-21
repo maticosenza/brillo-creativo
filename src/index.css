@@ -298,7 +298,9 @@ section[class*="black"] ::-moz-selection {
 
 .brief-cta-section {
   background: #c0181b;
-  padding: 24px 6vw 40px;
+  padding: 80px 6vw;
+  border-top: 1px solid #fcf7f5;
+  border-bottom: 1px solid #fcf7f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -310,7 +312,7 @@ section[class*="black"] ::-moz-selection {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 1px;
   height: 1px;
   background: linear-gradient(to right, transparent 0%, rgba(252,247,245,0.35) 20%, rgba(252,247,245,0.35) 80%, transparent 100%);
 }
@@ -339,47 +341,90 @@ section[class*="black"] ::-moz-selection {
   font-size: clamp(24px, 3vw, 36px);
   color: #fcf7f5;
   text-transform: uppercase;
-  margin: 0 0 16px 0;
+  margin:  0 0 16px 0;
   letter-spacing: -0.01em;
   line-height: 1;
 }
 
 .brief-text p {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 16px;
   color: #fcf7f5;
   line-height: 1.6;
   margin: 0;
-  max-width: 520px;
-  opacity: 0.85;
+  opacity: 0.9;
+  max-width: 500px;
 }
 
-.brief-button {
+/* CONTENEDOR DE BOTONES */
+.brief-buttons {
   flex-shrink: 0;
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
+}
+
+/* BOTÓN 1: IMPORTAR BRIEF */
+.brief-btn-primary {
   background: #fcf7f5;
   color: #c0181b;
-  padding: 16px 32px;
+  padding: 14px 28px;
   border: none;
   border-radius: 999px;
   font-family: 'Anton', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 300ms ease;
+  transition: 300ms ease;
   white-space: nowrap;
-  text-decoration: none;
+  min-width: 200px;
+  text-align: center;
 }
 
-.brief-button:hover { background: #fcf7f5; opacity: 0.9; }
+.brief-btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* SEPARADOR "o" */
+.brief-separator {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  color: #fcf7f5;
+  opacity: 0.6;
+  font-weight: normal;
+}
+
+/* BOTÓN 2: COMPLETAR PLANILLA */
+.brief-btn-secondary {
+  background: transparent;
+  color: #fcf7f5;
+  border: 1px solid #fcf7f5;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: 'Anton', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 300ms ease;
+  white-space: nowrap;
+  min-width: 200px;
+  text-align: center;
+}
+
+.brief-btn-secondary:hover {
+  background: rgba(252, 247, 245, 0.1);
+  border-color: #fcf7f5;
+}
 
 @media (max-width: 768px) {
   .contact-form-section { padding: 64px 6vw 20px; }
-  .brief-cta-section { padding: 20px 6vw 32px; }
+  .brief-cta-section { padding: 40px 6vw; }
   .brief-card {
     padding: 40px;
     border-radius: 12px;
@@ -387,10 +432,16 @@ section[class*="black"] ::-moz-selection {
   .brief-content {
     flex-direction: column;
     align-items: flex-start;
-    gap: 28px;
+    gap: 32px;
   }
-  .brief-button {
+  .brief-buttons {
     align-self: flex-start;
+    width: 100%;
+  }
+  .brief-btn-primary,
+  .brief-btn-secondary {
+    width: 100%;
+    min-width: auto;
   }
 }
 
