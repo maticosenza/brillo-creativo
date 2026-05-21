@@ -278,7 +278,7 @@ section[class*="black"] ::-moz-selection {
 
 .hablemos-title-red {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(80px, 14vw, 240px);
+  font-size: clamp(60px, 11vw, 180px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
