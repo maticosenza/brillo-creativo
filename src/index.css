@@ -176,18 +176,11 @@ section[class*="black"] ::-moz-selection {
 }
 
 /* ═══════════════════════════════════════════════ */
-/* FOOTER                                           */
+/* FOOTER CTA                                       */
 /* ═══════════════════════════════════════════════ */
 
-.footer-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0 6vw;
-}
-
 .footer-cta {
-  padding: 40px 0 24px;
+  padding: 40px 6vw 24px 6vw;
   text-align: center;
   display: flex;
   flex-direction: column;
