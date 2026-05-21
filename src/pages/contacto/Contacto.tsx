@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import GlobeWhiteTranslucent from "@/components/GlobeWhiteTranslucent";
 
@@ -24,16 +23,17 @@ const Contacto = () => {
       <section className="brief-cta-section">
         <div className="brief-card">
           <div className="brief-content">
+            {/* IZQUIERDA: Título + párrafo */}
             <div className="brief-text">
-              <h3>¿Tenés un brief?</h3>
-              <p>
-                Descargá nuestra plantilla de brief y completála con la información de tu proyecto.
-                Nos ayudará a entender mejor tus necesidades.
-              </p>
+              <h3>¿TENÉS UN BRIEF?</h3>
+              <p>Envianos tu brief directamente o completa nuestra planilla con la información de tu proyecto.</p>
+            </<div>
+            {/* DERECHA: 2 botones */}
+            <div className="brief-buttons">
+              <button className="brief-btn-primary">IMPORTAR BRIEF →</button>
+              <span className="brief-separator">o</span>
+              <button className="brief-btn-secondary">COMPLETAR PLANILLA →</button>
             </div>
-            <Link to="/contacto/brief" className="brief-button">
-              Descargar brief <ArrowRight className="w-4 h-4" aria-hidden />
-            </Link>
           </div>
         </div>
       </section>
