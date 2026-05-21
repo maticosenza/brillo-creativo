@@ -31,14 +31,11 @@ export const Footer = () => {
       {/* 2) Main content — 3 cols */}
       <div className="px-[4vw] md:px-[6vw] py-10 md:py-[50px]">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-10">
-          {/* Col 1 — Description + Logo */}
+          {/* Col 1 — Description */}
           <div>
-            <p className="font-body text-[14px] leading-[1.6] text-brand-white/80 max-w-[220px]">
+            <p className="font-body text-[14px] leading-[1.6] text-brand-white/85 max-w-[340px]">
               Contáctanos y descubrí cómo la experiencia y el carácter de CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
             </p>
-            <Link to="/" aria-label="Caracter Producciones" className="inline-flex mt-5 opacity-90">
-              <img src={logoCaracter} alt="Caracter Producciones" className="h-10 md:h-[52px] w-auto" />
-            </Link>
           </div>
 
         {/* Col 2 — Nav */}
@@ -77,6 +74,13 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+
+        {/* Logo row */}
+        <div className="max-w-[1200px] mx-auto mt-10 md:mt-12 flex justify-center md:justify-start">
+          <Link to="/" aria-label="Caracter Producciones" className="inline-flex opacity-90">
+            <img src={logoCaracter} alt="Caracter Producciones" className="h-12 md:h-[64px] w-auto" />
+          </Link>
+        </div>
       </div>
 
       {/* Divider */}
