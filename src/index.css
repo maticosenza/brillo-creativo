@@ -558,3 +558,20 @@ section[class*="black"] ::-moz-selection {
   }
   .world-section-red .world-text p { margin: 0 auto; }
 }
+
+/* ═══════════════════════════════════════════════ */
+/* NAVBAR LOGO — tamaño fijo igual para rojo y blanco */
+/* ═══════════════════════════════════════════════ */
+
+.navbar-logo {
+  height: 52px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 44px;
+  }
+}
