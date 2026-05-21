@@ -4,7 +4,7 @@ export const ProjectBanner = ({ p }: { p: Project }) => {
   return (
     <section className="relative h-screen min-h-[560px] w-full overflow-hidden bg-brand-black text-brand-white">
       <div className="absolute inset-0">
-        <img src={p.gallery[0]} alt={p.title} className="w-full h-full object-cover" />
+        <img src={p.heroImage ?? p.gallery[0]} alt={p.title} className="w-full h-full object-cover" />
       </div>
       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/85" />
 

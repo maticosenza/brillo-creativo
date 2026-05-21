@@ -12,9 +12,12 @@ export type Project = {
   longDescription: string;
   services: string[];
   gallery: string[];
+  heroImage?: string;
   quote?: { text: string; author: string; role: string };
   related: string[];
 };
+
+import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 
 const SERVICES = [
   "DIRECCIÓN CREATIVA",
@@ -108,6 +111,7 @@ export const PROJECTS: Project[] = [
     longDescription: "El desafío fue elevar la gala anual del cliente a un estándar internacional sin perder la cercanía con la audiencia local. Diseñamos una dirección artística unificada para el espacio, el guión, la escenografía y los contenidos audiovisuales. Coordinamos un equipo técnico de 80 personas durante 72 horas de montaje, gestionamos un elenco de talento musical en vivo y entregamos un registro audiovisual editado en 48 horas para uso interno y prensa. La noche cerró con un programa que mezcló reconocimientos, performances y un keynote del CEO global.",
     services: SERVICES,
     gallery: withParams(galleries.corporate),
+    heroImage: datawiseHpeBanner,
     quote: {
       text: "Convirtieron nuestra gala anual en la noche más comentada del año. La dirección artística y la coordinación operativa fueron impecables.",
       author: "María Acosta",
