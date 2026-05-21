@@ -37,7 +37,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+40", label: "Carreras operadas" },
     image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1568605117036-5fe5e7bab0b7","1541447270731-9c0f476a91d3","1503376780353-7e6692767b70"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["activacion-mundial", "festival-vertice", "lanzamiento-linea-2026"],
+    relatedProjects: ["activacion-mundial", "festival-vertice", "adidas"],
   },
   {
     slug: "corporativos-convenciones",
@@ -73,7 +73,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+80", label: "Activaciones LATAM" },
     image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1533174072545-7a4b6ad7a6c3","1492684223066-81342ee5ff30","1505236858219-8359eb29e329"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["activacion-mundial", "festival-vertice", "lanzamiento-linea-2026"],
+    relatedProjects: ["activacion-mundial", "festival-vertice", "adidas"],
   },
   {
     slug: "lanzamientos-de-producto",
@@ -85,7 +85,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "x3", label: "Aumento de leads" },
     image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1492684223066-81342ee5ff30","1505373877841-8d25f7d46678","1540039155733-5bb30b53aa14"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["lanzamiento-linea-2026", "premiere-atlas", "activacion-mundial"],
+    relatedProjects: ["adidas", "premiere-atlas", "activacion-mundial"],
   },
   {
     slug: "presupuesto",
