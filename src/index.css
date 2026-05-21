@@ -293,11 +293,20 @@ section[class*="black"] ::-moz-selection {
 .brief-cta-section {
   background: #c0181b;
   padding: 80px 6vw;
-  border-top: 1px solid #fcf7f5;
-  border-bottom: 1px solid #fcf7f5;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.brief-cta-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(252,247,245,0.35) 20%, rgba(252,247,245,0.35) 80%, transparent 100%);
 }
 
 .brief-card {
