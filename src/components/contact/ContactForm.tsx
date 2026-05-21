@@ -12,7 +12,7 @@ const schema = z.object({
   nombre: z.string().trim().min(1, "Ingresá tu nombre").max(100),
   email: z.string().trim().email("Email inválido").max(255),
   empresa: z.string().trim().max(120).optional().or(z.literal("")),
-  tipo: z.enum(["Deportivo", "Corporativo", "Activación de marca", "Lanzamiento de producto", "Otro"], { errorMap: () => ({ message: "Elegí un tipo" }) }),
+  tipo: z.enum(["Deportivo", "Corporativo", "Activación de marca", "Evento deportivo", "Otro"], { errorMap: () => ({ message: "Elegí un tipo" }) }),
   fecha: z.date().optional(),
   mensaje: z.string().trim().min(10, "Contanos un poco más (mínimo 10 caracteres)").max(1000),
 });
