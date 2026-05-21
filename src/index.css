@@ -295,11 +295,22 @@ section[class*="black"] ::-moz-selection {
   padding: 80px 6vw;
   border-top: 1px solid #fcf7f5;
   border-bottom: 1px solid #fcf7f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brief-card {
+  background: rgba(252, 247, 245, 1.1);
+  border: 1px solid rgba(252, 247, 245, 0.25);
+  border-radius: 16px;
+  padding: 60px;
+  backdrop-filter: blur(10px);
+  max-width: 1000px;
+  width: 100%;
 }
 
 .brief-content {
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
