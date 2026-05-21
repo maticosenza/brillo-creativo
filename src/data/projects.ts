@@ -95,9 +95,9 @@ const withParams = (urls: string[]) =>
 
 export const PROJECTS: Project[] = [
   {
-    slug: "gala-anual-fortune-500",
-    title: "Gala anual Fortune 500",
-    client: "Hilton",
+    slug: "datawise-x-hpe",
+    title: "Datawise x HPE",
+    client: "Datawise / HPE",
     category: "Evento corporativo",
     year: 2025,
     location: "Buenos Aires, AR",
@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
       author: "Diego Méndez",
       role: "Marketing Director, Genesis",
     },
-    related: ["gala-anual-fortune-500", "activacion-mundial", "festival-vertice"],
+    related: ["datawise-hpe", "activacion-mundial", "festival-vertice"],
   },
   {
     slug: "festival-vertice",
@@ -197,7 +197,7 @@ export const PROJECTS: Project[] = [
       author: "Sebastián Lara",
       role: "VP Operations, IFS",
     },
-    related: ["gala-anual-fortune-500", "lanzamiento-linea-2026", "activacion-mundial"],
+    related: ["datawise-hpe", "lanzamiento-linea-2026", "activacion-mundial"],
   },
   {
     slug: "premiere-atlas",
@@ -218,7 +218,7 @@ export const PROJECTS: Project[] = [
       author: "Camila Suárez",
       role: "Head of PR, Atlas Studios",
     },
-    related: ["gala-anual-fortune-500", "lanzamiento-linea-2026", "festival-vertice"],
+    related: ["datawise-hpe", "lanzamiento-linea-2026", "festival-vertice"],
   },
 ];
 
