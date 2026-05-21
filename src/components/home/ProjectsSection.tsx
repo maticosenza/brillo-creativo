@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
+import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 
 const slugify = (s: string) =>
   s.toLowerCase()
@@ -13,7 +14,7 @@ const slugify = (s: string) =>
 const PROJECTS = [
   { title: "Datawise x HPE", category: "Evento corporativo", img: datawiseHpeBanner },
   { title: "ADIDAS", category: "Evento deportivo", img: adidasBanner },
-  { title: "HCLSoftware", category: "formula 1 ", img: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1400&q=80" },
+  { title: "HCLSoftware", category: "formula 1 ", img: hclsoftwareBanner },
   { title: "Activación mundial", category: "Activación de marca", img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=80" },
   { title: "Cumbre LATAM", category: "Convención", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1400&q=80" },
   { title: "Premiere Atlas", category: "Premiere / Red carpet", img: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1400&q=80" },

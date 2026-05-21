@@ -19,6 +19,7 @@ export type Project = {
 
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
+import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 
 const SERVICES = [
   "DIRECCIÓN CREATIVA",
@@ -156,6 +157,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Producción integral de un festival multiescenario con cuatro stages simultáneos durante tres jornadas. Coordinamos riders de más de 40 artistas, 600 técnicos y un dispositivo de seguridad y hospitality para 42.000 personas por día. Diseñamos la identidad visual del festival, las activaciones de marca dentro del predio y la cobertura audiovisual en vivo distribuida a streamings y broadcasters.",
     services: SERVICES,
     gallery: withParams(galleries.festival),
+    heroImage: hclsoftwareBanner,
     quote: {
       text: "Llevaron Vértice al nivel de los grandes festivales internacionales. Operación enorme, ejecución obsesiva.",
       author: "Lucía Romero",
