@@ -36,7 +36,7 @@ export const Footer = () => {
             Contáctanos y descubrí cómo la experiencia y el carácter de CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
           </p>
           <Link to="/" aria-label="Caracter Producciones" className="inline-flex mt-6 opacity-90">
-            <img src={logoCaracter} alt="Caracter Producciones" className="h-10 w-auto" />
+            <img src={logoCaracter} alt="Caracter Producciones" className="h-[52px] w-auto" />
           </Link>
         </div>
 
