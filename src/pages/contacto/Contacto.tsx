@@ -10,6 +10,21 @@ const Contacto = () => {
     <>
       <section className="contact-banner-white">
         <h1 className="hablemos-title-red">HABLEMOS</h1>
+        <svg
+          className="hablemos-chevron"
+          viewBox="0 0 100 50"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <polyline
+            points="10,10 50,40 90,10"
+            fill="none"
+            stroke="#c0181b"
+            strokeWidth="8"
+            strokeLinecap="square"
+            strokeLinejoin="miter"
+          />
+        </svg>
       </section>
 
       <section className="contact-form-section">
