@@ -31,7 +31,7 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
           >
             <Link to={`/proyectos/${it.slug}`} className="group relative block aspect-[4/5] overflow-hidden">
               <img
-                src={it.gallery[0]}
+                src={it.heroImage ?? it.gallery[0]}
                 alt={it.title}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.08]"
