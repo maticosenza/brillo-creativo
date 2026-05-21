@@ -140,15 +140,15 @@ export const PROJECTS: Project[] = [
       author: "Diego Méndez",
       role: "Marketing Director, Genesis",
     },
-    related: ["datawise-hpe", "activacion-mundial", "festival-vertice"],
+    related: ["datawise-hpe", "activacion-mundial", "hclsoftware"],
   },
   {
-    slug: "festival-vertice",
-    title: "Festival Vértice",
+    slug: "hclsoftware",
+    title: "HCLSoftware",
     client: "Vértice",
-    category: "Festival de música",
+    category: "formula 1 ",
     year: 2025,
-    location: "Buenos Aires, AR",
+    location: "2025 — mice, las vegas",
     duration: "3 jornadas",
     durationDays: 3,
     attendees: 42000,
@@ -182,7 +182,7 @@ export const PROJECTS: Project[] = [
       author: "Florencia Caro",
       role: "Brand Experience Lead, Vodafone",
     },
-    related: ["festival-vertice", "adidas", "cumbre-latam"],
+    related: ["hclsoftware", "adidas", "cumbre-latam"],
   },
   {
     slug: "cumbre-latam",
@@ -224,7 +224,7 @@ export const PROJECTS: Project[] = [
       author: "Camila Suárez",
       role: "Head of PR, Atlas Studios",
     },
-    related: ["datawise-hpe", "adidas", "festival-vertice"],
+    related: ["datawise-hpe", "adidas", "hclsoftware"],
   },
 ];
 
