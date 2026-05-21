@@ -58,8 +58,8 @@ export const ContactForm = () => {
 
       <FloatingField label="Tipo de evento" required hasValue={true}>
         {(p) => (
-          <select value={tipo} onChange={(e) => setTipo(e.target.value)} className={cn(inputClass, "uppercase tracking-wide bg-brand-red")} {...p}>
-            <option value="" disabled>Seleccionar...</option>
+          <select value={tipo} onChange={(e) => setTipo(e.target.value)} className={cn(inputClass, "uppercase tracking-wide bg-brand-red", !tipo && "text-brand-white/50")} {...p}>
+            <option value="" disabled className="text-brand-white/50 bg-brand-red">Seleccionar...</option>
             {TIPOS.map((t) => <option key={t} value={t} className="bg-brand-red text-brand-white">{t}</option>)}
           </select>
         )}
