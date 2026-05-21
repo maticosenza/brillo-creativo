@@ -6,7 +6,6 @@ import { ProjectIntro } from "@/components/project/ProjectIntro";
 import { ProjectServices } from "@/components/project/ProjectServices";
 import { ProjectGallery } from "@/components/project/ProjectGallery";
 import { ProjectStats } from "@/components/project/ProjectStats";
-import { ProjectQuote } from "@/components/project/ProjectQuote";
 import { RelatedProjects } from "@/components/project/RelatedProjects";
 import { SEO } from "@/components/shared/SEO";
 
@@ -41,7 +40,6 @@ const ProjectDetail = () => {
       <ProjectServices p={project} />
       <ProjectGallery p={project} />
       <ProjectStats p={project} />
-      <ProjectQuote p={project} />
       <RelatedProjects p={project} />
     </>
   );
