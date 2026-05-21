@@ -52,7 +52,9 @@ export const Navbar = () => {
               className={`relative inline-flex items-center justify-center overflow-hidden rounded-full px-6 py-3 text-[13px] font-medium uppercase tracking-wider group transition-colors duration-300 ${
                 scrolled
                   ? "bg-brand-white text-brand-red border border-brand-white"
-                  : "bg-brand-white text-brand-black"
+                  : useRedLogo
+                    ? "bg-transparent text-brand-red border-2 border-brand-red"
+                    : "bg-brand-white text-brand-black"
               }`}
             >
               <span
@@ -62,7 +64,7 @@ export const Navbar = () => {
                 }`}
               />
               <span className={`relative z-10 transition-colors duration-300 ${
-                scrolled ? "group-hover:text-brand-white" : "group-hover:text-brand-white"
+                scrolled ? "group-hover:text-brand-white" : useRedLogo ? "group-hover:text-brand-white" : "group-hover:text-brand-white"
               }`}>
                 Contacto
               </span>
