@@ -77,7 +77,16 @@ export const Hero = () => {
       </div>
 
       <div className="hero-fade absolute bottom-[40px] left-0 right-0 z-10 px-[6vw]">
-        <p className="text-[11px] uppercase tracking-[0.3em] opacity-80">
+        <p
+          className="uppercase opacity-90"
+          style={{
+            fontFamily: 'Arial, sans-serif',
+            fontSize: 'clamp(13px, 3vw, 16px)',
+            letterSpacing: '0.2em',
+            wordSpacing: '0.2em',
+            margin: 0,
+          }}
+        >
           Productora de eventos — Buenos Aires, AR
         </p>
       </div>
