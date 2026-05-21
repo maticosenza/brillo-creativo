@@ -20,6 +20,7 @@ export type Project = {
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
+import atlassianBanner from "@/assets/atlassian-banner.jpg";
 
 const SERVICES = [
   "DIRECCIÓN CREATIVA",
@@ -179,6 +180,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Diseñamos un dispositivo modular itinerante que recorrió cinco ciudades de LATAM en 30 días. Cada activación combinó una instalación interactiva, presencia de talento local y un programa de contenidos para redes generado en tiempo real. Coordinamos logística internacional, equipos locales en cada plaza y un dashboard de medición de KPIs en vivo para el cliente.",
     services: SERVICES,
     gallery: withParams(galleries.activation),
+    heroImage: atlassianBanner,
     quote: {
       text: "Una operación enorme que se sintió simple desde nuestro lado. Eso solo se logra con un equipo realmente pro.",
       author: "Florencia Caro",
