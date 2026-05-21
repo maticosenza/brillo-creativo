@@ -30,7 +30,7 @@ const Nosotros = () => {
 
       {/* Our Company */}
       <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start max-w-7xl mx-auto">
           <div>
             <span className="font-display uppercase text-brand-white text-sm md:text-base tracking-[0.18em]">Nuestra empresa</span>
             <h2 className="mt-6 font-display uppercase text-[clamp(30px,4.5vw,56px)] leading-[1.05]">
@@ -44,7 +44,7 @@ const Nosotros = () => {
               <p>Gestionamos cada proyecto de punta a punta, logística, coordinación on-site, proveedores, invitados y operación general, para que el cliente pueda delegar con tranquilidad sabiendo que todo está bajo control.</p>
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="relative overflow-hidden mt-[3.25rem] md:mt-[4.5rem] aspect-square md:aspect-auto md:h-[clamp(420px,52vw,640px)]">
             <img
               src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80"
               alt="Equipo Caracter en acción"
