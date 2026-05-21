@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { ContactForm } from "@/components/contact/ContactForm";
 import GlobeWhiteTranslucent from "@/components/GlobeWhiteTranslucent";
 
