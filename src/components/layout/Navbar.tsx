@@ -9,7 +9,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const isContactPage = location.pathname.startsWith("/contacto");
-  const useRedLogo = isContactPage;
+  const useRedLogo = isContactPage && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
