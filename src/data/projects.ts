@@ -141,7 +141,7 @@ export const PROJECTS: Project[] = [
       author: "Diego Méndez",
       role: "Marketing Director, Genesis",
     },
-    related: ["datawise-hpe", "activacion-mundial", "hclsoftware"],
+    related: ["datawise-hpe", "atlassian", "hclsoftware"],
   },
   {
     slug: "hclsoftware",
@@ -163,7 +163,7 @@ export const PROJECTS: Project[] = [
       author: "Lucía Romero",
       role: "Festival Director",
     },
-    related: ["activacion-mundial", "adidas", "premiere-atlas"],
+    related: ["atlassian", "adidas", "premiere-atlas"],
   },
   {
     slug: "atlassian",
@@ -205,7 +205,7 @@ export const PROJECTS: Project[] = [
       author: "Sebastián Lara",
       role: "VP Operations, IFS",
     },
-    related: ["datawise-hpe", "adidas", "activacion-mundial"],
+    related: ["datawise-hpe", "adidas", "atlassian"],
   },
   {
     slug: "premiere-atlas",
