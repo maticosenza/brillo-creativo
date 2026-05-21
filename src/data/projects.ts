@@ -117,15 +117,15 @@ export const PROJECTS: Project[] = [
       author: "María Acosta",
       role: "Head of Brand, Hilton",
     },
-    related: ["lanzamiento-linea-2026", "cumbre-latam", "premiere-atlas"],
+    related: ["adidas", "cumbre-latam", "premiere-atlas"],
   },
   {
-    slug: "lanzamiento-linea-2026",
-    title: "Lanzamiento línea 2026",
+    slug: "adidas",
+    title: "ADIDAS",
     client: "Genesis",
-    category: "Lanzamiento de producto",
+    category: "Evento deportivo",
     year: 2025,
-    location: "Buenos Aires, AR",
+    location: "BARCELONA, ESP",
     duration: "2 jornadas",
     durationDays: 2,
     attendees: 1200,
@@ -159,7 +159,7 @@ export const PROJECTS: Project[] = [
       author: "Lucía Romero",
       role: "Festival Director",
     },
-    related: ["activacion-mundial", "lanzamiento-linea-2026", "premiere-atlas"],
+    related: ["activacion-mundial", "adidas", "premiere-atlas"],
   },
   {
     slug: "activacion-mundial",
@@ -180,7 +180,7 @@ export const PROJECTS: Project[] = [
       author: "Florencia Caro",
       role: "Brand Experience Lead, Vodafone",
     },
-    related: ["festival-vertice", "lanzamiento-linea-2026", "cumbre-latam"],
+    related: ["festival-vertice", "adidas", "cumbre-latam"],
   },
   {
     slug: "cumbre-latam",
@@ -201,7 +201,7 @@ export const PROJECTS: Project[] = [
       author: "Sebastián Lara",
       role: "VP Operations, IFS",
     },
-    related: ["datawise-hpe", "lanzamiento-linea-2026", "activacion-mundial"],
+    related: ["datawise-hpe", "adidas", "activacion-mundial"],
   },
   {
     slug: "premiere-atlas",
@@ -222,7 +222,7 @@ export const PROJECTS: Project[] = [
       author: "Camila Suárez",
       role: "Head of PR, Atlas Studios",
     },
-    related: ["datawise-hpe", "lanzamiento-linea-2026", "festival-vertice"],
+    related: ["datawise-hpe", "adidas", "festival-vertice"],
   },
 ];
 
