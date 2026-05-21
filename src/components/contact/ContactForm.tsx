@@ -17,7 +17,7 @@ const schema = z.object({
   mensaje: z.string().trim().min(10, "Contanos un poco más (mínimo 10 caracteres)").max(1000),
 });
 
-const TIPOS = ["Deportivo", "Corporativo", "Activación de marca", "Lanzamiento de producto", "Otro"] as const;
+const TIPOS = ["Deportivo", "Corporativo", "Activación de marca", "Evento deportivo", "Otro"] as const;
 
 export const ContactForm = () => {
   const [nombre, setNombre] = useState("");
