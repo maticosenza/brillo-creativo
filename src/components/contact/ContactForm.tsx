@@ -56,10 +56,10 @@ export const ContactForm = () => {
         {(p) => <input type="text" value={empresa} onChange={(e) => setEmpresa(e.target.value)} className={inputClass} maxLength={120} {...p} />}
       </FloatingField>
 
-      <FloatingField label="Tipo de evento" required hasValue={!!tipo}>
+      <FloatingField label="Tipo de evento" required hasValue={true}>
         {(p) => (
           <select value={tipo} onChange={(e) => setTipo(e.target.value)} className={cn(inputClass, "uppercase tracking-wide bg-brand-red")} {...p}>
-            <option value="" disabled></option>
+            <option value="" disabled>Seleccionar...</option>
             {TIPOS.map((t) => <option key={t} value={t} className="bg-brand-red text-brand-white">{t}</option>)}
           </select>
         )}

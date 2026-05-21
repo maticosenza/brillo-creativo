@@ -190,10 +190,10 @@ section[class*="black"] ::-moz-selection {
 
 .footer-cta h2 {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(36px, 8vw, 96px);
+  font-size: clamp(40px, 11vw, 140px);
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 2px #fcf7f5;
@@ -246,6 +246,30 @@ section[class*="black"] ::-moz-selection {
   background: #fcf7f5;
   padding: 140px 6vw 60px;
   border-bottom: 1px solid #c0181b;
+}
+
+/* Selection — banner blanco de /contacto */
+.contact-banner-white ::selection {
+  background-color: #c0181b;
+  color: #fcf7f5;
+}
+.contact-banner-white ::-moz-selection {
+  background-color: #c0181b;
+  color: #fcf7f5;
+}
+
+/* Selection en secciones rojas de /contacto */
+.contact-form-section ::selection,
+.brief-cta-section ::selection,
+.world-section-red ::selection {
+  background-color: #fcf7f5;
+  color: #c0181b;
+}
+.contact-form-section ::-moz-selection,
+.brief-cta-section ::-moz-selection,
+.world-section-red ::-moz-selection {
+  background-color: #fcf7f5;
+  color: #c0181b;
 }
 
 .hablemos-title-red {
