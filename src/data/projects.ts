@@ -18,6 +18,7 @@ export type Project = {
 };
 
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
+import adidasBanner from "@/assets/adidas-banner.jpg";
 
 const SERVICES = [
   "DIRECCIÓN CREATIVA",
