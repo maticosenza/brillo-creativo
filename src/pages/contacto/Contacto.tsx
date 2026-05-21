@@ -10,21 +10,11 @@ const Contacto = () => {
     <>
       <section className="contact-banner-white">
         <h1 className="hablemos-title-red">HABLEMOS</h1>
-        <svg
-          className="hablemos-chevron"
-          viewBox="0 0 100 50"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <polyline
-            points="10,10 50,40 90,10"
-            fill="none"
-            stroke="#c0181b"
-            strokeWidth="8"
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-          />
-        </svg>
+        <div className="hablemos-chevron" aria-hidden>
+          <svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4 L24 24 L44 4" stroke="#c0181b" strokeWidth="4" strokeLinecap="square" strokeLinejoin="miter" fill="none" />
+          </svg>
+        </div>
       </section>
 
       <section className="contact-form-section">

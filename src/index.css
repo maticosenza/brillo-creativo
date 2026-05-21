@@ -249,10 +249,7 @@ section[class*="black"] ::-moz-selection {
 }
 
 .hablemos-chevron {
-  display: block;
-  margin: 32px auto 0;
-  width: clamp(40px, 6vw, 80px);
-  height: auto;
+  margin-top: 24px;
 }
 
 /* Selection — banner blanco de /contacto */
