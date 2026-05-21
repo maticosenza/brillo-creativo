@@ -27,7 +27,7 @@ const Contacto = () => {
             <div className="brief-text">
               <h3>¿TENÉS UN BRIEF?</h3>
               <p>Envianos tu brief directamente o completa nuestra planilla con la información de tu proyecto.</p>
-            </<div>
+            </div>
             {/* DERECHA: 2 botones */}
             <div className="brief-buttons">
               <button className="brief-btn-primary">IMPORTAR BRIEF →</button>
