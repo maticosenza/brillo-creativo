@@ -15,7 +15,7 @@ export default function GlobalReachSection({
       style={{
         background,
         color: "#ffffff",
-        padding: "0 24px 80px",
+        padding: "0 8vw 80px",
         width: "100%",
         overflow: "hidden",
       }}
@@ -85,19 +85,19 @@ export default function GlobalReachSection({
         @media (max-width: 768px) {
           .globe-grid {
             grid-template-columns: 1fr !important;
-            gap: 32px !important;
+            gap: 24px !important;
             text-align: center;
           }
           .globe-grid > div:last-child {
             margin: 0 auto;
           }
           .globe-wrapper {
-            max-width: 78vw !important;
+            max-width: 62vw !important;
           }
         }
         @media (max-width: 480px) {
           .globe-wrapper {
-            max-width: 70vw !important;
+            max-width: 58vw !important;
           }
         }
       `}</style>

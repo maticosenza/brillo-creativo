@@ -632,16 +632,17 @@ section[class*="black"] ::-moz-selection {
 }
 
 @media (max-width: 768px) {
-  .world-section-red { padding: 64px 6vw; }
+  .world-section-red { padding: 56px 8vw; }
   .world-section-red .world-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 28px;
     text-align: center;
   }
   .world-section-red .world-globe {
     flex: 0 0 auto;
-    width: 70%;
-    max-width: 300px;
+    width: 62%;
+    max-width: 260px;
+    margin: 0 auto;
   }
   .world-section-red .world-text p { margin: 0 auto; }
 }
