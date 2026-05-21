@@ -77,6 +77,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+      </div>
 
       {/* Divider */}
       <div className="footer-divider" />
