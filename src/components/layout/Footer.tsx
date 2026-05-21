@@ -19,76 +19,81 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 export const Footer = () => {
   return (
     <footer className="text-brand-white red-background bg-brand-red">
-      {/* Divider — arriba del CTA */}
-      <div className="footer-divider" />
+      <div className="footer-wrapper">
+        {/* Divider — arriba del CTA */}
+        <div className="footer-divider" />
 
-      {/* 1) CTA */}
-      <section className="footer-cta cta-footer">
-        <h2>LET'S MAKE IMPACT!</h2>
-        <Link to="/contacto" className="footer-cta-btn">Hablemos</Link>
-      </section>
+        {/* 1) CTA */}
+        <section className="footer-cta cta-footer">
+          <h2>LET'S MAKE IMPACT!</h2>
+          <Link to="/contacto" className="footer-cta-btn">Hablemos</Link>
+        </section>
 
-      {/* 2) Main content — 3 cols */}
-      <div className="px-[4vw] md:px-[6vw] py-[60px] grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
-        {/* Col 1 — Description + Logo */}
-        <div>
-          <p className="font-body text-[16px] leading-[1.6] text-brand-white/80 max-w-[280px]">
-            Contáctanos y descubrí cómo la experiencia y el carácter de CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
-          </p>
-          <Link to="/" aria-label="Caracter Producciones" className="inline-flex mt-6 opacity-90">
-            <img src={logoCaracter} alt="Caracter Producciones" className="h-[52px] w-auto" />
-          </Link>
-        </div>
+        {/* Divider */}
+        <div className="footer-divider" />
 
-        {/* Col 2 — Nav */}
-        <div>
-          <h4 className="font-body uppercase text-[12px] text-brand-white/50 mb-4 tracking-[0.15em]">Home</h4>
-          <ul className="text-[16px] text-brand-white font-body" style={{ lineHeight: 1.8 }}>
-            {FOOTER_NAV.map((n) => (
-              <li key={n.href}>
-                <Link to={n.href} className="underline-link">{n.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* 2) Main content — 3 cols */}
+        <div className="py-[60px] grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
+          {/* Col 1 — Description + Logo */}
+          <div>
+            <p className="font-body text-[16px] leading-[1.6] text-brand-white/80 max-w-[280px]">
+              Contáctanos y descubrí cómo la experiencia y el carácter de CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
+            </p>
+            <Link to="/" aria-label="Caracter Producciones" className="inline-flex mt-6 opacity-90">
+              <img src={logoCaracter} alt="Caracter Producciones" className="h-[52px] w-auto" />
+            </Link>
+          </div>
 
-        {/* Col 3 — Contact + Socials */}
-        <div>
-          <h4 className="font-body uppercase text-[12px] text-brand-white/50 mb-4 tracking-[0.15em]">Contacto</h4>
-          <address className="not-italic font-body text-[16px] leading-[1.6] text-brand-white space-y-2">
-            <p className="max-w-[240px]">HQ en Puerto Madero, Argentina con presencia en todo el mundo</p>
-            <p><a href="mailto:hello@caracterproductions.com" className="underline-link">hello@caracterproductions.com</a></p>
-            <p>+1 645 239 7512</p>
-          </address>
-          <div className="mt-5 flex items-center gap-3">
-            <a href="https://www.linkedin.com/company/car%C3%A1cter-producciones/?viewAsMember=true" target="_blank" rel="noreferrer" aria-label="LinkedIn"
-               className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-brand-white text-brand-white transition-colors hover:bg-brand-white hover:text-brand-red">
-              <Linkedin className="h-3.5 w-3.5" />
-            </a>
-            <a href="https://www.instagram.com/caracter.prod/" target="_blank" rel="noreferrer" aria-label="Instagram"
-               className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-brand-white text-brand-white transition-colors hover:bg-brand-white hover:text-brand-red">
-              <Instagram className="h-3.5 w-3.5" />
-            </a>
-            <a href="https://www.tiktok.com/@caracter.prod?lang=es-419" target="_blank" rel="noreferrer" aria-label="TikTok"
-               className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-brand-white text-brand-white transition-colors hover:bg-brand-white hover:text-brand-red">
-              <TikTokIcon className="h-3.5 w-3.5" />
-            </a>
+          {/* Col 2 — Nav */}
+          <div>
+            <h4 className="font-body uppercase text-[12px] text-brand-white/50 mb-4 tracking-[0.15em]">Home</h4>
+            <ul className="text-[16px] text-brand-white font-body" style={{ lineHeight: 1.8 }}>
+              {FOOTER_NAV.map((n) => (
+                <li key={n.href}>
+                  <Link to={n.href} className="underline-link">{n.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 3 — Contact + Socials */}
+          <div>
+            <h4 className="font-body uppercase text-[12px] text-brand-white/50 mb-4 tracking-[0.15em]">Contacto</h4>
+            <address className="not-italic font-body text-[16px] leading-[1.6] text-brand-white space-y-2">
+              <p className="max-w-[240px]">HQ en Puerto Madero, Argentina con presencia en todo el mundo</p>
+              <p><a href="mailto:hello@caracterproductions.com" className="underline-link">hello@caracterproductions.com</a></p>
+              <p>+1 645 239 7512</p>
+            </address>
+            <div className="mt-5 flex items-center gap-3">
+              <a href="https://www.linkedin.com/company/car%C3%A1cter-producciones/?viewAsMember=true" target="_blank" rel="noreferrer" aria-label="LinkedIn"
+                 className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-brand-white text-brand-white transition-colors hover:bg-brand-white hover:text-brand-red">
+                <Linkedin className="h-3.5 w-3.5" />
+              </a>
+              <a href="https://www.instagram.com/caracter.prod/" target="_blank" rel="noreferrer" aria-label="Instagram"
+                 className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-brand-white text-brand-white transition-colors hover:bg-brand-white hover:text-brand-red">
+                <Instagram className="h-3.5 w-3.5" />
+              </a>
+              <a href="https://www.tiktok.com/@caracter.prod?lang=es-419" target="_blank" rel="noreferrer" aria-label="TikTok"
+                 className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-brand-white text-brand-white transition-colors hover:bg-brand-white hover:text-brand-red">
+                <TikTokIcon className="h-3.5 w-3.5" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Divider */}
-      <div className="footer-divider" />
+        {/* Divider */}
+        <div className="footer-divider" />
 
-      {/* 3) Bottom line */}
-      <div className="px-[4vw] md:px-[6vw] py-5 flex flex-col md:flex-row justify-between gap-2 font-body text-[12px] text-brand-white/60 uppercase tracking-[0.15em]">
-        <span>© 2026 Marca registrada</span>
-        <span>
-          Diseñado por{" "}
-          <a href="https://www.velocentum.com" target="_blank" rel="noreferrer" className="underline-link">
-            Velocentum
-          </a>
-        </span>
+        {/* 3) Bottom line */}
+        <div className="py-5 flex flex-col md:flex-row justify-between gap-2 font-body text-[12px] text-brand-white/60 uppercase tracking-[0.15em]">
+          <span>© 2026 Marca registrada</span>
+          <span>
+            Diseñado por{" "}
+            <a href="https://www.velocentum.com" target="_blank" rel="noreferrer" className="underline-link">
+              Velocentum
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   );
