@@ -287,12 +287,12 @@ section[class*="black"] ::-moz-selection {
 .contact-form-section {
   background: #c0181b;
   color: #fcf7f5;
-  padding: 100px 6vw;
+  padding: 100px 6vw 24px;
 }
 
 .brief-cta-section {
   background: #c0181b;
-  padding: 80px 6vw;
+  padding: 24px 6vw 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -372,8 +372,8 @@ section[class*="black"] ::-moz-selection {
 .brief-button:hover { background: #fcf7f5; opacity: 0.9; }
 
 @media (max-width: 768px) {
-  .contact-form-section { padding: 64px 6vw; }
-  .brief-cta-section { padding: 56px 6vw; }
+  .contact-form-section { padding: 64px 6vw 20px; }
+  .brief-cta-section { padding: 20px 6vw 32px; }
   .brief-card {
     padding: 40px;
     border-radius: 12px;
