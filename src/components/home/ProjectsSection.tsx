@@ -9,7 +9,7 @@ const slugify = (s: string) =>
    .replace(/(^-|-$)/g, "");
 
 const PROJECTS = [
-  { title: "Gala anual Fortune 500", category: "Evento corporativo", img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=80" },
+  { title: "Datawise x HPE", category: "Evento corporativo", img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=80" },
   { title: "Lanzamiento línea 2026", category: "Lanzamiento de producto", img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1400&q=80" },
   { title: "Festival Vértice", category: "Festival de música", img: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1400&q=80" },
   { title: "Activación mundial", category: "Activación de marca", img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=80" },

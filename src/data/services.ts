@@ -25,7 +25,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+150", label: "Eventos producidos" },
     image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1505236858219-8359eb29e329","1540575467063-178a50c2df87","1511795409834-ef04bbd61622","1559223607-a43c990c692c","1492684223066-81342ee5ff30","1517457373958-b7bdd4587205"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["datawise-hpe", "cumbre-latam", "premiere-atlas"],
+    relatedProjects: ["datawise-x-hpe", "cumbre-latam", "premiere-atlas"],
   },
   {
     slug: "motorsport",
@@ -49,7 +49,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+80", label: "Convenciones" },
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1540575467063-178a50c2df87","1559223607-a43c990c692c","1505236858219-8359eb29e329"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-hpe", "premiere-atlas"],
+    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
   },
   {
     slug: "experiencias-mice",
@@ -61,7 +61,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+25", label: "Países operados" },
     image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1515187029135-18ee286d815b","1540039155733-5bb30b53aa14","1492684223066-81342ee5ff30"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-hpe", "premiere-atlas"],
+    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
   },
   {
     slug: "activaciones-de-marca",
@@ -97,7 +97,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "100%", label: "Transparencia" },
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1554224155-6726b3ff858f","1454165804606-c3d57bc86b40","1517245386807-bb43f82c33c4"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-hpe", "premiere-atlas"],
+    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
   },
   {
     slug: "logistica-internacional",
@@ -109,7 +109,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+10", label: "Países operados" },
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1436491865332-7a61a109cc05","1519671482749-fd09be7ccebf","1540575467063-178a50c2df87"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-hpe", "premiere-atlas"],
+    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
   },
   {
     slug: "proveedores-y-riders",
@@ -121,7 +121,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+300", label: "Proveedores en red" },
     image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1511795409834-ef04bbd61622","1559223607-a43c990c692c","1505236858219-8359eb29e329"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-hpe", "premiere-atlas"],
+    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
   },
   {
     slug: "post-evento-reporting",
@@ -133,7 +133,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+50", label: "KPIs medidos" },
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
     gallery: ["1551288049-bebda4e38f71","1460925895917-afdab827c52f","1454165804606-c3d57bc86b40"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-hpe", "premiere-atlas"],
+    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
   },
 ];
 

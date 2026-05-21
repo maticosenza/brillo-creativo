@@ -95,7 +95,7 @@ const withParams = (urls: string[]) =>
 
 export const PROJECTS: Project[] = [
   {
-    slug: "datawise-hpe",
+    slug: "datawise-x-hpe",
     title: "Datawise x HPE",
     client: "Datawise / HPE",
     category: "Evento corporativo",
