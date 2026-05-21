@@ -248,6 +248,13 @@ section[class*="black"] ::-moz-selection {
   border-bottom: 1px solid #c0181b;
 }
 
+.hablemos-chevron {
+  display: block;
+  margin: 32px auto 0;
+  width: clamp(40px, 6vw, 80px);
+  height: auto;
+}
+
 /* Selection — banner blanco de /contacto */
 .contact-banner-white ::selection {
   background-color: #c0181b;
