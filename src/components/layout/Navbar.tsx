@@ -32,7 +32,7 @@ export const Navbar = () => {
       >
         <div className="flex items-center justify-between px-6 md:px-12 h-20">
           <Link to="/" aria-label="Caracter Producciones" className="flex items-center">
-            <img src={useRedLogo ? logoCaracterRed : logoCaracter} alt="Caracter Producciones" className="h-12 md:h-14 w-auto" />
+            <img src={isContactPage ? logoCaracterRed : logoCaracter} alt="Caracter Producciones" className="h-12 md:h-14 w-auto" />
           </Link>
 
           <div className="flex items-center gap-3 md:gap-5">
