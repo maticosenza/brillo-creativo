@@ -10,6 +10,7 @@ export const Navbar = () => {
   const location = useLocation();
   const isContactPage = location.pathname.startsWith("/contacto");
   const useRedLogo = isContactPage && !scrolled;
+  const logoSrc = isContactPage && !scrolled ? logoCaracterRed : logoCaracter;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -32,7 +33,7 @@ export const Navbar = () => {
       >
         <div className="flex items-center justify-between px-6 md:px-12 h-20">
           <Link to="/" aria-label="Caracter Producciones" className="flex items-center">
-            <img src={isContactPage ? logoCaracterRed : logoCaracter} alt="Caracter Producciones" className="h-12 md:h-14 w-auto" />
+            <img src={logoSrc} alt="Caracter Producciones" className="h-12 md:h-14 w-auto" />
           </Link>
 
           <div className="flex items-center gap-3 md:gap-5">
