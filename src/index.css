@@ -248,6 +248,30 @@ section[class*="black"] ::-moz-selection {
   border-bottom: 1px solid #c0181b;
 }
 
+/* Selection — banner blanco de /contacto */
+.contact-banner-white ::selection {
+  background-color: #c0181b;
+  color: #fcf7f5;
+}
+.contact-banner-white ::-moz-selection {
+  background-color: #c0181b;
+  color: #fcf7f5;
+}
+
+/* Selection en secciones rojas de /contacto */
+.contact-form-section ::selection,
+.brief-cta-section ::selection,
+.world-section-red ::selection {
+  background-color: #fcf7f5;
+  color: #c0181b;
+}
+.contact-form-section ::-moz-selection,
+.brief-cta-section ::-moz-selection,
+.world-section-red ::-moz-selection {
+  background-color: #fcf7f5;
+  color: #c0181b;
+}
+
 .hablemos-title-red {
   font-family: 'Anton', sans-serif;
   font-size: clamp(80px, 14vw, 240px);
