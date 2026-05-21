@@ -1,17 +1,33 @@
 import { Link } from "react-router-dom";
+import { RedFrame } from "@/components/shared/RedFrame";
+import { RevealHeading } from "./RevealHeading";
 
 export const ServicesOverview = () => {
   return (
     <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
-      <div className="max-w-5xl mx-auto flex flex-col items-center gap-10 md:gap-12 text-center">
-        <div className="w-full max-w-[700px]">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
+        <div className="md:col-start-2 md:col-span-5 relative">
+          <RedFrame side="right" className="w-full max-w-[520px] ml-auto">
+            <div className="relative aspect-[3/4] w-full overflow-hidden">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay muted loop playsInline
+                poster="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=80"
+              >
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-stage-with-spotlights-and-fog-at-a-concert-32809-large.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </RedFrame>
+        </div>
+
+        <div className="md:col-start-8 md:col-span-4">
           <span className="eyebrow text-brand-white">Nuestros servicios</span>
           <div style={{ fontSize: "clamp(32px, 3.6vw, 56px)" }}>
-            <h2 className="mt-6 font-display uppercase leading-[0.95]">
+            <h2 className="mt-6 font-display uppercase leading-[0.95] whitespace-nowrap">
               Gestión completa,<br />resultados concretos
             </h2>
           </div>
-          <p className="mt-8 text-lg leading-[1.6] text-brand-white/90 mx-auto max-w-[55ch]">
+          <p className="mt-8 text-lg leading-[1.6] text-brand-white/90">
             De la idea a la ejecución, nos ocupamos de cada detalle para que el
             resultado sea impecable.
           </p>
@@ -25,16 +41,6 @@ export const ServicesOverview = () => {
               Nuestros servicios
             </span>
           </Link>
-        </div>
-
-        <div className="w-full max-w-[500px] overflow-hidden rounded-lg" style={{ aspectRatio: "16 / 10" }}>
-          <video
-            className="w-full h-full object-cover"
-            autoPlay muted loop playsInline
-            poster="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=80"
-          >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-stage-with-spotlights-and-fog-at-a-concert-32809-large.mp4" type="video/mp4" />
-          </video>
         </div>
       </div>
     </section>

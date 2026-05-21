@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
+import { RedFrame } from "@/components/shared/RedFrame";
 
 export const AboutSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -12,18 +13,8 @@ export const AboutSection = () => {
 
   return (
     <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
-      <div className="max-w-5xl mx-auto flex flex-col items-center gap-10 md:gap-12">
-        <div ref={ref} className="w-full max-w-[500px] overflow-hidden rounded-lg" style={{ aspectRatio: "16 / 10" }}>
-          <motion.img
-            style={{ y }}
-            src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1200&q=80"
-            alt="Producción detrás de escena de un evento en vivo"
-            className="w-full h-[120%] object-cover -mt-[10%]"
-            loading="lazy"
-          />
-        </div>
-
-        <div className="w-full max-w-[700px] text-center space-y-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
+        <div className="md:col-span-6 md:col-start-2 space-y-12">
           <div>
             <span className="eyebrow text-brand-white">Sobre Nosotros</span>
             <h2
@@ -32,7 +23,7 @@ export const AboutSection = () => {
             >
               Quiénes somos
             </h2>
-            <p className="mt-6 text-lg leading-[1.6] text-brand-white mx-auto max-w-[55ch]">
+            <p className="mt-6 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
               Somos una productora de eventos con ADN operativo. Con más de seis
               años trabajando para empresas multinacionales y agencias
               internacionales de marketing y motorsport, sabemos lo que significa
@@ -47,12 +38,12 @@ export const AboutSection = () => {
             >
               Qué hacemos
             </h2>
-            <p className="mt-6 text-lg leading-[1.6] text-brand-white mx-auto max-w-[55ch]">
+            <p className="mt-6 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
               Operamos en más de diez países. Gestionamos activaciones en Grand
               Prix de Fórmula 1, eventos corporativos, deportivos y experiencias
               MICE para clientes de todo el mundo.
             </p>
-            <p className="mt-4 text-lg leading-[1.6] text-brand-white mx-auto max-w-[55ch]">
+            <p className="mt-4 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
               Nuestro trabajo es sencillo: ejecutar con eficiencia y que el
               cliente no tenga que preocuparse por nada.
             </p>
@@ -66,6 +57,20 @@ export const AboutSection = () => {
               </span>
             </Link>
           </div>
+        </div>
+
+        <div className="md:col-span-5 md:col-start-8">
+          <RedFrame side="right" className="w-full max-w-[520px] ml-auto">
+            <div ref={ref} className="overflow-hidden aspect-[3/4] w-full">
+              <motion.img
+                style={{ y }}
+                src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1200&q=80"
+                alt="Producción detrás de escena de un evento en vivo"
+                className="w-full h-[120%] object-cover -mt-[10%]"
+                loading="lazy"
+              />
+            </div>
+          </RedFrame>
         </div>
       </div>
     </section>
