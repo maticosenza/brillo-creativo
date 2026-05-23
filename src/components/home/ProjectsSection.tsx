@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import useEmblaCarousel from "embla-carousel-react";
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
@@ -43,6 +44,18 @@ export const ProjectsSection = () => {
   const dragDelta = useRef(0);
   const [dragging, setDragging] = useState(false);
 
+  // Mobile carousel
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", skipSnaps: false });
+  const [mobileIndex, setMobileIndex] = useState(0);
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setMobileIndex(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi]);
+  const scrollTo = useCallback((i: number) => emblaApi?.scrollTo(i), [emblaApi]);
+
   const go = useCallback((next: number) => {
     setIndex(((next % PROJECTS.length) + PROJECTS.length) % PROJECTS.length);
   }, []);
@@ -82,7 +95,7 @@ export const ProjectsSection = () => {
       {/* PROYECTOS title — half above, half overlapping image */}
       <h2
         aria-label="Proyectos"
-        className="relative z-20 font-display uppercase leading-[0.85] tracking-[-0.02em] select-none pointer-events-none"
+        className="hidden md:block relative z-20 font-display uppercase leading-[0.85] tracking-[-0.02em] select-none pointer-events-none"
         style={{
           fontSize: "clamp(80px, 18vw, 260px)",
           color: "transparent",
@@ -93,9 +106,54 @@ export const ProjectsSection = () => {
         PROYECTOS
       </h2>
 
-      {/* Image slideshow */}
+      {/* MOBILE: square carousel */}
+      <div className="md:hidden flex flex-col gap-6">
+        <h2
+          className="font-display uppercase leading-[0.95] tracking-[-0.02em]"
+          style={{ fontSize: "clamp(40px, 12vw, 72px)", color: "#fcf7f5" }}
+        >
+          NUESTROS PROYECTOS
+        </h2>
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            {PROJECTS.map((p, i) => {
+              const s = slugify(p.title);
+              const num = String(i + 1).padStart(2, "0");
+              return (
+                <div key={p.title} className="flex-[0_0_100%] min-w-0">
+                  <Link to={`/proyectos/${s}`} className="relative block w-full aspect-square overflow-hidden rounded-lg">
+                    <img src={p.img} alt={p.title} className="w-full h-full object-cover active:scale-105 transition-transform duration-300" draggable={false} />
+                    <div
+                      className="absolute inset-x-0 bottom-0 p-6 flex flex-col gap-3"
+                      style={{ background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)" }}
+                    >
+                      <h3 className="font-display uppercase text-brand-white m-0" style={{ fontSize: 18, letterSpacing: "-0.01em" }}>
+                        {num}. {p.title}
+                      </h3>
+                      <span className="text-brand-white/90 text-[13px]">Ver proyecto →</span>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="flex justify-center gap-2">
+          {PROJECTS.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => scrollTo(i)}
+              aria-label={`Ir al proyecto ${i + 1}`}
+              className="w-2 h-2 rounded-full transition-all duration-200"
+              style={{ background: i === mobileIndex ? "#fcf7f5" : "rgba(252,247,245,0.4)" }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* DESKTOP: Image slideshow */}
       <div
-        className="relative z-10 w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing select-none"
+        className="hidden md:block relative z-10 w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing select-none"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
@@ -130,7 +188,7 @@ export const ProjectsSection = () => {
       </div>
 
       {/* Bottom info + actions */}
-      <div className="relative z-20 mt-8 md:mt-10">
+      <div className="hidden md:block relative z-20 mt-8 md:mt-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <Link to={`/proyectos/${slug}`} className="block group max-w-2xl">
             <span className="text-[11px] uppercase tracking-[0.3em] opacity-80">{current.category}</span>
