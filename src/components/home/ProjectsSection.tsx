@@ -109,10 +109,14 @@ export const ProjectsSection = () => {
       {/* MOBILE: square carousel */}
       <div className="md:hidden flex flex-col gap-6">
         <h2
-          className="font-display uppercase leading-[0.95] tracking-[-0.02em]"
-          style={{ fontSize: "clamp(40px, 12vw, 72px)", color: "#fcf7f5" }}
+          className="font-display uppercase leading-none tracking-[-0.02em] text-center select-none"
+          style={{
+            fontSize: "clamp(48px, 10vw, 80px)",
+            color: "transparent",
+            WebkitTextStroke: "0.8px #fcf7f5",
+          }}
         >
-          NUESTROS PROYECTOS
+          PROYECTOS
         </h2>
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
@@ -121,7 +125,7 @@ export const ProjectsSection = () => {
               const num = String(i + 1).padStart(2, "0");
               return (
                 <div key={p.title} className="flex-[0_0_100%] min-w-0">
-                  <Link to={`/proyectos/${s}`} className="relative block w-full aspect-square overflow-hidden rounded-lg">
+                  <Link to={`/proyectos/${s}`} className="relative block w-full aspect-[4/5] overflow-hidden rounded-lg">
                     <img src={p.img} alt={p.title} className="w-full h-full object-cover active:scale-105 transition-transform duration-300" draggable={false} />
                     <div
                       className="absolute inset-x-0 bottom-0 p-6 flex flex-col gap-3"
@@ -148,6 +152,14 @@ export const ProjectsSection = () => {
               style={{ background: i === mobileIndex ? "#fcf7f5" : "rgba(252,247,245,0.4)" }}
             />
           ))}
+        </div>
+        <div className="flex justify-start">
+          <Link
+            to="/proyectos"
+            className="inline-flex items-center justify-center rounded-full border border-brand-white px-9 py-3.5 text-[12px] font-medium uppercase tracking-[0.15em] text-brand-white transition-all duration-300 active:bg-brand-white/10"
+          >
+            Ver más
+          </Link>
         </div>
       </div>
 
