@@ -136,9 +136,9 @@ export const ProjectsSection = () => {
             })}
           </div>
         </div>
-        {/* Footer: Button (left) + Name+Dots (right) */}
+        {/* Footer: Button (left) + Name+Dots (left) */}
         <div className="flex justify-between items-start gap-5 mt-6">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink- 0">
             <Link
               to="/proyectos"
               className="inline-flex items-center justify-center rounded-full border border-brand-white px-9 py-3.5 text-[12px] font-medium uppercase tracking-[0.15em] text-brand-white transition-all duration-300 active:bg-brand-white/10"
@@ -146,11 +146,11 @@ export const ProjectsSection = () => {
               Ver más
             </Link>
           </div>
-          <div className="flex-1 text-right">
-            <h3 className="font-display uppercase text-brand-white m-0 mb-3" style={{ fontSize: "clamp(16px, 3vw, 20px)", letterSpacing: "-0.01em" }}>
-              {String(mobileIndex + 1).padStart(2, "0")}. {PROJECTS[mobileIndex].title}
+          <div className="flex-1 text-left">
+            <h3 className="font-display uppercase text-brand-white m- 0 mb-3" style={{ fontSize: "clamp(20px, 4.5vw, 28px)", letterSpacing: "-0.01em" }}>
+              {PROJECTS[mobileIndex].title}
             </h3>
-            <div className="flex justify-end gap-2">
+            <div className="flex justify-start gap-2">
               {PROJECTS.map((_, i) => (
                 <button
                   key={i}
