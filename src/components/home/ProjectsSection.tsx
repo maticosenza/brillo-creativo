@@ -110,13 +110,14 @@ export const ProjectsSection = () => {
       <div className="md:hidden relative flex flex-col">
         <h2
           aria-label="Proyectos"
-          className="font-display uppercase tracking-[-0.03em] select-none pointer-events-none absolute left-0 z-20 m-0 text-left w-full"
+          className="font-display uppercase tracking-[-0.03em] select-none pointer-events-none absolute z-20 m-0 text-left w-full"
           style={{
-            fontSize: "clamp(72px, 16vw, 140px)",
+            fontSize: "clamp(56px, 13vw, 100px)",
             lineHeight: 0.85,
             color: "transparent",
-            WebkitTextStroke: "1px #fcf7f5",
+            WebkitTextStroke: "0.8px #fcf7f5",
             top: "-20px",
+            left: "-20px",
           }}
         >
           PROYECTOS
@@ -135,7 +136,7 @@ export const ProjectsSection = () => {
             })}
           </div>
         </div>
-        {/* Footer: Button (left) + Name+Dots (right) */}
+        {/* Footer: Button (left) + Name+Dots (left) */}
         <div className="flex justify-between items-start gap-5 mt-6">
           <div className="flex-shrink-0">
             <Link
@@ -145,11 +146,11 @@ export const ProjectsSection = () => {
               Ver más
             </Link>
           </div>
-          <div className="flex-1 text-right">
-            <h3 className="font-display uppercase text-brand-white m-0 mb-3" style={{ fontSize: "clamp(16px, 3vw, 20px)", letterSpacing: "-0.01em" }}>
-              {String(mobileIndex + 1).padStart(2, "0")}. {PROJECTS[mobileIndex].title}
+          <div className="flex-1 text-left">
+            <h3 className="font-display uppercase text-brand-white mb-3" style={{ fontSize: "clamp(20px, 4.5vw, 28px)", letterSpacing: "-0.01em" }}>
+              {PROJECTS[mobileIndex].title}
             </h3>
-            <div className="flex justify-end gap-2">
+            <div className="flex justify-start gap-2">
               {PROJECTS.map((_, i) => (
                 <button
                   key={i}
