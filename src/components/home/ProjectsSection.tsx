@@ -138,7 +138,7 @@ export const ProjectsSection = () => {
         </div>
         {/* Footer: Button (left) + Name+Dots (left) */}
         <div className="flex justify-between items-start gap-5 mt-6">
-          <div className="flex-shrink- 0">
+          <div className="flex-shrink-0">
             <Link
               to="/proyectos"
               className="inline-flex items-center justify-center rounded-full border border-brand-white px-9 py-3.5 text-[12px] font-medium uppercase tracking-[0.15em] text-brand-white transition-all duration-300 active:bg-brand-white/10"
@@ -147,7 +147,7 @@ export const ProjectsSection = () => {
             </Link>
           </div>
           <div className="flex-1 text-left">
-            <h3 className="font-display uppercase text-brand-white m- 0 mb-3" style={{ fontSize: "clamp(20px, 4.5vw, 28px)", letterSpacing: "-0.01em" }}>
+            <h3 className="font-display uppercase text-brand-white mb-3" style={{ fontSize: "clamp(20px, 4.5vw, 28px)", letterSpacing: "-0.01em" }}>
               {PROJECTS[mobileIndex].title}
             </h3>
             <div className="flex justify-start gap-2">
