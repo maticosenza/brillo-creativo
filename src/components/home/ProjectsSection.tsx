@@ -106,54 +106,58 @@ export const ProjectsSection = () => {
         PROYECTOS
       </h2>
 
-      {/* MOBILE: square carousel */}
-      <div className="md:hidden flex flex-col gap-6">
+      {/* MOBILE: carousel with overlapping title */}
+      <div className="md:hidden relative flex flex-col">
         <h2
-          className="font-display uppercase leading-none tracking-[-0.02em] text-center select-none"
+          aria-label="Proyectos"
+          className="font-display uppercase tracking-[-0.02em] select-none pointer-events-none absolute left-0 z-10 m-0 text-left"
           style={{
-            fontSize: "clamp(48px, 10vw, 80px)",
+            fontSize: "clamp(64px, 14vw, 120px)",
+            lineHeight: 0.9,
             color: "transparent",
             WebkitTextStroke: "0.8px #fcf7f5",
+            top: 0,
           }}
         >
           PROYECTOS
         </h2>
-        <div className="overflow-hidden" ref={emblaRef}>
+        <div className="overflow-hidden mt-[60px]" ref={emblaRef}>
           <div className="flex">
-            {PROJECTS.map((p, i) => {
+            {PROJECTS.map((p) => {
               const s = slugify(p.title);
-              const num = String(i + 1).padStart(2, "0");
               return (
                 <div key={p.title} className="flex-[0_0_100%] min-w-0">
                   <Link to={`/proyectos/${s}`} className="relative block w-full aspect-[4/5] overflow-hidden rounded-lg">
                     <img src={p.img} alt={p.title} className="w-full h-full object-cover active:scale-105 transition-transform duration-300" draggable={false} />
-                    <div
-                      className="absolute inset-x-0 bottom-0 p-6 flex flex-col gap-3"
-                      style={{ background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)" }}
-                    >
-                      <h3 className="font-display uppercase text-brand-white m-0" style={{ fontSize: 18, letterSpacing: "-0.01em" }}>
-                        {num}. {p.title}
-                      </h3>
-                      <span className="text-brand-white/90 text-[13px]">Ver proyecto →</span>
-                    </div>
                   </Link>
                 </div>
               );
             })}
           </div>
         </div>
-        <div className="flex justify-center gap-2">
-          {PROJECTS.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => scrollTo(i)}
-              aria-label={`Ir al proyecto ${i + 1}`}
-              className="w-2 h-2 rounded-full transition-all duration-200"
-              style={{ background: i === mobileIndex ? "#fcf7f5" : "rgba(252,247,245,0.4)" }}
-            />
-          ))}
+        {/* Name (left) + Dots (right) */}
+        <div className="flex justify-between items-center gap-5 mt-4">
+          <div className="flex-1 min-w-0">
+            <h3 className="font-display uppercase text-brand-white m-0 mb-2" style={{ fontSize: 16, letterSpacing: "-0.01em" }}>
+              {String(mobileIndex + 1).padStart(2, "0")}. {PROJECTS[mobileIndex].title}
+            </h3>
+            <Link to={`/proyectos/${slugify(PROJECTS[mobileIndex].title)}`} className="text-brand-white/90 text-[13px]">
+              Ver proyecto →
+            </Link>
+          </div>
+          <div className="flex justify-end gap-2 flex-shrink-0">
+            {PROJECTS.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollTo(i)}
+                aria-label={`Ir al proyecto ${i + 1}`}
+                className="w-2 h-2 rounded-full transition-all duration-200"
+                style={{ background: i === mobileIndex ? "#fcf7f5" : "rgba(252,247,245,0.4)" }}
+              />
+            ))}
+          </div>
         </div>
-        <div className="flex justify-start">
+        <div className="flex justify-start mt-4">
           <Link
             to="/proyectos"
             className="inline-flex items-center justify-center rounded-full border border-brand-white px-9 py-3.5 text-[12px] font-medium uppercase tracking-[0.15em] text-brand-white transition-all duration-300 active:bg-brand-white/10"
