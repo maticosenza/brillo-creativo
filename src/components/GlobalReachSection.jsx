@@ -92,12 +92,12 @@ export default function GlobalReachSection({
             margin: 0 auto;
           }
           .globe-wrapper {
-            max-width: 62vw !important;
+            max-width: 86vw !important;
           }
         }
         @media (max-width: 480px) {
           .globe-wrapper {
-            max-width: 58vw !important;
+            max-width: 82vw !important;
           }
         }
       `}</style>
