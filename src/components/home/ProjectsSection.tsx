@@ -136,7 +136,7 @@ export const ProjectsSection = () => {
             })}
           </div>
         </div>
-        {/* Footer: Button (left) + Name+Dots (left) */}
+        {/* Footer: Button (left) + Name+Dots (right) */}
         <div className="flex justify-between items-start gap-5 mt-6">
           <div className="flex-shrink-0">
             <Link
@@ -146,11 +146,11 @@ export const ProjectsSection = () => {
               Ver más
             </Link>
           </div>
-          <div className="flex-1 text-left">
+          <div className="flex-1 text-right">
             <h3 className="font-display uppercase text-brand-white mb-3" style={{ fontSize: "clamp(20px, 4.5vw, 28px)", letterSpacing: "-0.01em" }}>
               {PROJECTS[mobileIndex].title}
             </h3>
-            <div className="flex justify-start gap-2">
+            <div className="flex justify-end gap-2">
               {PROJECTS.map((_, i) => (
                 <button
                   key={i}
