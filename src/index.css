@@ -641,8 +641,8 @@ section[class*="black"] ::-moz-selection {
   }
   .world-section-red .world-globe {
     flex: 0 0 auto;
-    width: 62%;
-    max-width: 260px;
+    width: 88%;
+    max-width: 380px;
     margin: 0 auto;
   }
   .world-section-red .world-text p { margin: 0 auto; }
