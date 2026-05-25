@@ -110,14 +110,14 @@ export const ProjectsSection = () => {
       <div className="md:hidden relative flex flex-col">
         <h2
           aria-label="Proyectos"
-          className="font-display uppercase tracking-[-0.03em] select-none pointer-events-none absolute z-20 m-0 text-left w-full"
+          className="font-display uppercase tracking-[-0.03em] select-none pointer-events-none absolute z-20 m-1 text-left w-full"
           style={{
             fontSize: "clamp(56px, 13vw, 100px)",
             lineHeight: 0.85,
             color: "transparent",
             WebkitTextStroke: "0.8px #fcf7f5",
-            top: "-20px",
-            left: "-20px",
+            top: "40px",
+            left: "12px",
           }}
         >
           PROYECTOS
