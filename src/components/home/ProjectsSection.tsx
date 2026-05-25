@@ -112,17 +112,18 @@ export const ProjectsSection = () => {
           aria-label="Proyectos"
           className="font-display uppercase tracking-[-0.03em] select-none pointer-events-none absolute z-20 m-1 text-left w-full"
           style={{
-            fontSize: "clamp(56px, 13vw, 100px)",
+            fontSize: "clamp(68px, 16vw, 120px)",
             lineHeight: 0.85,
             color: "transparent",
             WebkitTextStroke: "0.8px #fcf7f5",
-            top: "40px",
+            top: "30px",
             left: "12px",
           }}
         >
           PROYECTOS
         </h2>
-        <div className="overflow-hidden mt-[80px]" ref={emblaRef}>
+        <div className="relative mt-[70px]">
+          <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {PROJECTS.map((p) => {
               const s = slugify(p.title);
@@ -134,6 +135,14 @@ export const ProjectsSection = () => {
                 </div>
               );
             })}
+          </div>
+          </div>
+          {/* White arrow buttons over image */}
+          <div className="absolute inset-y-0 left-3 z-30 flex items-center">
+            <NavBtn onClick={() => emblaApi?.scrollPrev()} dir="left" label="Anterior" />
+          </div>
+          <div className="absolute inset-y-0 right-3 z-30 flex items-center">
+            <NavBtn onClick={() => emblaApi?.scrollNext()} dir="right" label="Siguiente" />
           </div>
         </div>
         {/* Footer: Button (left) + Name+Dots (right) */}
