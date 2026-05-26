@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { RevealHeading } from "./RevealHeading";
 import { RedFrame } from "@/components/shared/RedFrame";
+import servicesHome from "@/assets/services-home.jpg";
 
 export const ServicesSection = () => {
   return (
@@ -44,8 +45,8 @@ export const ServicesSection = () => {
             className="aspect-[4/5] w-full overflow-hidden"
           >
             <img
-              src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80"
-              alt="Evento corporativo con escenario iluminado"
+              src={servicesHome}
+              alt="Experiencia inmersiva de motorsport en simulador"
               className="w-full h-full object-cover"
               loading="lazy"
             />
