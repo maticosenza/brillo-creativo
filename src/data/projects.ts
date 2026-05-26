@@ -155,7 +155,7 @@ export const PROJECTS: Project[] = [
     durationDays: 3,
     attendees: 42000,
     shortDescription: "Festival multiescenario de tres jornadas con producción técnica internacional y cobertura full audiovisual.",
-    longDescription: "Producción integral de un festival multiescenario con cuatro stages simultáneos durante tres jornadas. Coordinamos riders de más de 40 artistas, 600 técnicos y un dispositivo de seguridad y hospitality para 42.000 personas por día. Diseñamos la identidad visual del festival, las activaciones de marca dentro del predio y la cobertura audiovisual en vivo distribuida a streamings y broadcasters.",
+    longDescription: "Producción integral para HCLSoftware en el marco de la Formula 1 en Las Vegas. Coordinamos la presencia de marca, hospitality de alto nivel y activaciones tecnológicas inmersivas para miles de asistentes. Diseñamos la identidad visual de la activación, gestionamos la logística en un entorno de alta complejidad y aseguramos una cobertura audiovisual premium para canales globales.",
     services: SERVICES,
     gallery: withParams(galleries.festival),
     heroImage: hclsoftwareBanner,
