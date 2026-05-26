@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { RedFrame } from "@/components/shared/RedFrame";
+import aboutHome from "@/assets/about-home.jpg";
 
 export const AboutSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -64,7 +65,7 @@ export const AboutSection = () => {
             <div ref={ref} className="overflow-hidden aspect-[3/4] w-full">
               <motion.img
                 style={{ y }}
-                src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1200&q=80"
+                src={aboutHome}
                 alt="Producción detrás de escena de un evento en vivo"
                 className="w-full h-[120%] object-cover -mt-[10%]"
                 loading="lazy"
