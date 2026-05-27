@@ -36,7 +36,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+150", label: "Eventos producidos" },
     image: s1,
     gallery: ["1505236858219-8359eb29e329","1540575467063-178a50c2df87","1511795409834-ef04bbd61622","1559223607-a43c990c692c","1492684223066-81342ee5ff30","1517457373958-b7bdd4587205"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["datawise-x-hpe", "cumbre-latam", "premiere-atlas"],
+    relatedProjects: ["datawise-x-hpe", "manga", "fira-barcelona"],
   },
   {
     slug: "motorsport",
@@ -60,7 +60,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+80", label: "Convenciones" },
     image: s3,
     gallery: ["1540575467063-178a50c2df87","1559223607-a43c990c692c","1505236858219-8359eb29e329"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
+    relatedProjects: ["manga", "datawise-x-hpe", "fira-barcelona"],
   },
   {
     slug: "experiencias-mice",
@@ -72,7 +72,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+25", label: "Países operados" },
     image: s4,
     gallery: ["1515187029135-18ee286d815b","1540039155733-5bb30b53aa14","1492684223066-81342ee5ff30"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
+    relatedProjects: ["manga", "datawise-x-hpe", "fira-barcelona"],
   },
   {
     slug: "activaciones-de-marca",
@@ -96,7 +96,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "x3", label: "Aumento de leads" },
     image: s6,
     gallery: ["1492684223066-81342ee5ff30","1505373877841-8d25f7d46678","1540039155733-5bb30b53aa14"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["adidas", "premiere-atlas", "activacion-mundial"],
+    relatedProjects: ["adidas", "fira-barcelona", "activacion-mundial"],
   },
   {
     slug: "presupuesto",
@@ -108,7 +108,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "100%", label: "Transparencia" },
     image: s7,
     gallery: ["1554224155-6726b3ff858f","1454165804606-c3d57bc86b40","1517245386807-bb43f82c33c4"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
+    relatedProjects: ["manga", "datawise-x-hpe", "fira-barcelona"],
   },
   {
     slug: "logistica-internacional",
@@ -120,7 +120,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+10", label: "Países operados" },
     image: s8,
     gallery: ["1436491865332-7a61a109cc05","1519671482749-fd09be7ccebf","1540575467063-178a50c2df87"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
+    relatedProjects: ["manga", "datawise-x-hpe", "fira-barcelona"],
   },
   {
     slug: "proveedores-y-riders",
@@ -132,7 +132,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+300", label: "Proveedores en red" },
     image: s9,
     gallery: ["1511795409834-ef04bbd61622","1559223607-a43c990c692c","1505236858219-8359eb29e329"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
+    relatedProjects: ["manga", "datawise-x-hpe", "fira-barcelona"],
   },
   {
     slug: "post-evento-reporting",
@@ -144,7 +144,7 @@ export const SERVICES: Service[] = [
     highlight: { value: "+50", label: "KPIs medidos" },
     image: s10,
     gallery: ["1551288049-bebda4e38f71","1460925895917-afdab827c52f","1454165804606-c3d57bc86b40"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
-    relatedProjects: ["cumbre-latam", "datawise-x-hpe", "premiere-atlas"],
+    relatedProjects: ["manga", "datawise-x-hpe", "fira-barcelona"],
   },
 ];
 
