@@ -21,6 +21,8 @@ import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
+import mangaBanner from "@/assets/manga-banner.jpg";
+import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 
 const SERVICES = [
   "DIRECCIÓN CREATIVA",
@@ -120,7 +122,7 @@ export const PROJECTS: Project[] = [
       author: "María Acosta",
       role: "Head of Brand, Hilton",
     },
-    related: ["adidas", "cumbre-latam", "premiere-atlas"],
+    related: ["adidas", "manga", "fira-barcelona"],
   },
   {
     slug: "adidas",
@@ -164,7 +166,7 @@ export const PROJECTS: Project[] = [
       author: "Lucía Romero",
       role: "Festival Director",
     },
-    related: ["atlassian", "adidas", "premiere-atlas"],
+    related: ["atlassian", "adidas", "fira-barcelona"],
   },
   {
     slug: "atlassian",
@@ -186,13 +188,13 @@ export const PROJECTS: Project[] = [
       author: "Florencia Caro",
       role: "Brand Experience Lead, Atlassian",
     },
-    related: ["hclsoftware", "adidas", "cumbre-latam"],
+    related: ["hclsoftware", "adidas", "manga"],
   },
   {
-    slug: "cumbre-latam",
-    title: "Cumbre LATAM",
-    client: "IFS",
-    category: "Convención",
+    slug: "manga",
+    title: "MANGA",
+    client: "MANGA",
+    category: "Exhibición",
     year: 2025,
     location: "Buenos Aires, AR",
     duration: "3 jornadas",
@@ -202,6 +204,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Producción integral de la convención regional anual del cliente: tres jornadas con plenarias, más de 60 breakout rooms, expo de partners y una gala de cierre. Diseñamos la dirección artística unificada, gestionamos el run-of-show de más de 90 oradores y coordinamos hospitality, traducción simultánea y producción audiovisual en vivo para 12.000 asistentes presenciales y 18.000 remotos.",
     services: SERVICES,
     gallery: withParams(galleries.conference),
+    heroImage: mangaBanner,
     quote: {
       text: "Pasó de ser un compromiso anual a convertirse en el evento más esperado por el equipo. Resultados claros.",
       author: "Sebastián Lara",
@@ -210,10 +213,10 @@ export const PROJECTS: Project[] = [
     related: ["datawise-hpe", "adidas", "atlassian"],
   },
   {
-    slug: "premiere-atlas",
-    title: "Premiere Atlas",
-    client: "Atlas Studios",
-    category: "Premiere / Red carpet",
+    slug: "fira-barcelona",
+    title: "Fira Barcelona",
+    client: "Fira Barcelona",
+    category: "Rueda de prensa",
     year: 2025,
     location: "Buenos Aires, AR",
     duration: "1 jornada",
@@ -223,6 +226,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Estreno mundial con red carpet, screening y after dinner para el cliente. Diseñamos una dirección artística cinematográfica que recorrió desde la llegada de talento hasta la cena post función. Coordinamos prensa internacional, fotografía, producción audiovisual en vivo y un protocolo de hospitality de talento a la altura del evento.",
     services: SERVICES,
     gallery: withParams(galleries.premiere),
+    heroImage: firaBarcelonaBanner,
     quote: {
       text: "El nivel de detalle en cada touchpoint del evento fue exactamente lo que la película merecía.",
       author: "Camila Suárez",

@@ -6,6 +6,8 @@ import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
+import mangaBanner from "@/assets/manga-banner.jpg";
+import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 
 const slugify = (s: string) =>
   s.toLowerCase()
@@ -18,8 +20,8 @@ const PROJECTS = [
   { title: "ADIDAS", category: "Evento deportivo", img: adidasBanner },
   { title: "HCLSoftware", category: "formula 1 ", img: hclsoftwareBanner },
   { title: "Atlassian", category: "evento corporativo", img: atlassianBanner },
-  { title: "Cumbre LATAM", category: "Convención", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1400&q=80" },
-  { title: "Premiere Atlas", category: "Premiere / Red carpet", img: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1400&q=80" },
+  { title: "MANGA", category: "Exhibición", img: mangaBanner },
+  { title: "Fira Barcelona", category: "Rueda de prensa", img: firaBarcelonaBanner },
 ];
 
 const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"right"; label: string }) => (
