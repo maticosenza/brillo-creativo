@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { RedFrame } from "@/components/shared/RedFrame";
 import { RevealHeading } from "./RevealHeading";
+import servicesOverview from "@/assets/services-overview.jpg";
 
 export const ServicesOverview = () => {
   return (
@@ -32,13 +33,12 @@ export const ServicesOverview = () => {
         <div className="order-2 md:order-1 md:col-start-2 md:col-span-5 relative">
           <RedFrame side="right" className="w-full max-w-[520px] ml-auto">
             <div className="relative aspect-[3/4] w-full overflow-hidden">
-              <video
+              <img
+                src={servicesOverview}
+                alt="Simulador de Fórmula 1 en activación de marca"
                 className="w-full h-full object-cover"
-                autoPlay muted loop playsInline
-                poster="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=80"
-              >
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-stage-with-spotlights-and-fog-at-a-concert-32809-large.mp4" type="video/mp4" />
-              </video>
+                loading="lazy"
+              />
             </div>
           </RedFrame>
         </div>
