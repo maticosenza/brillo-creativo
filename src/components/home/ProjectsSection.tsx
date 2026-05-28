@@ -8,6 +8,8 @@ import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
+import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
+import unicaBanner from "@/assets/unica-banner.jpg";
 
 const slugify = (s: string) =>
   s.toLowerCase()
@@ -22,6 +24,8 @@ const PROJECTS = [
   { title: "Atlassian", category: "evento corporativo", img: atlassianBanner },
   { title: "MANGA", category: "Exhibición", img: mangaBanner },
   { title: "Fira Barcelona", category: "Rueda de prensa", img: firaBarcelonaBanner },
+  { title: "Nick Spa & Sport Club", category: "Evento deportivo", img: nickSpaBanner },
+  { title: "Unica+", category: "Evento corporativo", img: unicaBanner },
 ];
 
 const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"right"; label: string }) => (
