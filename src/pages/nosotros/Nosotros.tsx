@@ -2,6 +2,7 @@ import { PageHero } from "@/components/shared/PageHero";
 import GlobalReachSection from "@/components/GlobalReachSection";
 import { useEffect } from "react";
 import nosotrosHeroMobile from "@/assets/nosotros-hero-mobile.jpg";
+import nosotrosEmpresa from "@/assets/nosotros-empresa.jpg";
 
 const VALUES = [
   {
@@ -46,7 +47,7 @@ const Nosotros = () => {
           </div>
           <div className="relative overflow-hidden mt-[3.25rem] md:mt-[4.5rem] aspect-square md:aspect-auto md:h-[clamp(420px,52vw,640px)]">
             <img
-              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80"
+              src={nosotrosEmpresa}
               alt="Equipo Caracter en acción"
               className="w-full h-full object-cover"
               loading="lazy"
