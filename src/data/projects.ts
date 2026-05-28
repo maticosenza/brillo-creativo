@@ -23,6 +23,8 @@ import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
+import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
+import unicaBanner from "@/assets/unica-banner.jpg";
 
 const SERVICES = [
   "DIRECCIÓN CREATIVA",
@@ -233,6 +235,40 @@ export const PROJECTS: Project[] = [
       role: "Head of PR, Atlas Studios",
     },
     related: ["datawise-hpe", "adidas", "hclsoftware"],
+  },
+  {
+    slug: "nick-spa-sport-club",
+    title: "Nick Spa & Sport Club",
+    client: "Nick Spa & Sport Club",
+    category: "Evento deportivo",
+    year: 2025,
+    location: "Barcelona, ESP",
+    duration: "1 jornada",
+    durationDays: 1,
+    attendees: 5000,
+    shortDescription: "Carrera urbana con activación de marca a gran escala en el corazón de Barcelona.",
+    longDescription: "Producción integral de la carrera urbana de Nick Spa & Sport Club en Barcelona. Coordinamos la activación de marca en la línea de largada, branding del recorrido, hospitality para corredores VIP y cobertura audiovisual en vivo del evento deportivo.",
+    services: SERVICES,
+    gallery: withParams(galleries.activation),
+    heroImage: nickSpaBanner,
+    related: ["adidas", "hclsoftware", "atlassian"],
+  },
+  {
+    slug: "unica-plus",
+    title: "Unica+",
+    client: "Unica+",
+    category: "Evento corporativo",
+    year: 2025,
+    location: "Buenos Aires, AR",
+    duration: "1 jornada",
+    durationDays: 1,
+    attendees: 40,
+    shortDescription: "Encuentro corporativo íntimo con dirección artística cuidada y hospitality premium.",
+    longDescription: "Diseñamos y produjimos un encuentro corporativo íntimo para Unica+ en un salón histórico. Dirección artística, montaje de mesa, contenido audiovisual sincronizado y un programa de hospitality premium para una experiencia de marca a la altura del cliente.",
+    services: SERVICES,
+    gallery: withParams(galleries.corporate),
+    heroImage: unicaBanner,
+    related: ["datawise-x-hpe", "atlassian", "manga"],
   },
 ];
 
