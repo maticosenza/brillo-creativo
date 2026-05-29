@@ -45,7 +45,7 @@ export const BrandsSection = () => {
   );
 
   return (
-    <section className="bg-brand-red text-brand-white pt-[6px] pb-[10px] md:pt-[50px] md:pb-[100px]">
+    <section className="bg-brand-red text-brand-white pt-[6px] pb-[10px] md:pt-[25px] md:pb-[50px]">
       <div className="text-center max-w-5xl mx-auto px-6 md:px-12">
         <RevealHeading
           text="Track Record"
@@ -54,7 +54,7 @@ export const BrandsSection = () => {
       </div>
 
       {reduced ? (
-        <ul className="mt-4 md:mt-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 px-6 md:px-12">
+        <ul className="mt-4 md:mt-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 px-6 md:px-12">
           {BRANDS.map((b) => (
             <li key={b.name} className="flex items-center justify-center">
               <Logo name={b.name} src={b.src} className={b.className} />
@@ -63,7 +63,7 @@ export const BrandsSection = () => {
         </ul>
       ) : (
         <div
-          className="mt-4 md:mt-20 marquee-mask group"
+          className="mt-4 md:mt-10 marquee-mask group"
           style={{
             WebkitMaskImage:
               "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
