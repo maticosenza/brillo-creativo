@@ -21,7 +21,7 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
   const recommended = items.slice(0, 3);
 
   return (
-    <section className="bg-brand-white text-brand-black section-y px-6 md:px-12">
+    <section className="bg-brand-white text-brand-black py-[30px] pb-[60px] md:py-[40px] md:pb-[100px] px-6 md:px-12">
       <div className="max-w-3xl">
         <span className="eyebrow opacity-60">También podría interesarte</span>
         <RevealHeading text="Otros proyectos" className="mt-6 font-display uppercase text-h2" />

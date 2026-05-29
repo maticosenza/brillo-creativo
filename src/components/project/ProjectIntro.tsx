@@ -3,7 +3,7 @@ import type { Project } from "@/data/projects";
 
 export const ProjectIntro = ({ p }: { p: Project }) => {
   return (
-    <section className="bg-brand-white text-brand-black section-y px-6 md:px-12">
+    <section className="bg-brand-white text-brand-black py-[40px] md:py-[60px] px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8">
         <div className="md:col-span-5">
           <span className="eyebrow opacity-70">Cliente</span>

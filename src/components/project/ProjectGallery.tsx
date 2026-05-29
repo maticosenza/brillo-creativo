@@ -61,27 +61,29 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
   const current = String(selected + 1).padStart(2, "0");
 
   return (
-    <section ref={sectionRef} className="bg-brand-white text-brand-black section-y overflow-hidden">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-4 pl-12">
-          {p.gallery.map((src, i) => (
-            <div
-              key={i}
-              className="group pg-img-anim shrink-0 basis-[80vw] aspect-[16/10] overflow-hidden"
-              style={{ clipPath: "inset(0 50% 0 50%)" }}
-            >
-              <img
-                src={src}
-                alt={`${p.title} — imagen ${i + 1}`}
-                className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.04]"
-                loading={i < 3 ? "eager" : "lazy"}
-              />
-            </div>
-          ))}
+    <section ref={sectionRef} className="bg-brand-white text-brand-black py-[20px] pb-[40px] md:py-[20px] md:pb-[40px] overflow-hidden">
+      <div className="mx-auto max-w-[1100px] 2xl:max-w-[1200px] px-6 md:px-12">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-4">
+            {p.gallery.map((src, i) => (
+              <div
+                key={i}
+                className="group pg-img-anim shrink-0 basis-[85vw] md:basis-[55%] aspect-[4/5] md:aspect-[16/9] max-h-none md:max-h-[600px] 2xl:max-h-[650px] overflow-hidden rounded-none md:rounded"
+                style={{ clipPath: "inset(0 50% 0 50%)" }}
+              >
+                <img
+                  src={src}
+                  alt={`${p.title} — imagen ${i + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.04]"
+                  loading={i < 3 ? "eager" : "lazy"}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="mt-12 px-12 flex items-center justify-between">
+      <div className="mt-4 px-6 md:px-12 max-w-[1100px] 2xl:max-w-[1200px] mx-auto flex items-center justify-between">
         <span className="text-sm uppercase tracking-[0.2em]">{current} / {total}</span>
         <div className="flex gap-3">
           <NavBtn onClick={prev} dir="left" label="Anterior" />
