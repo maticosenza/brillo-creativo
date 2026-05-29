@@ -46,7 +46,7 @@ export const ServicesOverview = () => {
               <motion.img
                 style={{ y }}
                 src={servicesOverview}
-                alt="Simulador de Fórmula 1 en activación de marca"
+                alt="Activación de marca y experiencia inmersiva"
                 className="w-full h-[110%] object-cover -mt-[5%]"
                 loading="lazy"
               />

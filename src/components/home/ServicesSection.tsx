@@ -11,12 +11,12 @@ export const ServicesSection = () => {
         <div className="md:col-span-6">
           <span className="eyebrow opacity-90">Qué hacemos</span>
           <RevealHeading
-            text="Operamos en más de diez países."
+            text="Producción integral end-to-end."
             className="mt-6 font-display uppercase text-h2"
           />
           <p className="mt-8 text-lg leading-[1.6] max-w-[55ch] opacity-95">
-            Gestionamos Grand Prix de Fórmula 1, ferias internacionales, eventos
-            corporativos y experiencias MICE para clientes globales. Nuestro
+            Gestionamos eventos corporativos, activaciones de marca y experiencias
+            globales con un enfoque estratégico y operativo. Nuestro
             trabajo es sencillo: que el evento salga perfecto y que el cliente
             no tenga que preocuparse por nada.
           </p>
@@ -46,7 +46,7 @@ export const ServicesSection = () => {
           >
             <img
               src={servicesHome}
-              alt="Experiencia inmersiva de motorsport en simulador"
+              alt="Producción integral de eventos corporativos"
               className="w-full h-full object-cover"
               loading="lazy"
             />
