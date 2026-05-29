@@ -21,6 +21,7 @@ export type Project = {
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
+import hclsoftwareHero from "@/assets/hclsoftware-hero.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
@@ -168,7 +169,7 @@ export const PROJECTS: Project[] = [
     ],
     services: SERVICES,
     gallery: withParams(galleries.festival),
-    heroImage: hclsoftwareBanner,
+    heroImage: hclsoftwareHero,
     quote: {
       text: "Llevaron Vértice al nivel de los grandes festivales internacionales. Operación enorme, ejecución obsesiva.",
       author: "Lucía Romero",
