@@ -53,7 +53,6 @@ export const ServiceGrid = () => {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 60px;
-          min-height: 500px;
         }
         .service-card { display: flex; flex-direction: column; }
         .service-image-wrap {
