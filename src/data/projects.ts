@@ -21,6 +21,7 @@ export type Project = {
 
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
+import adidasGrid from "@/assets/adidas-grid.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import hclsoftwareHero from "@/assets/hclsoftware-hero.jpg";
 import hclsoftwareGrid from "@/assets/hclsoftware-grid.jpg";
@@ -145,6 +146,7 @@ export const PROJECTS: Project[] = [
     services: SERVICES,
     gallery: withParams(galleries.launch),
     heroImage: adidasBanner,
+    gridImage: adidasGrid,
     quote: {
       text: "Salió mejor de lo esperado. Producción, escenografía y guión se sintieron como una sola pieza coherente.",
       author: "Diego Méndez",
