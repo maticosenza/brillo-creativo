@@ -27,6 +27,7 @@ const Nosotros = () => {
         title={<>Sobre<br/>Nosotros</>}
         image={nosotrosHeroMobile}
         alt="Equipo Caracter"
+        objectPosition="center bottom"
       />
 
       {/* Our Company */}
