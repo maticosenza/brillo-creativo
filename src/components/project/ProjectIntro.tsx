@@ -4,8 +4,8 @@ export const ProjectIntro = ({ p }: { p: Project }) => {
   const scope = p.scopeOfWork?.length ? p.scopeOfWork : [p.longDescription];
 
   return (
-    <section className="bg-brand-white text-brand-black py-[40px] md:py-[60px] px-6 md:px-12">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8">
+    <section className="bg-brand-white text-brand-black py-[40px] md:py-[60px] px-6 md:px-[60px]">
+      <div className="mx-auto max-w-[1200px] grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8">
         {/* COLUMNA IZQUIERDA: Datos */}
         <div className="md:col-span-4">
           <dl className="space-y-8">
