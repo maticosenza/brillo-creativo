@@ -38,18 +38,20 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
     <section className="bg-brand-white text-brand-black py-[20px] pb-[40px] md:py-[20px] md:pb-[40px] overflow-hidden">
       <div className="mx-auto max-w-[1200px]">
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-3 md:gap-4">
+          <div className="flex -ml-3 md:-ml-4">
             {p.gallery.map((src, i) => (
               <div
                 key={i}
-                className="group shrink-0 basis-[90%] md:basis-[80%] aspect-[4/5] md:aspect-[16/9] max-h-none md:max-h-[600px] 2xl:max-h-[650px] overflow-hidden rounded-none md:rounded"
+                className="group shrink-0 basis-[90%] md:basis-[80%] pl-3 md:pl-4"
               >
-                <img
-                  src={src}
-                  alt={`${p.title} — imagen ${i + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.04]"
-                  loading={i < 3 ? "eager" : "lazy"}
-                />
+                <div className="aspect-[4/5] md:aspect-[16/9] max-h-none md:max-h-[600px] 2xl:max-h-[650px] overflow-hidden rounded-none md:rounded">
+                  <img
+                    src={src}
+                    alt={`${p.title} — imagen ${i + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.04]"
+                    loading={i < 3 ? "eager" : "lazy"}
+                  />
+                </div>
               </div>
             ))}
           </div>
