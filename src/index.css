@@ -255,7 +255,29 @@ section[class*="black"] ::-moz-selection {
 }
 
 .hablemos-chevron {
-  margin-top: 24px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hablemos-subtitle-row {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hablemos-subtitle-black {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(40px, 8vw, 120px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  margin: 0;
+  transform: scaleY(1.08);
+  transform-origin: left bottom;
 }
 
 /* Selection — banner blanco de /contacto */
@@ -284,7 +306,7 @@ section[class*="black"] ::-moz-selection {
 
 .hablemos-title-red {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(80px, 15vw, 240px);
+  font-size: clamp(64px, 12vw, 190px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.015em;
