@@ -10,7 +10,7 @@ const StatBox = ({ value, label }: { value: number; label: string }) => (
     >
       {fmt(value)}
     </span>
-    <span className="mt-2 text-[11px] uppercase tracking-[0.2em] text-brand-red">{label}</span>
+    <span className="mt-2 text-[11px] uppercase tracking-[0.2em] text-brand-black">{label}</span>
   </div>
 );
 
