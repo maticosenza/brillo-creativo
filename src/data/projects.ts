@@ -21,6 +21,7 @@ export type Project = {
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
+import hclsoftwareHero from "@/assets/hclsoftware-hero.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
