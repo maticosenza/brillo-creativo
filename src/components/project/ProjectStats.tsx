@@ -17,7 +17,7 @@ const StatBox = ({ value, label }: { value: number; label: string }) => (
 export const ProjectStats = ({ p }: { p: Project }) => {
   return (
     <section className="bg-brand-white text-brand-black py-[30px] pb-[40px] md:py-[40px] md:pb-[60px] px-6 md:px-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-[700px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-[700px] mx-auto">
         <StatBox value={p.attendees} label="Asistentes" />
         <StatBox value={p.durationDays} label={p.durationDays === 1 ? "Jornada" : "Jornadas"} />
       </div>
