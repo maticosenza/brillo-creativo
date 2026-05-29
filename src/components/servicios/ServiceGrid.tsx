@@ -30,7 +30,7 @@ export const ServiceGrid = () => {
     <section
       style={{
         background: "#c0181b",
-        paddingTop: 100,
+        paddingTop: 0,
         paddingBottom: 80,
         paddingLeft: "6vw",
         paddingRight: "6vw",
