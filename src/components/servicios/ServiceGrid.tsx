@@ -11,10 +11,12 @@ const Card = ({ s }: { s: typeof SERVICES[number] }) => (
         className="service-image"
       />
       <div aria-hidden className="service-image-vignette" />
+      <div className="service-image-overlay">
+        <span className="service-number">{s.number}</span>
+        <div className="service-divider-line" aria-hidden />
+      </div>
     </div>
     <div className="service-text">
-    <span className="service-number">{s.number}</span>
-    <div className="service-divider-line" aria-hidden />
     <h3 className="service-title">{s.title.toUpperCase()}</h3>
       <p className="service-description">{s.description}</p>
     </div>
