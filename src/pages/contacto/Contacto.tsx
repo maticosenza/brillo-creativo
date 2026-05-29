@@ -13,9 +13,9 @@ const Contacto = () => {
   return (
     <>
       <section className="contact-banner-white">
-        <h1 className="hablemos-title-red">¿Estás listo? </h1>
+        <h1 className="hablemos-title-red text-8xl">¿Estás listo? </h1>
         <div className="hablemos-subtitle-row">
-          <h2 className="hablemos-subtitle-black">Hablemos</h2>
+          <h2 className="hablemos-subtitle-black text-8xl">Hablemos</h2>
           <div className="hablemos-chevron" aria-hidden>
             <svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 4 L24 24 L44 4" stroke="#c0181b" strokeWidth="4" strokeLinecap="square" strokeLinejoin="miter" fill="none" />
