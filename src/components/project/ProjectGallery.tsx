@@ -38,7 +38,7 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
     <section className="bg-brand-white text-brand-black py-[20px] pb-[40px] md:py-[20px] md:pb-[40px] overflow-hidden">
       <div className="mx-auto max-w-[1200px]">
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-3 md:gap-4 px-6 md:px-[60px]">
+          <div className="flex gap-3 md:gap-4">
             {p.gallery.map((src, i) => (
               <div
                 key={i}
