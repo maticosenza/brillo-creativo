@@ -30,16 +30,16 @@ export const Footer = () => {
 
       {/* 2) Main content — 3 cols */}
       <div className="px-[4vw] md:px-[6vw] py-10 md:py-[50px]">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-10">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1.1fr] gap-10 md:gap-10">
           {/* Col 1 — Description */}
           <div>
-            <p className="font-body text-[14px] leading-[1.6] text-brand-white/85 max-w-[340px]">
+            <p className="font-body text-[14px] leading-[1.6] text-brand-white/85 max-w-[440px]">
               Contáctanos y descubrí cómo la experiencia y el carácter de CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
             </p>
           </div>
 
         {/* Col 2 — Nav */}
-        <div>
+        <div className="md:pl-10">
           <h4 className="font-body uppercase text-[12px] text-brand-white/50 mb-4 tracking-[0.15em]">Home</h4>
           <ul className="text-[16px] text-brand-white font-body" style={{ lineHeight: 1.8 }}>
             {FOOTER_NAV.map((n) => (
@@ -76,7 +76,7 @@ export const Footer = () => {
       </div>
 
         {/* Logo row */}
-        <div className="max-w-[1200px] mx-auto mt-10 md:mt-12 flex justify-center md:justify-start">
+        <div className="max-w-[1200px] mx-auto mt-10 md:-mt-[88px] flex justify-center md:justify-start">
           <Link to="/" aria-label="Caracter Producciones" className="inline-flex opacity-90">
             <img src={logoCaracter} alt="Caracter Producciones" className="h-12 md:h-[64px] w-auto" />
           </Link>
@@ -87,7 +87,7 @@ export const Footer = () => {
       <div className="footer-divider" />
 
       {/* 3) Bottom line */}
-      <div className="px-[4vw] md:px-[6vw] py-5 flex flex-col md:flex-row justify-between gap-2 font-body text-[12px] text-brand-white/60 uppercase tracking-[0.15em]">
+      <div className="px-[4vw] md:px-[6vw] py-5 md:py-3 flex flex-col md:flex-row justify-between gap-2 font-body text-[12px] text-brand-white/60 uppercase tracking-[0.15em]">
         <span>© 2026 Marca registrada</span>
         <span>
           Diseñado por{" "}
