@@ -87,7 +87,7 @@ const Nosotros = () => {
       {/* Global reach with animated globe */}
       <GlobalReachSection
         background="#c0181b"
-        title="Desde Argentina al mundo"
+        title={<>Desde Argentina<br/>al mundo</>}
         subtitle="Radicados en Argentina pero con alcance y experiencia global. Somos tu partner estrategico en todo el mundo ya que hemos producido eventos en Estados Unidos, Latino America, Europa, África, Oceanía y Asia."
       />
 
