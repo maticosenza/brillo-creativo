@@ -456,6 +456,54 @@ section[class*="black"] ::-moz-selection {
 /* MISSION / VISION / VALUES                        */
 /* ═══════════════════════════════════════════════ */
 
+/* SUCCESS MODAL (gracias) */
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6vw;
+  background: rgba(0, 0, 0, 0.35);
+  animation: success-fade 250ms ease;
+}
+
+.success-card {
+  background: rgba(252, 247, 245, 0.1);
+  border: 1px solid rgba(252, 247, 245, 0.25);
+  border-radius: 16px;
+  padding: 48px;
+  backdrop-filter: blur(16px);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+.success-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  color: #fcf7f5;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.success-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #fcf7f5;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+}
+
+@keyframes success-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .mission-vision-values {
   padding: 20px 6vw 100px 6vw;
   background-color: #c0181b;
