@@ -27,6 +27,7 @@ export const ContactForm = () => {
   const [fecha, setFecha] = useState<Date | undefined>();
   const [mensaje, setMensaje] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = () => {
     const parsed = schema.safeParse({ nombre, email, empresa, tipo, fecha, mensaje });
@@ -37,12 +38,13 @@ export const ContactForm = () => {
     setSubmitting(true);
     setTimeout(() => {
       setSubmitting(false);
-      toast.success("¡Mensaje enviado! Te respondemos en menos de 24 horas.");
+      setShowSuccess(true);
       setNombre(""); setEmail(""); setEmpresa(""); setTipo(""); setFecha(undefined); setMensaje("");
     }, 600);
   };
 
   return (
+    <>
     <div className="space-y-2 max-w-2xl mx-auto">
       <FloatingField label="Nombre" required hasValue={!!nombre}>
         {(p) => <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} className={inputClass} maxLength={100} {...p} />}
@@ -103,5 +105,15 @@ export const ContactForm = () => {
         </button>
       </div>
     </div>
+
+    {showSuccess && (
+      <div className="success-overlay" role="dialog" aria-modal="true" onClick={() => setShowSuccess(false)}>
+        <div className="success-card" onClick={(e) => e.stopPropagation()}>
+          <h3 className="success-title">¡Muchas gracias!</h3>
+          <p className="success-text">Tu mensaje fue enviado. Te respondemos en menos de 24 horas.</p>
+        </div>
+      </div>
+    )}
+    </>
   );
 };
