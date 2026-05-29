@@ -17,7 +17,7 @@ import s3 from "@/assets/servicios/servicio-3.jpg";
 import s4 from "@/assets/servicios/servicio-4.png";
 import s5 from "@/assets/servicios/servicio-5.png";
 import s6 from "@/assets/servicios/servicio-6.jpg";
-import s7 from "@/assets/servicios/servicio-7.jpg";
+import s7 from "@/assets/servicios/servicio-7.png";
 import s8 from "@/assets/servicios/servicio-8.png";
 import s9 from "@/assets/servicios/servicio-9.jpg";
 import s10 from "@/assets/servicios/servicio-10.png";
