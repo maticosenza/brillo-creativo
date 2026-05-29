@@ -50,6 +50,7 @@ const Nosotros = () => {
               src={nosotrosEmpresa}
               alt="Equipo Caracter en acción"
               className="w-full h-full object-cover"
+              style={{ objectPosition: "center 80%" }}
               loading="lazy"
             />
           </div>
