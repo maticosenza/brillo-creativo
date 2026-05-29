@@ -10,10 +10,6 @@ export const ProjectIntro = ({ p }: { p: Project }) => {
         <div className="md:col-span-4">
           <dl className="space-y-8">
             <div>
-              <dt className="text-xs uppercase tracking-[0.2em] opacity-50">Año</dt>
-              <dd className="mt-2 font-display uppercase text-lg">{p.year}</dd>
-            </div>
-            <div>
               <dt className="text-xs uppercase tracking-[0.2em] opacity-50">Ciudades</dt>
               <dd className="mt-2 font-display uppercase text-lg leading-tight">{p.location}</dd>
             </div>
@@ -21,12 +17,16 @@ export const ProjectIntro = ({ p }: { p: Project }) => {
               <dt className="text-xs uppercase tracking-[0.2em] opacity-50">Duración</dt>
               <dd className="mt-2 font-display uppercase text-lg">{p.duration}</dd>
             </div>
+            <div>
+              <dt className="text-xs uppercase tracking-[0.2em] opacity-50">Año</dt>
+              <dd className="mt-2 font-display uppercase text-lg">{p.year}</dd>
+            </div>
           </dl>
         </div>
 
         {/* COLUMNA DERECHA: Scope of work */}
         <div className="md:col-start-6 md:col-span-7">
-          <h3 className="font-display uppercase text-h3">Scope of work</h3>
+          <h3 className="font-display uppercase text-h3 text-brand-red">Scope of work</h3>
           <div className="mt-6 space-y-4">
             {scope.map((paragraph, idx) => (
               <p key={idx} className="text-lg leading-[1.5] opacity-80">{paragraph}</p>
