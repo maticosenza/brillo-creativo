@@ -13,7 +13,7 @@ const Contacto = () => {
   return (
     <>
       <section className="contact-banner-white">
-        <h1 className="hablemos-title-red text-8xl">¿Estás listo? </h1>
+        <h1 className="hablemos-title-red text-7xl">¿Estás listo? </h1>
         <div className="hablemos-subtitle-row">
           <h2 className="hablemos-subtitle-black text-8xl">Hablemos</h2>
           <div className="hablemos-chevron" aria-hidden>
