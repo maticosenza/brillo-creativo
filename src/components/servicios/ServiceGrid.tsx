@@ -1,7 +1,19 @@
 import { SERVICES } from "@/data/services";
 import { ServiceDivider } from "@/components/shared/ServiceDivider";
 
-const Card = ({ s }: { s: typeof SERVICES[number] }) => (
+const Card = ({ s }: { s: typeof SERVICES[number] }) => {
+  const title = s.title.toUpperCase();
+  const breakToken = "PRODUCCIÓN INTEGRAL DE EVENTOS";
+  const renderTitle =
+    title.startsWith(breakToken) ? (
+      <>
+        PRODUCCIÓN INTEGRAL
+        <br className="hidden md:block" /> {title.slice("PRODUCCIÓN INTEGRAL ".length)}
+      </>
+    ) : (
+      title
+    );
+  return (
   <div className="service-card">
     <div className="service-image-wrap">
       <img
@@ -17,11 +29,12 @@ const Card = ({ s }: { s: typeof SERVICES[number] }) => (
       </div>
     </div>
     <div className="service-text">
-    <h3 className="service-title">{s.title.toUpperCase()}</h3>
+    <h3 className="service-title">{renderTitle}</h3>
       <p className="service-description">{s.description}</p>
     </div>
   </div>
-);
+  );
+};
 
 export const ServiceGrid = () => {
   const rows: typeof SERVICES[number][][] = [];
