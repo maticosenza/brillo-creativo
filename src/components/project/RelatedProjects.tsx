@@ -8,9 +8,9 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
   const items = p.related.map((s) => PROJECTS.find((x) => x.slug === s)).filter(Boolean) as Project[];
 
   return (
-    <section className="bg-brand-black text-brand-white section-y px-6 md:px-12">
+    <section className="bg-brand-white text-brand-black section-y px-6 md:px-12">
       <div className="max-w-3xl">
-        <span className="eyebrow opacity-80">También podría interesarte</span>
+        <span className="eyebrow opacity-60">También podría interesarte</span>
         <RevealHeading text="Otros proyectos" className="mt-6 font-display uppercase text-h2" />
       </div>
 
@@ -52,10 +52,10 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
       <div className="mt-16 flex justify-center">
         <Link
           to="/proyectos"
-          className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-brand-white px-8 py-4 text-[13px] font-medium uppercase tracking-wider"
+          className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-brand-black px-8 py-4 text-[13px] font-medium uppercase tracking-wider"
         >
-          <span aria-hidden className="absolute inset-0 bg-brand-white origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
-          <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-black">
+          <span aria-hidden className="absolute inset-0 bg-brand-black origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
+          <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-white">
             Ver todos los proyectos
           </span>
         </Link>
