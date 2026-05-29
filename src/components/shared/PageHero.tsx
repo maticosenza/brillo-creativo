@@ -3,9 +3,10 @@ type Props = {
   image: string;
   mobileImage?: string;
   alt?: string;
+  objectPosition?: string;
 };
 
-export const PageHero = ({ title, image, mobileImage, alt = "" }: Props) => {
+export const PageHero = ({ title, image, mobileImage, alt = "", objectPosition = "center" }: Props) => {
   return (
     <section className="relative w-full h-screen min-h-[640px] overflow-hidden bg-brand-black text-brand-white">
       {mobileImage ? (
@@ -15,6 +16,7 @@ export const PageHero = ({ title, image, mobileImage, alt = "" }: Props) => {
             src={image}
             alt={alt}
             className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition }}
           />
         </picture>
       ) : (
@@ -22,6 +24,7 @@ export const PageHero = ({ title, image, mobileImage, alt = "" }: Props) => {
           src={image}
           alt={alt}
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition }}
         />
       )}
       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-brand-black/20 to-transparent" />
