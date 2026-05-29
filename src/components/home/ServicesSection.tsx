@@ -46,7 +46,7 @@ export const ServicesSection = () => {
           >
             <img
               src={servicesHome}
-              alt="Experiencia inmersiva de motorsport en simulador"
+              alt="Producción integral de eventos corporativos"
               className="w-full h-full object-cover"
               loading="lazy"
             />
