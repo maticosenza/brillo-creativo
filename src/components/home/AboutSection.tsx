@@ -67,7 +67,7 @@ export const AboutSection = () => {
                 style={{ y }}
                 src={aboutHome}
                 alt="Producción detrás de escena de un evento en vivo"
-                className="w-full h-[120%] object-cover -mt-[10%]"
+                className="w-full h-[110%] object-cover -mt-[5%]"
                 loading="lazy"
               />
             </div>
