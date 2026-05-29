@@ -5,7 +5,20 @@ import { RevealHeading } from "@/components/home/RevealHeading";
 import { PROJECTS, type Project } from "@/data/projects";
 
 export const RelatedProjects = ({ p }: { p: Project }) => {
-  const items = p.related.map((s) => PROJECTS.find((x) => x.slug === s)).filter(Boolean) as Project[];
+  const fromRelated = p.related
+    .map((s) => PROJECTS.find((x) => x.slug === s))
+    .filter(Boolean) as Project[];
+
+  const items = [...fromRelated];
+  if (items.length < 3) {
+    for (const candidate of PROJECTS) {
+      if (items.length >= 3) break;
+      if (candidate.slug === p.slug) continue;
+      if (items.some((it) => it.slug === candidate.slug)) continue;
+      items.push(candidate);
+    }
+  }
+  const recommended = items.slice(0, 3);
 
   return (
     <section className="bg-brand-white text-brand-black section-y px-6 md:px-12">
@@ -21,7 +34,7 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
         variants={{ show: { transition: { staggerChildren: 0.15 } } }}
         className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6"
       >
-        {items.map((it) => (
+        {recommended.map((it) => (
           <motion.div
             key={it.slug}
             variants={{
@@ -40,7 +53,7 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
               <span aria-hidden className="absolute top-5 right-5 w-12 h-12 rounded-full border border-brand-white flex items-center justify-center opacity-0 -translate-x-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
                 <ArrowUpRight className="w-5 h-5 text-brand-white" />
               </span>
-              <div className="absolute left-6 bottom-6 right-6 z-10">
+              <div className="absolute left-6 bottom-6 right-6 z-10 text-brand-white">
                 <span className="text-xs uppercase tracking-[0.2em] opacity-90">{it.category}</span>
                 <h3 className="mt-2 font-display uppercase text-h3">{it.title}</h3>
               </div>
