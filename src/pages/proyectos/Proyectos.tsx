@@ -34,8 +34,8 @@ const Proyectos = () => {
         alt="Proyectos"
       />
 
-      <section className="bg-brand-red text-brand-white px-6 md:px-12 py-20 md:py-28">
-        <div className="flex flex-col gap-6">
+      <section className="bg-brand-red text-brand-white px-4 md:px-6 py-20 md:py-24">
+        <div className="flex flex-col gap-4 md:gap-5">
           {rows.map((row, ri) => {
             const isSquareRow = row.length === 3;
             const colsClass = row.length === 3
@@ -44,7 +44,7 @@ const Proyectos = () => {
                 ? "md:grid-cols-2"
                 : "md:grid-cols-1";
             return (
-              <div key={ri} className={`grid grid-cols-1 gap-6 ${colsClass}`}>
+              <div key={ri} className={`grid grid-cols-1 gap-4 md:gap-5 ${colsClass}`}>
                 {row.map((p, i) => (
                   <motion.div
                     key={p.slug}
@@ -55,7 +55,7 @@ const Proyectos = () => {
                   >
                     <Link
                       to={`/proyectos/${p.slug}`}
-                      className={`group relative block overflow-hidden aspect-[4/5] ${isSquareRow ? "md:aspect-square" : "md:aspect-[16/9]"}`}
+                      className={`group relative block overflow-hidden aspect-[4/5] ${isSquareRow ? "md:aspect-square" : "md:aspect-[2/1]"}`}
                     >
                       <img
                         src={p.heroImage ?? p.gallery[0]}
