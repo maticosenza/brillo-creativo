@@ -33,8 +33,10 @@ export const Footer = () => {
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1.1fr] gap-10 md:gap-10">
           {/* Col 1 — Description */}
           <div>
-            <p className="font-body text-[14px] leading-[1.6] text-brand-white/85 max-w-[440px]">
-              Contáctanos y descubrí cómo la experiencia y el carácter de CARACTER Producciones pueden transformar tu próximo evento en algo que genere impacto real.
+            <p className="font-body text-[14px] leading-[1.6] text-brand-white/85 max-w-none md:max-w-[480px]">
+              Contáctanos y descubrí cómo la experiencia y el carácter de
+              <br className="hidden md:inline" /> CARACTER Producciones pueden transformar tu próximo
+              <br className="hidden md:inline" /> evento en algo que genere impacto real.
             </p>
           </div>
 
