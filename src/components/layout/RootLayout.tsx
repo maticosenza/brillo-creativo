@@ -27,6 +27,7 @@ export const RootLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppButton />
     </SmoothScroll>
   );
 };
