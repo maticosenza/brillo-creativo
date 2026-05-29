@@ -56,7 +56,7 @@ export const Footer = () => {
         <div>
           <h4 className="font-body uppercase text-[12px] text-brand-white/50 mb-4 tracking-[0.15em]">Contacto</h4>
           <address className="not-italic font-body text-[16px] leading-[1.6] text-brand-white space-y-2">
-            <p className="max-w-[240px]">HQ en Puerto Madero, Argentina con presencia en todo el mundo</p>
+            <p className="max-w-[240px]">HQ en Puerto Madero, Bs As, Argentina con presencia en todo el mundo</p>
             <p><a href="mailto:hello@caracterprod.com" className="underline-link">hello@caracterprod.com</a></p>
             <p>+1 645 239 7512</p>
           </address>
