@@ -7,16 +7,8 @@ const Card = ({ s }: { s: typeof SERVICES[number] }) => {
   const renderTitle =
     title.startsWith(breakToken) ? (
       <>
-        {/* Desktop: PRODUCCIÓN INTEGRAL / DE EVENTOS END-TO-END */}
-        <span className="hidden md:inline">
-          PRODUCCIÓN INTEGRAL
-          <br /> DE EVENTOS END-TO-END
-        </span>
-        {/* Mobile: PRODUCCIÓN INTEGRAL DE EVENTOS / END-TO-END */}
-        <span className="md:hidden">
-          PRODUCCIÓN INTEGRAL DE EVENTOS
-          <br /> END-TO-END
-        </span>
+        PRODUCCIÓN INTEGRAL DE
+        <br /> EVENTOS END-TO-END
       </>
     ) : (
       title
