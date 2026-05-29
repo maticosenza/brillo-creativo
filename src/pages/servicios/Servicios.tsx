@@ -15,8 +15,7 @@ const Servicios = () => {
         <img
           src={serviciosHero}
           alt="Servicios Caracter"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "0% 38%", transform: "scale(1.18)" }}
+          className="servicios-hero-img absolute inset-0 w-full h-full object-cover"
         />
         <div
           className="relative z-10 h-full flex flex-col justify-end pb-16 md:pb-20"
