@@ -27,7 +27,7 @@ const BRANDS: { name: string; src: string; className?: string }[] = [
   { name: "Intelcia", src: intelcia },
   { name: "Clap Music", src: clap },
   { name: "Adidas", src: adidas },
-  { name: "Beliving", src: beliving },
+  
 ];
 
 export const BrandsSection = () => {
