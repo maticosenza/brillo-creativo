@@ -2,7 +2,7 @@ import { PageHero } from "@/components/shared/PageHero";
 import GlobalReachSection from "@/components/GlobalReachSection";
 import { useEffect } from "react";
 import nosotrosHeroMobile from "@/assets/nosotros-hero-mobile.jpg";
-import nosotrosEmpresa from "@/assets/nosotros-empresa.jpg";
+import nosotrosEmpresa from "@/assets/nosotros-empresa-new.png";
 
 const VALUES = [
   {
