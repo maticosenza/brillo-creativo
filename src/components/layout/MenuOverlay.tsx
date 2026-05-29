@@ -24,9 +24,9 @@ export const MenuOverlay = ({ open, onClose }: Props) => {
           aria-modal="true"
           aria-label="Menú principal"
         >
-          <div className="flex items-center justify-between px-6 md:px-12 py-6">
+          <div className="flex items-center justify-between px-6 md:px-12 h-20">
             <Link to="/" onClick={onClose} aria-label="Caracter Producciones" className="flex items-center">
-              <img src={logoCaracter} alt="Caracter Producciones" className="h-12 md:h-14 w-auto" />
+              <img src={logoCaracter} alt="Caracter Producciones" className="navbar-logo" />
             </Link>
             <button
               onClick={onClose}
