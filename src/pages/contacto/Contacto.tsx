@@ -1,9 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import GlobeWhiteTranslucent from "@/components/GlobeWhiteTranslucent";
 
 const Contacto = () => {
   useEffect(() => { window.scrollTo(0, 0); document.title = "Contacto — Productora"; }, []);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [fileName, setFileName] = useState<string | null>(null);
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) setFileName(file.name);
+  };
   return (
     <>
       <section className="contact-banner-white">
@@ -25,13 +31,19 @@ const Contacto = () => {
             {/* IZQUIERDA: Título + párrafo */}
             <div className="brief-text">
               <h3>¿TENÉS UN BRIEF?</h3>
-              <p>Envianos tu brief directamente o completa nuestra planilla con la información de tu proyecto.</p>
+              <p>Envianos tu brief directamente<br />con la información de tu proyecto.</p>
             </div>
-            {/* DERECHA: 2 botones */}
+            {/* DERECHA: botón importar */}
             <div className="brief-buttons">
-              <button className="brief-btn-primary">IMPORTAR BRIEF →</button>
-              <span className="brief-separator">o</span>
-              <button className="brief-btn-secondary">COMPLETAR PLANILLA →</button>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept=".pdf,.doc,.docx,.xls,.xlsx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                className="sr-only"
+                onChange={handleFileChange}
+              />
+              <button className="brief-btn-primary" onClick={() => fileInputRef.current?.click()}>IMPORTAR BRIEF →</button>
+              {fileName && <span className="brief-filename">{fileName}</span>}
             </div>
           </div>
         </div>
