@@ -328,9 +328,9 @@ section[class*="black"] ::-moz-selection {
   background: rgba(252, 247, 245, 0.1);
   border: 1px solid rgba(252, 247, 245, 0.25);
   border-radius: 16px;
-  padding: 60px;
+  padding: 48px;
   backdrop-filter: blur(10px);
-  max-width: 1000px;
+  max-width: 672px;
   width: 100%;
 }
 
@@ -338,7 +338,7 @@ section[class*="black"] ::-moz-selection {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  gap: 32px;
 }
 
 .brief-text { flex: 1; }
