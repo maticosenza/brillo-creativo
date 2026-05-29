@@ -29,7 +29,7 @@ export const SERVICES: Service[] = [
     title: "Producción Integral de Eventos end-to-end",
     description: "Gestionamos cada etapa del evento, desde la planificación inicial hasta la ejecución final, asegurando una experiencia fluida y alineada con los objetivos del cliente.",
     bullets: ["DIRECCIÓN CREATIVA", "OPERATIVA EN SITIO", "COORDINACIÓN GLOBAL"],
-    longDescription: "Diseñamos y operamos eventos de cualquier escala con un equipo único que cubre dirección creativa, producción técnica, logística, talento y hospitality.",
+    longDescription: "Nos encargamos de la producción integral de tu evento, desde la concepción hasta el cierre, garantizando excelencia operativa y estratégica.",
     highlight: { value: "+150", label: "Eventos producidos" },
     image: s1,
     gallery: ["1505236858219-8359eb29e329","1540575467063-178a50c2df87","1511795409834-ef04bbd61622","1559223607-a43c990c692c","1492684223066-81342ee5ff30","1517457373958-b7bdd4587205"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
