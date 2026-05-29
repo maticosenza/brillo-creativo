@@ -3,7 +3,6 @@ import { useParams, Navigate } from "react-router-dom";
 import { getProject } from "@/data/projects";
 import { ProjectBanner } from "@/components/project/ProjectBanner";
 import { ProjectIntro } from "@/components/project/ProjectIntro";
-import { ProjectServices } from "@/components/project/ProjectServices";
 import { ProjectGallery } from "@/components/project/ProjectGallery";
 import { ProjectStats } from "@/components/project/ProjectStats";
 import { RelatedProjects } from "@/components/project/RelatedProjects";
@@ -37,7 +36,6 @@ const ProjectDetail = () => {
       />
       <ProjectBanner p={project} />
       <ProjectIntro p={project} />
-      <ProjectServices p={project} />
       <ProjectGallery p={project} />
       <ProjectStats p={project} />
       <RelatedProjects p={project} />
