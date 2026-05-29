@@ -1,11 +1,7 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Project } from "@/data/projects";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"right"; label: string }) => (
   <button
@@ -23,7 +19,6 @@ const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"rig
 export const ProjectGallery = ({ p }: { p: Project }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "center", loop: true, skipSnaps: false, containScroll: "trimSnaps" });
   const [selected, setSelected] = useState(0);
-  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -33,27 +28,6 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
     return () => { emblaApi.off("select", onSelect); };
   }, [emblaApi]);
 
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      gsap.set(".pg-img-anim", { clipPath: "inset(0 0 0 0)" });
-      return;
-    }
-    const tween = gsap.fromTo(
-      ".pg-img-anim",
-      { clipPath: "inset(0 50% 0 50%)" },
-      {
-        clipPath: "inset(0% 0% 0% 0%)",
-        duration: 0.9,
-        ease: "power3.out",
-        stagger: 0.12,
-        scrollTrigger: { trigger: el, start: "top 75%", once: true },
-      }
-    );
-    return () => { tween.scrollTrigger?.kill(); tween.kill(); };
-  }, []);
-
   const prev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const next = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
@@ -61,15 +35,14 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
   const current = String(selected + 1).padStart(2, "0");
 
   return (
-    <section ref={sectionRef} className="bg-brand-white text-brand-black py-[20px] pb-[40px] md:py-[20px] md:pb-[40px] overflow-hidden">
+    <section className="bg-brand-white text-brand-black py-[20px] pb-[40px] md:py-[20px] md:pb-[40px] overflow-hidden">
       <div className="mx-auto max-w-[1200px]">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-3 md:gap-4 px-6 md:px-[60px]">
             {p.gallery.map((src, i) => (
               <div
                 key={i}
-                className="group pg-img-anim shrink-0 basis-[90%] md:basis-[80%] aspect-[4/5] md:aspect-[16/9] max-h-none md:max-h-[600px] 2xl:max-h-[650px] overflow-hidden rounded-none md:rounded"
-                style={{ clipPath: "inset(0 50% 0 50%)" }}
+                className="group shrink-0 basis-[90%] md:basis-[80%] aspect-[4/5] md:aspect-[16/9] max-h-none md:max-h-[600px] 2xl:max-h-[650px] overflow-hidden rounded-none md:rounded"
               >
                 <img
                   src={src}
