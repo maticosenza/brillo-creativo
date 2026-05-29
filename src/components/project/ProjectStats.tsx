@@ -3,14 +3,14 @@ import type { Project } from "@/data/projects";
 const fmt = (n: number) => new Intl.NumberFormat("es-AR").format(Math.round(n));
 
 const StatBox = ({ value, label }: { value: number; label: string }) => (
-  <div className="relative border border-brand-black/80 px-6 py-6 md:px-8 md:py-8 flex flex-col justify-end">
+  <div className="relative border border-brand-red px-6 py-6 md:px-8 md:py-8 flex flex-col justify-end">
     <span
-      className="font-display uppercase leading-[0.9] block"
+      className="font-display uppercase leading-[0.9] block text-brand-red"
       style={{ fontSize: "clamp(40px, 6vw, 84px)" }}
     >
       {fmt(value)}
     </span>
-    <span className="mt-2 text-[11px] uppercase tracking-[0.2em]">{label}</span>
+    <span className="mt-2 text-[11px] uppercase tracking-[0.2em] text-brand-red">{label}</span>
   </div>
 );
 
