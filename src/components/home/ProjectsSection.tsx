@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
-import adidasBanner from "@/assets/adidas-banner.jpg";
+import adidasCarousel from "@/assets/adidas-carousel.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
 import mangaBanner from "@/assets/manga-banner.jpg";
@@ -19,7 +19,7 @@ const slugify = (s: string) =>
 
 const PROJECTS = [
   { title: "Datawise x HPE", category: "Evento corporativo", img: datawiseHpeBanner },
-  { title: "ADIDAS", category: "Evento deportivo", img: adidasBanner },
+  { title: "ADIDAS", category: "Evento deportivo", img: adidasCarousel },
   { title: "HCLSoftware", category: "formula 1 ", img: hclsoftwareBanner, pos: "center 38%" },
   { title: "Atlassian", category: "evento corporativo", img: atlassianBanner },
   { title: "MANGA", category: "Exhibición", img: mangaBanner, pos: "center bottom" },
