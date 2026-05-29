@@ -23,7 +23,7 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
   return (
     <section className="bg-brand-white text-brand-black py-[30px] pb-[60px] md:py-[40px] md:pb-[100px] px-6 md:px-12">
       <div className="max-w-3xl">
-        <span className="eyebrow opacity-60">También podría interesarte</span>
+        <span className="eyebrow text-brand-red">También podría interesarte</span>
         <RevealHeading text="Otros proyectos" className="mt-6 font-display uppercase text-h2" />
       </div>
 
@@ -65,9 +65,9 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
       <div className="mt-16 flex justify-center">
         <Link
           to="/proyectos"
-          className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-brand-black px-8 py-4 text-[13px] font-medium uppercase tracking-wider"
+          className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-brand-red px-8 py-4 text-[13px] font-medium uppercase tracking-wider text-brand-red"
         >
-          <span aria-hidden className="absolute inset-0 bg-brand-black origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
+          <span aria-hidden className="absolute inset-0 bg-brand-red origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
           <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-white">
             Ver todos los proyectos
           </span>
