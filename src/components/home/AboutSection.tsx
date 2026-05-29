@@ -13,7 +13,7 @@ export const AboutSection = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
-    <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
+    <section className="bg-brand-red text-brand-white section-y pb-[24px] md:pb-[120px] px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
         <div className="md:col-span-6 md:col-start-2 space-y-12">
           <div>
