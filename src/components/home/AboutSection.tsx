@@ -24,7 +24,7 @@ export const AboutSection = () => {
             >
               Quiénes somos
             </h2>
-            <p className="mt-6 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
+            <p className="mt-6 text-lg leading-[1.6] text-brand-white max-w-[55ch] text-justify">
               Somos una productora de eventos con ADN operativo. Con más de seis
               años trabajando para empresas multinacionales y agencias
               internacionales de marketing y motorsport, sabemos lo que significa
@@ -39,12 +39,12 @@ export const AboutSection = () => {
             >
               Qué hacemos
             </h2>
-            <p className="mt-6 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
+            <p className="mt-6 text-lg leading-[1.6] text-brand-white max-w-[55ch] text-justify">
               Operamos en más de diez países. Gestionamos activaciones en Grand
               Prix de Fórmula 1, eventos corporativos, deportivos y experiencias
               MICE para clientes de todo el mundo.
             </p>
-            <p className="mt-4 text-lg leading-[1.6] text-brand-white max-w-[55ch]">
+            <p className="mt-4 text-lg leading-[1.6] text-brand-white max-w-[55ch] text-justify">
               Nuestro trabajo es sencillo: ejecutar con eficiencia y que el
               cliente no tenga que preocuparse por nada.
             </p>
