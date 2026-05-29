@@ -203,15 +203,12 @@ section[class*="black"] ::-moz-selection {
   text-shadow: none;
 }
 
-.footer-cta-btn {
-}
-
 .cta-impact-fill {
   color: #fcf7f5;
   -webkit-text-stroke: 0 transparent;
 }
 
-.footer-cta-btn-placeholder {
+.footer-cta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
