@@ -23,7 +23,7 @@ const PROJECTS = [
   { title: "HCLSoftware", category: "formula 1 ", img: hclsoftwareBanner, pos: "center 38%" },
   { title: "Atlassian", category: "evento corporativo", img: atlassianBanner },
   { title: "MANGA", category: "Exhibición", img: mangaBanner, pos: "center bottom" },
-  { title: "Fira Barcelona", category: "Rueda de prensa", img: firaBarcelonaBanner },
+  { title: "Fira Barcelona", category: "Rueda de prensa", img: firaBarcelonaBanner, pos: "center bottom" },
   { title: "Nick Spa & Sport Club", category: "Evento deportivo", img: nickSpaBanner },
   { title: "Unica+", category: "Evento corporativo", img: unicaBanner },
 ];
