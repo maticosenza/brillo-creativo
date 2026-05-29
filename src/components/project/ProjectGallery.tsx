@@ -68,7 +68,7 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
             {p.gallery.map((src, i) => (
               <div
                 key={i}
-                className="group pg-img-anim shrink-0 basis-[85vw] md:basis-[55%] aspect-[4/5] md:aspect-[16/9] max-h-none md:max-h-[600px] 2xl:max-h-[650px] overflow-hidden rounded-none md:rounded"
+                className="group pg-img-anim shrink-0 basis-full aspect-[4/5] md:aspect-[16/9] max-h-none md:max-h-[600px] 2xl:max-h-[650px] overflow-hidden rounded-none md:rounded"
                 style={{ clipPath: "inset(0 50% 0 50%)" }}
               >
                 <img
