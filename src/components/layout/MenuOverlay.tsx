@@ -129,7 +129,7 @@ export const MenuOverlay = ({ open, onClose }: Props) => {
             </ul>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="underline-link font-display text-2xl"
+              className="underline-link font-display text-2xl md:mr-20"
             >
               {CONTACT_EMAIL}
             </a>
