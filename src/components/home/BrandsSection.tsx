@@ -49,7 +49,7 @@ export const BrandsSection = () => {
       <div className="text-center max-w-5xl mx-auto px-6 md:px-12">
         <RevealHeading
           text="Track Record"
-          className="font-display uppercase text-h2 text-brand-black"
+          className="font-display uppercase text-h2"
         />
       </div>
 
