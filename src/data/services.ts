@@ -41,7 +41,7 @@ export const SERVICES: Service[] = [
     title: "Coordinación on-site",
     description: "Supervisamos la operación en tiempo real, coordinando equipos, proveedores y timing para garantizar que todo funcione de manera impecable durante el evento.",
     bullets: ["OPERACIÓN EN TIEMPO REAL", "COORDINACIÓN DE EQUIPOS", "CONTROL DE TIMING"],
-    longDescription: "Operamos en circuitos de máxima exigencia con equipos curtidos en hospitality, activación y logística de talento.",
+    longDescription: "Supervisamos cada detalle técnico y operativo en el lugar del evento para asegurar una ejecución impecable.",
     highlight: { value: "+40", label: "Carreras operadas" },
     image: s2,
     gallery: ["1568605117036-5fe5e7bab0b7","1541447270731-9c0f476a91d3","1503376780353-7e6692767b70"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
