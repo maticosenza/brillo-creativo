@@ -1,9 +1,18 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { RedFrame } from "@/components/shared/RedFrame";
 import { RevealHeading } from "./RevealHeading";
 import servicesOverview from "@/assets/services-overview.jpg";
 
 export const ServicesOverview = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+
   return (
     <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
@@ -33,11 +42,12 @@ export const ServicesOverview = () => {
 
         <div className="order-2 md:order-1 md:col-start-2 md:col-span-5 relative">
           <RedFrame side="right" className="w-full max-w-[520px] ml-auto">
-            <div className="relative aspect-[3/4] w-full overflow-hidden">
-              <img
+            <div ref={ref} className="overflow-hidden aspect-[3/4] w-full">
+              <motion.img
+                style={{ y }}
                 src={servicesOverview}
                 alt="Simulador de Fórmula 1 en activación de marca"
-                className="w-full h-full object-cover"
+                className="w-full h-[110%] object-cover -mt-[5%]"
                 loading="lazy"
               />
             </div>
