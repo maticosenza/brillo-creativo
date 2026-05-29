@@ -21,6 +21,7 @@ export type Project = {
 
 import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
+import adidasHero from "@/assets/adidas-hero.jpg";
 import adidasGrid from "@/assets/adidas-grid.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import hclsoftwareHero from "@/assets/hclsoftware-hero.jpg";
@@ -145,7 +146,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Diseñamos la presentación global del nuevo modelo del cliente integrando un escenario cinematográfico de 32 metros, transmisión en vivo a cinco mercados y una experiencia presencial para prensa y dealers. La narrativa cruzó video, talento en vivo y demos de producto sincronizados al milisegundo. Coordinamos producción técnica internacional, dirección de cámaras multi-IP y un equipo de hospitality bilingüe para más de 1.200 invitados.",
     services: SERVICES,
     gallery: withParams(galleries.launch),
-    heroImage: adidasBanner,
+    heroImage: adidasHero,
     gridImage: adidasGrid,
     quote: {
       text: "Salió mejor de lo esperado. Producción, escenografía y guión se sintieron como una sola pieza coherente.",
