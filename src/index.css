@@ -669,3 +669,24 @@ section[class*="black"] ::-moz-selection {
     height: 44px;
   }
 }
+
+/* Servicios hero image — keep steering wheel clear of the title on all desktop sizes */
+.servicios-hero-img {
+  object-position: 0% 38%;
+  transform: scale(1.18);
+}
+@media (min-width: 1280px) {
+  .servicios-hero-img {
+    object-position: 22% 38%;
+  }
+}
+@media (min-width: 1600px) {
+  .servicios-hero-img {
+    object-position: 40% 38%;
+  }
+}
+@media (min-width: 1920px) {
+  .servicios-hero-img {
+    object-position: 55% 38%;
+  }
+}
