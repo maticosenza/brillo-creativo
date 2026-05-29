@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { RedFrame } from "@/components/shared/RedFrame";
 import { RevealHeading } from "./RevealHeading";
-import servicesOverview from "@/assets/nosotros-empresa-new.png";
+import servicesOverview from "@/assets/nosotros-empresa-v3.png";
 
 export const ServicesOverview = () => {
   const ref = useRef<HTMLDivElement>(null);
