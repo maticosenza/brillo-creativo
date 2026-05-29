@@ -22,15 +22,12 @@ import s8 from "@/assets/servicios/servicio-8.png";
 import s9 from "@/assets/servicios/servicio-9.jpg";
 import s10 from "@/assets/servicios/servicio-10.png";
 
-const u = (q: string, seed: number) =>
-  `https://images.unsplash.com/photo-${q}?auto=format&fit=crop&w=1600&q=80`;
-
 export const SERVICES: Service[] = [
   {
     slug: "produccion-integral",
     number: "01",
-    title: "Producción Integral de Eventos",
-    description: "Asumimos cada evento desde la idea inicial hasta el desarme del último panel. Estrategia, creatividad, producción técnica y operativa en un solo equipo coordinado.",
+    title: "Producción Integral de Eventos end-to-end",
+    description: "Gestionamos cada etapa del evento, desde la planificación inicial hasta la ejecución final, asegurando una experiencia fluida y alineada con los objetivos del cliente.",
     bullets: ["DIRECCIÓN CREATIVA", "OPERATIVA EN SITIO", "COORDINACIÓN GLOBAL"],
     longDescription: "Diseñamos y operamos eventos de cualquier escala con un equipo único que cubre dirección creativa, producción técnica, logística, talento y hospitality.",
     highlight: { value: "+150", label: "Eventos producidos" },
@@ -41,9 +38,9 @@ export const SERVICES: Service[] = [
   {
     slug: "motorsport",
     number: "02",
-    title: "Gestión de Eventos Motorsport",
-    description: "Operamos en Grand Prix de Fórmula 1, MotoGP y rally para clientes que exigen ejecución de primer nivel en entornos de alta presión y plazos no negociables.",
-    bullets: ["PADDOCK HOSPITALITY", "ACTIVACIONES EN PISTA", "GESTIÓN DE TALENTO"],
+    title: "Coordinación on-site",
+    description: "Supervisamos la operación en tiempo real, coordinando equipos, proveedores y timing para garantizar que todo funcione de manera impecable durante el evento.",
+    bullets: ["OPERACIÓN EN TIEMPO REAL", "COORDINACIÓN DE EQUIPOS", "CONTROL DE TIMING"],
     longDescription: "Operamos en circuitos de máxima exigencia con equipos curtidos en hospitality, activación y logística de talento.",
     highlight: { value: "+40", label: "Carreras operadas" },
     image: s2,
@@ -53,9 +50,9 @@ export const SERVICES: Service[] = [
   {
     slug: "corporativos-convenciones",
     number: "03",
-    title: "Eventos Corporativos y Convenciones",
-    description: "Convenciones anuales, kickoffs, galas y ceremonias para empresas que necesitan reunir a sus equipos, partners o clientes con un nivel de ejecución impecable.",
-    bullets: ["PRODUCCIÓN AUDIOVISUAL", "ESCENARIO Y SET DESIGN", "HOSPITALITY"],
+    title: "Gestión de proveedores",
+    description: "Seleccionamos, coordinamos y negociamos con proveedores estratégicos para asegurar calidad, eficiencia y cumplimiento en cada proyecto.",
+    bullets: ["NEGOCIACIÓN ESTRATÉGICA", "CONTROL DE CALIDAD", "CUMPLIMIENTO"],
     longDescription: "Diseñamos convenciones que combinan contenido potente, escenografía cinematográfica y hospitality de primer nivel.",
     highlight: { value: "+80", label: "Convenciones" },
     image: s3,
@@ -65,9 +62,9 @@ export const SERVICES: Service[] = [
   {
     slug: "experiencias-mice",
     number: "04",
-    title: "Experiencias MICE",
-    description: "Meetings, incentivos, conferencias y exhibiciones para audiencias corporativas internacionales. Coordinamos viaje, agenda, espacios y cada detalle del programa.",
-    bullets: ["INCENTIVE TRAVEL", "AGENDAS HÍBRIDAS", "EXPERIENCIAS A MEDIDA"],
+    title: "Gestión de influencers & prensa",
+    description: "Coordinamos la relación con influencers, medios y creadores de contenido para maximizar la visibilidad y el alcance de cada evento.",
+    bullets: ["RELACIONES CON PRENSA", "COORDINACIÓN DE INFLUENCERS", "AMPLIFICACIÓN"],
     longDescription: "Construimos programas MICE end-to-end con agenda, hospitality y experiencias diseñadas para audiencias exigentes.",
     highlight: { value: "+25", label: "Países operados" },
     image: s4,
@@ -78,7 +75,7 @@ export const SERVICES: Service[] = [
     slug: "activaciones-de-marca",
     number: "05",
     title: "Activaciones de Marca",
-    description: "Llevamos marcas a sus consumidores con experiencias presenciales que generan contenido, datos y memoria. Pensamos formato, ejecución y amplificación digital.",
+    description: "Desarrollamos experiencias de marca dinámicas e interactivas que generan conexión, engagement y recordación en el público.",
     bullets: ["EXPERIENCIA DE MARCA", "CONTENIDO PARA REDES", "MÉTRICAS Y ROI"],
     longDescription: "Creamos experiencias de marca que generan recordación, datos y conversación.",
     highlight: { value: "+80", label: "Activaciones LATAM" },
@@ -89,9 +86,9 @@ export const SERVICES: Service[] = [
   {
     slug: "lanzamientos-de-producto",
     number: "06",
-    title: "Lanzamientos de Producto",
-    description: "Diseñamos lanzamientos que combinan prensa, comunidad e influencers, con escenografía, producción audiovisual y experiencia inmersiva para el público objetivo.",
-    bullets: ["ESCENOGRAFÍA INMERSIVA", "PRESS DAY Y DEMO", "CONTENIDO POST-EVENTO"],
+    title: "Comunicación y creatividades",
+    description: "Creamos propuestas visuales y piezas de comunicación alineadas con la identidad y objetivos de cada marca o evento.",
+    bullets: ["DISEÑO VISUAL", "PIEZAS CREATIVAS", "IDENTIDAD DE EVENTO"],
     longDescription: "Producimos lanzamientos integrales: escenografía, prensa, demos y contenido para el rollout digital.",
     highlight: { value: "x3", label: "Aumento de leads" },
     image: s6,
@@ -101,9 +98,9 @@ export const SERVICES: Service[] = [
   {
     slug: "presupuesto",
     number: "07",
-    title: "Armado y Control de Presupuesto",
-    description: "Diseñamos presupuestos realistas y los defendemos hasta el cierre. Visibilidad total, sin sorpresas, con seguimiento financiero línea por línea durante toda la producción.",
-    bullets: ["ESTIMACIÓN INICIAL", "TRACKING FINANCIERO", "CIERRE Y RECONCILIACIÓN"],
+    title: "Event Marketing",
+    description: "Diseñamos estrategias de difusión y posicionamiento para potenciar el impacto y la convocatoria de cada experiencia.",
+    bullets: ["ESTRATEGIA DE DIFUSIÓN", "POSICIONAMIENTO", "CONVOCATORIA"],
     longDescription: "El presupuesto es una herramienta de gestión: lo construimos con detalle y lo controlamos en cada etapa.",
     highlight: { value: "100%", label: "Transparencia" },
     image: s7,
@@ -113,9 +110,9 @@ export const SERVICES: Service[] = [
   {
     slug: "logistica-internacional",
     number: "08",
-    title: "Logística Internacional",
-    description: "Operamos en más de diez países. Gestionamos vuelos, traslados, aduanas, permisos y todo lo necesario para que la producción funcione donde sea.",
-    bullets: ["MULTI-PAÍS", "ADUANAS Y PERMISOS", "TRASLADOS Y ALOJAMIENTO"],
+    title: "Armado y control de presupuesto",
+    description: "Planificamos y administramos presupuestos de manera estratégica, optimizando recursos sin comprometer la calidad del evento.",
+    bullets: ["PLANIFICACIÓN FINANCIERA", "OPTIMIZACIÓN", "CONTROL DE COSTOS"],
     longDescription: "Coordinamos operaciones internacionales con foco en aduanas, permisos, vuelos y traslados de equipos y talento.",
     highlight: { value: "+10", label: "Países operados" },
     image: s8,
@@ -125,9 +122,9 @@ export const SERVICES: Service[] = [
   {
     slug: "proveedores-y-riders",
     number: "09",
-    title: "Gestión de Proveedores y Riders",
-    description: "Auditamos, negociamos y coordinamos proveedores técnicos, catering, seguridad y talento. Riders cumplidos al pie de la letra, sin renegociar en sitio.",
-    bullets: ["AUDIOVISUAL Y SONIDO", "CATERING Y HOSPITALITY", "TALENT MANAGEMENT"],
+    title: "Report post-evento",
+    description: "Elaboramos informes finales con resultados, métricas y análisis del evento para evaluar performance y oportunidades de mejora.",
+    bullets: ["ANÁLISIS DE RESULTADOS", "MÉTRICAS DE IMPACTO", "DEBRIEF FINAL"],
     longDescription: "Gestionamos toda la red de proveedores con foco en calidad, tiempos y cumplimiento de riders.",
     highlight: { value: "+300", label: "Proveedores en red" },
     image: s9,
@@ -137,9 +134,9 @@ export const SERVICES: Service[] = [
   {
     slug: "post-evento-reporting",
     number: "10",
-    title: "Post-Evento y Reporting",
-    description: "Cerramos cada proyecto con un reporte ejecutivo: métricas, contenido generado, aprendizajes y recomendaciones. El evento termina cuando el cliente tiene todo en la mano.",
-    bullets: ["REPORTE EJECUTIVO", "ASSETS AUDIOVISUALES", "DEBRIEF Y APRENDIZAJES"],
+    title: "Consultoría y asesoramiento",
+    description: "Brindamos soporte estratégico y operativo para ayudar a marcas y empresas a desarrollar eventos más eficientes, atractivos y alineados a sus objetivos.",
+    bullets: ["SOPORTE ESTRATÉGICO", "ASESORAMIENTO", "EFICIENCIA OPERATIVA"],
     longDescription: "Cerramos cada evento con un reporte ejecutivo que documenta resultados, aprendizajes y oportunidades.",
     highlight: { value: "+50", label: "KPIs medidos" },
     image: s10,
