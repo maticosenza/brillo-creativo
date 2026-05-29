@@ -6,6 +6,7 @@ import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { SmoothScroll } from "./SmoothScroll";
 import { PageTransition } from "./PageTransition";
+import { WhatsAppButton } from "../WhatsAppButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,6 +27,7 @@ export const RootLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppButton />
     </SmoothScroll>
   );
 };
