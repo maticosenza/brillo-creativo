@@ -204,6 +204,14 @@ section[class*="black"] ::-moz-selection {
 }
 
 .footer-cta-btn {
+}
+
+.cta-impact-fill {
+  color: #fcf7f5;
+  -webkit-text-stroke: 0 transparent;
+}
+
+.footer-cta-btn-placeholder {
   display: inline-flex;
   align-items: center;
   justify-content: center;
