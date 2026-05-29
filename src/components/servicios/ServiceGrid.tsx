@@ -82,6 +82,14 @@ export const ServiceGrid = () => {
             rgba(192, 24, 27, 0.75) 100%
           );
         }
+        .service-image-overlay {
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+        }
         .service-text {
           padding: 0;
           margin-top: 24px;
