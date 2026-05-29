@@ -11,12 +11,12 @@ const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"rig
   <button
     onClick={onClick}
     aria-label={label}
-    className="group relative w-14 h-14 rounded-full border border-brand-white overflow-hidden flex items-center justify-center"
+    className="group relative w-14 h-14 rounded-full border border-brand-black overflow-hidden flex items-center justify-center"
   >
-    <span aria-hidden className="absolute inset-0 bg-brand-white origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
+    <span aria-hidden className="absolute inset-0 bg-brand-black origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100" />
     {dir === "left"
-      ? <ArrowLeft className="relative z-10 w-5 h-5 text-brand-white transition-colors duration-300 group-hover:text-brand-red" />
-      : <ArrowRight className="relative z-10 w-5 h-5 text-brand-white transition-colors duration-300 group-hover:text-brand-red" />}
+      ? <ArrowLeft className="relative z-10 w-5 h-5 text-brand-black transition-colors duration-300 group-hover:text-brand-white" />
+      : <ArrowRight className="relative z-10 w-5 h-5 text-brand-black transition-colors duration-300 group-hover:text-brand-white" />}
   </button>
 );
 
@@ -61,7 +61,7 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
   const current = String(selected + 1).padStart(2, "0");
 
   return (
-    <section ref={sectionRef} className="bg-brand-red text-brand-white section-y overflow-hidden">
+    <section ref={sectionRef} className="bg-brand-white text-brand-black section-y overflow-hidden">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex gap-4 pl-12">
           {p.gallery.map((src, i) => (
