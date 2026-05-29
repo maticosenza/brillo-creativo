@@ -10,17 +10,12 @@ type Props = {
 export const FloatingField = ({ label, required, children, hasValue }: Props) => {
   const id = useId();
   const [focused, setFocused] = useState(false);
-  const floated = focused || hasValue;
 
   return (
     <div className="relative pt-6">
       <label
         htmlFor={id}
-        className={`absolute left-0 origin-left transition-all duration-200 pointer-events-none ${
-          floated
-            ? "top-0 text-[12px] uppercase tracking-[0.2em] text-brand-white/90"
-            : "top-7 text-[18px] text-brand-white/80"
-        }`}
+        className="absolute left-0 top-0 origin-left pointer-events-none text-[12px] uppercase tracking-[0.2em] text-brand-white/90"
       >
         {label}{required && <span aria-hidden> *</span>}
       </label>
