@@ -24,7 +24,7 @@ export const Footer = () => {
 
       {/* 1) CTA */}
       <section className="footer-cta cta-footer">
-        <h2>LET'S MAKE IMPACT!</h2>
+        <h2>LET'S MAKE <span className="cta-impact-fill">IMPACT!</span></h2>
         <Link to="/contacto" className="footer-cta-btn">Hablemos</Link>
       </section>
 

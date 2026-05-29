@@ -203,6 +203,11 @@ section[class*="black"] ::-moz-selection {
   text-shadow: none;
 }
 
+.cta-impact-fill {
+  color: #fcf7f5;
+  -webkit-text-stroke: 0 transparent;
+}
+
 .footer-cta-btn {
   display: inline-flex;
   align-items: center;
