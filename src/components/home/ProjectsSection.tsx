@@ -20,7 +20,7 @@ const slugify = (s: string) =>
 const PROJECTS = [
   { title: "Datawise x HPE", category: "Evento corporativo", img: datawiseHpeBanner },
   { title: "ADIDAS", category: "Evento deportivo", img: adidasBanner },
-  { title: "HCLSoftware", category: "formula 1 ", img: hclsoftwareBanner, pos: "center top" },
+  { title: "HCLSoftware", category: "formula 1 ", img: hclsoftwareBanner, pos: "center 38%" },
   { title: "Atlassian", category: "evento corporativo", img: atlassianBanner },
   { title: "MANGA", category: "Exhibición", img: mangaBanner, pos: "center bottom" },
   { title: "Fira Barcelona", category: "Rueda de prensa", img: firaBarcelonaBanner },
