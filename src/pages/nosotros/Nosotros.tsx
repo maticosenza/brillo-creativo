@@ -38,7 +38,7 @@ const Nosotros = () => {
             <h2 className="mt-6 font-display uppercase text-[clamp(30px,4.5vw,56px)] leading-[1.05]">
               Somos una empresa con caracter que genera impacto
             </h2>
-            <div className="mt-8 space-y-5 text-base md:text-lg leading-[1.7] text-brand-white/90">
+            <div className="mt-8 space-y-5 text-base md:text-lg leading-[1.7] text-brand-white/90 text-justify">
               <p>Nos especializamos en eventos deportivos y corporativos, con foco en experiencias de alto impacto y ejecución impecable.</p>
               <p>Tenemos más de seis años trabajando para empresas multinacionales, agencias internacionales y proyectos vinculados al marketing, hospitality y motorsport.</p>
               <p>Participamos en la producción y operación de Grand Prix de Fórmula 1, activaciones de marca, eventos deportivos, conferencias, hospitality, ferias y experiencias corporativas en más de diez países.</p>
@@ -63,11 +63,11 @@ const Nosotros = () => {
         <div className="mission-vision-row">
           <div className="mvv-box">
             <h3>Misión</h3>
-            <p>Diseñar y ejecutar eventos de alto impacto, combinando estrategia, creatividad y excelencia operativa para generar experiencias memorables y resultados concretos para cada cliente.</p>
+            <p className="text-justify">Diseñar y ejecutar eventos de alto impacto, combinando estrategia, creatividad y excelencia operativa para generar experiencias memorables y resultados concretos para cada cliente.</p>
           </div>
           <div className="mvv-box">
             <h3>Visión</h3>
-            <p>Ser una productora referente en el sector deportivo y corporativo a nivel internacional, creando experiencias que eleven el estándar de ejecución, hospitality y producción en cada evento.</p>
+            <p className="text-justify">Ser una productora referente en el sector deportivo y corporativo a nivel internacional, creando experiencias que eleven el estándar de ejecución, hospitality y producción en cada evento.</p>
           </div>
         </div>
 
@@ -77,7 +77,7 @@ const Nosotros = () => {
             {VALUES.map((v) => (
               <div key={v.title} className="value-item">
                 <h4>{v.title}</h4>
-                <p>{v.body}</p>
+                <p className="text-justify">{v.body}</p>
               </div>
             ))}
           </div>

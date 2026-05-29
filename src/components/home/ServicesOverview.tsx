@@ -23,7 +23,7 @@ export const ServicesOverview = () => {
               Gestión completa,<br />resultados concretos
             </h2>
           </div>
-          <div className="mt-8 space-y-6 text-lg leading-[1.6] text-brand-white/90">
+          <div className="mt-8 space-y-6 text-lg leading-[1.6] text-brand-white/90 text-justify">
             <p>De la idea a la ejecución, nos ocupamos de cada detalle para que el resultado sea impecable.</p>
             <p>Planificamos, coordinamos y ejecutamos eventos con un enfoque estratégico, operativo y orientado a resultados. Trabajamos junto al cliente en cada etapa del proyecto, asegurando una gestión eficiente, comunicación clara y resolución rápida en tiempo real.</p>
             <p>Desde la logística y coordinación on-site hasta la atención a invitados, proveedores y producción general, nuestro objetivo es simple: que cada evento funcione a la perfección.</p>
