@@ -10,6 +10,7 @@ export type Project = {
   attendees: number;
   shortDescription: string;
   longDescription: string;
+  scopeOfWork?: string[];
   services: string[];
   gallery: string[];
   heroImage?: string;
@@ -155,11 +156,16 @@ export const PROJECTS: Project[] = [
     category: "MICE - Fórmula 1",
     year: 2025,
     location: "Monza, Bakú, Singapore, São Paulo, Las Vegas, Abu Dhabi",
-    duration: "3 jornadas",
+    duration: "3 jornadas por ciudad",
     durationDays: 3,
     attendees: 5000,
     shortDescription: "Activación tecnológica y hospitality de alto impacto durante el GP de Las Vegas.",
     longDescription: "Producción integral para HCLSoftware en el marco de la Formula 1 en Las Vegas. Coordinamos la presencia de marca, hospitality de alto nivel y activaciones tecnológicas inmersivas para miles de asistentes. Diseñamos la identidad visual de la activación, gestionamos la logística en un entorno de alta complejidad y aseguramos una cobertura audiovisual premium para canales globales.",
+    scopeOfWork: [
+      "Gestión y coordinación de experiencias hospitality en cada Grand Prix de Fórmula 1 para clientes y prospectos.",
+      "El proyecto incluyó la planificación y operación integral de la experiencia: alojamiento, traslados, logística, atención a invitados, merchandising, coordinación de actividades y soporte general durante todo el fin de semana del evento.",
+      "Además de la experiencia deportiva, se desarrollaron instancias corporativas y presentaciones estratégicas orientadas a fortalecer el relacionamiento con clientes y generar nuevas oportunidades comerciales en un entorno premium y de alto impacto.",
+    ],
     services: SERVICES,
     gallery: withParams(galleries.festival),
     heroImage: hclsoftwareBanner,
