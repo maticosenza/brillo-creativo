@@ -11,9 +11,6 @@ type Props = {
   double?: boolean;
 };
 
-const STRIPE_W = 10;
-const GAP = "10%";
-
 export const RedFrame = ({ children, className = "", side = "right" }: Props) => {
   return (
     <div className={`relative ${className}`}>
