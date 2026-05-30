@@ -175,6 +175,28 @@ section[class*="black"] ::-moz-selection {
   color: #fcf7f5 !important;
 }
 
+/* 5) Selection en el GRID DE SERVICIOS (cards 01-10): fondo blanco, texto rojo */
+[style*="background: #c0181b"] ::selection,
+.service-card ::selection,
+.service-number ::selection,
+.service-title ::selection,
+.service-description ::selection,
+section[class*="service"] ::selection,
+div[class*="service"] ::selection {
+  background-color: #fcf7f5 !important;
+  color: #c0181b !important;
+}
+[style*="background: #c0181b"] ::-moz-selection,
+.service-card ::-moz-selection,
+.service-number ::-moz-selection,
+.service-title ::-moz-selection,
+.service-description ::-moz-selection,
+section[class*="service"] ::-moz-selection,
+div[class*="service"] ::-moz-selection {
+  background-color: #fcf7f5 !important;
+  color: #c0181b !important;
+}
+
 /* ═══════════════════════════════════════════════ */
 /* FOOTER CTA                                       */
 /* ═══════════════════════════════════════════════ */
