@@ -1,7 +1,11 @@
 import type { Project } from "@/data/projects";
 
 export const ProjectIntro = ({ p }: { p: Project }) => {
-  const scope = p.scopeOfWork?.length ? p.scopeOfWork : [p.longDescription];
+  const rawScope = p.scopeOfWork?.length ? p.scopeOfWork : [p.longDescription];
+  const scope = rawScope
+    .flatMap((block) => (block ?? "").split(/\n+/))
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
 
   return (
     <section className="bg-brand-white text-brand-black py-[40px] md:py-[60px] px-6 md:px-[60px]">
