@@ -119,7 +119,7 @@ export const PROJECTS: Project[] = [
     location: "Buenos Aires, AR",
     duration: "3 jornadas por ciudad",
     durationDays: 3,
-    attendees: 850,
+    attendees: 45,
     shortDescription: "Una velada de gala internacional con dirección artística íntegra, escenografía a medida y cobertura audiovisual en vivo.",
     longDescription: "Gestión y coordinación de experiencias hospitality en cada Grand Prix de Fórmula 1 para clientes y prospectos.",
     scopeOfWork: [
