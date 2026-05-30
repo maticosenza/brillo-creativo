@@ -250,7 +250,7 @@ section[class*="black"] ::-moz-selection {
 
 .contact-banner-white {
   background: #fcf7f5;
-  padding: 140px 6vw 24px;
+  padding: 140px 6vw 40px;
   border-bottom: 1px solid #c0181b;
 }
 
@@ -269,7 +269,7 @@ section[class*="black"] ::-moz-selection {
 
 .hablemos-subtitle-black {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(40px, 8vw, 120px);
+  font-size: clamp(44px, 9vw, 150px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.015em;
@@ -306,7 +306,7 @@ section[class*="black"] ::-moz-selection {
 
 .hablemos-title-red {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(64px, 12vw, 190px);
+  font-size: clamp(56px, 11vw, 175px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.015em;
@@ -453,6 +453,10 @@ section[class*="black"] ::-moz-selection {
 
 @media (max-width: 768px) {
   .contact-form-section { padding: 64px 6vw 20px; }
+  .contact-banner-white { padding: 60px 6vw 32px; }
+  .hablemos-title-red { font-size: clamp(48px, 14vw, 84px); }
+  .hablemos-subtitle-black { font-size: clamp(40px, 12vw, 74px); }
+  .hablemos-subtitle-row { gap: 12px; }
   .brief-cta-section { padding: 40px 6vw; }
   .brief-card {
     padding: 40px;
