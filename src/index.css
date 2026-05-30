@@ -453,6 +453,10 @@ section[class*="black"] ::-moz-selection {
 
 @media (max-width: 768px) {
   .contact-form-section { padding: 64px 6vw 20px; }
+  .contact-banner-white { padding: 60px 6vw 32px; }
+  .hablemos-title-red { font-size: clamp(48px, 14vw, 84px); }
+  .hablemos-subtitle-black { font-size: clamp(40px, 12vw, 74px); }
+  .hablemos-subtitle-row { gap: 12px; }
   .brief-cta-section { padding: 40px 6vw; }
   .brief-card {
     padding: 40px;
