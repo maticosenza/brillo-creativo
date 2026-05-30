@@ -10,9 +10,6 @@ export const ProjectBanner = ({ p }: { p: Project }) => {
 
       <div className="absolute left-0 bottom-0 z-10 p-8 md:p-16 max-w-[1200px]">
         <span className="block eyebrow opacity-90">{p.category}</span>
-        <p className="mt-4 text-sm opacity-70 uppercase tracking-[0.15em]">
-          {p.year} — {p.location}
-        </p>
         <h1
           className="mt-6 font-display uppercase leading-[0.9]"
           style={{ fontSize: "clamp(56px, 11vw, 180px)" }}
