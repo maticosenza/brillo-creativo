@@ -121,7 +121,12 @@ export const PROJECTS: Project[] = [
     durationDays: 3,
     attendees: 850,
     shortDescription: "Una velada de gala internacional con dirección artística íntegra, escenografía a medida y cobertura audiovisual en vivo.",
-    longDescription: "Gestión y coordinación de experiencias hospitality en cada Grand Prix de Fórmula 1 para clientes y prospectos.\nEl proyecto incluyó la planificación y operación integral de la experiencia: alojamiento, traslados, logística, atención a invitados, merchandising, coordinación de actividades y soporte general durante todo el fin de semana del evento.\nAdemás de la experiencia deportiva, se desarrollaron instancias corporativas y presentaciones estratégicas orientadas a fortalecer el relacionamiento con clientes y generar nuevas oportunidades comerciales en un entorno premium y de alto impacto.\n",
+    longDescription: "Gestión y coordinación de experiencias hospitality en cada Grand Prix de Fórmula 1 para clientes y prospectos.",
+    scopeOfWork: [
+      "Gestión y coordinación de experiencias hospitality en cada Grand Prix de Fórmula 1 para clientes y prospectos.",
+      "El proyecto incluyó la planificación y operación integral de la experiencia: alojamiento, traslados, logística, atención a invitados, merchandising, coordinación de actividades y soporte general durante todo el fin de semana del evento.",
+      "Además de la experiencia deportiva, se desarrollaron instancias corporativas y presentaciones estratégicas orientadas a fortalecer el relacionamiento con clientes y generar nuevas oportunidades comerciales en un entorno premium y de alto impacto.",
+    ],
     services: SERVICES,
     gallery: withParams(galleries.corporate),
     heroImage: datawiseHpeBanner,
