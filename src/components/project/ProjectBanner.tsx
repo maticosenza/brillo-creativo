@@ -14,7 +14,13 @@ export const ProjectBanner = ({ p }: { p: Project }) => {
           className="mt-6 font-display uppercase leading-[0.9]"
           style={{ fontSize: "clamp(56px, 11vw, 180px)" }}
         >
-          {p.title.toUpperCase()}
+          {p.slug === "nick-spa-sport-club" ? (
+            <>
+              NICK SPA &amp;<br />SPORT CLUB
+            </>
+          ) : (
+            p.title.toUpperCase()
+          )}
         </h1>
       </div>
     </section>
