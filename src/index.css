@@ -250,7 +250,7 @@ section[class*="black"] ::-moz-selection {
 
 .contact-banner-white {
   background: #fcf7f5;
-  padding: 140px 6vw 24px;
+  padding: 140px 6vw 40px;
   border-bottom: 1px solid #c0181b;
 }
 
@@ -269,7 +269,7 @@ section[class*="black"] ::-moz-selection {
 
 .hablemos-subtitle-black {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(40px, 8vw, 120px);
+  font-size: clamp(44px, 9vw, 150px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.015em;
@@ -306,7 +306,7 @@ section[class*="black"] ::-moz-selection {
 
 .hablemos-title-red {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(64px, 12vw, 190px);
+  font-size: clamp(56px, 11vw, 175px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.015em;
