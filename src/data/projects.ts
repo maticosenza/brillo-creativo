@@ -118,8 +118,8 @@ export const PROJECTS: Project[] = [
     year: 2026,
     location: "Buenos Aires, AR",
     duration: "3 jornadas por ciudad",
-    durationDays: 3,
-    attendees: 45,
+    durationDays: 2,
+    attendees: 25,
     shortDescription: "Desarrollo y producción integral de dos experiencias corporativas diseñadas para fortalecer el relacionamiento con clientes, generar networking y potenciar nuevas oportunidades comerciales.",
     longDescription: "Desarrollo y producción integral de dos experiencias corporativas diseñadas para fortalecer el relacionamiento con clientes, generar networking y potenciar nuevas oportunidades comerciales.\n",
     scopeOfWork: [
