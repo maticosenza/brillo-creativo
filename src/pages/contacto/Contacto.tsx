@@ -1,14 +1,47 @@
 import { useEffect, useRef, useState } from "react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import GlobeWhiteTranslucent from "@/components/GlobeWhiteTranslucent";
+import { z } from "zod";
+import { toast } from "sonner";
 
 const Contacto = () => {
   useEffect(() => { window.scrollTo(0, 0); document.title = "Contacto — Productora"; }, []);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [fileName, setFileName] = useState<string | null>(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [showBriefModal, setShowBriefModal] = useState(false);
+  const [briefEmail, setBriefEmail] = useState("");
+  const [sending, setSending] = useState(false);
+  const [briefSent, setBriefSent] = useState(false);
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) setFileName(file.name);
+    if (file) {
+      setFileName(file.name);
+      setSelectedFile(file);
+      setBriefSent(false);
+      setShowBriefModal(true);
+    }
+  };
+  const handleSendBrief = () => {
+    const parsed = z.string().trim().email().max(255).safeParse(briefEmail);
+    if (!parsed.success) {
+      toast.error("Ingresá un email válido");
+      return;
+    }
+    setSending(true);
+    setTimeout(() => {
+      setSending(false);
+      setBriefSent(true);
+    }, 600);
+  };
+  const closeBriefModal = () => {
+    setShowBriefModal(false);
+    setBriefEmail("");
+    if (briefSent) {
+      setFileName(null);
+      setSelectedFile(null);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
   };
   return (
     <>
@@ -63,6 +96,36 @@ const Contacto = () => {
           </div>
         </div>
       </section>
+
+      {showBriefModal && (
+        <div className="success-overlay" role="dialog" aria-modal="true" onClick={closeBriefModal}>
+          <div className="success-card" onClick={(e) => e.stopPropagation()}>
+            {briefSent ? (
+              <>
+                <h3 className="success-title">¡Brief enviado!</h3>
+                <p className="success-text">Recibimos tu archivo. Te respondemos en menos de 24 horas.</p>
+              </>
+            ) : (
+              <>
+                <h3 className="success-title">Enviá tu brief</h3>
+                <p className="success-text">Dejanos tu email para enviarte la confirmación junto a tu archivo adjunto.</p>
+                {fileName && <p className="brief-modal-filename">{fileName}</p>}
+                <input
+                  type="email"
+                  value={briefEmail}
+                  onChange={(e) => setBriefEmail(e.target.value)}
+                  placeholder="tu@email.com"
+                  maxLength={255}
+                  className="brief-modal-input"
+                />
+                <button className="brief-btn-primary brief-modal-btn" onClick={handleSendBrief} disabled={sending}>
+                  {sending ? "ENVIANDO..." : "ENVIAR ARCHIVO →"}
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 };
