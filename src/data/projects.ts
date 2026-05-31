@@ -195,7 +195,7 @@ export const PROJECTS: Project[] = [
       "Además de la experiencia deportiva, se desarrollaron instancias corporativas y presentaciones estratégicas orientadas a fortalecer el relacionamiento con clientes y generar nuevas oportunidades comerciales en un entorno premium y de alto impacto.",
     ],
     services: SERVICES,
-    gallery: withParams(galleries.festival),
+    gallery: hclsoftwareGallery,
     heroImage: hclsoftwareHero,
     gridImage: hclsoftwareGrid,
     quote: {
