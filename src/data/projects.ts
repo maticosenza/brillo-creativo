@@ -26,6 +26,13 @@ import adidasGrid from "@/assets/adidas-grid.jpg";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import hclsoftwareHero from "@/assets/hclsoftware-hero.jpg";
 import hclsoftwareGrid from "@/assets/hclsoftware-grid.jpg";
+import hclGallery1 from "@/assets/hclsoftware-gallery-1.jpg";
+import hclGallery2 from "@/assets/hclsoftware-gallery-2.jpg";
+import hclGallery3 from "@/assets/hclsoftware-gallery-3.jpg";
+import hclGallery4 from "@/assets/hclsoftware-gallery-4.jpg";
+import hclGallery5 from "@/assets/hclsoftware-gallery-5.jpg";
+import hclGallery6 from "@/assets/hclsoftware-gallery-6.jpg";
+import hclGallery7 from "@/assets/hclsoftware-gallery-7.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
@@ -108,6 +115,16 @@ const galleries = {
 
 const withParams = (urls: string[]) =>
   urls.map((u) => `${u}?auto=format&fit=crop&w=1600&q=80`);
+
+const hclsoftwareGallery = [
+  hclGallery1,
+  hclGallery2,
+  hclGallery3,
+  hclGallery4,
+  hclGallery5,
+  hclGallery6,
+  hclGallery7,
+];
 
 export const PROJECTS: Project[] = [
   {
