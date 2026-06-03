@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { RevealHeading } from "./RevealHeading";
 import { RedFrame } from "@/components/shared/RedFrame";
+import OptimizedImage from "@/components/shared/OptimizedImage";
 import servicesHome from "@/assets/services-home.jpg";
 
 export const ServicesSection = () => {
@@ -44,11 +45,10 @@ export const ServicesSection = () => {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="aspect-[4/5] w-full overflow-hidden"
           >
-            <img
+            <OptimizedImage
               src={servicesHome}
               alt="Producción integral de eventos corporativos"
               className="w-full h-full object-cover"
-              loading="lazy"
             />
           </motion.div>
           </RedFrame>
