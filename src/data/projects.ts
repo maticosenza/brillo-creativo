@@ -92,6 +92,15 @@ import nickSpaGallery5 from "@/assets/nick-spa-gallery-5.jpg.asset.json";
 import nickSpaGallery6 from "@/assets/nick-spa-gallery-6.jpg.asset.json";
 import nickSpaGallery7 from "@/assets/nick-spa-gallery-7.jpg.asset.json";
 import unicaBanner from "@/assets/unica-banner.jpg";
+import unicaGallery1 from "@/assets/unica-gallery-1.jpg.asset.json";
+import unicaGallery2 from "@/assets/unica-gallery-2.jpg.asset.json";
+import unicaGallery3 from "@/assets/unica-gallery-3.jpg.asset.json";
+import unicaGallery4 from "@/assets/unica-gallery-4.jpg.asset.json";
+import unicaGallery5 from "@/assets/unica-gallery-5.jpg.asset.json";
+import unicaGallery6 from "@/assets/unica-gallery-6.jpg.asset.json";
+import unicaGallery7 from "@/assets/unica-gallery-7.jpg.asset.json";
+import unicaGallery8 from "@/assets/unica-gallery-8.jpg.asset.json";
+import unicaGallery9 from "@/assets/unica-gallery-9.jpg.asset.json";
 
 const SERVICES = [
   "DIRECCIÓN CREATIVA",
