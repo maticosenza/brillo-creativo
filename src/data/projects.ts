@@ -61,6 +61,10 @@ import datawiseHpeGallery7 from "@/assets/datawise-hpe-gallery-7.jpg.asset.json"
 import datawiseHpeGallery8 from "@/assets/datawise-hpe-gallery-8.jpg.asset.json";
 import datawiseHpeGallery9 from "@/assets/datawise-hpe-gallery-9.jpg.asset.json";
 import datawiseHpeGallery10 from "@/assets/datawise-hpe-gallery-10.jpg.asset.json";
+import adidasGallery1 from "@/assets/adidas-gallery-1.jpg.asset.json";
+import adidasGallery2 from "@/assets/adidas-gallery-2.jpg.asset.json";
+import adidasGallery3 from "@/assets/adidas-gallery-3.jpg.asset.json";
+import adidasGallery4 from "@/assets/adidas-gallery-4.jpg.asset.json";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
