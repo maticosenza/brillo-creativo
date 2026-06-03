@@ -220,6 +220,16 @@ const adidasProjectGallery = [
   adidasGallery4.url,
 ];
 
+const nickSpaProjectGallery = [
+  nickSpaGallery1.url,
+  nickSpaGallery2.url,
+  nickSpaGallery3.url,
+  nickSpaGallery4.url,
+  nickSpaGallery5.url,
+  nickSpaGallery6.url,
+  nickSpaGallery7.url,
+];
+
 const mangaProjectGallery = [
   mangaGallery1.url,
   mangaGallery2.url,
