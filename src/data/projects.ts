@@ -445,7 +445,7 @@ export const PROJECTS: Project[] = [
     shortDescription: "Desarrollo y producción de una serie de eventos corporativos realizados en seis ciudades.",
     longDescription: "Desarrollo y producción de una serie de eventos corporativos realizados en seis ciudades, diseñados para generar networking, fortalecer el relacionamiento con prospectos y presentar nuevas soluciones vinculadas a inteligencia artificial aplicada al marketing.\n\nCada encuentro combinó contenido estratégico, presentaciones corporativas y espacios de interacción en un formato pensado para impulsar conversaciones de valor y conexiones comerciales en un entorno cercano y dinámico.\n\nNuestro rol incluyó la planificación y coordinación integral de cada jornada: logística, proveedores, producción general, atención a invitados, montaje, operación on-site y supervisión completa de la experiencia en todas las ciudades.\n\nEl proyecto fue diseñado para garantizar una ejecución consistente y alineada con la identidad de la marca, creando experiencias profesionales, modernas y orientadas a generar engagement y oportunidades comerciales reales.\n",
     services: SERVICES,
-    gallery: withParams(galleries.corporate),
+    gallery: unicaProjectGallery,
     heroImage: unicaBanner,
     related: ["datawise-x-hpe", "atlassian", "manga"],
   },
