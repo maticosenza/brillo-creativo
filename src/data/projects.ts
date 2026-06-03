@@ -76,6 +76,12 @@ import mangaGallery7 from "@/assets/manga-gallery-7.jpg.asset.json";
 import mangaGallery8 from "@/assets/manga-gallery-8.jpg.asset.json";
 import mangaGallery9 from "@/assets/manga-gallery-9.jpg.asset.json";
 import mangaGallery10 from "@/assets/manga-gallery-10.jpg.asset.json";
+import mangaGallery11 from "@/assets/manga-gallery-11.jpg.asset.json";
+import mangaGallery12 from "@/assets/manga-gallery-12.jpg.asset.json";
+import mangaGallery13 from "@/assets/manga-gallery-13.jpg.asset.json";
+import mangaGallery14 from "@/assets/manga-gallery-14.jpg.asset.json";
+import mangaGallery15 from "@/assets/manga-gallery-15.jpg.asset.json";
+import mangaGallery16 from "@/assets/manga-gallery-16.jpg.asset.json";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
 import unicaBanner from "@/assets/unica-banner.jpg";
@@ -218,6 +224,12 @@ const mangaProjectGallery = [
   mangaGallery8.url,
   mangaGallery9.url,
   mangaGallery10.url,
+  mangaGallery11.url,
+  mangaGallery12.url,
+  mangaGallery13.url,
+  mangaGallery14.url,
+  mangaGallery15.url,
+  mangaGallery16.url,
 ];
 
 export const PROJECTS: Project[] = [
