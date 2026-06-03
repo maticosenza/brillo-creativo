@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { MenuOverlay } from "./MenuOverlay";
+import OptimizedImage from "@/components/shared/OptimizedImage";
 import logoCaracter from "@/assets/logo-caracter.png";
 import logoCaracterRed from "@/assets/logo-caracter-red.png";
 
@@ -33,7 +34,7 @@ export const Navbar = () => {
       >
         <div className="flex items-center justify-between px-6 md:px-12 h-20">
           <Link to="/" aria-label="Caracter Producciones" className="flex items-center">
-            <img src={logoSrc} alt="Caracter Producciones" className="navbar-logo" />
+            <OptimizedImage src={logoSrc} alt="Caracter Producciones" className="navbar-logo" priority />
           </Link>
 
           <div className="flex items-center gap-3 md:gap-5">
