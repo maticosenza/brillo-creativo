@@ -73,7 +73,7 @@ export const BrandsSection = () => {
           }}
         >
           <div
-            className="flex gap-14 marquee-track"
+            className="flex items-center gap-14 marquee-track"
             style={{ width: "max-content" }}
           >
             {[...BRANDS, ...BRANDS].map((b, i) => (
