@@ -98,7 +98,7 @@ export const Hero = () => {
           preload="auto"
           onLoadedData={() => setHdReady(true)}
           onPlaying={() => setHdReady(true)}
-          className={`absolute inset-0 w-full h-full object-cover z-[4] transition-opacity duration-300 ease-out ${hdReady ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 w-full h-full object-cover z-[4] transition-opacity duration-150 ease-out ${hdReady ? "opacity-100" : "opacity-0"}`}
         >
           <source src={hdSrc} type="video/mp4" />
         </video>
