@@ -194,6 +194,14 @@ const hclsoftwareGallery = [
   hclGallery7,
 ];
 
+const firaBarcelonaGallery = [
+  firaGallery1.url,
+  firaGallery2.url,
+  firaGallery3.url,
+  firaGallery4.url,
+  firaGallery5.url,
+];
+
 const atlassianProjectGallery = [
   atlassianGallery1.url,
   atlassianGallery2.url,
