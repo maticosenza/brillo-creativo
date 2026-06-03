@@ -190,6 +190,13 @@ const datawiseHpeProjectGallery = [
   datawiseHpeGallery10.url,
 ];
 
+const adidasProjectGallery = [
+  adidasGallery1.url,
+  adidasGallery2.url,
+  adidasGallery3.url,
+  adidasGallery4.url,
+];
+
 export const PROJECTS: Project[] = [
   {
     slug: "datawise-x-hpe",
