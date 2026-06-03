@@ -68,7 +68,7 @@ export const Hero = () => {
         alt=""
         aria-hidden
         onLoad={() => setPosterLoaded(true)}
-        className={`absolute inset-0 w-full h-full object-cover z-[2] transition-opacity duration-[400ms] ${posterLoaded ? "opacity-100" : "opacity-0"}`}
+        className={`absolute inset-0 w-full h-full object-cover z-[2] transition-opacity duration-200 ease-out ${posterLoaded ? "opacity-100" : "opacity-0"}`}
       />
 
       {/* CAPA 3 — Video Preview */}
@@ -80,8 +80,9 @@ export const Hero = () => {
           loop
           playsInline
           preload="auto"
-          onCanPlay={() => setPreviewReady(true)}
-          className={`absolute inset-0 w-full h-full object-cover z-[3] transition-opacity duration-[600ms] ${previewReady ? "opacity-100" : "opacity-0"}`}
+          onLoadedData={() => setPreviewReady(true)}
+          onPlaying={() => setPreviewReady(true)}
+          className={`absolute inset-0 w-full h-full object-cover z-[3] transition-opacity duration-300 ease-out ${previewReady ? "opacity-100" : "opacity-0"}`}
         >
           <source src={previewSrc} type="video/mp4" />
         </video>
@@ -96,8 +97,9 @@ export const Hero = () => {
           loop
           playsInline
           preload="auto"
-          onCanPlay={() => setHdReady(true)}
-          className={`absolute inset-0 w-full h-full object-cover z-[4] transition-opacity duration-[600ms] ${hdReady ? "opacity-100" : "opacity-0"}`}
+          onLoadedData={() => setHdReady(true)}
+          onPlaying={() => setHdReady(true)}
+          className={`absolute inset-0 w-full h-full object-cover z-[4] transition-opacity duration-300 ease-out ${hdReady ? "opacity-100" : "opacity-0"}`}
         >
           <source src={hdSrc} type="video/mp4" />
         </video>
