@@ -51,6 +51,16 @@ import atlassianGallery14 from "@/assets/atlassian-gallery-14.png.asset.json";
 import atlassianGallery15 from "@/assets/atlassian-gallery-15.png.asset.json";
 import atlassianGallery16 from "@/assets/atlassian-gallery-16.png.asset.json";
 import atlassianGallery17 from "@/assets/atlassian-gallery-17.png.asset.json";
+import datawiseHpeGallery1 from "@/assets/datawise-hpe-gallery-1.jpg.asset.json";
+import datawiseHpeGallery2 from "@/assets/datawise-hpe-gallery-2.jpg.asset.json";
+import datawiseHpeGallery3 from "@/assets/datawise-hpe-gallery-3.jpg.asset.json";
+import datawiseHpeGallery4 from "@/assets/datawise-hpe-gallery-4.jpg.asset.json";
+import datawiseHpeGallery5 from "@/assets/datawise-hpe-gallery-5.jpg.asset.json";
+import datawiseHpeGallery6 from "@/assets/datawise-hpe-gallery-6.jpg.asset.json";
+import datawiseHpeGallery7 from "@/assets/datawise-hpe-gallery-7.jpg.asset.json";
+import datawiseHpeGallery8 from "@/assets/datawise-hpe-gallery-8.jpg.asset.json";
+import datawiseHpeGallery9 from "@/assets/datawise-hpe-gallery-9.jpg.asset.json";
+import datawiseHpeGallery10 from "@/assets/datawise-hpe-gallery-10.jpg.asset.json";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
@@ -161,6 +171,19 @@ const atlassianProjectGallery = [
   atlassianGallery15.url,
   atlassianGallery16.url,
   atlassianGallery17.url,
+];
+
+const datawiseHpeProjectGallery = [
+  datawiseHpeGallery1.url,
+  datawiseHpeGallery2.url,
+  datawiseHpeGallery3.url,
+  datawiseHpeGallery4.url,
+  datawiseHpeGallery5.url,
+  datawiseHpeGallery6.url,
+  datawiseHpeGallery7.url,
+  datawiseHpeGallery8.url,
+  datawiseHpeGallery9.url,
+  datawiseHpeGallery10.url,
 ];
 
 export const PROJECTS: Project[] = [
