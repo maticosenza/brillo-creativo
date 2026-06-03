@@ -205,7 +205,7 @@ export const PROJECTS: Project[] = [
       "Las experiencias combinaron instancias corporativas y actividades inmersivas de alto valor agregado: una jornada vinculada al universo Fórmula 1 a través de simuladores profesionales, y una experiencia enológica enfocada en la creación de blends personalizados en equipo.\n\nCada evento incluyó espacios de networking, presentaciones corporativas, hospitality y experiencias gastronómicas diseñadas para generar interacción, engagement y una conexión más cercana entre la marca y sus invitados.\n\nNuestro rol abarcó la planificación estratégica, producción general, coordinación on-site y supervisión completa de cada detalle operativo para garantizar una experiencia alineada con los estándares premium de ambas marcas.\n\n",
     ],
     services: SERVICES,
-    gallery: withParams(galleries.corporate),
+    gallery: datawiseHpeProjectGallery,
     heroImage: datawiseHpeBanner,
     quote: {
       text: "Convirtieron nuestra gala anual en la noche más comentada del año. La dirección artística y la coordinación operativa fueron impecables.",
