@@ -84,6 +84,13 @@ import mangaGallery15 from "@/assets/manga-gallery-15.jpg.asset.json";
 import mangaGallery16 from "@/assets/manga-gallery-16.jpg.asset.json";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
+import nickSpaGallery1 from "@/assets/nick-spa-gallery-1.jpg.asset.json";
+import nickSpaGallery2 from "@/assets/nick-spa-gallery-2.jpg.asset.json";
+import nickSpaGallery3 from "@/assets/nick-spa-gallery-3.jpg.asset.json";
+import nickSpaGallery4 from "@/assets/nick-spa-gallery-4.jpg.asset.json";
+import nickSpaGallery5 from "@/assets/nick-spa-gallery-5.jpg.asset.json";
+import nickSpaGallery6 from "@/assets/nick-spa-gallery-6.jpg.asset.json";
+import nickSpaGallery7 from "@/assets/nick-spa-gallery-7.jpg.asset.json";
 import unicaBanner from "@/assets/unica-banner.jpg";
 
 const SERVICES = [
@@ -211,6 +218,16 @@ const adidasProjectGallery = [
   adidasGallery2.url,
   adidasGallery3.url,
   adidasGallery4.url,
+];
+
+const nickSpaProjectGallery = [
+  nickSpaGallery1.url,
+  nickSpaGallery2.url,
+  nickSpaGallery3.url,
+  nickSpaGallery4.url,
+  nickSpaGallery5.url,
+  nickSpaGallery6.url,
+  nickSpaGallery7.url,
 ];
 
 const mangaProjectGallery = [
@@ -390,7 +407,7 @@ export const PROJECTS: Project[] = [
     shortDescription: "Producción integral de una carrera urbana 5K en Barcelona.",
     longDescription: "Producción integral de una carrera urbana 5K en Barcelona, diseñada para transformar una competencia deportiva en una experiencia de marca de alto impacto.\n\nDesde la conceptualización hasta la ejecución final, desarrollamos un evento pensado para generar comunidad, visibilidad y una experiencia memorable tanto para corredores como para asistentes.\n\nLa producción incluyó la coordinación operativa completa de la jornada, gestión de proveedores, branding, activaciones, logística, montaje y supervisión on-site, asegurando una experiencia dinámica, fluida y alineada con la identidad del evento.\n\nCon cientos de participantes, activaciones en vivo y una fuerte presencia de marca en todo el recorrido, el proyecto combinó deporte, entretenimiento y engagement en un entorno urbano de gran convocatoria.\n",
     services: SERVICES,
-    gallery: withParams(galleries.activation),
+    gallery: nickSpaProjectGallery,
     heroImage: nickSpaBanner,
     related: ["adidas", "hclsoftware", "atlassian"],
   },
