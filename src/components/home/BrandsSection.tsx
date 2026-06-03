@@ -14,17 +14,17 @@ import clap from "@/assets/brands/clap.png";
 import adidas from "@/assets/brands/adidas.png";
 
 const BRANDS: { name: string; src: string; className?: string }[] = [
-  { name: "Mercado Libre", src: mercadolibre },
+  { name: "Mercado Libre", src: mercadolibre, className: "h-[38px] max-w-[150px]" },
   { name: "Fira Barcelona", src: fira },
   { name: "Monster Energy", src: monster },
   { name: "Sophos", src: sophos, className: "h-[72px] max-w-[180px]" },
-  { name: "Heineken", src: heineken },
+  { name: "Heineken", src: heineken, className: "h-[40px] max-w-[150px]" },
   { name: "Geopost", src: geopost },
   { name: "Datawise", src: datawise },
   { name: "Atlassian", src: atlassian, className: "h-[60px] max-w-[200px]" },
   { name: "Coca-Cola", src: cocacola },
-  { name: "Manga Barcelona", src: manga },
-  { name: "Intelcia", src: intelcia },
+  { name: "Manga Barcelona", src: manga, className: "h-[38px] max-w-[150px]" },
+  { name: "Intelcia", src: intelcia, className: "h-[40px] max-w-[150px]" },
   { name: "Clap Music", src: clap },
   { name: "Adidas", src: adidas },
   
