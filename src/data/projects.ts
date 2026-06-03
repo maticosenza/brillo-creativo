@@ -239,6 +239,18 @@ const nickSpaProjectGallery = [
   nickSpaGallery7.url,
 ];
 
+const unicaProjectGallery = [
+  unicaGallery1.url,
+  unicaGallery2.url,
+  unicaGallery3.url,
+  unicaGallery4.url,
+  unicaGallery5.url,
+  unicaGallery6.url,
+  unicaGallery7.url,
+  unicaGallery8.url,
+  unicaGallery9.url,
+];
+
 const mangaProjectGallery = [
   mangaGallery1.url,
   mangaGallery2.url,
