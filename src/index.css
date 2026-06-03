@@ -828,3 +828,12 @@ div[class*="service"] ::-moz-selection {
     object-position: 55% 38%;
   }
 }
+
+/* ----- Image fade-in (scoped to OptimizedImage) ----- */
+.oimg {
+  transition: opacity 300ms ease-out;
+  opacity: 0.3;
+}
+.oimg.loaded {
+  opacity: 1;
+}
