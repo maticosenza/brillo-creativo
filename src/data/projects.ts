@@ -84,6 +84,13 @@ import mangaGallery15 from "@/assets/manga-gallery-15.jpg.asset.json";
 import mangaGallery16 from "@/assets/manga-gallery-16.jpg.asset.json";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
+import nickSpaGallery1 from "@/assets/nick-spa-gallery-1.jpg.asset.json";
+import nickSpaGallery2 from "@/assets/nick-spa-gallery-2.jpg.asset.json";
+import nickSpaGallery3 from "@/assets/nick-spa-gallery-3.jpg.asset.json";
+import nickSpaGallery4 from "@/assets/nick-spa-gallery-4.jpg.asset.json";
+import nickSpaGallery5 from "@/assets/nick-spa-gallery-5.jpg.asset.json";
+import nickSpaGallery6 from "@/assets/nick-spa-gallery-6.jpg.asset.json";
+import nickSpaGallery7 from "@/assets/nick-spa-gallery-7.jpg.asset.json";
 import unicaBanner from "@/assets/unica-banner.jpg";
 
 const SERVICES = [
