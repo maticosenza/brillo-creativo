@@ -319,7 +319,7 @@ export const PROJECTS: Project[] = [
       author: "Diego Méndez",
       role: "Marketing Director, Genesis",
     },
-    related: ["datawise-hpe", "atlassian", "hclsoftware"],
+    related: ["datawise-x-hpe", "atlassian", "hclsoftware"],
   },
   {
     slug: "hclsoftware",
@@ -391,7 +391,7 @@ export const PROJECTS: Project[] = [
       author: "Sebastián Lara",
       role: "VP Operations, IFS",
     },
-    related: ["datawise-hpe", "adidas", "atlassian"],
+    related: ["datawise-x-hpe", "adidas", "atlassian"],
   },
   {
     slug: "fira-barcelona",
@@ -413,7 +413,7 @@ export const PROJECTS: Project[] = [
       author: "Camila Suárez",
       role: "Head of PR, Atlas Studios",
     },
-    related: ["datawise-hpe", "adidas", "hclsoftware"],
+    related: ["datawise-x-hpe", "adidas", "hclsoftware"],
   },
   {
     slug: "nick-spa-sport-club",
