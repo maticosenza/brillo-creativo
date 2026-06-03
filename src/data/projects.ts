@@ -44,6 +44,13 @@ import atlassianGallery7 from "@/assets/atlassian-gallery-7.png.asset.json";
 import atlassianGallery8 from "@/assets/atlassian-gallery-8.png.asset.json";
 import atlassianGallery9 from "@/assets/atlassian-gallery-9.png.asset.json";
 import atlassianGallery10 from "@/assets/atlassian-gallery-10.png.asset.json";
+import atlassianGallery11 from "@/assets/atlassian-gallery-11.png.asset.json";
+import atlassianGallery12 from "@/assets/atlassian-gallery-12.png.asset.json";
+import atlassianGallery13 from "@/assets/atlassian-gallery-13.png.asset.json";
+import atlassianGallery14 from "@/assets/atlassian-gallery-14.png.asset.json";
+import atlassianGallery15 from "@/assets/atlassian-gallery-15.png.asset.json";
+import atlassianGallery16 from "@/assets/atlassian-gallery-16.png.asset.json";
+import atlassianGallery17 from "@/assets/atlassian-gallery-17.png.asset.json";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
@@ -147,6 +154,13 @@ const atlassianProjectGallery = [
   atlassianGallery8.url,
   atlassianGallery9.url,
   atlassianGallery10.url,
+  atlassianGallery11.url,
+  atlassianGallery12.url,
+  atlassianGallery13.url,
+  atlassianGallery14.url,
+  atlassianGallery15.url,
+  atlassianGallery16.url,
+  atlassianGallery17.url,
 ];
 
 export const PROJECTS: Project[] = [
