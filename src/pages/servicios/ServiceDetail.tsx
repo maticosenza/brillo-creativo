@@ -99,7 +99,7 @@ const ServiceDetail = () => {
           <div className="flex gap-4 pl-12">
             {s.gallery.map((src, i) => (
               <div key={i} className="shrink-0 basis-[80vw] aspect-[16/10] overflow-hidden">
-                <img src={src} alt={`${s.title} — imagen ${i + 1}`} className="w-full h-full object-cover" loading={i < 2 ? "eager" : "lazy"} />
+                <img src={src} alt={`${s.title} — imagen ${i + 1}`} className="w-full h-full object-cover" loading={i < 2 ? "eager" : "lazy"} decoding={i < 2 ? "sync" : "async"} />
               </div>
             ))}
           </div>
@@ -130,7 +130,7 @@ const ServiceDetail = () => {
               show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22,1,0.36,1] } },
             }}>
               <Link to={`/proyectos/${p.slug}`} className="group relative block aspect-[4/5] overflow-hidden">
-                <img src={p.gallery[0]} alt={p.title} loading="lazy"
+                <img src={p.gallery[0]} alt={p.title} loading="lazy" decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.08]" />
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
                 <span aria-hidden className="absolute top-5 right-5 w-12 h-12 rounded-full border border-brand-white flex items-center justify-center opacity-0 -translate-x-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
