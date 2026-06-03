@@ -196,6 +196,7 @@ const hclsoftwareGallery = [
 
 const atlassianProjectGallery = [
   atlassianGallery1.url,
+  atlassianGallery1.url,
   atlassianGallery2.url,
   atlassianGallery3.url,
   atlassianGallery4.url,
