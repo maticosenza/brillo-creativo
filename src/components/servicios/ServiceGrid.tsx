@@ -1,5 +1,6 @@
 import { SERVICES } from "@/data/services";
 import { ServiceDivider } from "@/components/shared/ServiceDivider";
+import OptimizedImage from "@/components/shared/OptimizedImage";
 
 const Card = ({ s }: { s: typeof SERVICES[number] }) => {
   const title = s.title.toUpperCase();
@@ -16,10 +17,9 @@ const Card = ({ s }: { s: typeof SERVICES[number] }) => {
   return (
   <div className="service-card">
     <div className="service-image-wrap">
-      <img
+      <OptimizedImage
         src={s.image}
         alt={s.title}
-        loading="lazy"
         className="service-image"
       />
       <div aria-hidden className="service-image-vignette" />
