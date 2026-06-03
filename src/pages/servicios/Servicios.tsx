@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { DisplayHeading } from "@/components/shared/DisplayHeading";
 import { ServiceGrid } from "@/components/servicios/ServiceGrid";
+import OptimizedImage from "@/components/shared/OptimizedImage";
 import serviciosHero from "@/assets/servicios-hero.jpg";
 
 const Servicios = () => {
@@ -12,10 +13,11 @@ const Servicios = () => {
         className="relative w-full overflow-hidden bg-brand-black text-brand-white"
         style={{ height: "100vh", minHeight: 520 }}
       >
-        <img
+        <OptimizedImage
           src={serviciosHero}
           alt="Servicios Caracter"
           className="servicios-hero-img absolute inset-0 w-full h-full object-cover"
+          priority
         />
         <div
           className="relative z-10 h-full flex flex-col justify-end pb-16 md:pb-20"
