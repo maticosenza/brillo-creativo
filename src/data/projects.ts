@@ -83,6 +83,11 @@ import mangaGallery14 from "@/assets/manga-gallery-14.jpg.asset.json";
 import mangaGallery15 from "@/assets/manga-gallery-15.jpg.asset.json";
 import mangaGallery16 from "@/assets/manga-gallery-16.jpg.asset.json";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
+import firaGallery1 from "@/assets/fira-barcelona-gallery-1.jpg.asset.json";
+import firaGallery2 from "@/assets/fira-barcelona-gallery-2.jpg.asset.json";
+import firaGallery3 from "@/assets/fira-barcelona-gallery-3.jpg.asset.json";
+import firaGallery4 from "@/assets/fira-barcelona-gallery-4.jpg.asset.json";
+import firaGallery5 from "@/assets/fira-barcelona-gallery-5.jpg.asset.json";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
 import nickSpaGallery1 from "@/assets/nick-spa-gallery-1.jpg.asset.json";
 import nickSpaGallery2 from "@/assets/nick-spa-gallery-2.jpg.asset.json";
@@ -187,6 +192,14 @@ const hclsoftwareGallery = [
   hclGallery5,
   hclGallery6,
   hclGallery7,
+];
+
+const firaBarcelonaGallery = [
+  firaGallery1.url,
+  firaGallery2.url,
+  firaGallery3.url,
+  firaGallery4.url,
+  firaGallery5.url,
 ];
 
 const atlassianProjectGallery = [
@@ -406,7 +419,7 @@ export const PROJECTS: Project[] = [
     shortDescription: "Producción y coordinación integral de una rueda de prensa institucional.",
     longDescription: "Producción y coordinación integral de una rueda de prensa institucional, gestionando una experiencia organizada, profesional y alineada con los estándares de comunicación de un evento de alto perfil.\n\nEl proyecto incluyó la planificación operativa completa de la jornada: coordinación de espacios, montaje técnico, gestión de prensa, acreditaciones, logística general y supervisión on-site para garantizar el correcto funcionamiento de cada instancia del evento.\n\nLa convocatoria reunió a periodistas, medios y representantes institucionales en un entorno diseñado para facilitar la comunicación, la cobertura mediática y el relacionamiento estratégico entre las distintas partes involucradas.\n\nNuestro foco estuvo puesto en asegurar una ejecución precisa, fluida y profesional, cuidando cada detalle operativo para que el mensaje y la experiencia del evento tuvieran el máximo impacto.\n",
     services: SERVICES,
-    gallery: withParams(galleries.premiere),
+    gallery: firaBarcelonaGallery,
     heroImage: firaBarcelonaBanner,
     quote: {
       text: "El nivel de detalle en cada touchpoint del evento fue exactamente lo que la película merecía.",
