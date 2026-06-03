@@ -419,7 +419,7 @@ export const PROJECTS: Project[] = [
     shortDescription: "Producción y coordinación integral de una rueda de prensa institucional.",
     longDescription: "Producción y coordinación integral de una rueda de prensa institucional, gestionando una experiencia organizada, profesional y alineada con los estándares de comunicación de un evento de alto perfil.\n\nEl proyecto incluyó la planificación operativa completa de la jornada: coordinación de espacios, montaje técnico, gestión de prensa, acreditaciones, logística general y supervisión on-site para garantizar el correcto funcionamiento de cada instancia del evento.\n\nLa convocatoria reunió a periodistas, medios y representantes institucionales en un entorno diseñado para facilitar la comunicación, la cobertura mediática y el relacionamiento estratégico entre las distintas partes involucradas.\n\nNuestro foco estuvo puesto en asegurar una ejecución precisa, fluida y profesional, cuidando cada detalle operativo para que el mensaje y la experiencia del evento tuvieran el máximo impacto.\n",
     services: SERVICES,
-    gallery: withParams(galleries.premiere),
+    gallery: firaBarcelonaGallery,
     heroImage: firaBarcelonaBanner,
     quote: {
       text: "El nivel de detalle en cada touchpoint del evento fue exactamente lo que la película merecía.",
