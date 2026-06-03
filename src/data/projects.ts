@@ -66,6 +66,16 @@ import adidasGallery2 from "@/assets/adidas-gallery-2.jpg.asset.json";
 import adidasGallery3 from "@/assets/adidas-gallery-3.jpg.asset.json";
 import adidasGallery4 from "@/assets/adidas-gallery-4.jpg.asset.json";
 import mangaBanner from "@/assets/manga-banner.jpg";
+import mangaGallery1 from "@/assets/manga-gallery-1.jpg.asset.json";
+import mangaGallery2 from "@/assets/manga-gallery-2.jpg.asset.json";
+import mangaGallery3 from "@/assets/manga-gallery-3.jpg.asset.json";
+import mangaGallery4 from "@/assets/manga-gallery-4.jpg.asset.json";
+import mangaGallery5 from "@/assets/manga-gallery-5.jpg.asset.json";
+import mangaGallery6 from "@/assets/manga-gallery-6.jpg.asset.json";
+import mangaGallery7 from "@/assets/manga-gallery-7.jpg.asset.json";
+import mangaGallery8 from "@/assets/manga-gallery-8.jpg.asset.json";
+import mangaGallery9 from "@/assets/manga-gallery-9.jpg.asset.json";
+import mangaGallery10 from "@/assets/manga-gallery-10.jpg.asset.json";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
 import unicaBanner from "@/assets/unica-banner.jpg";
@@ -195,6 +205,19 @@ const adidasProjectGallery = [
   adidasGallery2.url,
   adidasGallery3.url,
   adidasGallery4.url,
+];
+
+const mangaProjectGallery = [
+  mangaGallery1.url,
+  mangaGallery2.url,
+  mangaGallery3.url,
+  mangaGallery4.url,
+  mangaGallery5.url,
+  mangaGallery6.url,
+  mangaGallery7.url,
+  mangaGallery8.url,
+  mangaGallery9.url,
+  mangaGallery10.url,
 ];
 
 export const PROJECTS: Project[] = [
