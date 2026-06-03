@@ -45,7 +45,7 @@ export const Hero = () => {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           poster="/videos/caracter-hero-poster.jpg"
         >
           <source src="/videos/caracter-hero.mp4" type="video/mp4" />
