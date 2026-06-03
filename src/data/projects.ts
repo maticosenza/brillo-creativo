@@ -66,6 +66,16 @@ import adidasGallery2 from "@/assets/adidas-gallery-2.jpg.asset.json";
 import adidasGallery3 from "@/assets/adidas-gallery-3.jpg.asset.json";
 import adidasGallery4 from "@/assets/adidas-gallery-4.jpg.asset.json";
 import mangaBanner from "@/assets/manga-banner.jpg";
+import mangaGallery1 from "@/assets/manga-gallery-1.jpg.asset.json";
+import mangaGallery2 from "@/assets/manga-gallery-2.jpg.asset.json";
+import mangaGallery3 from "@/assets/manga-gallery-3.jpg.asset.json";
+import mangaGallery4 from "@/assets/manga-gallery-4.jpg.asset.json";
+import mangaGallery5 from "@/assets/manga-gallery-5.jpg.asset.json";
+import mangaGallery6 from "@/assets/manga-gallery-6.jpg.asset.json";
+import mangaGallery7 from "@/assets/manga-gallery-7.jpg.asset.json";
+import mangaGallery8 from "@/assets/manga-gallery-8.jpg.asset.json";
+import mangaGallery9 from "@/assets/manga-gallery-9.jpg.asset.json";
+import mangaGallery10 from "@/assets/manga-gallery-10.jpg.asset.json";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
 import unicaBanner from "@/assets/unica-banner.jpg";
@@ -197,6 +207,19 @@ const adidasProjectGallery = [
   adidasGallery4.url,
 ];
 
+const mangaProjectGallery = [
+  mangaGallery1.url,
+  mangaGallery2.url,
+  mangaGallery3.url,
+  mangaGallery4.url,
+  mangaGallery5.url,
+  mangaGallery6.url,
+  mangaGallery7.url,
+  mangaGallery8.url,
+  mangaGallery9.url,
+  mangaGallery10.url,
+];
+
 export const PROJECTS: Project[] = [
   {
     slug: "datawise-x-hpe",
@@ -311,7 +334,7 @@ export const PROJECTS: Project[] = [
     shortDescription: "Producción y coordinación operativa de una exhibición de cultura pop y entretenimiento.",
     longDescription: "Producción y coordinación operativa de una exhibición de cultura pop y entretenimiento desarrollada en cuatro pabellones, reuniendo miles de asistentes, exhibiciones temáticas, espacios comerciales y experiencias inmersivas durante múltiples jornadas.\n\nEl proyecto implicó la gestión integral de una operación de gran escala, coordinando logística, circulación de público, montaje, señalización, proveedores, áreas gastronómicas y supervisión general de cada espacio del evento.\n\nLa experiencia incluyó exhibiciones interactivas, zonas comerciales especializadas, propuestas gastronómicas orientales y activaciones vinculadas al universo del comic, anime y entretenimiento, generando un entorno dinámico y de alta convocatoria.\n\nDebido al volumen de asistentes y la magnitud del evento, se implementó una coordinación intensiva de seguridad, control de accesos y operación on-site para garantizar una experiencia organizada, segura y fluida en todo momento.\n\nNuestro foco estuvo puesto en asegurar una ejecución eficiente y una experiencia envolvente capaz de conectar comunidad, entretenimiento y marca a gran escala.\n",
     services: SERVICES,
-    gallery: withParams(galleries.conference),
+    gallery: mangaProjectGallery,
     heroImage: mangaBanner,
     quote: {
       text: "Pasó de ser un compromiso anual a convertirse en el evento más esperado por el equipo. Resultados claros.",
