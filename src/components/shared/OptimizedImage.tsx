@@ -15,10 +15,11 @@ const OptimizedImage = ({ src, alt, className = "", priority = false, ...rest }:
   const ref = useRef<HTMLImageElement>(null);
   const [loaded, setLoaded] = useState(false);
 
-  // Handle images that are already cached/complete before React attaches onLoad.
+  // Handle images that are already cached/complete before React attaches onLoad,
+  // and re-check whenever the src changes (e.g. client-side navigation).
   useEffect(() => {
     if (ref.current?.complete) setLoaded(true);
-  }, []);
+  }, [src]);
 
   return (
     <img
@@ -29,6 +30,7 @@ const OptimizedImage = ({ src, alt, className = "", priority = false, ...rest }:
       decoding={priority ? "sync" : "async"}
       {...({ fetchpriority: priority ? "high" : "auto" } as Record<string, string>)}
       onLoad={() => setLoaded(true)}
+      onError={() => setLoaded(true)}
       className={`oimg ${loaded ? "loaded" : ""} ${className}`.trim()}
       {...rest}
     />
