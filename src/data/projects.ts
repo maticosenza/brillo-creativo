@@ -34,6 +34,16 @@ import hclGallery5 from "@/assets/hclsoftware-gallery-5.jpg";
 import hclGallery6 from "@/assets/hclsoftware-gallery-6.jpg";
 import hclGallery7 from "@/assets/hclsoftware-gallery-7.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
+import atlassianGallery1 from "@/assets/atlassian-gallery-1.png.asset.json";
+import atlassianGallery2 from "@/assets/atlassian-gallery-2.png.asset.json";
+import atlassianGallery3 from "@/assets/atlassian-gallery-3.png.asset.json";
+import atlassianGallery4 from "@/assets/atlassian-gallery-4.png.asset.json";
+import atlassianGallery5 from "@/assets/atlassian-gallery-5.png.asset.json";
+import atlassianGallery6 from "@/assets/atlassian-gallery-6.png.asset.json";
+import atlassianGallery7 from "@/assets/atlassian-gallery-7.png.asset.json";
+import atlassianGallery8 from "@/assets/atlassian-gallery-8.png.asset.json";
+import atlassianGallery9 from "@/assets/atlassian-gallery-9.png.asset.json";
+import atlassianGallery10 from "@/assets/atlassian-gallery-10.png.asset.json";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
@@ -124,6 +134,19 @@ const hclsoftwareGallery = [
   hclGallery5,
   hclGallery6,
   hclGallery7,
+];
+
+const atlassianProjectGallery = [
+  atlassianGallery1.url,
+  atlassianGallery2.url,
+  atlassianGallery3.url,
+  atlassianGallery4.url,
+  atlassianGallery5.url,
+  atlassianGallery6.url,
+  atlassianGallery7.url,
+  atlassianGallery8.url,
+  atlassianGallery9.url,
+  atlassianGallery10.url,
 ];
 
 export const PROJECTS: Project[] = [
@@ -218,7 +241,7 @@ export const PROJECTS: Project[] = [
     shortDescription: "Producción y coordinación operativa integral de un evento corporativo internacional para más de 2.000 asistentes por jornada.",
     longDescription: "Producción y coordinación operativa integral de un evento corporativo internacional para más de 2.000 asistentes por jornada.\n\nEl proyecto incluyó la gestión completa de la infraestructura y experiencia del evento: distribución y operación de salas, mobiliario, escenografía, señalización, ambientación, coordinación técnica y soporte logístico general en un entorno de alta complejidad operativa.\nAdemás, se coordinó la operación de áreas VIP, espacios de prensa, atención al cliente y la gestión integral del personal involucrado, incluyendo equipos de seguridad, limpieza, promotoras y staff operativo.\n\nNuestro rol estuvo enfocado en garantizar una ejecución precisa, organizada y alineada con los estándares internacionales de un evento corporativo de gran escala, gestionando múltiples equipos y proveedores en simultáneo durante todas las jornadas.\n",
     services: SERVICES,
-    gallery: withParams(galleries.activation),
+    gallery: atlassianProjectGallery,
     heroImage: atlassianBanner,
     quote: {
       text: "Una operación enorme que se sintió simple desde nuestro lado. Eso solo se logra con un equipo realmente pro.",
