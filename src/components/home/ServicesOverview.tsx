@@ -14,7 +14,7 @@ export const ServicesOverview = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
-    <section className="bg-brand-red text-brand-white section-y px-6 md:px-12">
+    <section className="bg-brand-red text-brand-white pt-[56px] pb-[80px] md:pt-[84px] md:pb-[120px] px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12 items-center">
         <div className="order-1 md:order-2 md:col-start-8 md:col-span-4">
           <span className="eyebrow text-brand-white">Nuestros servicios</span>
