@@ -46,7 +46,7 @@ export const BrandsSection = () => {
   );
 
   return (
-    <section className="bg-brand-red text-brand-white pt-[6px] pb-[10px] md:pt-[25px] md:pb-[50px]">
+    <section className="bg-brand-red text-brand-white pt-[40px] pb-[10px] md:pt-[25px] md:pb-[50px]">
       <div className="text-center max-w-5xl mx-auto px-6 md:px-12">
         <RevealHeading
           text="Track Record"
