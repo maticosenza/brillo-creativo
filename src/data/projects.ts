@@ -61,6 +61,10 @@ import datawiseHpeGallery7 from "@/assets/datawise-hpe-gallery-7.jpg.asset.json"
 import datawiseHpeGallery8 from "@/assets/datawise-hpe-gallery-8.jpg.asset.json";
 import datawiseHpeGallery9 from "@/assets/datawise-hpe-gallery-9.jpg.asset.json";
 import datawiseHpeGallery10 from "@/assets/datawise-hpe-gallery-10.jpg.asset.json";
+import adidasGallery1 from "@/assets/adidas-gallery-1.jpg.asset.json";
+import adidasGallery2 from "@/assets/adidas-gallery-2.jpg.asset.json";
+import adidasGallery3 from "@/assets/adidas-gallery-3.jpg.asset.json";
+import adidasGallery4 from "@/assets/adidas-gallery-4.jpg.asset.json";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
@@ -186,6 +190,13 @@ const datawiseHpeProjectGallery = [
   datawiseHpeGallery10.url,
 ];
 
+const adidasProjectGallery = [
+  adidasGallery1.url,
+  adidasGallery2.url,
+  adidasGallery3.url,
+  adidasGallery4.url,
+];
+
 export const PROJECTS: Project[] = [
   {
     slug: "datawise-x-hpe",
@@ -227,7 +238,7 @@ export const PROJECTS: Project[] = [
     shortDescription: "Producción integral de un torneo de pádel de cuatro jornadas junto a Adidas.",
     longDescription: "Producción integral de un torneo de pádel de cuatro jornadas junto a Adidas, combinando competencia deportiva, activaciones de marca y experiencias orientadas a la comunidad y el engagement.\n\nEl evento reunió a más de 1.200 participantes distribuidos en distintas categorías y niveles, generando una experiencia dinámica y de alta convocatoria durante todo el fin de semana.\n\nNuestro rol abarcó la planificación y coordinación operativa completa del torneo: gestión de proveedores, logística general, atención a jugadores, activaciones, montaje, coordinación on-site y supervisión integral de la experiencia en cada jornada.\n\nAdemás de la competencia deportiva, el evento incluyó espacios interactivos, juegos, premios y merchandising diseñados para potenciar la presencia de marca y generar una experiencia cercana, entretenida y memorable para todos los asistentes.\n\nEl resultado fue un evento que combinó deporte, comunidad y branding en un entorno alineado con la identidad y energía de Adidas.\n",
     services: SERVICES,
-    gallery: withParams(galleries.launch),
+    gallery: adidasProjectGallery,
     heroImage: adidasHero,
     gridImage: adidasGrid,
     quote: {
