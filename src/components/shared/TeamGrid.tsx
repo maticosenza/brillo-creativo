@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { TEAM } from "@/data/team";
+import OptimizedImage from "@/components/shared/OptimizedImage";
 
 export const TeamGrid = ({ items = TEAM }: { items?: typeof TEAM }) => (
   <motion.ul
@@ -19,10 +20,9 @@ export const TeamGrid = ({ items = TEAM }: { items?: typeof TEAM }) => (
         className="group"
       >
         <div className="aspect-square overflow-hidden">
-          <img
+          <OptimizedImage
             src={m.img}
             alt={m.name}
-            loading="lazy"
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-[1.05]"
           />
         </div>

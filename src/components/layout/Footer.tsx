@@ -80,7 +80,7 @@ export const Footer = () => {
         {/* Logo row */}
         <div className="max-w-[1200px] mx-auto mt-10 md:-mt-[88px] flex justify-center md:justify-start">
           <Link to="/" aria-label="Caracter Producciones" className="inline-flex opacity-90">
-            <img src={logoCaracter} alt="Caracter Producciones" className="h-12 md:h-[64px] w-auto" />
+            <img src={logoCaracter} alt="Caracter Producciones" loading="lazy" decoding="async" className="h-12 md:h-[64px] w-auto" />
           </Link>
         </div>
       </div>

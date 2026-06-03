@@ -26,7 +26,7 @@ export const MenuOverlay = ({ open, onClose }: Props) => {
         >
           <div className="flex items-center justify-between px-6 md:px-12 h-20">
             <Link to="/" onClick={onClose} aria-label="Caracter Producciones" className="flex items-center">
-              <img src={logoCaracter} alt="Caracter Producciones" className="navbar-logo" />
+              <img src={logoCaracter} alt="Caracter Producciones" loading="lazy" decoding="async" className="navbar-logo" />
             </Link>
             <button
               onClick={onClose}

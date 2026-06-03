@@ -49,7 +49,7 @@ const BuenosAires = () => {
         <ul className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {PHOTOS.map((src, i) => (
             <li key={src} className="aspect-[4/5] overflow-hidden">
-              <img src={src} alt={`Vista ${i + 1} del estudio en Buenos Aires`} loading="lazy" className="w-full h-full object-cover" />
+              <img src={src} alt={`Vista ${i + 1} del estudio en Buenos Aires`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </li>
           ))}
         </ul>

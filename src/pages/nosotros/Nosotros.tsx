@@ -53,6 +53,7 @@ const Nosotros = () => {
               className="w-full h-full object-cover"
               style={{ objectPosition: "center bottom" }}
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

@@ -46,7 +46,7 @@ const InsightDetail = () => {
 
       <section className="bg-brand-black text-brand-white px-6 md:px-12 py-20 md:py-28">
         <div className="aspect-[16/9] w-full max-w-[1200px] mx-auto overflow-hidden mb-16">
-          <img src={post.img} alt={post.title} className="w-full h-full object-cover" />
+          <img src={post.img} alt={post.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
         </div>
         <div className="max-w-[720px] mx-auto space-y-8 text-lg leading-[1.7] opacity-90">
           {post.body.map((para, i) => (
@@ -62,7 +62,7 @@ const InsightDetail = () => {
             {related.map((r) => (
               <Link key={r.slug} to={`/insights/${r.slug}`} className="group block">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={r.img} alt={r.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.05]" />
+                  <img src={r.img} alt={r.title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.05]" />
                 </div>
                 <span className="block mt-4 text-[12px] uppercase tracking-[0.2em] opacity-60">{r.date}</span>
                 <h3 className="mt-3 font-display uppercase" style={{ fontSize: "clamp(20px, 1.8vw, 26px)", lineHeight: 1 }}>{r.title}</h3>

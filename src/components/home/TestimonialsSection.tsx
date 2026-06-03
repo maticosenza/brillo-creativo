@@ -100,6 +100,7 @@ export const TestimonialsSection = () => {
                       alt={`Evento producido para ${t.client}`}
                       className="w-[200px] h-[140px] object-cover md:hidden"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -111,6 +112,7 @@ export const TestimonialsSection = () => {
                     selected === i ? "opacity-100" : "opacity-0"
                   }`}
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}

@@ -61,6 +61,7 @@ const Proyectos = () => {
                         src={p.gridImage ?? p.heroImage ?? p.gallery[0]}
                         alt={p.title}
                         loading="lazy"
+                        decoding="async"
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.08]"
                       />
                       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />

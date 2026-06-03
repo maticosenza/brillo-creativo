@@ -136,7 +136,7 @@ export const ProjectsSection = () => {
               return (
                 <div key={p.title} className="flex-[0_0_100%] min-w-0">
                   <Link to={`/proyectos/${s}`} className="relative block w-full aspect-[4/5] overflow-hidden">
-                    <img src={p.img} alt={p.title} className="w-full h-full object-cover active:scale-105 transition-transform duration-300" style={{ objectPosition: p.pos ?? "center" }} draggable={false} />
+                    <img src={p.img} alt={p.title} loading="lazy" decoding="async" className="w-full h-full object-cover active:scale-105 transition-transform duration-300" style={{ objectPosition: p.pos ?? "center" }} draggable={false} />
                   </Link>
                 </div>
               );
@@ -195,6 +195,8 @@ export const ProjectsSection = () => {
             alt=""
             aria-hidden
             draggable={false}
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-out"
             style={{ opacity: i === index ? 1 : 0, objectPosition: p.pos ?? "center" }}
           />

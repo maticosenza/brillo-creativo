@@ -1,3 +1,5 @@
+import OptimizedImage from "@/components/shared/OptimizedImage";
+
 type Props = {
   title: React.ReactNode;
   image: string;
@@ -12,19 +14,21 @@ export const PageHero = ({ title, image, mobileImage, alt = "", objectPosition =
       {mobileImage ? (
         <picture>
           <source media="(max-width: 767px)" srcSet={mobileImage} />
-          <img
+          <OptimizedImage
             src={image}
             alt={alt}
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition }}
+            priority
           />
         </picture>
       ) : (
-        <img
+        <OptimizedImage
           src={image}
           alt={alt}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition }}
+          priority
         />
       )}
       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-brand-black/20 to-transparent" />

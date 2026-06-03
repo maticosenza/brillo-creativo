@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { Project } from "@/data/projects";
+import OptimizedImage from "@/components/shared/OptimizedImage";
 
 const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"right"; label: string }) => (
   <button
@@ -45,11 +46,11 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
                 className="group shrink-0 basis-[90%] md:basis-[80%] pl-3 md:pl-4"
               >
                 <div className="aspect-[4/5] md:aspect-[16/9] max-h-none md:max-h-[600px] 2xl:max-h-[650px] overflow-hidden rounded-none md:rounded">
-                  <img
+                  <OptimizedImage
                     src={src}
                     alt={`${p.title} — imagen ${i + 1}`}
                     className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.04]"
-                    loading={i < 3 ? "eager" : "lazy"}
+                    priority={i < 3}
                   />
                 </div>
               </div>
