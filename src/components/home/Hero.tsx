@@ -6,7 +6,13 @@ export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [previewReady, setPreviewReady] = useState(false);
   const [hdReady, setHdReady] = useState(false);
-  const [deviceType, setDeviceType] = useState<"mobile" | "tablet" | "desktop">("desktop");
+  const [deviceType, setDeviceType] = useState<"mobile" | "tablet" | "desktop">(() => {
+    if (typeof window === "undefined") return "desktop";
+    const width = window.innerWidth;
+    if (width <= 768) return "mobile";
+    if (width <= 1024) return "tablet";
+    return "desktop";
+  });
   const [shouldLoadVideo, setShouldLoadVideo] = useState(true);
   const previewVideoRef = useRef<HTMLVideoElement>(null);
 
@@ -47,11 +53,13 @@ export const Hero = () => {
   const hdSrc = "/videos/caracter-hero.mp4";
 
   useEffect(() => {
+    setPreviewReady(false);
     const v = previewVideoRef.current;
     if (!v) return;
+    v.load();
     const p = v.play();
     if (p !== undefined) p.catch(() => {});
-  }, [shouldLoadVideo]);
+  }, [previewSrc, shouldLoadVideo]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -84,7 +92,7 @@ export const Hero = () => {
       {/* CAPA 2 — Video Preview (directo sobre el blur) */}
       {shouldLoadVideo && (
         <video
-          key="hero-preview"
+          key={`hero-preview-${deviceType}`}
           ref={previewVideoRef}
           autoPlay
           muted
