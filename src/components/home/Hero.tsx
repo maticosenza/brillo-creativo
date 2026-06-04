@@ -6,14 +6,23 @@ export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [previewReady, setPreviewReady] = useState(false);
   const [hdReady, setHdReady] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [deviceType, setDeviceType] = useState<"mobile" | "tablet" | "desktop">("desktop");
   const [shouldLoadVideo, setShouldLoadVideo] = useState(true);
   const previewVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
+    const checkDevice = () => {
+      const width = window.innerWidth;
+      if (width <= 768) {
+        setDeviceType("mobile");
+      } else if (width <= 1024) {
+        setDeviceType("tablet");
+      } else {
+        setDeviceType("desktop");
+      }
+    };
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
 
     let slow = false;
     // @ts-expect-error - non-standard API
@@ -26,12 +35,15 @@ export const Hero = () => {
     }
     if (slow) setShouldLoadVideo(false);
 
-    return () => window.removeEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkDevice);
   }, []);
 
-  const previewSrc = isMobile
-    ? "/videos/caracter-hero-mobile.mp4"
-    : "/videos/caracter-hero-preview.mp4";
+  const previewSrc =
+    deviceType === "mobile"
+      ? "/videos/caracter-hero-mobile.mp4"
+      : deviceType === "tablet"
+        ? "/videos/caracter-hero-tablet.mp4"
+        : "/videos/caracter-hero-preview.mp4";
   const hdSrc = "/videos/caracter-hero.mp4";
 
   useEffect(() => {
@@ -88,7 +100,7 @@ export const Hero = () => {
       )}
 
       {/* CAPA 4 — Video HD (solo desktop) */}
-      {shouldLoadVideo && !isMobile && (
+      {shouldLoadVideo && deviceType === "desktop" && (
         <video
           key="hero-hd"
           autoPlay
