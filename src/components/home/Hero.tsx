@@ -40,9 +40,9 @@ export const Hero = () => {
 
   const previewSrc =
     deviceType === "mobile"
-      ? "/videos/caracter-hero-mobile.mp4"
+      ? "/videos/caracter-hero-mobile.mp4?v=2"
       : deviceType === "tablet"
-        ? "/videos/caracter-hero-tablet.mp4"
+        ? "/videos/caracter-hero-tablet.mp4?v=2"
         : "/videos/caracter-hero-preview.mp4";
   const hdSrc = "/videos/caracter-hero.mp4";
 
