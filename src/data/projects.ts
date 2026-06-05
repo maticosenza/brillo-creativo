@@ -26,6 +26,7 @@ import adidasBanner from "@/assets/adidas-banner.jpg";
 import adidasHero from "@/assets/adidas-hero.jpg";
 import adidasGrid from "@/assets/adidas-grid.jpg";
 import adidasGridMobile from "@/assets/adidas-grid-mobile.png.asset.json";
+import adidasBannerMobile from "@/assets/adidas-banner-mobile.png.asset.json";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import hclsoftwareHero from "@/assets/hclsoftware-hero.jpg";
 import hclsoftwareGrid from "@/assets/hclsoftware-grid.jpg";
