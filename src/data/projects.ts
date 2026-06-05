@@ -13,6 +13,7 @@ export type Project = {
   scopeOfWork?: string[];
   services: string[];
   gallery: string[];
+  galleryMobile?: string[];
   heroImage?: string;
   gridImage?: string;
   gridImageMobile?: string;
@@ -39,6 +40,7 @@ import hclGallery4 from "@/assets/hclsoftware-gallery-4.jpg";
 import hclGallery5 from "@/assets/hclsoftware-gallery-5.jpg";
 import hclGallery6 from "@/assets/hclsoftware-gallery-6.jpg";
 import hclGallery7 from "@/assets/hclsoftware-gallery-7.jpg";
+import hclGallery6Mobile from "@/assets/hclsoftware-gallery-6-mobile.png.asset.json";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
 import atlassianBannerMobile from "@/assets/atlassian-banner-mobile.jpg.asset.json";
 import atlassianGallery1 from "@/assets/atlassian-gallery-1.png.asset.json";
@@ -203,6 +205,16 @@ const hclsoftwareGallery = [
   hclGallery7,
 ];
 
+const hclsoftwareGalleryMobile = [
+  hclGallery1,
+  hclGallery2,
+  hclGallery3,
+  hclGallery4,
+  hclGallery5,
+  hclGallery6Mobile.url,
+  hclGallery7,
+];
+
 const firaBarcelonaGallery = [
   firaGallery1.url,
   firaGallery2.url,
@@ -364,6 +376,7 @@ export const PROJECTS: Project[] = [
     ],
     services: SERVICES,
     gallery: hclsoftwareGallery,
+    galleryMobile: hclsoftwareGalleryMobile,
     heroImage: hclsoftwareHero,
     gridImage: hclsoftwareGrid,
     gridImageMobile: hclsoftwareGridMobile.url,
