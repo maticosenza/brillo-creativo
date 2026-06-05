@@ -17,7 +17,7 @@ export const PageHero = ({ title, image, mobileImage, alt = "", objectPosition =
           <OptimizedImage
             src={image}
             alt={alt}
-            className="absolute inset-0 w-full h-full object-contain md:object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition }}
             priority
           />
