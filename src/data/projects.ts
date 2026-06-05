@@ -122,6 +122,9 @@ import mangaGallery7Mobile from "@/assets/manga-gallery-7-mobile.jpg.asset.json"
 import mangaGallery8Mobile from "@/assets/manga-gallery-8-mobile.jpg.asset.json";
 import mangaGallery10Mobile from "@/assets/manga-gallery-10-mobile.jpg.asset.json";
 import mangaGallery11Mobile from "@/assets/manga-gallery-11-mobile.jpg.asset.json";
+import mangaGallery12Mobile from "@/assets/manga-gallery-12-mobile.jpg.asset.json";
+import mangaGallery13Mobile from "@/assets/manga-gallery-13-mobile.jpg.asset.json";
+import mangaGallery14Mobile from "@/assets/manga-gallery-14-mobile.jpg.asset.json";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import firaGallery1 from "@/assets/fira-barcelona-gallery-1.jpg.asset.json";
 import firaGallery2 from "@/assets/fira-barcelona-gallery-2.jpg.asset.json";
@@ -387,9 +390,9 @@ const mangaProjectGalleryMobile = [
   mangaGallery9.url,
   mangaGallery10Mobile.url,
   mangaGallery11Mobile.url,
-  mangaGallery12.url,
-  mangaGallery13.url,
-  mangaGallery14.url,
+  mangaGallery12Mobile.url,
+  mangaGallery13Mobile.url,
+  mangaGallery14Mobile.url,
   mangaGallery15.url,
   mangaGallery16.url,
 ];
