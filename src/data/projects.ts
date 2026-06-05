@@ -354,7 +354,7 @@ export const PROJECTS: Project[] = [
     location: "Monza, Bakú, Singapore, São Paulo, Las Vegas, Abu Dhabi",
     duration: "2 jornadas",
     durationDays: 3,
-    attendees: 5000,
+    attendees: 270,
     shortDescription: "Activación tecnológica y hospitality de alto impacto durante el GP de Las Vegas.",
     longDescription: "Producción integral para HCLSoftware en el marco de la Formula 1 en Las Vegas. Coordinamos la presencia de marca, hospitality de alto nivel y activaciones tecnológicas inmersivas para miles de asistentes. Diseñamos la identidad visual de la activación, gestionamos la logística en un entorno de alta complejidad y aseguramos una cobertura audiovisual premium para canales globales.",
     scopeOfWork: [
