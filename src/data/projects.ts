@@ -40,6 +40,7 @@ import hclGallery5 from "@/assets/hclsoftware-gallery-5.jpg";
 import hclGallery6 from "@/assets/hclsoftware-gallery-6.jpg";
 import hclGallery7 from "@/assets/hclsoftware-gallery-7.jpg";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
+import atlassianBannerMobile from "@/assets/atlassian-banner-mobile.jpg.asset.json";
 import atlassianGallery1 from "@/assets/atlassian-gallery-1.png.asset.json";
 import atlassianGallery2 from "@/assets/atlassian-gallery-2.png.asset.json";
 import atlassianGallery3 from "@/assets/atlassian-gallery-3.png.asset.json";
@@ -388,6 +389,7 @@ export const PROJECTS: Project[] = [
     services: SERVICES,
     gallery: atlassianProjectGallery,
     heroImage: atlassianBanner,
+    heroImageMobile: atlassianBannerMobile.url,
     quote: {
       text: "Una operación enorme que se sintió simple desde nuestro lado. Eso solo se logra con un equipo realmente pro.",
       author: "Florencia Caro",
