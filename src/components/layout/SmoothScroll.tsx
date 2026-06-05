@@ -10,6 +10,7 @@ export const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    (window as unknown as { lenis?: Lenis }).lenis = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
 
@@ -22,6 +23,7 @@ export const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
     return () => {
       gsap.ticker.remove(onRaf);
       lenis.destroy();
+      (window as unknown as { lenis?: Lenis }).lenis = undefined;
     };
   }, []);
 
