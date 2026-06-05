@@ -113,6 +113,15 @@ import mangaGallery13 from "@/assets/manga-gallery-13.jpg.asset.json";
 import mangaGallery14 from "@/assets/manga-gallery-14.jpg.asset.json";
 import mangaGallery15 from "@/assets/manga-gallery-15.jpg.asset.json";
 import mangaGallery16 from "@/assets/manga-gallery-16.jpg.asset.json";
+import mangaGallery1Mobile from "@/assets/manga-gallery-1-mobile.jpg.asset.json";
+import mangaGallery2Mobile from "@/assets/manga-gallery-2-mobile.jpg.asset.json";
+import mangaGallery3Mobile from "@/assets/manga-gallery-3-mobile.jpg.asset.json";
+import mangaGallery4Mobile from "@/assets/manga-gallery-4-mobile.jpg.asset.json";
+import mangaGallery6Mobile from "@/assets/manga-gallery-6-mobile.jpg.asset.json";
+import mangaGallery7Mobile from "@/assets/manga-gallery-7-mobile.jpg.asset.json";
+import mangaGallery8Mobile from "@/assets/manga-gallery-8-mobile.jpg.asset.json";
+import mangaGallery10Mobile from "@/assets/manga-gallery-10-mobile.jpg.asset.json";
+import mangaGallery11Mobile from "@/assets/manga-gallery-11-mobile.jpg.asset.json";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import firaGallery1 from "@/assets/fira-barcelona-gallery-1.jpg.asset.json";
 import firaGallery2 from "@/assets/fira-barcelona-gallery-2.jpg.asset.json";
@@ -366,6 +375,25 @@ const mangaProjectGallery = [
   mangaGallery16.url,
 ];
 
+const mangaProjectGalleryMobile = [
+  mangaGallery1Mobile.url,
+  mangaGallery2Mobile.url,
+  mangaGallery3Mobile.url,
+  mangaGallery4Mobile.url,
+  mangaGallery5.url,
+  mangaGallery6Mobile.url,
+  mangaGallery7Mobile.url,
+  mangaGallery8Mobile.url,
+  mangaGallery9.url,
+  mangaGallery10Mobile.url,
+  mangaGallery11Mobile.url,
+  mangaGallery12.url,
+  mangaGallery13.url,
+  mangaGallery14.url,
+  mangaGallery15.url,
+  mangaGallery16.url,
+];
+
 export const PROJECTS: Project[] = [
   {
     slug: "datawise-x-hpe",
@@ -490,6 +518,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Producción y coordinación operativa de una exhibición de cultura pop y entretenimiento desarrollada en cuatro pabellones, reuniendo miles de asistentes, exhibiciones temáticas, espacios comerciales y experiencias inmersivas durante múltiples jornadas.\n\nEl proyecto implicó la gestión integral de una operación de gran escala, coordinando logística, circulación de público, montaje, señalización, proveedores, áreas gastronómicas y supervisión general de cada espacio del evento.\n\nLa experiencia incluyó exhibiciones interactivas, zonas comerciales especializadas, propuestas gastronómicas orientales y activaciones vinculadas al universo del comic, anime y entretenimiento, generando un entorno dinámico y de alta convocatoria.\n\nDebido al volumen de asistentes y la magnitud del evento, se implementó una coordinación intensiva de seguridad, control de accesos y operación on-site para garantizar una experiencia organizada, segura y fluida en todo momento.\n\nNuestro foco estuvo puesto en asegurar una ejecución eficiente y una experiencia envolvente capaz de conectar comunidad, entretenimiento y marca a gran escala.\n",
     services: SERVICES,
     gallery: mangaProjectGallery,
+    galleryMobile: mangaProjectGalleryMobile,
     heroImage: mangaBanner,
     quote: {
       text: "Pasó de ser un compromiso anual a convertirse en el evento más esperado por el equipo. Resultados claros.",
