@@ -14,13 +14,28 @@ export const RootLayout = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const lenis = (window as unknown as { lenis?: { scrollTo: (t: number, o?: { immediate?: boolean }) => void } }).lenis;
-    if (lenis) {
-      lenis.scrollTo(0, { immediate: true });
-    }
-    window.scrollTo(0, 0);
+    const scrollTop = () => {
+      const lenis = (window as unknown as {
+        lenis?: { scrollTo: (t: number, o?: { immediate?: boolean; force?: boolean }) => void };
+      }).lenis;
+      if (lenis) {
+        lenis.scrollTo(0, { immediate: true, force: true });
+      }
+      window.scrollTo(0, 0);
+      if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
+    };
+
+    // Run immediately and again on the next frames, since Lenis/route content
+    // can restore scroll after the first call.
+    scrollTop();
+    const raf1 = requestAnimationFrame(scrollTop);
+    const raf2 = requestAnimationFrame(() => requestAnimationFrame(scrollTop));
     const t = setTimeout(() => ScrollTrigger.refresh(), 700);
-    return () => clearTimeout(t);
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+      clearTimeout(t);
+    };
   }, [pathname]);
 
   return (
