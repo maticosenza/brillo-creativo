@@ -352,7 +352,7 @@ export const PROJECTS: Project[] = [
     category: "MICE - Fórmula 1",
     year: 2025,
     location: "Monza, Bakú, Singapore, São Paulo, Las Vegas, Abu Dhabi",
-    duration: "3 jornadas por ciudad",
+    duration: "3 jornadas",
     durationDays: 3,
     attendees: 5000,
     shortDescription: "Activación tecnológica y hospitality de alto impacto durante el GP de Las Vegas.",
