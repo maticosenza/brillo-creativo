@@ -15,6 +15,7 @@ export type Project = {
   gallery: string[];
   heroImage?: string;
   gridImage?: string;
+  gridImageMobile?: string;
   quote?: { text: string; author: string; role: string };
   related: string[];
 };
@@ -23,9 +24,11 @@ import datawiseHpeBanner from "@/assets/datawise-hpe-banner.jpg";
 import adidasBanner from "@/assets/adidas-banner.jpg";
 import adidasHero from "@/assets/adidas-hero.jpg";
 import adidasGrid from "@/assets/adidas-grid.jpg";
+import adidasGridMobile from "@/assets/adidas-grid-mobile.png.asset.json";
 import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import hclsoftwareHero from "@/assets/hclsoftware-hero.jpg";
 import hclsoftwareGrid from "@/assets/hclsoftware-grid.jpg";
+import hclsoftwareGridMobile from "@/assets/hclsoftware-grid-mobile.png.asset.json";
 import hclGallery1 from "@/assets/hclsoftware-gallery-1.jpg";
 import hclGallery2 from "@/assets/hclsoftware-gallery-2.jpg";
 import hclGallery3 from "@/assets/hclsoftware-gallery-3.jpg";
@@ -89,6 +92,7 @@ import firaGallery3 from "@/assets/fira-barcelona-gallery-3.jpg.asset.json";
 import firaGallery4 from "@/assets/fira-barcelona-gallery-4.jpg.asset.json";
 import firaGallery5 from "@/assets/fira-barcelona-gallery-5.jpg.asset.json";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
+import nickSpaGridMobile from "@/assets/nickspa-grid-mobile.png.asset.json";
 import nickSpaGallery1 from "@/assets/nick-spa-gallery-1.jpg.asset.json";
 import nickSpaGallery2 from "@/assets/nick-spa-gallery-2.jpg.asset.json";
 import nickSpaGallery3 from "@/assets/nick-spa-gallery-3.jpg.asset.json";
@@ -327,6 +331,7 @@ export const PROJECTS: Project[] = [
     gallery: adidasProjectGallery,
     heroImage: adidasHero,
     gridImage: adidasGrid,
+    gridImageMobile: adidasGridMobile.url,
     quote: {
       text: "Salió mejor de lo esperado. Producción, escenografía y guión se sintieron como una sola pieza coherente.",
       author: "Diego Méndez",
@@ -355,6 +360,7 @@ export const PROJECTS: Project[] = [
     gallery: hclsoftwareGallery,
     heroImage: hclsoftwareHero,
     gridImage: hclsoftwareGrid,
+    gridImageMobile: hclsoftwareGridMobile.url,
     quote: {
       text: "Llevaron Vértice al nivel de los grandes festivales internacionales. Operación enorme, ejecución obsesiva.",
       author: "Lucía Romero",
@@ -443,6 +449,7 @@ export const PROJECTS: Project[] = [
     services: SERVICES,
     gallery: nickSpaProjectGallery,
     heroImage: nickSpaBanner,
+    gridImageMobile: nickSpaGridMobile.url,
     related: ["adidas", "hclsoftware", "atlassian"],
   },
   {
