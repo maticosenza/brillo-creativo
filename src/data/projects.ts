@@ -113,6 +113,15 @@ import mangaGallery13 from "@/assets/manga-gallery-13.jpg.asset.json";
 import mangaGallery14 from "@/assets/manga-gallery-14.jpg.asset.json";
 import mangaGallery15 from "@/assets/manga-gallery-15.jpg.asset.json";
 import mangaGallery16 from "@/assets/manga-gallery-16.jpg.asset.json";
+import mangaGallery1Mobile from "@/assets/manga-gallery-1-mobile.jpg.asset.json";
+import mangaGallery2Mobile from "@/assets/manga-gallery-2-mobile.jpg.asset.json";
+import mangaGallery3Mobile from "@/assets/manga-gallery-3-mobile.jpg.asset.json";
+import mangaGallery4Mobile from "@/assets/manga-gallery-4-mobile.jpg.asset.json";
+import mangaGallery6Mobile from "@/assets/manga-gallery-6-mobile.jpg.asset.json";
+import mangaGallery7Mobile from "@/assets/manga-gallery-7-mobile.jpg.asset.json";
+import mangaGallery8Mobile from "@/assets/manga-gallery-8-mobile.jpg.asset.json";
+import mangaGallery10Mobile from "@/assets/manga-gallery-10-mobile.jpg.asset.json";
+import mangaGallery11Mobile from "@/assets/manga-gallery-11-mobile.jpg.asset.json";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import firaGallery1 from "@/assets/fira-barcelona-gallery-1.jpg.asset.json";
 import firaGallery2 from "@/assets/fira-barcelona-gallery-2.jpg.asset.json";
@@ -359,6 +368,25 @@ const mangaProjectGallery = [
   mangaGallery9.url,
   mangaGallery10.url,
   mangaGallery11.url,
+  mangaGallery12.url,
+  mangaGallery13.url,
+  mangaGallery14.url,
+  mangaGallery15.url,
+  mangaGallery16.url,
+];
+
+const mangaProjectGalleryMobile = [
+  mangaGallery1Mobile.url,
+  mangaGallery2Mobile.url,
+  mangaGallery3Mobile.url,
+  mangaGallery4Mobile.url,
+  mangaGallery5.url,
+  mangaGallery6Mobile.url,
+  mangaGallery7Mobile.url,
+  mangaGallery8Mobile.url,
+  mangaGallery9.url,
+  mangaGallery10Mobile.url,
+  mangaGallery11Mobile.url,
   mangaGallery12.url,
   mangaGallery13.url,
   mangaGallery14.url,
