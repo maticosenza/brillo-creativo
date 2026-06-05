@@ -13,6 +13,7 @@ import unicaBanner from "@/assets/unica-banner.jpg";
 import nickSpaMobile from "@/assets/nick-spa-mobile.png.asset.json";
 import hclsoftwareMobile from "@/assets/hclsoftware-mobile.png.asset.json";
 import adidasMobile from "@/assets/adidas-mobile.png.asset.json";
+import { renderProjectTitle } from "@/lib/project-title";
 
 const slugify = (s: string) =>
   s.toLowerCase()
@@ -166,7 +167,7 @@ export const ProjectsSection = () => {
           </div>
           <div className="flex-1 text-right">
             <h3 className="font-display uppercase text-brand-white mb-3" style={{ fontSize: "clamp(20px, 4.5vw, 28px)", letterSpacing: "-0.01em" }}>
-              {PROJECTS[mobileIndex].title}
+              {renderProjectTitle(PROJECTS[mobileIndex].title)}
             </h3>
             <div className="flex justify-end gap-2">
               {PROJECTS.map((_, i) => (
@@ -231,7 +232,7 @@ export const ProjectsSection = () => {
               className="mt-3 font-display uppercase text-brand-white animate-fade-in"
               style={{ fontSize: "clamp(24px, 3.5vw, 48px)", lineHeight: 1 }}
             >
-              {current.title}
+              {renderProjectTitle(current.title)}
             </h3>
           </Link>
 
