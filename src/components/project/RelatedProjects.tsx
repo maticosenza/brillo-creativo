@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { RevealHeading } from "@/components/home/RevealHeading";
 import { PROJECTS, type Project } from "@/data/projects";
 import OptimizedImage from "@/components/shared/OptimizedImage";
+import { renderProjectTitle } from "@/lib/project-title";
 
 export const RelatedProjects = ({ p }: { p: Project }) => {
   const fromRelated = p.related
@@ -56,7 +57,7 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
               </span>
               <div className="absolute left-6 bottom-6 right-6 z-10 text-brand-white">
                 <span className="text-xs uppercase tracking-[0.2em] opacity-90">{it.category}</span>
-                <h3 className="mt-2 font-display uppercase text-h3">{it.title}</h3>
+                <h3 className="mt-2 font-display uppercase text-h3">{renderProjectTitle(it.title)}</h3>
               </div>
             </Link>
           </motion.div>

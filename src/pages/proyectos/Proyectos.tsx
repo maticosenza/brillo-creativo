@@ -6,6 +6,7 @@ import { SEO } from "@/components/shared/SEO";
 import { PROJECTS } from "@/data/projects";
 import proyectosHero from "@/assets/proyectos-hero.jpg";
 import proyectosHeroMobile from "@/assets/proyectos-hero-mobile.png.asset.json";
+import { renderProjectTitle } from "@/lib/project-title";
 
 const Proyectos = () => {
   const filtered = PROJECTS;
@@ -82,7 +83,7 @@ const Proyectos = () => {
 
                       <div className="absolute left-8 bottom-8 right-8 z-10">
                         <span className="text-xs uppercase tracking-[0.2em] opacity-90">{p.category}</span>
-                        <h3 className="mt-3 font-display uppercase text-h3 text-brand-white">{p.title}</h3>
+                        <h3 className="mt-3 font-display uppercase text-h3 text-brand-white">{renderProjectTitle(p.title)}</h3>
                       </div>
                     </Link>
                   </motion.div>
