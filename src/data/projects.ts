@@ -131,6 +131,11 @@ import firaGallery2 from "@/assets/fira-barcelona-gallery-2.jpg.asset.json";
 import firaGallery3 from "@/assets/fira-barcelona-gallery-3.jpg.asset.json";
 import firaGallery4 from "@/assets/fira-barcelona-gallery-4.jpg.asset.json";
 import firaGallery5 from "@/assets/fira-barcelona-gallery-5.jpg.asset.json";
+import firaGallery1Mobile from "@/assets/fira-barcelona-gallery-1-mobile.jpg.asset.json";
+import firaGallery2Mobile from "@/assets/fira-barcelona-gallery-2-mobile.jpg.asset.json";
+import firaGallery3Mobile from "@/assets/fira-barcelona-gallery-3-mobile.jpg.asset.json";
+import firaGallery4Mobile from "@/assets/fira-barcelona-gallery-4-mobile.jpg.asset.json";
+import firaGallery5Mobile from "@/assets/fira-barcelona-gallery-5-mobile.jpg.asset.json";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
 import nickSpaGridMobile from "@/assets/nickspa-grid-mobile.png.asset.json";
 import nickSpaBannerMobile from "@/assets/nickspa-banner-mobile.jpg.asset.json";
@@ -255,6 +260,14 @@ const firaBarcelonaGallery = [
   firaGallery3.url,
   firaGallery4.url,
   firaGallery5.url,
+];
+
+const firaBarcelonaGalleryMobile = [
+  firaGallery1Mobile.url,
+  firaGallery2Mobile.url,
+  firaGallery3Mobile.url,
+  firaGallery4Mobile.url,
+  firaGallery5Mobile.url,
 ];
 
 const atlassianProjectGallery = [
