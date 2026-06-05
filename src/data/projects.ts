@@ -152,7 +152,6 @@ import nickSpaGallery5Mobile from "@/assets/nick-spa-gallery-5-mobile.jpg.asset.
 import nickSpaGallery6Mobile from "@/assets/nick-spa-gallery-6-mobile.jpg.asset.json";
 import nickSpaGallery7Mobile from "@/assets/nick-spa-gallery-7-mobile.jpg.asset.json";
 import unicaBanner from "@/assets/unica-banner.jpg";
-import unicaGallery1 from "@/assets/unica-gallery-1.jpg.asset.json";
 import unicaGallery2 from "@/assets/unica-gallery-2.jpg.asset.json";
 import unicaGallery3 from "@/assets/unica-gallery-3.jpg.asset.json";
 import unicaGallery4 from "@/assets/unica-gallery-4.jpg.asset.json";
@@ -376,7 +375,6 @@ const nickSpaProjectGalleryMobile = [
 ];
 
 const unicaProjectGallery = [
-  unicaGallery1.url,
   unicaGallery2.url,
   unicaGallery3.url,
   unicaGallery4.url,
