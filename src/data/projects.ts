@@ -458,6 +458,7 @@ export const PROJECTS: Project[] = [
     gallery: nickSpaProjectGallery,
     heroImage: nickSpaBanner,
     gridImageMobile: nickSpaGridMobile.url,
+    heroImageMobile: nickSpaBannerMobile.url,
     related: ["adidas", "hclsoftware", "atlassian"],
   },
   {
