@@ -595,6 +595,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Producción integral de una carrera urbana 5K en Barcelona, diseñada para transformar una competencia deportiva en una experiencia de marca de alto impacto.\n\nDesde la conceptualización hasta la ejecución final, desarrollamos un evento pensado para generar comunidad, visibilidad y una experiencia memorable tanto para corredores como para asistentes.\n\nLa producción incluyó la coordinación operativa completa de la jornada, gestión de proveedores, branding, activaciones, logística, montaje y supervisión on-site, asegurando una experiencia dinámica, fluida y alineada con la identidad del evento.\n\nCon cientos de participantes, activaciones en vivo y una fuerte presencia de marca en todo el recorrido, el proyecto combinó deporte, entretenimiento y engagement en un entorno urbano de gran convocatoria.\n",
     services: SERVICES,
     gallery: nickSpaProjectGallery,
+    galleryMobile: nickSpaProjectGalleryMobile,
     heroImage: nickSpaBanner,
     gridImageMobile: nickSpaGridMobile.url,
     heroImageMobile: nickSpaBannerMobile.url,
