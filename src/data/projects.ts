@@ -131,6 +131,11 @@ import firaGallery2 from "@/assets/fira-barcelona-gallery-2.jpg.asset.json";
 import firaGallery3 from "@/assets/fira-barcelona-gallery-3.jpg.asset.json";
 import firaGallery4 from "@/assets/fira-barcelona-gallery-4.jpg.asset.json";
 import firaGallery5 from "@/assets/fira-barcelona-gallery-5.jpg.asset.json";
+import firaGallery1Mobile from "@/assets/fira-barcelona-gallery-1-mobile.jpg.asset.json";
+import firaGallery2Mobile from "@/assets/fira-barcelona-gallery-2-mobile.jpg.asset.json";
+import firaGallery3Mobile from "@/assets/fira-barcelona-gallery-3-mobile.jpg.asset.json";
+import firaGallery4Mobile from "@/assets/fira-barcelona-gallery-4-mobile.jpg.asset.json";
+import firaGallery5Mobile from "@/assets/fira-barcelona-gallery-5-mobile.jpg.asset.json";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
 import nickSpaGridMobile from "@/assets/nickspa-grid-mobile.png.asset.json";
 import nickSpaBannerMobile from "@/assets/nickspa-banner-mobile.jpg.asset.json";
@@ -255,6 +260,14 @@ const firaBarcelonaGallery = [
   firaGallery3.url,
   firaGallery4.url,
   firaGallery5.url,
+];
+
+const firaBarcelonaGalleryMobile = [
+  firaGallery1Mobile.url,
+  firaGallery2Mobile.url,
+  firaGallery3Mobile.url,
+  firaGallery4Mobile.url,
+  firaGallery5Mobile.url,
 ];
 
 const atlassianProjectGallery = [
@@ -544,6 +557,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Producción y coordinación integral de una rueda de prensa institucional, gestionando una experiencia organizada, profesional y alineada con los estándares de comunicación de un evento de alto perfil.\n\nEl proyecto incluyó la planificación operativa completa de la jornada: coordinación de espacios, montaje técnico, gestión de prensa, acreditaciones, logística general y supervisión on-site para garantizar el correcto funcionamiento de cada instancia del evento.\n\nLa convocatoria reunió a periodistas, medios y representantes institucionales en un entorno diseñado para facilitar la comunicación, la cobertura mediática y el relacionamiento estratégico entre las distintas partes involucradas.\n\nNuestro foco estuvo puesto en asegurar una ejecución precisa, fluida y profesional, cuidando cada detalle operativo para que el mensaje y la experiencia del evento tuvieran el máximo impacto.\n",
     services: SERVICES,
     gallery: firaBarcelonaGallery,
+    galleryMobile: firaBarcelonaGalleryMobile,
     heroImage: firaBarcelonaBanner,
     quote: {
       text: "El nivel de detalle en cada touchpoint del evento fue exactamente lo que la película merecía.",
