@@ -153,7 +153,12 @@ export const Hero = () => {
             margin: 0,
           }}
         >
-          Productora de eventos — Buenos Aires, AR
+          <span className="md:hidden">
+            Productora de eventos
+            <br />
+            Buenos Aires, AR
+          </span>
+          <span className="hidden md:inline">Productora de eventos — Buenos Aires, AR</span>
         </p>
       </div>
 
