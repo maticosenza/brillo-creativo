@@ -66,7 +66,7 @@ export const SERVICES: Service[] = [
     description: "Coordinamos la relación con influencers, medios y creadores de contenido para maximizar la visibilidad y el alcance de cada evento.",
     bullets: ["RELACIONES CON PRENSA", "COORDINACIÓN DE INFLUENCERS", "AMPLIFICACIÓN"],
     longDescription: "Potenciamos la visibilidad de tu marca a través de la gestión estratégica de prensa e influencers.",
-    highlight: { value: "+25", label: "Países operados" },
+    highlight: { value: "+75", label: "Países operados" },
     image: s4,
     gallery: ["1515187029135-18ee286d815b","1540039155733-5bb30b53aa14","1492684223066-81342ee5ff30"].map((p)=>`https://images.unsplash.com/photo-${p}?auto=format&fit=crop&w=1600&q=80`),
     relatedProjects: ["manga", "datawise-x-hpe", "fira-barcelona"],
