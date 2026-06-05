@@ -33,7 +33,7 @@ export const ProjectIntro = ({ p }: { p: Project }) => {
           <h3 className="font-display uppercase text-h3 text-brand-red">Scope of work</h3>
           <div className="mt-6 space-y-4">
             {scope.map((paragraph, idx) => (
-              <p key={idx} className="text-lg leading-[1.5] opacity-80 text-justify">{paragraph}</p>
+              <p key={idx} className="text-lg leading-[1.5] opacity-80 text-left">{paragraph}</p>
             ))}
           </div>
         </div>

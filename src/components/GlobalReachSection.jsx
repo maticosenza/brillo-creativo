@@ -74,7 +74,7 @@ export default function GlobalReachSection({
               color: "#ffffff",
               margin: 0,
             }}
-            className="text-justify"
+            className="text-left"
           >
             {subtitle}
           </p>
