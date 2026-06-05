@@ -5,6 +5,7 @@ import { PageHero } from "@/components/shared/PageHero";
 import { SEO } from "@/components/shared/SEO";
 import { PROJECTS } from "@/data/projects";
 import proyectosHero from "@/assets/proyectos-hero.jpg";
+import proyectosHeroMobile from "@/assets/proyectos-hero-mobile.png.asset.json";
 
 const Proyectos = () => {
   const filtered = PROJECTS;
@@ -31,6 +32,7 @@ const Proyectos = () => {
       <PageHero
         title={<>Proyectos</>}
         image={proyectosHero}
+        mobileImage={proyectosHeroMobile.url}
         alt="Proyectos"
       />
 
