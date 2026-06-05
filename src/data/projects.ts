@@ -93,6 +93,9 @@ import adidasGallery1 from "@/assets/adidas-gallery-1.jpg.asset.json";
 import adidasGallery2 from "@/assets/adidas-gallery-2.jpg.asset.json";
 import adidasGallery3 from "@/assets/adidas-gallery-3.jpg.asset.json";
 import adidasGallery4 from "@/assets/adidas-gallery-4.jpg.asset.json";
+import adidasGallery2Mobile from "@/assets/adidas-gallery-2-mobile.jpg.asset.json";
+import adidasGallery3Mobile from "@/assets/adidas-gallery-3-mobile.jpg.asset.json";
+import adidasGallery4Mobile from "@/assets/adidas-gallery-4-mobile.jpg.asset.json";
 import mangaBanner from "@/assets/manga-banner.jpg";
 import mangaGallery1 from "@/assets/manga-gallery-1.jpg.asset.json";
 import mangaGallery2 from "@/assets/manga-gallery-2.jpg.asset.json";
@@ -313,6 +316,13 @@ const adidasProjectGallery = [
   adidasGallery2.url,
   adidasGallery3.url,
   adidasGallery4.url,
+];
+
+const adidasProjectGalleryMobile = [
+  adidasGallery1.url,
+  adidasGallery2Mobile.url,
+  adidasGallery3Mobile.url,
+  adidasGallery4Mobile.url,
 ];
 
 const nickSpaProjectGallery = [
