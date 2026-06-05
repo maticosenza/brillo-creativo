@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { RevealHeading } from "@/components/home/RevealHeading";
 import { PROJECTS, type Project } from "@/data/projects";
 import OptimizedImage from "@/components/shared/OptimizedImage";
+import { renderProjectTitle } from "@/lib/project-title";
 
 export const RelatedProjects = ({ p }: { p: Project }) => {
   const fromRelated = p.related
