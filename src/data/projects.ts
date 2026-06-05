@@ -367,7 +367,7 @@ export const PROJECTS: Project[] = [
     heroImage: hclsoftwareHero,
     gridImage: hclsoftwareGrid,
     gridImageMobile: hclsoftwareGridMobile.url,
-    heroImageMobile: hclGallery6,
+    heroImageMobile: hclsoftwareBannerMobile.url,
     quote: {
       text: "Llevaron Vértice al nivel de los grandes festivales internacionales. Operación enorme, ejecución obsesiva.",
       author: "Lucía Romero",
