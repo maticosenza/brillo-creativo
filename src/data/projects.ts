@@ -31,6 +31,7 @@ import hclsoftwareBanner from "@/assets/hclsoftware-banner.jpg";
 import hclsoftwareHero from "@/assets/hclsoftware-hero.jpg";
 import hclsoftwareGrid from "@/assets/hclsoftware-grid.jpg";
 import hclsoftwareGridMobile from "@/assets/hclsoftware-grid-mobile.png.asset.json";
+import hclsoftwareBannerMobile from "@/assets/hclsoftware-banner-mobile.png.asset.json";
 import hclGallery1 from "@/assets/hclsoftware-gallery-1.jpg";
 import hclGallery2 from "@/assets/hclsoftware-gallery-2.jpg";
 import hclGallery3 from "@/assets/hclsoftware-gallery-3.jpg";
