@@ -376,7 +376,6 @@ const nickSpaProjectGalleryMobile = [
 ];
 
 const unicaProjectGallery = [
-  unicaGallery1.url,
   unicaGallery2.url,
   unicaGallery3.url,
   unicaGallery4.url,
