@@ -83,11 +83,17 @@ export const Hero = () => {
       className="relative h-screen min-h-[640px] w-full overflow-hidden bg-brand-red text-brand-white"
     >
       {/* CAPA 1 — Blur placeholder */}
-      <div
-        className="absolute inset-0 z-[1] bg-cover bg-center scale-110 blur-[20px]"
-        style={{ backgroundImage: "url(/videos/caracter-hero-poster-blur.jpg)" }}
-        aria-hidden
-      />
+      <picture className="absolute inset-0 z-[1]" aria-hidden>
+        <source srcSet="/videos/caracter-hero-poster-blur.webp" type="image/webp" />
+        <img
+          src="/videos/caracter-hero-poster-blur.jpg"
+          alt=""
+          className="w-full h-full object-cover scale-110 blur-[20px]"
+          loading="eager"
+          fetchPriority="high"
+          decoding="sync"
+        />
+      </picture>
 
       {/* CAPA 2 — Video Preview (directo sobre el blur) */}
       {shouldLoadVideo && (
