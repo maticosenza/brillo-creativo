@@ -46,7 +46,7 @@ const Nosotros = () => {
               <p>Gestionamos cada proyecto de punta a punta, logística, coordinación on-site, proveedores, invitados y operación general, para que el cliente pueda delegar con tranquilidad sabiendo que todo está bajo control.</p>
             </div>
           </div>
-          <div className="relative overflow-hidden mt-[3.25rem] md:mt-[4.5rem] aspect-square md:aspect-auto md:h-[clamp(420px,52vw,640px)]">
+          <div className="relative overflow-hidden mt-[3.25rem] md:mt-[4.5rem] aspect-[3/4] md:aspect-auto md:h-[clamp(420px,52vw,640px)]">
             <img
               src={nosotrosEmpresa}
               alt="Equipo Caracter en acción"
