@@ -376,6 +376,7 @@ export const PROJECTS: Project[] = [
     ],
     services: SERVICES,
     gallery: datawiseHpeProjectGallery,
+    galleryMobile: datawiseHpeProjectGalleryMobile,
     heroImage: datawiseHpeBanner,
     quote: {
       text: "Convirtieron nuestra gala anual en la noche más comentada del año. La dirección artística y la coordinación operativa fueron impecables.",
