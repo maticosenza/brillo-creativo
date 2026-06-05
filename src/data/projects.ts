@@ -87,6 +87,8 @@ import datawiseHpeGallery7 from "@/assets/datawise-hpe-gallery-7.jpg.asset.json"
 import datawiseHpeGallery8 from "@/assets/datawise-hpe-gallery-8.jpg.asset.json";
 import datawiseHpeGallery9 from "@/assets/datawise-hpe-gallery-9.jpg.asset.json";
 import datawiseHpeGallery10 from "@/assets/datawise-hpe-gallery-10.jpg.asset.json";
+import datawiseHpeGallery2Mobile from "@/assets/datawise-hpe-gallery-2-mobile.jpg.asset.json";
+import datawiseHpeGallery6Mobile from "@/assets/datawise-hpe-gallery-6-mobile.jpg.asset.json";
 import adidasGallery1 from "@/assets/adidas-gallery-1.jpg.asset.json";
 import adidasGallery2 from "@/assets/adidas-gallery-2.jpg.asset.json";
 import adidasGallery3 from "@/assets/adidas-gallery-3.jpg.asset.json";
@@ -287,6 +289,19 @@ const datawiseHpeProjectGallery = [
   datawiseHpeGallery4.url,
   datawiseHpeGallery5.url,
   datawiseHpeGallery6.url,
+  datawiseHpeGallery7.url,
+  datawiseHpeGallery8.url,
+  datawiseHpeGallery9.url,
+  datawiseHpeGallery10.url,
+];
+
+const datawiseHpeProjectGalleryMobile = [
+  datawiseHpeGallery1.url,
+  datawiseHpeGallery2Mobile.url,
+  datawiseHpeGallery3.url,
+  datawiseHpeGallery4.url,
+  datawiseHpeGallery5.url,
+  datawiseHpeGallery6Mobile.url,
   datawiseHpeGallery7.url,
   datawiseHpeGallery8.url,
   datawiseHpeGallery9.url,
