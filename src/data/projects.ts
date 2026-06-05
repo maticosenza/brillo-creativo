@@ -74,6 +74,9 @@ import atlassianGallery10Mobile from "@/assets/atlassian-gallery-10-mobile.jpg.a
 import atlassianGallery11Mobile from "@/assets/atlassian-gallery-11-mobile.jpg.asset.json";
 import atlassianGallery12Mobile from "@/assets/atlassian-gallery-12-mobile.jpg.asset.json";
 import atlassianGallery14Mobile from "@/assets/atlassian-gallery-14-mobile.jpg.asset.json";
+import atlassianGallery15Mobile from "@/assets/atlassian-gallery-15-mobile.jpg.asset.json";
+import atlassianGallery16Mobile from "@/assets/atlassian-gallery-16-mobile.jpg.asset.json";
+import atlassianGallery17Mobile from "@/assets/atlassian-gallery-17-mobile.jpg.asset.json";
 import datawiseHpeGallery1 from "@/assets/datawise-hpe-gallery-1.jpg.asset.json";
 import datawiseHpeGallery2 from "@/assets/datawise-hpe-gallery-2.jpg.asset.json";
 import datawiseHpeGallery3 from "@/assets/datawise-hpe-gallery-3.jpg.asset.json";
@@ -272,9 +275,9 @@ const atlassianProjectGalleryMobile = [
   atlassianGallery12Mobile.url,
   atlassianGallery13.url,
   atlassianGallery14Mobile.url,
-  atlassianGallery15.url,
-  atlassianGallery16.url,
-  atlassianGallery17.url,
+  atlassianGallery15Mobile.url,
+  atlassianGallery16Mobile.url,
+  atlassianGallery17Mobile.url,
 ];
 
 const datawiseHpeProjectGallery = [
