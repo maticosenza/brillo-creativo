@@ -382,7 +382,7 @@ export const PROJECTS: Project[] = [
     category: "evento corporativo",
     year: 2025,
     location: "barcelona, esp",
-    duration: "3 jornadas",
+    duration: "2 jornadas",
     durationDays: 3,
     attendees: 2000,
     shortDescription: "Producción y coordinación operativa integral de un evento corporativo internacional para más de 2.000 asistentes por jornada.",
