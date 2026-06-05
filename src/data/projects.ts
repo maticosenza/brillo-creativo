@@ -64,6 +64,16 @@ import atlassianGallery14 from "@/assets/atlassian-gallery-14.png.asset.json";
 import atlassianGallery15 from "@/assets/atlassian-gallery-15.png.asset.json";
 import atlassianGallery16 from "@/assets/atlassian-gallery-16.png.asset.json";
 import atlassianGallery17 from "@/assets/atlassian-gallery-17.png.asset.json";
+import atlassianGallery2Mobile from "@/assets/atlassian-gallery-2-mobile.jpg.asset.json";
+import atlassianGallery3Mobile from "@/assets/atlassian-gallery-3-mobile.jpg.asset.json";
+import atlassianGallery4Mobile from "@/assets/atlassian-gallery-4-mobile.jpg.asset.json";
+import atlassianGallery5Mobile from "@/assets/atlassian-gallery-5-mobile.jpg.asset.json";
+import atlassianGallery8Mobile from "@/assets/atlassian-gallery-8-mobile.jpg.asset.json";
+import atlassianGallery9Mobile from "@/assets/atlassian-gallery-9-mobile.jpg.asset.json";
+import atlassianGallery10Mobile from "@/assets/atlassian-gallery-10-mobile.jpg.asset.json";
+import atlassianGallery11Mobile from "@/assets/atlassian-gallery-11-mobile.jpg.asset.json";
+import atlassianGallery12Mobile from "@/assets/atlassian-gallery-12-mobile.jpg.asset.json";
+import atlassianGallery14Mobile from "@/assets/atlassian-gallery-14-mobile.jpg.asset.json";
 import datawiseHpeGallery1 from "@/assets/datawise-hpe-gallery-1.jpg.asset.json";
 import datawiseHpeGallery2 from "@/assets/datawise-hpe-gallery-2.jpg.asset.json";
 import datawiseHpeGallery3 from "@/assets/datawise-hpe-gallery-3.jpg.asset.json";
@@ -242,6 +252,26 @@ const atlassianProjectGallery = [
   atlassianGallery12.url,
   atlassianGallery13.url,
   atlassianGallery14.url,
+  atlassianGallery15.url,
+  atlassianGallery16.url,
+  atlassianGallery17.url,
+];
+
+const atlassianProjectGalleryMobile = [
+  atlassianGallery1.url,
+  atlassianGallery2Mobile.url,
+  atlassianGallery3Mobile.url,
+  atlassianGallery4Mobile.url,
+  atlassianGallery5Mobile.url,
+  atlassianGallery6.url,
+  atlassianGallery7.url,
+  atlassianGallery8Mobile.url,
+  atlassianGallery9Mobile.url,
+  atlassianGallery10Mobile.url,
+  atlassianGallery11Mobile.url,
+  atlassianGallery12Mobile.url,
+  atlassianGallery13.url,
+  atlassianGallery14Mobile.url,
   atlassianGallery15.url,
   atlassianGallery16.url,
   atlassianGallery17.url,
