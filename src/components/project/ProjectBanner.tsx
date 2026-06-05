@@ -1,5 +1,6 @@
 import type { Project } from "@/data/projects";
 import OptimizedImage from "@/components/shared/OptimizedImage";
+import { renderProjectTitle } from "@/lib/project-title";
 
 export const ProjectBanner = ({ p }: { p: Project }) => {
   return (
@@ -27,7 +28,7 @@ export const ProjectBanner = ({ p }: { p: Project }) => {
               NICK SPA &amp;<br />SPORT CLUB
             </>
           ) : (
-            p.title.toUpperCase()
+            renderProjectTitle(p.title)
           )}
         </h1>
       </div>
