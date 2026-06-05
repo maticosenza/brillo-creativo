@@ -10,6 +10,9 @@ import mangaBanner from "@/assets/manga-banner.jpg";
 import firaBarcelonaBanner from "@/assets/fira-barcelona-banner.jpg";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
 import unicaBanner from "@/assets/unica-banner.jpg";
+import nickSpaMobile from "@/assets/nick-spa-mobile.png.asset.json";
+import hclsoftwareMobile from "@/assets/hclsoftware-mobile.png.asset.json";
+import adidasMobile from "@/assets/adidas-mobile.png.asset.json";
 
 const slugify = (s: string) =>
   s.toLowerCase()
@@ -19,12 +22,12 @@ const slugify = (s: string) =>
 
 const PROJECTS = [
   { title: "Datawise x HPE", category: "Evento corporativo", img: datawiseHpeBanner },
-  { title: "ADIDAS", category: "Evento deportivo", img: adidasCarousel },
-  { title: "HCLSoftware", category: "formula 1 ", img: hclsoftwareBanner, pos: "center 38%" },
+  { title: "ADIDAS", category: "Evento deportivo", img: adidasCarousel, mobileImg: adidasMobile.url },
+  { title: "HCLSoftware", category: "formula 1 ", img: hclsoftwareBanner, pos: "center 38%", mobileImg: hclsoftwareMobile.url },
   { title: "Atlassian", category: "evento corporativo", img: atlassianBanner },
   { title: "MANGA", category: "Exhibición", img: mangaBanner, pos: "center bottom" },
   { title: "Fira Barcelona", category: "Rueda de prensa", img: firaBarcelonaBanner, pos: "center bottom" },
-  { title: "Nick Spa & Sport Club", category: "Evento deportivo", img: nickSpaBanner },
+  { title: "Nick Spa & Sport Club", category: "Evento deportivo", img: nickSpaBanner, mobileImg: nickSpaMobile.url },
   { title: "Unica+", category: "Evento corporativo", img: unicaBanner },
 ];
 
