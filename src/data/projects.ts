@@ -97,6 +97,7 @@ import firaGallery4 from "@/assets/fira-barcelona-gallery-4.jpg.asset.json";
 import firaGallery5 from "@/assets/fira-barcelona-gallery-5.jpg.asset.json";
 import nickSpaBanner from "@/assets/nick-spa-banner.jpg";
 import nickSpaGridMobile from "@/assets/nickspa-grid-mobile.png.asset.json";
+import nickSpaBannerMobile from "@/assets/nickspa-banner-mobile.jpg.asset.json";
 import nickSpaGallery1 from "@/assets/nick-spa-gallery-1.jpg.asset.json";
 import nickSpaGallery2 from "@/assets/nick-spa-gallery-2.jpg.asset.json";
 import nickSpaGallery3 from "@/assets/nick-spa-gallery-3.jpg.asset.json";
@@ -457,6 +458,7 @@ export const PROJECTS: Project[] = [
     gallery: nickSpaProjectGallery,
     heroImage: nickSpaBanner,
     gridImageMobile: nickSpaGridMobile.url,
+    heroImageMobile: nickSpaBannerMobile.url,
     related: ["adidas", "hclsoftware", "atlassian"],
   },
   {
