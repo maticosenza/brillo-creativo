@@ -59,13 +59,18 @@ const Proyectos = () => {
                       to={`/proyectos/${p.slug}`}
                       className={`group relative block overflow-hidden aspect-[4/5] ${isSquareRow ? "md:aspect-square" : "md:aspect-[2/1]"}`}
                     >
-                      <img
-                        src={p.gridImage ?? p.heroImage ?? p.gallery[0]}
-                        alt={p.title}
-                        loading="lazy"
-                        decoding="async"
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.08]"
-                      />
+                      <picture>
+                        {p.gridImageMobile && (
+                          <source media="(max-width: 767px)" srcSet={p.gridImageMobile} />
+                        )}
+                        <img
+                          src={p.gridImage ?? p.heroImage ?? p.gallery[0]}
+                          alt={p.title}
+                          loading="lazy"
+                          decoding="async"
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-[1.08]"
+                        />
+                      </picture>
                       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
 
                       <span
