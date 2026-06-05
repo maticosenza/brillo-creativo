@@ -331,6 +331,7 @@ export const PROJECTS: Project[] = [
     gallery: adidasProjectGallery,
     heroImage: adidasHero,
     gridImage: adidasGrid,
+    gridImageMobile: adidasGridMobile.url,
     quote: {
       text: "Salió mejor de lo esperado. Producción, escenografía y guión se sintieron como una sola pieza coherente.",
       author: "Diego Méndez",
