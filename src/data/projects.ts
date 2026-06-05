@@ -41,6 +41,10 @@ import hclGallery5 from "@/assets/hclsoftware-gallery-5.jpg";
 import hclGallery6 from "@/assets/hclsoftware-gallery-6.jpg";
 import hclGallery7 from "@/assets/hclsoftware-gallery-7.jpg";
 import hclGallery6Mobile from "@/assets/hclsoftware-gallery-6-mobile.png.asset.json";
+import hclGallery2Mobile from "@/assets/hclsoftware-gallery-2-mobile.jpg.asset.json";
+import hclGallery3Mobile from "@/assets/hclsoftware-gallery-3-mobile.jpg.asset.json";
+import hclGallery4Mobile from "@/assets/hclsoftware-gallery-4-mobile.jpg.asset.json";
+import hclGallery5Mobile from "@/assets/hclsoftware-gallery-5-mobile.jpg.asset.json";
 import atlassianBanner from "@/assets/atlassian-banner.jpg";
 import atlassianBannerMobile from "@/assets/atlassian-banner-mobile.jpg.asset.json";
 import atlassianGallery1 from "@/assets/atlassian-gallery-1.png.asset.json";
@@ -207,10 +211,10 @@ const hclsoftwareGallery = [
 
 const hclsoftwareGalleryMobile = [
   hclGallery1,
-  hclGallery2,
-  hclGallery3,
-  hclGallery4,
-  hclGallery5,
+  hclGallery2Mobile.url,
+  hclGallery3Mobile.url,
+  hclGallery4Mobile.url,
+  hclGallery5Mobile.url,
   hclGallery6Mobile.url,
   hclGallery7,
 ];
