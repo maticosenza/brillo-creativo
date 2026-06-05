@@ -126,8 +126,8 @@ export const Hero = () => {
 
       <div className="absolute inset-0 bg-brand-red/40 z-[5]" aria-hidden />
 
-      <div className="relative z-10 h-full flex flex-col justify-center" style={{ paddingLeft: "6vw", paddingRight: "6vw" }}>
-        <div className="max-w-[80%]" style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.3))" }}>
+      <div className="relative z-10 h-full flex flex-col justify-start pt-[20vh] md:justify-center md:pt-0" style={{ paddingLeft: "6vw", paddingRight: "6vw" }}>
+        <div className="max-w-[95%] md:max-w-[80%] scale-[1.08] origin-left md:scale-100" style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.3))" }}>
           <DisplayHeading
             lines={["SPORT.", "BUSINESS.", "IMPACT."]}
             highlightedLine={2}
