@@ -16,6 +16,7 @@ export type Project = {
   heroImage?: string;
   gridImage?: string;
   gridImageMobile?: string;
+  heroImageMobile?: string;
   quote?: { text: string; author: string; role: string };
   related: string[];
 };
