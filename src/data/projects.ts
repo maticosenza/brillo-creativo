@@ -389,6 +389,7 @@ export const PROJECTS: Project[] = [
     services: SERVICES,
     gallery: atlassianProjectGallery,
     heroImage: atlassianBanner,
+    heroImageMobile: atlassianBannerMobile.url,
     quote: {
       text: "Una operación enorme que se sintió simple desde nuestro lado. Eso solo se logra con un equipo realmente pro.",
       author: "Florencia Caro",
