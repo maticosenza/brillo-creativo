@@ -146,6 +146,11 @@ import nickSpaGallery4 from "@/assets/nick-spa-gallery-4.jpg.asset.json";
 import nickSpaGallery5 from "@/assets/nick-spa-gallery-5.jpg.asset.json";
 import nickSpaGallery6 from "@/assets/nick-spa-gallery-6.jpg.asset.json";
 import nickSpaGallery7 from "@/assets/nick-spa-gallery-7.jpg.asset.json";
+import nickSpaGallery1Mobile from "@/assets/nick-spa-gallery-1-mobile.jpg.asset.json";
+import nickSpaGallery4Mobile from "@/assets/nick-spa-gallery-4-mobile.jpg.asset.json";
+import nickSpaGallery5Mobile from "@/assets/nick-spa-gallery-5-mobile.jpg.asset.json";
+import nickSpaGallery6Mobile from "@/assets/nick-spa-gallery-6-mobile.jpg.asset.json";
+import nickSpaGallery7Mobile from "@/assets/nick-spa-gallery-7-mobile.jpg.asset.json";
 import unicaBanner from "@/assets/unica-banner.jpg";
 import unicaGallery1 from "@/assets/unica-gallery-1.jpg.asset.json";
 import unicaGallery2 from "@/assets/unica-gallery-2.jpg.asset.json";
@@ -358,6 +363,16 @@ const nickSpaProjectGallery = [
   nickSpaGallery5.url,
   nickSpaGallery6.url,
   nickSpaGallery7.url,
+];
+
+const nickSpaProjectGalleryMobile = [
+  nickSpaGallery1Mobile.url,
+  nickSpaGallery2.url,
+  nickSpaGallery3.url,
+  nickSpaGallery4Mobile.url,
+  nickSpaGallery5Mobile.url,
+  nickSpaGallery6Mobile.url,
+  nickSpaGallery7Mobile.url,
 ];
 
 const unicaProjectGallery = [
@@ -580,6 +595,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Producción integral de una carrera urbana 5K en Barcelona, diseñada para transformar una competencia deportiva en una experiencia de marca de alto impacto.\n\nDesde la conceptualización hasta la ejecución final, desarrollamos un evento pensado para generar comunidad, visibilidad y una experiencia memorable tanto para corredores como para asistentes.\n\nLa producción incluyó la coordinación operativa completa de la jornada, gestión de proveedores, branding, activaciones, logística, montaje y supervisión on-site, asegurando una experiencia dinámica, fluida y alineada con la identidad del evento.\n\nCon cientos de participantes, activaciones en vivo y una fuerte presencia de marca en todo el recorrido, el proyecto combinó deporte, entretenimiento y engagement en un entorno urbano de gran convocatoria.\n",
     services: SERVICES,
     gallery: nickSpaProjectGallery,
+    galleryMobile: nickSpaProjectGalleryMobile,
     heroImage: nickSpaBanner,
     gridImageMobile: nickSpaGridMobile.url,
     heroImageMobile: nickSpaBannerMobile.url,
