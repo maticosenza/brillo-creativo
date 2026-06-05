@@ -3,6 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { Project } from "@/data/projects";
 import OptimizedImage from "@/components/shared/OptimizedImage";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"right"; label: string }) => (
   <button
@@ -20,6 +21,8 @@ const NavBtn = ({ onClick, dir, label }: { onClick: () => void; dir: "left"|"rig
 export const ProjectGallery = ({ p }: { p: Project }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "center", loop: true, skipSnaps: false, containScroll: "trimSnaps" });
   const [selected, setSelected] = useState(0);
+  const isMobile = useIsMobile();
+  const gallery = isMobile && p.galleryMobile ? p.galleryMobile : p.gallery;
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -32,7 +35,7 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
   const prev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const next = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  const total = String(p.gallery.length).padStart(2, "0");
+  const total = String(gallery.length).padStart(2, "0");
   const current = String(selected + 1).padStart(2, "0");
 
   return (
@@ -40,7 +43,7 @@ export const ProjectGallery = ({ p }: { p: Project }) => {
       <div className="mx-auto max-w-[1200px]">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-3 md:-ml-4">
-            {p.gallery.map((src, i) => (
+            {gallery.map((src, i) => (
               <div
                 key={i}
                 className="group shrink-0 basis-[90%] md:basis-[80%] pl-3 md:pl-4"
