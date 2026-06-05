@@ -436,6 +436,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Producción y coordinación operativa integral de un evento corporativo internacional para más de 6.000 asistentes por jornada.\n\nEl proyecto incluyó la gestión completa de la infraestructura y experiencia del evento: distribución y operación de salas, mobiliario, escenografía, señalización, ambientación, coordinación técnica y soporte logístico general en un entorno de alta complejidad operativa.\nAdemás, se coordinó la operación de áreas VIP, espacios de prensa, atención al cliente y la gestión integral del personal involucrado, incluyendo equipos de seguridad, limpieza, promotoras y staff operativo.\n\nNuestro rol estuvo enfocado en garantizar una ejecución precisa, organizada y alineada con los estándares internacionales de un evento corporativo de gran escala, gestionando múltiples equipos y proveedores en simultáneo durante todas las jornadas.\n",
     services: SERVICES,
     gallery: atlassianProjectGallery,
+    galleryMobile: atlassianProjectGalleryMobile,
     heroImage: atlassianBanner,
     heroImageMobile: atlassianBannerMobile.url,
     quote: {
