@@ -14,6 +14,11 @@ export const RootLayout = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    const lenis = (window as unknown as { lenis?: { scrollTo: (t: number, o?: { immediate?: boolean }) => void } }).lenis;
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    }
+    window.scrollTo(0, 0);
     const t = setTimeout(() => ScrollTrigger.refresh(), 700);
     return () => clearTimeout(t);
   }, [pathname]);
