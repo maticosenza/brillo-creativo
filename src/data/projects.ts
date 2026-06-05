@@ -518,6 +518,7 @@ export const PROJECTS: Project[] = [
     longDescription: "Producción y coordinación operativa de una exhibición de cultura pop y entretenimiento desarrollada en cuatro pabellones, reuniendo miles de asistentes, exhibiciones temáticas, espacios comerciales y experiencias inmersivas durante múltiples jornadas.\n\nEl proyecto implicó la gestión integral de una operación de gran escala, coordinando logística, circulación de público, montaje, señalización, proveedores, áreas gastronómicas y supervisión general de cada espacio del evento.\n\nLa experiencia incluyó exhibiciones interactivas, zonas comerciales especializadas, propuestas gastronómicas orientales y activaciones vinculadas al universo del comic, anime y entretenimiento, generando un entorno dinámico y de alta convocatoria.\n\nDebido al volumen de asistentes y la magnitud del evento, se implementó una coordinación intensiva de seguridad, control de accesos y operación on-site para garantizar una experiencia organizada, segura y fluida en todo momento.\n\nNuestro foco estuvo puesto en asegurar una ejecución eficiente y una experiencia envolvente capaz de conectar comunidad, entretenimiento y marca a gran escala.\n",
     services: SERVICES,
     gallery: mangaProjectGallery,
+    galleryMobile: mangaProjectGalleryMobile,
     heroImage: mangaBanner,
     quote: {
       text: "Pasó de ser un compromiso anual a convertirse en el evento más esperado por el equipo. Resultados claros.",
