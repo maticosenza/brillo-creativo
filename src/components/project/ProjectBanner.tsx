@@ -27,6 +27,10 @@ export const ProjectBanner = ({ p }: { p: Project }) => {
             <>
               NICK SPA &amp;<br />SPORT CLUB
             </>
+          ) : p.slug === "datawise-x-hpe" ? (
+            <>
+              DATAWISE<br /><span className="lowercase">x</span> HPE
+            </>
           ) : (
             renderProjectTitle(p.title)
           )}
