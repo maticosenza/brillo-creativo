@@ -93,7 +93,7 @@ export const Footer = () => {
 
       {/* 3) Bottom line */}
       <div className="px-[4vw] md:px-[6vw] py-5 md:py-3 flex flex-col md:flex-row justify-between gap-2 font-body text-[12px] text-brand-white/60 uppercase tracking-[0.15em]">
-        <span>© 2026 Marca registrada</span>
+        <span>© 2024 Marca registrada</span>
         <span>
           Diseñado por{" "}
           <a href="https://www.velocentum.com" target="_blank" rel="noreferrer" className="underline-link">
