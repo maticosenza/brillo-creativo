@@ -44,6 +44,28 @@ export const Hero = () => {
     return () => window.removeEventListener("resize", checkDevice);
   }, []);
 
+  useEffect(() => {
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible" && previewVideoRef.current) {
+        const v = previewVideoRef.current;
+        if (v.paused) {
+          const p = v.play();
+          if (p !== undefined) p.catch(() => {});
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibility);
+    window.addEventListener("pageshow", handleVisibility);
+    window.addEventListener("focus", handleVisibility);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibility);
+      window.removeEventListener("pageshow", handleVisibility);
+      window.removeEventListener("focus", handleVisibility);
+    };
+  }, []);
+
   const previewSrc =
     deviceType === "mobile"
       ? "/videos/caracter-hero-mobile.mp4?v=2"
