@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { RevealHeading } from "./RevealHeading";
 
 const POSTS = [
-  { date: "15.03.2026", title: "Cómo diseñar un evento que se convierte en contenido", img: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1000&q=80", slug: "evento-contenido" },
-  { date: "02.03.2026", title: "5 tendencias de producción para 2026", img: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1000&q=80", slug: "tendencias-2026" },
-  { date: "18.02.2026", title: "El ROI de las activaciones de marca", img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80", slug: "roi-activaciones" },
-  { date: "30.01.2026", title: "Producción híbrida: presencial + streaming", img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80", slug: "produccion-hibrida" },
+  { date: "15.03.2024", title: "Cómo diseñar un evento que se convierte en contenido", img: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1000&q=80", slug: "evento-contenido" },
+  { date: "02.03.2024", title: "5 tendencias de producción para 2024", img: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1000&q=80", slug: "tendencias-2026" },
+  { date: "18.02.2024", title: "El ROI de las activaciones de marca", img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80", slug: "roi-activaciones" },
+  { date: "30.01.2024", title: "Producción híbrida: presencial + streaming", img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80", slug: "produccion-hibrida" },
 ];
 
 export const InsightsSection = () => {
