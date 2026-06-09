@@ -35,9 +35,9 @@ export const Footer = () => {
           <div>
             <p className="font-body text-[14px] leading-[1.6] text-brand-white/85 max-w-none md:w-max">
               <span className="md:hidden">
-                Contáctanos y descubrí cómo la experiencia y el
-                <br /> carácter de CARACTER Producciones pueden
-                <br /> transformar tu próximo evento en algo
+                Contáctanos y descubrí cómo la experiencia
+                <br /> y el carácter de CARACTER Producciones
+                <br /> pueden transformar tu próximo evento en algo
                 <br /> que genere impacto real.
               </span>
               <span className="hidden md:inline">
