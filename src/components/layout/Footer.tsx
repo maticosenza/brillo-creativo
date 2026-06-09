@@ -34,9 +34,17 @@ export const Footer = () => {
           {/* Col 1 — Description */}
           <div>
             <p className="font-body text-[14px] leading-[1.6] text-brand-white/85 max-w-none md:w-max">
-              Contáctanos y descubrí cómo la experiencia y el carácter
-              <br className="hidden md:inline" /> de CARACTER Producciones pueden transformar tu
-              <br className="hidden md:inline" /> próximo evento en algo que genere impacto real.
+              <span className="md:hidden">
+                Contáctanos y descubrí cómo la experiencia y el
+                <br /> carácter de CARACTER Producciones pueden
+                <br /> transformar tu próximo evento en algo
+                <br /> que genere impacto real.
+              </span>
+              <span className="hidden md:inline">
+                Contáctanos y descubrí cómo la experiencia y el carácter
+                <br /> de CARACTER Producciones pueden transformar tu
+                <br /> próximo evento en algo que genere impacto real.
+              </span>
             </p>
           </div>
 
