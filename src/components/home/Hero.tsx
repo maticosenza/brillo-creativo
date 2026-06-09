@@ -75,6 +75,8 @@ export const Hero = () => {
   const hdSrc = "/videos/caracter-hero.mp4";
 
   useEffect(() => {
+    if (deviceType !== "mobile" || !shouldLoadVideo) return;
+
     const v = previewVideoRef.current;
     if (!v) return;
 
@@ -101,9 +103,11 @@ export const Hero = () => {
       v.removeEventListener("stalled", forcePlay);
       v.removeEventListener("suspend", forcePlay);
     };
-  }, [previewSrc]);
+  }, [previewSrc, deviceType, shouldLoadVideo]);
 
   useEffect(() => {
+    if (deviceType !== "mobile" || !shouldLoadVideo) return;
+
     const interval = setInterval(() => {
       const v = previewVideoRef.current;
       if (v && document.visibilityState === "visible") {
@@ -114,7 +118,7 @@ export const Hero = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [deviceType, shouldLoadVideo]);
 
   useEffect(() => {
     setPreviewReady(false);
