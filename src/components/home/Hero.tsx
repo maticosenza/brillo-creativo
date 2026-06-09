@@ -66,6 +66,48 @@ export const Hero = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const v = previewVideoRef.current;
+    if (!v) return;
+
+    const forcePlay = () => {
+      if (v.paused || v.ended) {
+        const p = v.play();
+        if (p !== undefined) p.catch(() => {});
+      }
+    };
+
+    const handleEnded = () => {
+      v.currentTime = 0;
+      forcePlay();
+    };
+
+    v.addEventListener("pause", forcePlay);
+    v.addEventListener("ended", handleEnded);
+    v.addEventListener("stalled", forcePlay);
+    v.addEventListener("suspend", forcePlay);
+
+    return () => {
+      v.removeEventListener("pause", forcePlay);
+      v.removeEventListener("ended", handleEnded);
+      v.removeEventListener("stalled", forcePlay);
+      v.removeEventListener("suspend", forcePlay);
+    };
+  }, [previewSrc]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const v = previewVideoRef.current;
+      if (v && document.visibilityState === "visible") {
+        if (v.paused || v.ended) {
+          v.play().catch(() => {});
+        }
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const previewSrc =
     deviceType === "mobile"
       ? "/videos/caracter-hero-mobile.mp4?v=2"
@@ -133,6 +175,9 @@ export const Hero = () => {
           loop
           playsInline
           preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
+          x-webkit-airplay="deny"
           onLoadedMetadata={() => setPreviewReady(true)}
           onPlaying={() => setPreviewReady(true)}
           className={`absolute inset-0 w-full h-full object-cover z-[3] transition-opacity duration-150 ease-out ${previewReady ? "opacity-100" : "opacity-0"}`}
