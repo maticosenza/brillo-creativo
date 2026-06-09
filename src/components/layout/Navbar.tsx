@@ -13,6 +13,16 @@ export const Navbar = () => {
   const useRedLogo = isContactPage && !scrolled;
   const logoSrc = isContactPage && !scrolled ? logoCaracterRed : logoCaracter;
 
+  const handleLogoClick = () => {
+    if (location.pathname === "/") {
+      const lenis = (window as unknown as {
+        lenis?: { scrollTo: (t: number, o?: { immediate?: boolean }) => void };
+      }).lenis;
+      if (lenis) lenis.scrollTo(0, { immediate: false });
+      else window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
     onScroll();
@@ -33,7 +43,7 @@ export const Navbar = () => {
         }`}
       >
         <div className="flex items-center justify-between px-6 md:px-12 h-20">
-          <Link to="/" aria-label="Caracter Producciones" className="flex items-center">
+          <Link to="/" onClick={handleLogoClick} aria-label="Caracter Producciones" className="flex items-center">
             <OptimizedImage src={logoSrc} alt="Caracter Producciones" className="navbar-logo" priority />
           </Link>
 

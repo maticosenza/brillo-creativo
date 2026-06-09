@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Linkedin, Instagram } from "lucide-react";
 import logoCaracter from "@/assets/logo-caracter.png";
 
@@ -17,6 +17,17 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 );
 
 export const Footer = () => {
+  const location = useLocation();
+
+  const handleLogoClick = () => {
+    if (location.pathname === "/") {
+      const lenis = (window as unknown as {
+        lenis?: { scrollTo: (t: number, o?: { immediate?: boolean }) => void };
+      }).lenis;
+      if (lenis) lenis.scrollTo(0, { immediate: false });
+      else window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   return (
     <footer className="text-brand-white red-background bg-brand-red">
       {/* Divider — arriba del CTA */}
@@ -90,7 +101,7 @@ export const Footer = () => {
 
         {/* Logo row */}
         <div className="max-w-[1200px] mx-auto mt-10 md:-mt-[88px] flex justify-center md:justify-start">
-          <Link to="/" aria-label="Caracter Producciones" className="inline-flex opacity-90">
+          <Link to="/" onClick={handleLogoClick} aria-label="Caracter Producciones" className="inline-flex opacity-90">
             <img src={logoCaracter} alt="Caracter Producciones" loading="lazy" decoding="async" className="h-12 md:h-[64px] w-auto" />
           </Link>
         </div>
