@@ -66,6 +66,14 @@ export const Hero = () => {
     };
   }, []);
 
+  const previewSrc =
+    deviceType === "mobile"
+      ? "/videos/caracter-hero-mobile.mp4?v=2"
+      : deviceType === "tablet"
+        ? "/videos/caracter-hero-tablet.mp4?v=2"
+        : "/videos/caracter-hero-preview.mp4";
+  const hdSrc = "/videos/caracter-hero.mp4";
+
   useEffect(() => {
     const v = previewVideoRef.current;
     if (!v) return;
@@ -107,14 +115,6 @@ export const Hero = () => {
 
     return () => clearInterval(interval);
   }, []);
-
-  const previewSrc =
-    deviceType === "mobile"
-      ? "/videos/caracter-hero-mobile.mp4?v=2"
-      : deviceType === "tablet"
-        ? "/videos/caracter-hero-tablet.mp4?v=2"
-        : "/videos/caracter-hero-preview.mp4";
-  const hdSrc = "/videos/caracter-hero.mp4";
 
   useEffect(() => {
     setPreviewReady(false);
