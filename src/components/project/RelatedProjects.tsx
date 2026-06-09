@@ -31,8 +31,7 @@ export const RelatedProjects = ({ p }: { p: Project }) => {
 
       <motion.div
         initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-10%" }}
+        animate="show"
         variants={{ show: { transition: { staggerChildren: 0.15 } } }}
         className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6"
       >
