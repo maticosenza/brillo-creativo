@@ -604,7 +604,7 @@ export const PROJECTS: Project[] = [
     title: "Unica+",
     client: "Unica+",
     category: "Evento corporativo",
-    year: 2026,
+    year: 2025,
     location: "Johannesburg, Cape Town, Sydney, Madrid, París, Austin",
     duration: "6 jornadas",
     durationDays: 6,
