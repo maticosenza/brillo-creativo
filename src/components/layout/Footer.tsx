@@ -36,7 +36,24 @@ export const Footer = () => {
       {/* 1) CTA */}
       <section className="footer-cta cta-footer">
         <h2>LET'S MAKE <span className="cta-impact-fill">IMPACT!</span></h2>
-        <Link to="/contacto" className="footer-cta-btn">Hablemos</Link>
+        {location.pathname === "/contacto" ? (
+          <button
+            type="button"
+            className="footer-cta-btn"
+            onClick={() => {
+              const el = document.querySelector(".contact-form-section");
+              const lenis = (window as unknown as {
+                lenis?: { scrollTo: (t: Element | number, o?: { offset?: number }) => void };
+              }).lenis;
+              if (el && lenis) lenis.scrollTo(el as Element, { offset: -80 });
+              else if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+          >
+            Hablemos
+          </button>
+        ) : (
+          <Link to="/contacto" className="footer-cta-btn">Hablemos</Link>
+        )}
       </section>
 
       {/* 2) Main content — 3 cols */}
