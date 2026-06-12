@@ -97,7 +97,7 @@ export const Footer = () => {
               <span className="hidden md:inline">HQ en Puerto Madero, Bs As, Argentina<br /> con presencia en todo el mundo</span>
             </p>
             <p><a href="mailto:hello@caracterprod.com" className="underline-link">hello@caracterprod.com</a></p>
-            <p>+1 645 239 7512</p>
+            <p>WhatsApp: +1 645 239 7512</p>
           </address>
           <div className="mt-5 flex items-center gap-3">
             <a href="https://www.linkedin.com/company/car%C3%A1cter-producciones/?viewAsMember=true" target="_blank" rel="noreferrer" aria-label="LinkedIn"
