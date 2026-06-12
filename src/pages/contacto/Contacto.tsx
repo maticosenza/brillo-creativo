@@ -92,7 +92,7 @@ const Contacto = () => {
           </div>
           <div className="world-text">
             <h2>Desde Argentina<br/>al mundo</h2>
-            <p className="text-left">Radicados en Argentina pero con alcance y experiencia global. Somos tu partner estrategico en todo el mundo ya que hemos producido eventos en Estados Unidos, Latino America, Europa, África, Oceanía y Asia.</p>
+            <p className="text-left">Radicados en Argentina pero con alcance y experiencia global. Somos tu partner estratégico en todo el mundo ya que hemos producido eventos en Estados Unidos, Latino America, Europa, África, Oceanía y Asia.</p>
           </div>
         </div>
       </section>
